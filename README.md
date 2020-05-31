@@ -1,5 +1,9 @@
 # mst-ka.org
 
+This repository serves as the source for the mst-ka.org website, as well
+as the alumni portal. 
+
+## Status: WIP
 ## Contributing
 
 ### Git
@@ -52,3 +56,19 @@ already familiar with Git & Terminal commands.
   3. Commit and push the changes to your branch 
   4. Submit a Pull Request.
 
+### Recommended Practices
+#### Branch Naming
+
+All branches should be named <username>-<issuename>
+
+#### CSS
+
+All CSS files should be stored in the _styles_ directory.
+
+#### Scripts
+
+All script files should be stored in the _script_ directory.
+
+#### HTML
+
+Excluding the main page, all html views should be stored in the _views_ directory.
