@@ -57,6 +57,13 @@ already familiar with Git & Terminal commands.
   4. Submit a Pull Request.
 
 ### Recommended Practices
+
+#### Making Changes
+  1. Create a development branch of the repository
+  2. In your new branch make whatever changes you wish.
+  3. Test your changes with multiple window sizes to ensure mobile compatibility.
+  4. Submit a PR with the changes.
+
 #### Branch Naming
 
 All branches should be named <username>-<issuename>
