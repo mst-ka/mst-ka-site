@@ -51,3 +51,4 @@ already familiar with Git & Terminal commands.
      to the contributors section.
   3. Commit and push the changes to your branch 
   4. Submit a Pull Request.
+
