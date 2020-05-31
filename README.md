@@ -52,6 +52,3 @@ already familiar with Git & Terminal commands.
      section.
   4. Commit the changes to your forked repo
   5. Submit a Pull Request.
-
-Navigate to https://localhost:5000 & view the website
-After all this, lets have a second meeting to get planning a bit more in depth
