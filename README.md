@@ -46,12 +46,8 @@ already familiar with Git & Terminal commands.
 
 ### Getting Started
 
-  1. Fork the repository from Github
-  2. Clone the forked repository to your local device
-  3. In the firebase.json file, add your name and email to the contributors
-     section.
-  4. Commit the changes to your forked repo
-  5. Submit a Pull Request.
-
-Navigate to https://localhost:5000 & view the website
-After all this, lets have a second meeting to get planning a bit more in depth
+  1. Create a development branch of the repository
+  2. In your new branch, edit the firebase.json file, add your name and email 
+     to the contributors section.
+  3. Commit and push the changes to your branch 
+  4. Submit a Pull Request.
