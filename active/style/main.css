@@ -1053,6 +1053,7 @@ img {
 	vertical-align: middle;
 }
 .img-responsive {
+	box-shadow: 0px 0px 12px #ddd;
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -6269,6 +6270,12 @@ body #myCarousel .carousel-control {
 body #features {
 	background-color: #fff;
 }
+body #features .img-responsive {
+	box-shadow: 0px 0px 12px #ddd;
+	display: block;
+	height: auto;
+  max-width: 240px;
+}
 body #features i.feature_icon {
 	font-size: 30px;
 }
@@ -6284,16 +6291,38 @@ body #about .section-block, body #about #features, body #about #process, body #a
 	padding: 50px 0px;
 	display: inline-block;
 }
-body #about .background-imgholder {
-	background: url(../img/1.jpg);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
-	z-index: 0;
-	background-size: cover !important;
-	background-position: 50% 50% !important;
+body #about .imgholder {
+	box-shadow: 0px 0px 12px #ddd;
+  height: auto;
+  min-width: 300px;
+  padding: 8px;
+  padding-top: 33%;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+body #about .imgholder {
+	box-shadow: 0px 0px 12px #ddd;
+  height: auto;
+  min-width: 300px;
+  padding: 8px;
+  padding-bottom: 24px;
+  width: 100%;
+}
+}
+body #about .container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body #about .container-fluid:before, .container-fluid:after {
+	content: " ";
+	display: table;
+}
+body #about .container-fluid:after {
+	clear: both;
 }
 body #about .image-holder {
 	overflow: hidden;
@@ -6309,8 +6338,18 @@ body #about .text-block {
 	background: #fff;
 	padding: 40px;
 	position: relative;
-	top: 50%;
+  float:left;
 	box-shadow: 0px 0px 12px #ddd;
+  margin: -24px;
+  max-width: 500px;
+}
+@media screen and (max-width: 1024px) {
+body #about .text-block {
+	background: #fff;
+	padding: 40px;
+  clear:both;
+	box-shadow: 0px 0px 12px #ddd;
+}
 }
 body #about .text-block li {
 	padding: 0px;
@@ -7401,7 +7440,7 @@ body #features-page .subsection3 {
 }
 body #features-page .subsection3 .right-section {
 	color: #fff;
-}
+}bout
 body #features-page .subsection3 .right-section .section-heading h1, body #features-page .subsection3 .right-section #features h1, body #features-page .subsection3 .right-section #about h1, body #features-page .subsection3 .right-section #process h1, body #features-page .subsection3 .right-section #testimonial h1, body #features-page .subsection3 .right-section #about-page-section-3 h1, body #features-page .subsection3 .right-section #skills h1, body #features-page .subsection3 .right-section #team-member h1, body #features-page .subsection3 .right-section #top_banner h1, body #features-page .subsection3 .right-section #portfolio h1, body #features-page .subsection3 .right-section #faq h1, body #features-page .subsection3 .right-section #contact h1, body #features-page .subsection3 .right-section #contact-page h1, body #features-page .subsection3 .right-section .subsection1 h1, body #features-page .subsection3 .right-section .subsection2 h1, body #features-page .subsection3 .right-section .right-section h1, body #features-page .subsection3 .right-section .left-section h1, body #features-page .subsection3 .right-section .subsection4 h1, body #features-page .subsection3 .right-section #login-reg h1 {
 	color: #fff;
 }
