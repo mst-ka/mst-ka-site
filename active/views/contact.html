@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<!-- Allows Relative Link Addresses -->
+<base href="../" />
 
 <head>
     <meta charset="utf-8">
@@ -7,8 +10,8 @@
     <title>Contact</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/skin.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/skin.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -46,24 +49,25 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a class="navbar-brand" href="#">
-                        <h1>Aspire</h1><span>Software Solutions</span></a>
+                        <h1>Aspire</h1><span>Software Solutions</span>
+                    </a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li class="active"><a href="#contact">Contact</a></li>
-                        <li><a href="login.html">Sign In</a></li>
-                        <li><a href="registration.html">Sign Up</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="views/features.html">Features</a></li>
+                        <li><a href="views/about.html">About</a></li>
+                        <li><a href="views/portfolio.html">Portfolio</a></li>
+                        <li><a href="views/faq.html">FAQ</a></li>
+                        <li><a href="views/contact.html">Contact</a></li>
+                        <li><a href="views/login.html">Sign In</a></li>
+                        <li><a href="views/registration.html">Sign Up</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -93,7 +97,7 @@
     <section id="contact-page">
         <div class="container">
             <div class="section-heading text-center">
-                <h2>Drop your <span>Message</span></h2>
+                <h2>Email <span>Us</span></h2>
                 <p class="subheading">Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset nam nostrud euismod volumus ne mei.</p>
             </div>
             <div class="row contact-wrap">
@@ -111,10 +115,6 @@
                         <div class="form-group">
                             <label>Phone</label>
                             <input type="number" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <label>Company Name</label>
-                            <input type="text" class="form-control">
                         </div>
                     </div>
                     <div class="col-sm-5">
@@ -141,36 +141,30 @@
                     <div class="row">
                         <div class="col-sm-5">
                             <div class="gmap">
-                                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=JoomShaper,+Dhaka,+Dhaka+Division,+Bangladesh&amp;aq=0&amp;oq=joomshaper&amp;sll=37.0625,-95.677068&amp;sspn=42.766543,80.332031&amp;ie=UTF8&amp;hq=JoomShaper,&amp;hnear=Dhaka,+Dhaka+Division,+Bangladesh&amp;ll=23.73854,90.385504&amp;spn=0.001515,0.002452&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=1073661719450182870&amp;output=embed"></iframe>
+                                <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;coord=37.9564399,-91.78486307581586&amp;q=1%20Fraternity%20Drive%2C%20Rolla%20MO%2C%2065401+(Beta%20Alpha%20of%20Kappa%20Alpha)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"></iframe>
                             </div>
                         </div>
                         <div class="col-sm-7 map-content">
                             <ul class="row">
                                 <li class="col-sm-6">
                                     <address>
-									<h5>Head Office</h5>
-									<p>Aspire Software Solutions <br>
-									202, Parishram Complex,<br>
-									Mithakhali Six Roads,<br>
-									Navrangpura, Ahmedabad,<br>
-									Gujarat, India. </p>
-										<p>Phone:+91 848 594 5080 <br>
-									Email Address:sales@aspiresoftware.in</p>
-								</address>
-
+                                        <h5>Missour S&T Chapter</h5>
+                                        <p>Beta Alpha of Kappa Alpha <br>
+                                            1 Fraternity Drive,<br>
+                                            Rolla, MO, 65401</p>
+                                        <p>Phone: (816) 863-4066<br>
+                                            Alumni Contact: Jim Hennessey<br>
+                                            Phone: (314) 378-8483</p>
+                                    </address>
                                 </li>
                                 <li class="col-sm-6">
                                     <address>
-									<h5>Zone#2 Office</h5>
-									<p>Aspire Software Solutions <br>
-									202, Parishram Complex,<br>
-									Mithakhali Six Roads,<br>
-									Navrangpura, Ahmedabad,<br>
-									Gujarat, India. </p>
-									<p>Phone:+91 848 594 5080 <br>
-									Email Address:sales@aspiresoftware.in</p>
-								</address>
-
+                                        <h5>National Office</h5>
+                                        <p>Kappa Alpha Order at Mulberry Hill<br>
+                                            115 Liberty Hall Road,<br>
+                                            Lexington, VA, 24450</p>
+                                        <p>Phone: (540) 463-1865</p>
+                                    </address>
                                 </li>
                             </ul>
                         </div>
@@ -185,7 +179,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
                         <h4>Address</h4>
-                        <hr/>
+                        <hr />
                         <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.
                         </p>
                         <a href="#" class="learnmore">Learn More <i class="fa fa-caret-right"></i></a>
@@ -195,7 +189,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
                         <h4>Useful Links</h4>
-                        <hr/>
+                        <hr />
                         <ul class="footer-links">
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Features</a></li>
@@ -210,7 +204,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
                         <h4>Community</h4>
-                        <hr/>
+                        <hr />
                         <ul class="footer-links">
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Forum</a></li>
@@ -222,7 +216,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 <block></block>">
                     <div class="footer-block">
                         <h4>Recent Posts</h4>
-                        <hr/>
+                        <hr />
                         <ul class="footer-links">
                             <li>
                                 <a href="#" class="post">Lorem ipsum dolor sit amet</a>
