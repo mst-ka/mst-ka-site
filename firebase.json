@@ -1,7 +1,6 @@
 {
   "hosting": {
     "public": "active",
-    // Prevents the .html portion of pages from being rendered
     "cleanUrls": true,
     "ignore": [
       "firebase.json",

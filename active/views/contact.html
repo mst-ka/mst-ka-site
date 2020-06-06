@@ -75,6 +75,7 @@
         </nav>
         <!--/.nav-ends -->
     </header>
+
     <section id="top_banner">
         <div class="banner">
             <div class="inner text-center">
@@ -98,17 +99,16 @@
         <div class="container">
             <div class="section-heading text-center">
                 <h2>Email <span>Us</span></h2>
-                <p class="subheading">Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset nam nostrud euismod volumus ne mei.</p>
             </div>
             <div class="row contact-wrap">
                 <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+                <form id="main-contact-form" class="contact-form" name="contact-form" method="post">
                     <div class="col-sm-5 col-sm-offset-1">
-                        <div class="form-group">
+                        <div id="nameForm" class="form-group">
                             <label>Name *</label>
                             <input type="text" name="name" class="form-control" required="required">
                         </div>
-                        <div class="form-group">
+                        <div id="emailForm" class="form-group">
                             <label>Email *</label>
                             <input type="email" name="email" class="form-control" required="required">
                         </div>
@@ -127,7 +127,7 @@
                             <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
                         </div>
                         <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-default submit-button">Submit Message <i class="fa fa-caret-right"></i></button>
+                            <button type="submit" name="submit" class="btn btn-default submit-button">Send Message <i class="fa fa-caret-right"></i></button>
                         </div>
                     </div>
                 </form>
@@ -271,6 +271,16 @@
         </div>
         <a class="open" href="#"><span><i class="fa fa-gear fa-spin"></i></span></a>
     </div>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase.js"></script>
+    <script src="script/firebase-init.js"></script>
+    <script src="script/contact.js"></script>
 </body>
 
 </html>
