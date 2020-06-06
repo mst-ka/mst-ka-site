@@ -1,3 +1,9 @@
+/***************************************************
+ * File: index.js
+ * Description: Server Side listener for firebase
+ *              database updates.
+ **************************************************/
+
 'use strict';
 
 const functions = require('firebase-functions');
