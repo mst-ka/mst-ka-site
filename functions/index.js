@@ -13,8 +13,7 @@ const nodemailer = require('nodemailer');
 admin.initializeApp();
 
 const gmailUser = functions.config().gmail.login;
-const gmailPass = functions.config().gmail.pass;
-
+const gmailPass = functions.config().gmail.pass; 
 const contactEmails = ['Joe Studer <joe.studer.18@gmail.com>'];
 
 var email = function(message) {
@@ -47,6 +46,37 @@ exports.onDataAdded = functions.database.ref('/messages/{sessionId}').onCreate(f
     //here we catch a new data, added to firebase database, it stored in a snap variable
     const createdData = snap.val();
     var text = createdData;
+
+    //here we send new data using function for sending emails
+    email(text);
+});
+
+exports.onDataAdded = functions.database.ref('/applications/{sessionId}').onCreate(function (snap, context) {
+    //here we catch a new data, added to firebase database, it stored in a snap variable
+    const createdData = snap.val();
+    var text = createdData;
+    text.subject = "BAofKA Membership Application";
+    text.message = "Name: " + text.name + "<br/><br/>" +
+                   "Email: " + text.mail + "<br/><br/>" +
+                   "Age: " + text.age + "<br/><br/>" +
+                   "Address: " + text.addr + "<br/><br/>" +
+                   "City: " + text.city + "<br/><br/>" +
+                   "State: " + text.state + "<br/><br/>" +
+                   "Zip: " + text.zip + "<br/><br/>" +
+                   "Phone: " + text.phone + "<br/><br/>" +
+                   "High School: " + text.school + "<br/><br/>" +
+                   "Religion: " + text.religion + "<br/><br/>" +
+                   "GPA: " + text.gpa + "<br/><br/>" +
+                   "Class Rank: " + text.rank + "<br/><br/>" +
+                   "ACT/SAT: " + text.tests + "<br/><br/>" +
+                   "Honors and Awards: " + text.honors + "<br/><br/>" +
+                   "What are your goals for your first year of college: " + text.goals + "<br/><br/>" +
+                   "Who have you been in contact with at KA: " + text.contact + "<br/><br/>" +
+                   "Why are you considering KA: " + text.why + "<br/><br/>" +
+                   "What do you like about our Chapter: " + text.likes + "<br/><br/>" +
+                   "How would you define a gentleman: " + text.gentleman + "<br/><br/>" +
+                   "High School Activities: " + text.activities;
+
 
     //here we send new data using function for sending emails
     email(text);
