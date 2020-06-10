@@ -107,8 +107,7 @@ body.cyan .btn-default:hover {
 	border-color: #138892;
 }
 body.cyan .btn-default:active, body.cyan .btn-default.active, .open > body.cyan .btn-default.dropdown-toggle {
-	/* color: #fff; */
-	color: #111111;
+	color: #fff;
 	background-color: #14909b;
 	border-color: #138892;
 }
