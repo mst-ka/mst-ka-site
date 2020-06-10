@@ -6,7 +6,7 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
     padding: 50px 0px;
 }
 .about-section-heading{
-    color: #333333;
+    color: #333333; /*Dark Grey*/
     text-transform: uppercase;
 }
 .bullets li {
