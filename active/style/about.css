@@ -2,6 +2,13 @@
     display: inline;
     margin: 0px 30px 0px 0px;
 }
-body #greek-life{
+body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers, #parents-faq{
     padding: 50px 0px;
+}
+.about-section-heading{
+    color: #333333;
+    text-transform: uppercase;
+}
+.bullets li {
+    list-style-type: circle;
 }
