@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 
+<base href="../" />
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>About</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../style/main.css">
-    <link rel="stylesheet" href="../style/skin.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/skin.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -16,7 +18,7 @@
 
 </head>
 
-<body id="wrapper">
+<body id="wrapper" class="red">
 
     <section id="top-header">
         <div class="container">
@@ -47,24 +49,25 @@
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			  </button>
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
                     <a class="navbar-brand" href="#">
-                        <h1>Aspire</h1><span>Software Solutions</span></a>
+                        <h1>Aspire</h1><span>Software Solutions</span>
+                    </a>
                 </div>
                 <div id="navbar" class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="features.html">Features</a></li>
-                        <li class="active"><a href="#about">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="login.html">Sign In</a></li>
-                        <li><a href="registration.html">Sign Up</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="views/features.html">Features</a></li>
+                        <li><a href="views/about.html">About</a></li>
+                        <li><a href="views/portfolio.html">Portfolio</a></li>
+                        <li><a href="views/faq.html">FAQ</a></li>
+                        <li><a href="views/contact.html">Contact</a></li>
+                        <li><a href="views/login.html">Sign In</a></li>
+                        <li><a href="views/registration.html">Sign Up</a></li>
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
@@ -84,7 +87,7 @@
                     <div class="col-md-8 col-sm-8 col-xs-6">
                         <h4>About</h4>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-xs-6" style="text-align:right;">Home<span class="sep"> 	/ </span><span class="current"> About</span></div>
+                    <div class="col-md-4 col-sm-4 col-xs-6" style="text-align:right;">Home<span class="sep"> / </span><span class="current"> About</span></div>
                 </div>
             </div>
         </div>
@@ -136,10 +139,10 @@
                             <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
                                 <div class="progress color progress-bar-1">
                                     <span class="progress-left">
-                    <span class="progress-bar"></span>
+                                        <span class="progress-bar"></span>
                                     </span>
                                     <span class="progress-right">
-                    <span class="progress-bar"></span>
+                                        <span class="progress-bar"></span>
                                     </span>
                                     <div class="progress-value">90%</div>
 
@@ -152,10 +155,10 @@
                             <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
                                 <div class="progress color progress-bar-2">
                                     <span class="progress-left">
-                    <span class="progress-bar"></span>
+                                        <span class="progress-bar"></span>
                                     </span>
                                     <span class="progress-right">
-                    <span class="progress-bar"></span>
+                                        <span class="progress-bar"></span>
                                     </span>
                                     <div class="progress-value">75%</div>
                                 </div>
@@ -166,10 +169,10 @@
                             <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
                                 <div class="progress color progress-bar-3">
                                     <span class="progress-left">
-                    <span class="progress-bar"></span>
+                                        <span class="progress-bar"></span>
                                     </span>
                                     <span class="progress-right">
-                    <span class="progress-bar"></span>
+                                        <span class="progress-bar"></span>
                                     </span>
                                     <div class="progress-value">60%</div>
                                 </div>
@@ -181,10 +184,10 @@
                             <div class="col-md-3 col-sm-6 col-xs-6 block mybox">
                                 <div class="progress color progress-bar-4">
                                     <span class="progress-left">
-                    <span class="progress-bar"></span>
+                                        <span class="progress-bar"></span>
                                     </span>
                                     <span class="progress-right">
-                    <span class="progress-bar"></span>
+                                        <span class="progress-bar"></span>
                                     </span>
                                     <div class="progress-value">80%</div>
                                 </div>
@@ -215,8 +218,8 @@
                                             <div class="qodef-circle-animate"></div>
                                             <div class="our-team-position-icon">
                                                 <span class="qodef-icon-shortcode circle">
-        			<i class="qodef-icon-simple-line-icon qodef-icon-element fa fa-cog"></i>
-            </span>
+                                                    <i class="qodef-icon-simple-line-icon qodef-icon-element fa fa-cog"></i>
+                                                </span>
                                             </div>
                                             <h6 class="q_team_position">Developer</h6>
                                         </div>
@@ -245,8 +248,8 @@
                                             <div class="qodef-circle-animate"></div>
                                             <div class="our-team-position-icon">
                                                 <span class="qodef-icon-shortcode circle">
-        				<i class="qodef-icon-simple-line-icon fa fa-pencil qodef-icon-element"></i>
-    					</span>
+                                                    <i class="qodef-icon-simple-line-icon fa fa-pencil qodef-icon-element"></i>
+                                                </span>
                                             </div>
                                             <h6 class="q_team_position">Graphic Designer</h6>
                                         </div>
@@ -274,9 +277,9 @@
                                             <img src="img/team-4.jpg" />
                                             <div class="qodef-circle-animate"></div>
                                             <div class="our-team-position-icon">
-                                                <span class="qodef-icon-shortcode circle">        
-        					<i class="qodef-icon-simple-line-icon fa fa-hashtag qodef-icon-element"></i>
-            		</span>
+                                                <span class="qodef-icon-shortcode circle">
+                                                    <i class="qodef-icon-simple-line-icon fa fa-hashtag qodef-icon-element"></i>
+                                                </span>
                                             </div>
                                             <h6 class="q_team_position">Accountant</h6>
                                         </div>
@@ -305,8 +308,8 @@
                                             <div class="qodef-circle-animate"></div>
                                             <div class="our-team-position-icon">
                                                 <span class="qodef-icon-shortcode circle ">
-						        <i class="qodef-icon-simple-line-icon fa fa-wrench qodef-icon-element" ></i>
-			            </span>
+                                                    <i class="qodef-icon-simple-line-icon fa fa-wrench qodef-icon-element"></i>
+                                                </span>
                                             </div>
                                             <h6 class="q_team_position">Engineer</h6>
                                         </div>
@@ -338,7 +341,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
                         <h4>Address</h4>
-                        <hr/>
+                        <hr />
                         <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum.
                         </p>
                         <a href="#" class="learnmore">Learn More <i class="fa fa-caret-right"></i></a>
@@ -348,7 +351,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
                         <h4>Useful Links</h4>
-                        <hr/>
+                        <hr />
                         <ul class="footer-links">
                             <li><a href="#">About Us</a></li>
                             <li><a href="#">Features</a></li>
@@ -363,7 +366,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
                         <h4>Community</h4>
-                        <hr/>
+                        <hr />
                         <ul class="footer-links">
                             <li><a href="#">Blog</a></li>
                             <li><a href="#">Forum</a></li>
@@ -375,7 +378,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 <block></block>">
                     <div class="footer-block">
                         <h4>Recent Posts</h4>
-                        <hr/>
+                        <hr />
                         <ul class="footer-links">
                             <li>
                                 <a href="#" class="post">Lorem ipsum dolor sit amet</a>
