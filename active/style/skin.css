@@ -10,9 +10,6 @@
 body.red span {
 	color: var(--primary);
 }
-body.red .slide:hover, body.red .slide:focus {
-	box-shadow: inset 15.5em 0 0 0 var(--primary);
-}
 body.red .btn-primary:focus, body.red .btn-primary.focus {
 	color: #fff;
 	background-color: var(--primary);
@@ -302,17 +299,16 @@ body.red .section-heading span {
 }
 body.red .navbar-inverse .navbar-nav > li > a:hover, body.red .navbar-inverse .navbar-nav > li > a:focus {
 	color: var(--secondary);
-	background-color: transparent;
 	border-bottom-width: 5px;
 	border-bottom-style: solid;
 	border-bottom-color: var(--secondary);
 }
 body.red .navbar-inverse .navbar-nav > .active > a, body.red .navbar-inverse .navbar-nav > .active > a:hover, body.red .navbar-inverse .navbar-nav > .active > a:focus {
-	color: var(--secondary);
-	background-color: transparent;
+	color: var(--primary);
+  background-color: #fff;
 	border-bottom-width: 5px;
 	border-bottom-style: solid;
-	border-bottom-color: var(--secondary);
+	border-bottom-color: var(--primary);
 }
 body.red #myCarousel .carousel-indicators .active {
 	background-color: var(--primary);
