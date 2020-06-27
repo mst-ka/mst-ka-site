@@ -7827,3 +7827,31 @@ body #login-reg .btn-link-1 {
 	margin: 5px 0px;
 }
 }
+
+.footer-brand {
+	display: flex;
+	align-items: center;
+}
+
+.footer-brand img {
+	width: 80px;
+	height: auto;
+	box-sizing: border-box;
+}
+
+.footer-brand h1 {
+	font-size: 22px;
+	word-spacing: 100000px;
+	padding: 20px;
+}
+
+.footer-brand span {
+	font-size: 14px;
+	word-spacing: .25em;
+}
+
+.social-footer li {
+	float: left;
+	margin: 0 15px 0 0;
+	font-size: 22px;
+}
