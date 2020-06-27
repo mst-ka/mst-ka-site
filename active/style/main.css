@@ -7843,6 +7843,7 @@ body #login-reg .btn-link-1 {
 	position: fixed;
 	right: 1em;
 	bottom: 1em;
+	z-index: 999;
 }
 
 .applyText {
