@@ -7828,6 +7828,34 @@ body #login-reg .btn-link-1 {
 }
 }
 
+.applyButton {
+	width: 6.5em;
+	height: 2em;
+	background-color: #BE2F37;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	border-radius: .4em;
+	color: #C10709;
+	font-size: 2em;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.25);
+	position: fixed;
+	right: 1em;
+	bottom: 1em;
+	z-index: 999;
+}
+
+.applyText {
+	color: #ffffff;
+}
+
+@media (max-width: 767px) {
+	.applyButton {
+		display: none;
+  }
+}
+
 .footer-brand {
 	display: flex;
 	align-items: center;
