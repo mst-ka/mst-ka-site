@@ -5867,6 +5867,13 @@ body .section-heading p.subheading, body #features p.subheading, body #about p.s
 	font-size: 16px;
 	line-height: 30px;
 }
+#testimonial p.subheading {
+  background: var(--primary);
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 40px -10px rgba(69,69,69,0.53);
+  -moz-box-shadow: 10px 10px 40px -10px rgba(69,69,69,0.53);
+  box-shadow: 10px 10px 40px -10px rgba(69,69,69,0.53);
+}
 @media screen and (max-width: 480px) {
 body .section-heading h1, body #features h1, body #about h1, body #process h1, body #testimonial h1, body #about-page-section-3 h1, body #skills h1, body #team-member h1, body #top_banner h1, body #portfolio h1, body #faq h1, body #contact h1, body #contact-page h1, body #features-page .subsection1 h1, body #features-page .subsection2 h1, body #features-page .subsection3 .right-section h1, body #features-page .subsection3 .left-section h1, body #features-page .subsection4 h1, body #login-reg h1, body .section-heading .h1, body #features .h1, body #about .h1, body #process .h1, body #testimonial .h1, body #about-page-section-3 .h1, body #skills .h1, body #team-member .h1, body #top_banner .h1, body #portfolio .h1, body #faq .h1, body #contact .h1, body #contact-page .h1, body #features-page .subsection1 .h1, body #features-page .subsection2 .h1, body #features-page .subsection3 .right-section .h1, body #features-page .subsection3 .left-section .h1, body #features-page .subsection4 .h1, body #login-reg .h1 {
 	font-size: 32px;
