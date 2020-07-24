@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/skin.css">
+    <link rel="stylesheet" href="style/index.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -80,10 +81,14 @@
                 <div class="carousel-caption slide-up">
                     <!-- TODO(jstuder) Style this in the top right corner -->
                     <h1 class="banner_heading">Kappa Alpha Order</h1>
-                    <p class="banner_txt">Beta Alpha Chapter</p>
+                    <h2 class="banner_txt"><span>Beta Alpha Chapter</span></h2>
                     <div class="slider_btn">
-                        <button type="button" class="btn btn-default slide">Learn More <i class="fa fa-caret-right"></i></button>
-                        <button type="button" class="btn btn-primary slide">Learn More <i class="fa fa-caret-right"></i></button>
+                      <a href="views/about.html">
+                        <button type="button" class="btn btn-default slide">About Us <i class="fa fa-caret-right"></i></button>
+                      </a>
+                      <a href="views/contact.html">
+                        <button type="button" class="btn btn-primary slide">Apply Online <i class="fa fa-caret-right"></i></button>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -92,13 +97,16 @@
                 <div class="fill" style="background-image:url('img/banner-slide-2.jpg');"></div>
                 <div class="carousel-caption slide-up">
                     <h1 class="banner_heading">Kappa Alpha Order</h1>
-                    <p class="banner_txt">Missouri S&amp;T Average GPA: X.XX<br>
-                        Kappa Alpha GPA: 4.43<br>
-                        <span>Academics Matter</br>
+                    <p class="banner_txt">Missouri S&amp;T Average GPA: 3.57<br>
+                        <b>Kappa Alpha GPA: 3.69</b><br>
                     </p>
                     <div class="slider_btn">
-                        <button type="button" class="btn btn-default slide">Learn More <i class="fa fa-caret-right"></i></button>
-                        <button type="button" class="btn btn-primary slide">Learn More <i class="fa fa-caret-right"></i></button>
+                      <a href="views/awardtab/scholarships.html">
+                        <button type="button" class="btn btn-default slide">Academics Matter <i class="fa fa-caret-right"></i></button>
+                      </a>
+                      <a href="views/contact.html">
+                        <button type="button" class="btn btn-primary slide">Apply Online <i class="fa fa-caret-right"></i></button>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -108,11 +116,15 @@
                 <div class="carousel-caption slide-up">
                     <h1 class="banner_heading">Kappa Alpha Order</h1>
                     <p class="banner_txt">From joining a band, to creating a
-                        design team. You're not joing another organization, you're
-                        joining a brotherhood.</p>
+                        design team. You're not joing another organization, <span>you're
+                            joining a brotherhood.</span></p>
                     <div class="slider_btn">
-                        <button type="button" class="btn btn-default slide">Learn More <i class="fa fa-caret-right"></i></button>
-                        <button type="button" class="btn btn-primary slide">Learn More <i class="fa fa-caret-right"></i></button>
+                      <a href="views/valuetab/brotherhood.html">
+                        <button type="button" class="btn btn-default slide">Our Brotherhood <i class="fa fa-caret-right"></i></button>
+                      </a>
+                      <a href="views/contact.html">
+                        <button type="button" class="btn btn-primary slide">Apply Online <i class="fa fa-caret-right"></i></button>
+                      </a>
                     </div>
                 </div>
             </div>
@@ -129,7 +141,7 @@
 
     </div>
 
-    <section id="features">
+    <section id="values">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-xs-12 block">
@@ -139,7 +151,7 @@
                         <img src="img/gentility.png" alt="logo" class="img-responsive" />
                         <h4>Gentility</h4>
                         <p>The men of Kappa Alpha Order are known as the gentlemen of the fraternity world. A KA, through his gentility, should always be distinguished by his modern chivalric characteristics.</p>
-                        <a href="#" class="readmore">Read More <i class="fa fa-caret-right"></i></a>
+                        <a href="views/values.html" class="readmore">Read More <i class="fa fa-caret-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-xs-12 block">
@@ -147,7 +159,7 @@
                         <img src="img/service.png" alt="logo" class="img-responsive" />
                         <h4>Service</h4>
                         <p>At the heart of the code of chivalry and the fabric of KA is service to those in need. KAs serve hrough community service, volunteerism and commitment to philanthropy.</p>
-                        <a href="#" class="readmore">Read More <i class="fa fa-caret-right"></i></a>
+                        <a href="views/values.html" class="readmore">Read More <i class="fa fa-caret-right"></i></a>
                     </div>
                 </div>
                 <div class="col-md-4 col-xs-12 block">
@@ -155,7 +167,7 @@
                     <div class="col-md-10 col-xs-10">
                         <h4>Excellence</h4>
                         <p>“Onward” is ever our stance despite the danger and difficulty that life often brings. KAs understand that anything in life worth attaining will take hard work, dedication, and determination.</p>
-                        <a href="#" class="readmore">Read More <i class="fa fa-caret-right"></i></a>
+                        <a href="views/values.html" class="readmore">Read More <i class="fa fa-caret-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -186,152 +198,45 @@
                 </div>
                 <ul class="aboutul">
                     <li> <i class="fa fa-check"></i>
-                        Academics: Our focus on academics consistently ranks us
+                        <span>Academics:</span> Our focus on academics consistently ranks us
                         among the top fraternity GPAs on campus.
                     </li>
                     <li> <i class="fa fa-check"></i>
-                        Brotherhood:
+                        <span>Brotherhood:</span> Whether it's relaxing in the den after
+                        a rough day in class or studying together in a suite,
+                        the support network our member's build is always there.
                     </li>
                     <li> <i class="fa fa-check"></i>
-                        Leadership:
+                        <span>Involvement:</span> Members of our chapter are involved in over 50
+                        different campus organizations and design teams.
                     </li>
                     <li> <i class="fa fa-check"></i>
-                        Involvement:
+                        <span>Networking:</span> Our alumni are employed across the nation
+                        at companies like Boeing, Google, Microsoft, Intel, and Honeywell.
                     </li>
                 </ul>
                 <button type="button" class="btn btn-primary slide">
-                    Learn More <i class="fa fa-caret-right"></i>
+                    <a href="views/about.html">
+                        Learn More </a><i class="fa fa-caret-right"></i>
                 </button>
             </div>
         </div>
     </section>
 
-    <section id="process">
+    <section id="whoweare">
         <div class="container">
             <div class="section-heading text-center">
                 <div class="col-md-12 col-xs-12">
-                    <h1>What <span>We Do</span></h1>
-                    <p class="subheading">Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset nam nostrud euismod volumus ne mei.</p>
+                    <h1>Who <span>We Are</span></h1>
+                    <p class="subheading">We teach our members to be leaders among men, on campus, in their communities, and throughout life. Through bravery and self-reliance, KAs strive to lead their lives with honor, and when given the opportunity, to lead others with humility, integrity, and justice.</p>
                 </div>
             </div>
-
-            <div class="row">
-                <div class="col-md-3 col-sm-6 block process-block">
-                    <div class="process-icon-holder">
-                        <div class="process-border">
-                            <span class="process-icon"><a href="#"><i class="fa fa-lightbulb-o feature_icon"></i></a></span></div>
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <div class="process-text-block">
-                        <h4><a href="#">Idea</a></h4>
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 block process-block">
-                    <div class="process-icon-holder">
-                        <div class="process-border">
-                            <span class="process-icon"><a href="#"><i class="fa fa-cloud-download feature_icon"></i></a></span></div>
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <div class="process-text-block">
-                        <h4><a href="#">Concept</a></h4>
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 block process-block">
-                    <div class="process-icon-holder">
-                        <div class="process-border">
-                            <span class="process-icon"><a href="#"><i class="fa fa-magic feature_icon"></i></a></span></div>
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <div class="process-text-block">
-                        <h4><a href="#">Design</a></h4>
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum</p>
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 block process-block lastchild">
-                    <div class="process-icon-holder">
-                        <div class="process-border">
-                            <span class="process-icon"><a href="#"><i class="fa fa-cog feature_icon"></i></a></span></div>
-                        <div class="clearfix"></div>
-                    </div>
-
-                    <div class="process-text-block">
-                        <h4><a href="#">Develop</a></h4>
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <section id="testimonial">
-        <div class="container">
-            <div class="section-heading text-center">
-                <div class="col-md-12 col-xs-12">
-                    <h1>What Our <span>Client Says</span></h1>
-                    <p class="subheading">Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset nam nostrud euismod volumus ne mei.</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-4 col-sm-12 block ">
-                    <div class="testimonial_box">
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset. </p>
-                    </div>
-                    <div class="arrow-down"></div>
-                    <div class="testimonial_user">
-                        <div class="user-image"><img src="img/user1.png" alt="user" class="img-responsive" /></div>
-                        <div class="user-info">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Manager</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4 col-sm-12 block">
-                    <div class="testimonial_box">
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset. </p>
-                    </div>
-                    <div class="arrow-down"></div>
-                    <div class="testimonial_user">
-                        <div class="user-image"><img src="img/user1.png" alt="user" class="img-responsive" /></div>
-                        <div class="user-info">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Manager</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-sm-12 block">
-                    <div class="testimonial_box">
-                        <p>Lorem ipsum dolor sit amet sit legimus copiosae instructior ei ut vix denique fierentis ea saperet inimicu ut qui dolor oratio mnesarchum ea utamur impetus fuisset. </p>
-                    </div>
-                    <div class="arrow-down"></div>
-                    <div class="testimonial_user">
-                        <div class="user-image"><img src="img/user1.png" alt="user" class="img-responsive" /></div>
-                        <div class="user-info">
-                            <h5>Lorem Ipsum</h5>
-                            <p>Manager</p>
-                        </div>
-                    </div>
-                </div>
-
-
+            <div id="instafeed" class="insta"></div>
+            <script src="script/instafeed.js"></script>
             </div>
         </div>
 
     </section>
-
-
-
-
 
     <section id="footer">
         <div class="container">
