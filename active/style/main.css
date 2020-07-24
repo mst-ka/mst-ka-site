@@ -5822,73 +5822,80 @@ body .navbar-brand {
 	padding: 15px 15px;
 }
 }
-body .heading, body .section-heading h1, body #features h1, body #about h1, body #process h1, body #testimonial h1, body #about-page-section-3 h1, body #skills h1, body #team-member h1, body #top_banner h1, body #portfolio h1, body #faq h1, body #contact h1, body #contact-page h1, body #features-page .subsection1 h1, body #features-page .subsection2 h1, body #features-page .subsection3 .right-section h1, body #features-page .subsection3 .left-section h1, body #features-page .subsection4 h1, body #login-reg h1, body .section-heading .h1, body #features .h1, body #about .h1, body #process .h1, body #testimonial .h1, body #about-page-section-3 .h1, body #skills .h1, body #team-member .h1, body #top_banner .h1, body #portfolio .h1, body #faq .h1, body #contact .h1, body #contact-page .h1, body #features-page .subsection1 .h1, body #features-page .subsection2 .h1, body #features-page .subsection3 .right-section .h1, body #features-page .subsection3 .left-section .h1, body #features-page .subsection4 .h1, body #login-reg .h1, body .section-heading h2, body #features h2, body #about h2, body #process h2, body #testimonial h2, body #about-page-section-3 h2, body #skills h2, body #team-member h2, body #top_banner h2, body #portfolio h2, body #faq h2, body #contact h2, body #contact-page h2, body #features-page .subsection1 h2, body #features-page .subsection2 h2, body #features-page .subsection3 .right-section h2, body #features-page .subsection3 .left-section h2, body #features-page .subsection4 h2, body #login-reg h2, body .section-heading .h2, body #features .h2, body #about .h2, body #process .h2, body #testimonial .h2, body #about-page-section-3 .h2, body #skills .h2, body #team-member .h2, body #top_banner .h2, body #portfolio .h2, body #faq .h2, body #contact .h2, body #contact-page .h2, body #features-page .subsection1 .h2, body #features-page .subsection2 .h2, body #features-page .subsection3 .right-section .h2, body #features-page .subsection3 .left-section .h2, body #features-page .subsection4 .h2, body #login-reg .h2, body .section-heading h3, body #features h3, body #about h3, body #process h3, body #testimonial h3, body #about-page-section-3 h3, body #skills h3, body #team-member h3, body #top_banner h3, body #portfolio h3, body #faq h3, body #contact h3, body #contact-page h3, body #features-page .subsection1 h3, body #features-page .subsection2 h3, body #features-page .subsection3 .right-section h3, body #features-page .subsection3 .left-section h3, body #features-page .subsection4 h3, body #login-reg h3, body .section-heading .h3, body #features .h3, body #about .h3, body #process .h3, body #testimonial .h3, body #about-page-section-3 .h3, body #skills .h3, body #team-member .h3, body #top_banner .h3, body #portfolio .h3, body #faq .h3, body #contact .h3, body #contact-page .h3, body #features-page .subsection1 .h3, body #features-page .subsection2 .h3, body #features-page .subsection3 .right-section .h3, body #features-page .subsection3 .left-section .h3, body #features-page .subsection4 .h3, body #login-reg .h3, body .section-heading h4, body #features h4, body #about h4, body #process h4, body #testimonial h4, body #about-page-section-3 h4, body #skills h4, body #team-member h4, body #top_banner h4, body #portfolio h4, body #faq h4, body #contact h4, body #contact-page h4, body #features-page .subsection1 h4, body #features-page .subsection2 h4, body #features-page .subsection3 .right-section h4, body #features-page .subsection3 .left-section h4, body #features-page .subsection4 h4, body #login-reg h4, body .section-heading .h4, body #features .h4, body #about .h4, body #process .h4, body #testimonial .h4, body #about-page-section-3 .h4, body #skills .h4, body #team-member .h4, body #top_banner .h4, body #portfolio .h4, body #faq .h4, body #contact .h4, body #contact-page .h4, body #features-page .subsection1 .h4, body #features-page .subsection2 .h4, body #features-page .subsection3 .right-section .h4, body #features-page .subsection3 .left-section .h4, body #features-page .subsection4 .h4, body #login-reg .h4, body .section-heading h5, body #features h5, body #about h5, body #process h5, body #testimonial h5, body #about-page-section-3 h5, body #skills h5, body #team-member h5, body #top_banner h5, body #portfolio h5, body #faq h5, body #contact h5, body #contact-page h5, body #features-page .subsection1 h5, body #features-page .subsection2 h5, body #features-page .subsection3 .right-section h5, body #features-page .subsection3 .left-section h5, body #features-page .subsection4 h5, body #login-reg h5, body .section-heading .h5, body #features .h5, body #about .h5, body #process .h5, body #testimonial .h5, body #about-page-section-3 .h5, body #skills .h5, body #team-member .h5, body #top_banner .h5, body #portfolio .h5, body #faq .h5, body #contact .h5, body #contact-page .h5, body #features-page .subsection1 .h5, body #features-page .subsection2 .h5, body #features-page .subsection3 .right-section .h5, body #features-page .subsection3 .left-section .h5, body #features-page .subsection4 .h5, body #login-reg .h5, body .section-heading h6, body #features h6, body #about h6, body #process h6, body #testimonial h6, body #about-page-section-3 h6, body #skills h6, body #team-member h6, body #top_banner h6, body #portfolio h6, body #faq h6, body #contact h6, body #contact-page h6, body #features-page .subsection1 h6, body #features-page .subsection2 h6, body #features-page .subsection3 .right-section h6, body #features-page .subsection3 .left-section h6, body #features-page .subsection4 h6, body #login-reg h6, body .section-heading .h6, body #features .h6, body #about .h6, body #process .h6, body #testimonial .h6, body #about-page-section-3 .h6, body #skills .h6, body #team-member .h6, body #top_banner .h6, body #portfolio .h6, body #faq .h6, body #contact .h6, body #contact-page .h6, body #features-page .subsection1 .h6, body #features-page .subsection2 .h6, body #features-page .subsection3 .right-section .h6, body #features-page .subsection3 .left-section .h6, body #features-page .subsection4 .h6, body #login-reg .h6, body #about .about-list h3, body #about .about-list .h3 {
+body .heading, body .section-heading h1, body #values h1, body #about h1, body #process h1, body #whoweare h1, body #about-page-section-3 h1, body #skills h1, body #team-member h1, body #top_banner h1, body #portfolio h1, body #faq h1, body #contact h1, body #contact-page h1, body #features-page .subsection1 h1, body #features-page .subsection2 h1, body #features-page .subsection3 .right-section h1, body #features-page .subsection3 .left-section h1, body #features-page .subsection4 h1, body #login-reg h1, body .section-heading .h1, body #features .h1, body #about .h1, body #process .h1, body #testimonial .h1, body #about-page-section-3 .h1, body #skills .h1, body #team-member .h1, body #top_banner .h1, body #portfolio .h1, body #faq .h1, body #contact .h1, body #contact-page .h1, body #features-page .subsection1 .h1, body #features-page .subsection2 .h1, body #features-page .subsection3 .right-section .h1, body #features-page .subsection3 .left-section .h1, body #features-page .subsection4 .h1, body #login-reg .h1, body .section-heading h2, body #features h2, body #about h2, body #process h2, body #testimonial h2, body #about-page-section-3 h2, body #skills h2, body #team-member h2, body #top_banner h2, body #portfolio h2, body #faq h2, body #contact h2, body #contact-page h2, body #features-page .subsection1 h2, body #features-page .subsection2 h2, body #features-page .subsection3 .right-section h2, body #features-page .subsection3 .left-section h2, body #features-page .subsection4 h2, body #login-reg h2, body .section-heading .h2, body #features .h2, body #about .h2, body #process .h2, body #testimonial .h2, body #about-page-section-3 .h2, body #skills .h2, body #team-member .h2, body #top_banner .h2, body #portfolio .h2, body #faq .h2, body #contact .h2, body #contact-page .h2, body #features-page .subsection1 .h2, body #features-page .subsection2 .h2, body #features-page .subsection3 .right-section .h2, body #features-page .subsection3 .left-section .h2, body #features-page .subsection4 .h2, body #login-reg .h2, body .section-heading h3, body #features h3, body #about h3, body #process h3, body #testimonial h3, body #about-page-section-3 h3, body #skills h3, body #team-member h3, body #top_banner h3, body #portfolio h3, body #faq h3, body #contact h3, body #contact-page h3, body #features-page .subsection1 h3, body #features-page .subsection2 h3, body #features-page .subsection3 .right-section h3, body #features-page .subsection3 .left-section h3, body #features-page .subsection4 h3, body #login-reg h3, body .section-heading .h3, body #features .h3, body #about .h3, body #process .h3, body #testimonial .h3, body #about-page-section-3 .h3, body #skills .h3, body #team-member .h3, body #top_banner .h3, body #portfolio .h3, body #faq .h3, body #contact .h3, body #contact-page .h3, body #features-page .subsection1 .h3, body #features-page .subsection2 .h3, body #features-page .subsection3 .right-section .h3, body #features-page .subsection3 .left-section .h3, body #features-page .subsection4 .h3, body #login-reg .h3, body .section-heading h4, body #features h4, body #about h4, body #process h4, body #testimonial h4, body #about-page-section-3 h4, body #skills h4, body #team-member h4, body #top_banner h4, body #portfolio h4, body #faq h4, body #contact h4, body #contact-page h4, body #features-page .subsection1 h4, body #features-page .subsection2 h4, body #features-page .subsection3 .right-section h4, body #features-page .subsection3 .left-section h4, body #features-page .subsection4 h4, body #login-reg h4, body .section-heading .h4, body #features .h4, body #about .h4, body #process .h4, body #testimonial .h4, body #about-page-section-3 .h4, body #skills .h4, body #team-member .h4, body #top_banner .h4, body #portfolio .h4, body #faq .h4, body #contact .h4, body #contact-page .h4, body #features-page .subsection1 .h4, body #features-page .subsection2 .h4, body #features-page .subsection3 .right-section .h4, body #features-page .subsection3 .left-section .h4, body #features-page .subsection4 .h4, body #login-reg .h4, body .section-heading h5, body #features h5, body #about h5, body #process h5, body #testimonial h5, body #about-page-section-3 h5, body #skills h5, body #team-member h5, body #top_banner h5, body #portfolio h5, body #faq h5, body #contact h5, body #contact-page h5, body #features-page .subsection1 h5, body #features-page .subsection2 h5, body #features-page .subsection3 .right-section h5, body #features-page .subsection3 .left-section h5, body #features-page .subsection4 h5, body #login-reg h5, body .section-heading .h5, body #features .h5, body #about .h5, body #process .h5, body #testimonial .h5, body #about-page-section-3 .h5, body #skills .h5, body #team-member .h5, body #top_banner .h5, body #portfolio .h5, body #faq .h5, body #contact .h5, body #contact-page .h5, body #features-page .subsection1 .h5, body #features-page .subsection2 .h5, body #features-page .subsection3 .right-section .h5, body #features-page .subsection3 .left-section .h5, body #features-page .subsection4 .h5, body #login-reg .h5, body .section-heading h6, body #features h6, body #about h6, body #process h6, body #testimonial h6, body #about-page-section-3 h6, body #skills h6, body #team-member h6, body #top_banner h6, body #portfolio h6, body #faq h6, body #contact h6, body #contact-page h6, body #features-page .subsection1 h6, body #features-page .subsection2 h6, body #features-page .subsection3 .right-section h6, body #features-page .subsection3 .left-section h6, body #features-page .subsection4 h6, body #login-reg h6, body .section-heading .h6, body #features .h6, body #about .h6, body #process .h6, body #testimonial .h6, body #about-page-section-3 .h6, body #skills .h6, body #team-member .h6, body #top_banner .h6, body #portfolio .h6, body #faq .h6, body #contact .h6, body #contact-page .h6, body #features-page .subsection1 .h6, body #features-page .subsection2 .h6, body #features-page .subsection3 .right-section .h6, body #features-page .subsection3 .left-section .h6, body #features-page .subsection4 .h6, body #login-reg .h6, body #about .about-list h3, body #about .about-list .h3 {
 	color: #333333;
 	text-transform: uppercase;
 }
-body .footer_heading, body #testimonial .testimonial_user .user-info h5, body #testimonial .testimonial_user .user-info .h5, body #footer .footer-block h4, body #footer .footer-block .h4 {
+body .footer_heading, body #whoweare .testimonial_user .user-info h5, body #testimonial .testimonial_user .user-info .h5, body #footer .footer-block h4, body #footer .footer-block .h4 {
 	color: #fff;
 }
 body .nopadding {
 	padding-left: 0px;
 	padding-right: 0px;
 }
-body .section-block, body #features, body #process, body #testimonial, body #footer, body #about-page-section-3, body #skills, body #team-member, body #portfolio, body #faq, body #contact, body #contact-page, body #features-page .subsection1, body #features-page .subsection2, body #features-page .subsection3 .right-section, body #features-page .subsection3 .left-section, body #features-page .subsection4, body #login-reg {
+body .section-block, body #values, body #process, body #whoweare, body #footer, body #about-page-section-3, body #skills, body #team-member, body #portfolio, body #faq, body #contact, body #contact-page, body #features-page .subsection1, body #features-page .subsection2, body #features-page .subsection3 .right-section, body #features-page .subsection3 .left-section, body #features-page .subsection4, body #login-reg {
 	padding: 50px 0px;
 	display: block;
 }
-body .section-heading h1, body #features h1, body #about h1, body #process h1, body #testimonial h1, body #about-page-section-3 h1, body #skills h1, body #team-member h1, body #top_banner h1, body #portfolio h1, body #faq h1, body #contact h1, body #contact-page h1, body #features-page .subsection1 h1, body #features-page .subsection2 h1, body #features-page .subsection3 .right-section h1, body #features-page .subsection3 .left-section h1, body #features-page .subsection4 h1, body #login-reg h1, body .section-heading .h1, body #features .h1, body #about .h1, body #process .h1, body #testimonial .h1, body #about-page-section-3 .h1, body #skills .h1, body #team-member .h1, body #top_banner .h1, body #portfolio .h1, body #faq .h1, body #contact .h1, body #contact-page .h1, body #features-page .subsection1 .h1, body #features-page .subsection2 .h1, body #features-page .subsection3 .right-section .h1, body #features-page .subsection3 .left-section .h1, body #features-page .subsection4 .h1, body #login-reg .h1 {
+body .section-heading h1, body #values h1, body #about h1, body #process h1, body #whoweare h1, body #about-page-section-3 h1, body #skills h1, body #team-member h1, body #top_banner h1, body #portfolio h1, body #faq h1, body #contact h1, body #contact-page h1, body #features-page .subsection1 h1, body #features-page .subsection2 h1, body #features-page .subsection3 .right-section h1, body #features-page .subsection3 .left-section h1, body #features-page .subsection4 h1, body #login-reg h1, body .section-heading .h1, body #features .h1, body #about .h1, body #process .h1, body #testimonial .h1, body #about-page-section-3 .h1, body #skills .h1, body #team-member .h1, body #top_banner .h1, body #portfolio .h1, body #faq .h1, body #contact .h1, body #contact-page .h1, body #features-page .subsection1 .h1, body #features-page .subsection2 .h1, body #features-page .subsection3 .right-section .h1, body #features-page .subsection3 .left-section .h1, body #features-page .subsection4 .h1, body #login-reg .h1 {
 	font-size: 36px;
 	margin-top: 0px;
 }
-body .section-heading h2, body #features h2, body #about h2, body #process h2, body #testimonial h2, body #about-page-section-3 h2, body #skills h2, body #team-member h2, body #top_banner h2, body #portfolio h2, body #faq h2, body #contact h2, body #contact-page h2, body #features-page .subsection1 h2, body #features-page .subsection2 h2, body #features-page .subsection3 .right-section h2, body #features-page .subsection3 .left-section h2, body #features-page .subsection4 h2, body #login-reg h2, body .section-heading .h2, body #features .h2, body #about .h2, body #process .h2, body #testimonial .h2, body #about-page-section-3 .h2, body #skills .h2, body #team-member .h2, body #top_banner .h2, body #portfolio .h2, body #faq .h2, body #contact .h2, body #contact-page .h2, body #features-page .subsection1 .h2, body #features-page .subsection2 .h2, body #features-page .subsection3 .right-section .h2, body #features-page .subsection3 .left-section .h2, body #features-page .subsection4 .h2, body #login-reg .h2 {
+body .section-heading h2, body #values h2, body #about h2, body #process h2, body #whoweare h2, body #about-page-section-3 h2, body #skills h2, body #team-member h2, body #top_banner h2, body #portfolio h2, body #faq h2, body #contact h2, body #contact-page h2, body #features-page .subsection1 h2, body #features-page .subsection2 h2, body #features-page .subsection3 .right-section h2, body #features-page .subsection3 .left-section h2, body #features-page .subsection4 h2, body #login-reg h2, body .section-heading .h2, body #features .h2, body #about .h2, body #process .h2, body #testimonial .h2, body #about-page-section-3 .h2, body #skills .h2, body #team-member .h2, body #top_banner .h2, body #portfolio .h2, body #faq .h2, body #contact .h2, body #contact-page .h2, body #features-page .subsection1 .h2, body #features-page .subsection2 .h2, body #features-page .subsection3 .right-section .h2, body #features-page .subsection3 .left-section .h2, body #features-page .subsection4 .h2, body #login-reg .h2 {
 	font-size: 30px;
 	margin-top: 0px;
 }
-body .section-heading h3, body #features h3, body #about h3, body #process h3, body #testimonial h3, body #about-page-section-3 h3, body #skills h3, body #team-member h3, body #top_banner h3, body #portfolio h3, body #faq h3, body #contact h3, body #contact-page h3, body #features-page .subsection1 h3, body #features-page .subsection2 h3, body #features-page .subsection3 .right-section h3, body #features-page .subsection3 .left-section h3, body #features-page .subsection4 h3, body #login-reg h3, body .section-heading .h3, body #features .h3, body #about .h3, body #process .h3, body #testimonial .h3, body #about-page-section-3 .h3, body #skills .h3, body #team-member .h3, body #top_banner .h3, body #portfolio .h3, body #faq .h3, body #contact .h3, body #contact-page .h3, body #features-page .subsection1 .h3, body #features-page .subsection2 .h3, body #features-page .subsection3 .right-section .h3, body #features-page .subsection3 .left-section .h3, body #features-page .subsection4 .h3, body #login-reg .h3 {
+body .section-heading h3, body #values h3, body #about h3, body #process h3, body #whoweare h3, body #about-page-section-3 h3, body #skills h3, body #team-member h3, body #top_banner h3, body #portfolio h3, body #faq h3, body #contact h3, body #contact-page h3, body #features-page .subsection1 h3, body #features-page .subsection2 h3, body #features-page .subsection3 .right-section h3, body #features-page .subsection3 .left-section h3, body #features-page .subsection4 h3, body #login-reg h3, body .section-heading .h3, body #features .h3, body #about .h3, body #process .h3, body #testimonial .h3, body #about-page-section-3 .h3, body #skills .h3, body #team-member .h3, body #top_banner .h3, body #portfolio .h3, body #faq .h3, body #contact .h3, body #contact-page .h3, body #features-page .subsection1 .h3, body #features-page .subsection2 .h3, body #features-page .subsection3 .right-section .h3, body #features-page .subsection3 .left-section .h3, body #features-page .subsection4 .h3, body #login-reg .h3 {
 	font-size: 24px;
 	margin-top: 0px;
 }
-body .section-heading h4, body #features h4, body #about h4, body #process h4, body #testimonial h4, body #about-page-section-3 h4, body #skills h4, body #team-member h4, body #top_banner h4, body #portfolio h4, body #faq h4, body #contact h4, body #contact-page h4, body #features-page .subsection1 h4, body #features-page .subsection2 h4, body #features-page .subsection3 .right-section h4, body #features-page .subsection3 .left-section h4, body #features-page .subsection4 h4, body #login-reg h4, body .section-heading .h4, body #features .h4, body #about .h4, body #process .h4, body #testimonial .h4, body #about-page-section-3 .h4, body #skills .h4, body #team-member .h4, body #top_banner .h4, body #portfolio .h4, body #faq .h4, body #contact .h4, body #contact-page .h4, body #features-page .subsection1 .h4, body #features-page .subsection2 .h4, body #features-page .subsection3 .right-section .h4, body #features-page .subsection3 .left-section .h4, body #features-page .subsection4 .h4, body #login-reg .h4 {
+body .section-heading h4, body #values h4, body #about h4, body #process h4, body #whoweare h4, body #about-page-section-3 h4, body #skills h4, body #team-member h4, body #top_banner h4, body #portfolio h4, body #faq h4, body #contact h4, body #contact-page h4, body #features-page .subsection1 h4, body #features-page .subsection2 h4, body #features-page .subsection3 .right-section h4, body #features-page .subsection3 .left-section h4, body #features-page .subsection4 h4, body #login-reg h4, body .section-heading .h4, body #features .h4, body #about .h4, body #process .h4, body #testimonial .h4, body #about-page-section-3 .h4, body #skills .h4, body #team-member .h4, body #top_banner .h4, body #portfolio .h4, body #faq .h4, body #contact .h4, body #contact-page .h4, body #features-page .subsection1 .h4, body #features-page .subsection2 .h4, body #features-page .subsection3 .right-section .h4, body #features-page .subsection3 .left-section .h4, body #features-page .subsection4 .h4, body #login-reg .h4 {
 	font-size: 20px;
 	margin-top: 0px;
 }
-body .section-heading h5, body #features h5, body #about h5, body #process h5, body #testimonial h5, body #about-page-section-3 h5, body #skills h5, body #team-member h5, body #top_banner h5, body #portfolio h5, body #faq h5, body #contact h5, body #contact-page h5, body #features-page .subsection1 h5, body #features-page .subsection2 h5, body #features-page .subsection3 .right-section h5, body #features-page .subsection3 .left-section h5, body #features-page .subsection4 h5, body #login-reg h5, body .section-heading .h5, body #features .h5, body #about .h5, body #process .h5, body #testimonial .h5, body #about-page-section-3 .h5, body #skills .h5, body #team-member .h5, body #top_banner .h5, body #portfolio .h5, body #faq .h5, body #contact .h5, body #contact-page .h5, body #features-page .subsection1 .h5, body #features-page .subsection2 .h5, body #features-page .subsection3 .right-section .h5, body #features-page .subsection3 .left-section .h5, body #features-page .subsection4 .h5, body #login-reg .h5 {
+body .section-heading h5, body #values h5, body #about h5, body #process h5, body #whoweare h5, body #about-page-section-3 h5, body #skills h5, body #team-member h5, body #top_banner h5, body #portfolio h5, body #faq h5, body #contact h5, body #contact-page h5, body #features-page .subsection1 h5, body #features-page .subsection2 h5, body #features-page .subsection3 .right-section h5, body #features-page .subsection3 .left-section h5, body #features-page .subsection4 h5, body #login-reg h5, body .section-heading .h5, body #features .h5, body #about .h5, body #process .h5, body #testimonial .h5, body #about-page-section-3 .h5, body #skills .h5, body #team-member .h5, body #top_banner .h5, body #portfolio .h5, body #faq .h5, body #contact .h5, body #contact-page .h5, body #features-page .subsection1 .h5, body #features-page .subsection2 .h5, body #features-page .subsection3 .right-section .h5, body #features-page .subsection3 .left-section .h5, body #features-page .subsection4 .h5, body #login-reg .h5 {
 	font-size: 18px;
 	margin-top: 0px;
 }
-body .section-heading h6, body #features h6, body #about h6, body #process h6, body #testimonial h6, body #about-page-section-3 h6, body #skills h6, body #team-member h6, body #top_banner h6, body #portfolio h6, body #faq h6, body #contact h6, body #contact-page h6, body #features-page .subsection1 h6, body #features-page .subsection2 h6, body #features-page .subsection3 .right-section h6, body #features-page .subsection3 .left-section h6, body #features-page .subsection4 h6, body #login-reg h6, body .section-heading .h6, body #features .h6, body #about .h6, body #process .h6, body #testimonial .h6, body #about-page-section-3 .h6, body #skills .h6, body #team-member .h6, body #top_banner .h6, body #portfolio .h6, body #faq .h6, body #contact .h6, body #contact-page .h6, body #features-page .subsection1 .h6, body #features-page .subsection2 .h6, body #features-page .subsection3 .right-section .h6, body #features-page .subsection3 .left-section .h6, body #features-page .subsection4 .h6, body #login-reg .h6 {
+body .section-heading h6, body #values h6, body #about h6, body #process h6, body #whoweare h6, body #about-page-section-3 h6, body #skills h6, body #team-member h6, body #top_banner h6, body #portfolio h6, body #faq h6, body #contact h6, body #contact-page h6, body #features-page .subsection1 h6, body #features-page .subsection2 h6, body #features-page .subsection3 .right-section h6, body #features-page .subsection3 .left-section h6, body #features-page .subsection4 h6, body #login-reg h6, body .section-heading .h6, body #features .h6, body #about .h6, body #process .h6, body #testimonial .h6, body #about-page-section-3 .h6, body #skills .h6, body #team-member .h6, body #top_banner .h6, body #portfolio .h6, body #faq .h6, body #contact .h6, body #contact-page .h6, body #features-page .subsection1 .h6, body #features-page .subsection2 .h6, body #features-page .subsection3 .right-section .h6, body #features-page .subsection3 .left-section .h6, body #features-page .subsection4 .h6, body #login-reg .h6 {
 	font-size: 16px;
 	margin-top: 0px;
 }
-body .section-heading p.subheading, body #features p.subheading, body #about p.subheading, body #process p.subheading, body #testimonial p.subheading, body #about-page-section-3 p.subheading, body #skills p.subheading, body #team-member p.subheading, body #top_banner p.subheading, body #portfolio p.subheading, body #faq p.subheading, body #contact p.subheading, body #contact-page p.subheading, body #features-page .subsection1 p.subheading, body #features-page .subsection2 p.subheading, body #features-page .subsection3 .right-section p.subheading, body #features-page .subsection3 .left-section p.subheading, body #features-page .subsection4 p.subheading, body #login-reg p.subheading {
+body .section-heading p.subheading, body #values p.subheading, body #about p.subheading, body #process p.subheading, body #whoweare p.subheading, body #about-page-section-3 p.subheading, body #skills p.subheading, body #team-member p.subheading, body #top_banner p.subheading, body #portfolio p.subheading, body #faq p.subheading, body #contact p.subheading, body #contact-page p.subheading, body #features-page .subsection1 p.subheading, body #features-page .subsection2 p.subheading, body #features-page .subsection3 .right-section p.subheading, body #features-page .subsection3 .left-section p.subheading, body #features-page .subsection4 p.subheading, body #login-reg p.subheading {
 	font-style: italic;
 	margin-bottom: 40px;
 	font-size: 16px;
 	line-height: 30px;
 }
+#whoweare p.subheading {
+  background: var(--primary);
+  border-radius: 10px;
+  -webkit-box-shadow: 10px 10px 40px -10px rgba(69,69,69,0.53);
+  -moz-box-shadow: 10px 10px 40px -10px rgba(69,69,69,0.53);
+  box-shadow: 10px 10px 40px -10px rgba(69,69,69,0.53);
+}
 @media screen and (max-width: 480px) {
-body .section-heading h1, body #features h1, body #about h1, body #process h1, body #testimonial h1, body #about-page-section-3 h1, body #skills h1, body #team-member h1, body #top_banner h1, body #portfolio h1, body #faq h1, body #contact h1, body #contact-page h1, body #features-page .subsection1 h1, body #features-page .subsection2 h1, body #features-page .subsection3 .right-section h1, body #features-page .subsection3 .left-section h1, body #features-page .subsection4 h1, body #login-reg h1, body .section-heading .h1, body #features .h1, body #about .h1, body #process .h1, body #testimonial .h1, body #about-page-section-3 .h1, body #skills .h1, body #team-member .h1, body #top_banner .h1, body #portfolio .h1, body #faq .h1, body #contact .h1, body #contact-page .h1, body #features-page .subsection1 .h1, body #features-page .subsection2 .h1, body #features-page .subsection3 .right-section .h1, body #features-page .subsection3 .left-section .h1, body #features-page .subsection4 .h1, body #login-reg .h1 {
+body .section-heading h1, body #values h1, body #about h1, body #process h1, body #whoweare h1, body #about-page-section-3 h1, body #skills h1, body #team-member h1, body #top_banner h1, body #portfolio h1, body #faq h1, body #contact h1, body #contact-page h1, body #features-page .subsection1 h1, body #features-page .subsection2 h1, body #features-page .subsection3 .right-section h1, body #features-page .subsection3 .left-section h1, body #features-page .subsection4 h1, body #login-reg h1, body .section-heading .h1, body #features .h1, body #about .h1, body #process .h1, body #testimonial .h1, body #about-page-section-3 .h1, body #skills .h1, body #team-member .h1, body #top_banner .h1, body #portfolio .h1, body #faq .h1, body #contact .h1, body #contact-page .h1, body #features-page .subsection1 .h1, body #features-page .subsection2 .h1, body #features-page .subsection3 .right-section .h1, body #features-page .subsection3 .left-section .h1, body #features-page .subsection4 .h1, body #login-reg .h1 {
 	font-size: 32px;
 	margin-top: 0px;
 }
-body .section-heading h2, body #features h2, body #about h2, body #process h2, body #testimonial h2, body #about-page-section-3 h2, body #skills h2, body #team-member h2, body #top_banner h2, body #portfolio h2, body #faq h2, body #contact h2, body #contact-page h2, body #features-page .subsection1 h2, body #features-page .subsection2 h2, body #features-page .subsection3 .right-section h2, body #features-page .subsection3 .left-section h2, body #features-page .subsection4 h2, body #login-reg h2, body .section-heading .h2, body #features .h2, body #about .h2, body #process .h2, body #testimonial .h2, body #about-page-section-3 .h2, body #skills .h2, body #team-member .h2, body #top_banner .h2, body #portfolio .h2, body #faq .h2, body #contact .h2, body #contact-page .h2, body #features-page .subsection1 .h2, body #features-page .subsection2 .h2, body #features-page .subsection3 .right-section .h2, body #features-page .subsection3 .left-section .h2, body #features-page .subsection4 .h2, body #login-reg .h2 {
+body .section-heading h2, body #values h2, body #about h2, body #process h2, body #whoweare h2, body #about-page-section-3 h2, body #skills h2, body #team-member h2, body #top_banner h2, body #portfolio h2, body #faq h2, body #contact h2, body #contact-page h2, body #features-page .subsection1 h2, body #features-page .subsection2 h2, body #features-page .subsection3 .right-section h2, body #features-page .subsection3 .left-section h2, body #features-page .subsection4 h2, body #login-reg h2, body .section-heading .h2, body #features .h2, body #about .h2, body #process .h2, body #testimonial .h2, body #about-page-section-3 .h2, body #skills .h2, body #team-member .h2, body #top_banner .h2, body #portfolio .h2, body #faq .h2, body #contact .h2, body #contact-page .h2, body #features-page .subsection1 .h2, body #features-page .subsection2 .h2, body #features-page .subsection3 .right-section .h2, body #features-page .subsection3 .left-section .h2, body #features-page .subsection4 .h2, body #login-reg .h2 {
 	font-size: 36px;
 	margin-top: 0px;
 }
-body .section-heading h3, body #features h3, body #about h3, body #process h3, body #testimonial h3, body #about-page-section-3 h3, body #skills h3, body #team-member h3, body #top_banner h3, body #portfolio h3, body #faq h3, body #contact h3, body #contact-page h3, body #features-page .subsection1 h3, body #features-page .subsection2 h3, body #features-page .subsection3 .right-section h3, body #features-page .subsection3 .left-section h3, body #features-page .subsection4 h3, body #login-reg h3, body .section-heading .h3, body #features .h3, body #about .h3, body #process .h3, body #testimonial .h3, body #about-page-section-3 .h3, body #skills .h3, body #team-member .h3, body #top_banner .h3, body #portfolio .h3, body #faq .h3, body #contact .h3, body #contact-page .h3, body #features-page .subsection1 .h3, body #features-page .subsection2 .h3, body #features-page .subsection3 .right-section .h3, body #features-page .subsection3 .left-section .h3, body #features-page .subsection4 .h3, body #login-reg .h3 {
+body .section-heading h3, body #values h3, body #about h3, body #process h3, body #whoweare h3, body #about-page-section-3 h3, body #skills h3, body #team-member h3, body #top_banner h3, body #portfolio h3, body #faq h3, body #contact h3, body #contact-page h3, body #features-page .subsection1 h3, body #features-page .subsection2 h3, body #features-page .subsection3 .right-section h3, body #features-page .subsection3 .left-section h3, body #features-page .subsection4 h3, body #login-reg h3, body .section-heading .h3, body #features .h3, body #about .h3, body #process .h3, body #testimonial .h3, body #about-page-section-3 .h3, body #skills .h3, body #team-member .h3, body #top_banner .h3, body #portfolio .h3, body #faq .h3, body #contact .h3, body #contact-page .h3, body #features-page .subsection1 .h3, body #features-page .subsection2 .h3, body #features-page .subsection3 .right-section .h3, body #features-page .subsection3 .left-section .h3, body #features-page .subsection4 .h3, body #login-reg .h3 {
 	font-size: 22px;
 	margin-top: 0px;
 }
-body .section-heading h4, body #features h4, body #about h4, body #process h4, body #testimonial h4, body #about-page-section-3 h4, body #skills h4, body #team-member h4, body #top_banner h4, body #portfolio h4, body #faq h4, body #contact h4, body #contact-page h4, body #features-page .subsection1 h4, body #features-page .subsection2 h4, body #features-page .subsection3 .right-section h4, body #features-page .subsection3 .left-section h4, body #features-page .subsection4 h4, body #login-reg h4, body .section-heading .h4, body #features .h4, body #about .h4, body #process .h4, body #testimonial .h4, body #about-page-section-3 .h4, body #skills .h4, body #team-member .h4, body #top_banner .h4, body #portfolio .h4, body #faq .h4, body #contact .h4, body #contact-page .h4, body #features-page .subsection1 .h4, body #features-page .subsection2 .h4, body #features-page .subsection3 .right-section .h4, body #features-page .subsection3 .left-section .h4, body #features-page .subsection4 .h4, body #login-reg .h4 {
+body .section-heading h4, body #values h4, body #about h4, body #process h4, body #whoweare h4, body #about-page-section-3 h4, body #skills h4, body #team-member h4, body #top_banner h4, body #portfolio h4, body #faq h4, body #contact h4, body #contact-page h4, body #features-page .subsection1 h4, body #features-page .subsection2 h4, body #features-page .subsection3 .right-section h4, body #features-page .subsection3 .left-section h4, body #features-page .subsection4 h4, body #login-reg h4, body .section-heading .h4, body #features .h4, body #about .h4, body #process .h4, body #testimonial .h4, body #about-page-section-3 .h4, body #skills .h4, body #team-member .h4, body #top_banner .h4, body #portfolio .h4, body #faq .h4, body #contact .h4, body #contact-page .h4, body #features-page .subsection1 .h4, body #features-page .subsection2 .h4, body #features-page .subsection3 .right-section .h4, body #features-page .subsection3 .left-section .h4, body #features-page .subsection4 .h4, body #login-reg .h4 {
 	font-size: 18px;
 	margin-top: 0px;
 }
-body .section-heading h5, body #features h5, body #about h5, body #process h5, body #testimonial h5, body #about-page-section-3 h5, body #skills h5, body #team-member h5, body #top_banner h5, body #portfolio h5, body #faq h5, body #contact h5, body #contact-page h5, body #features-page .subsection1 h5, body #features-page .subsection2 h5, body #features-page .subsection3 .right-section h5, body #features-page .subsection3 .left-section h5, body #features-page .subsection4 h5, body #login-reg h5, body .section-heading .h5, body #features .h5, body #about .h5, body #process .h5, body #testimonial .h5, body #about-page-section-3 .h5, body #skills .h5, body #team-member .h5, body #top_banner .h5, body #portfolio .h5, body #faq .h5, body #contact .h5, body #contact-page .h5, body #features-page .subsection1 .h5, body #features-page .subsection2 .h5, body #features-page .subsection3 .right-section .h5, body #features-page .subsection3 .left-section .h5, body #features-page .subsection4 .h5, body #login-reg .h5 {
+body .section-heading h5, body #values h5, body #about h5, body #process h5, body #whoweare h5, body #about-page-section-3 h5, body #skills h5, body #team-member h5, body #top_banner h5, body #portfolio h5, body #faq h5, body #contact h5, body #contact-page h5, body #features-page .subsection1 h5, body #features-page .subsection2 h5, body #features-page .subsection3 .right-section h5, body #features-page .subsection3 .left-section h5, body #features-page .subsection4 h5, body #login-reg h5, body .section-heading .h5, body #features .h5, body #about .h5, body #process .h5, body #testimonial .h5, body #about-page-section-3 .h5, body #skills .h5, body #team-member .h5, body #top_banner .h5, body #portfolio .h5, body #faq .h5, body #contact .h5, body #contact-page .h5, body #features-page .subsection1 .h5, body #features-page .subsection2 .h5, body #features-page .subsection3 .right-section .h5, body #features-page .subsection3 .left-section .h5, body #features-page .subsection4 .h5, body #login-reg .h5 {
 	font-size: 17px;
 	margin-top: 0px;
 }
-body .section-heading h6, body #features h6, body #about h6, body #process h6, body #testimonial h6, body #about-page-section-3 h6, body #skills h6, body #team-member h6, body #top_banner h6, body #portfolio h6, body #faq h6, body #contact h6, body #contact-page h6, body #features-page .subsection1 h6, body #features-page .subsection2 h6, body #features-page .subsection3 .right-section h6, body #features-page .subsection3 .left-section h6, body #features-page .subsection4 h6, body #login-reg h6, body .section-heading .h6, body #features .h6, body #about .h6, body #process .h6, body #testimonial .h6, body #about-page-section-3 .h6, body #skills .h6, body #team-member .h6, body #top_banner .h6, body #portfolio .h6, body #faq .h6, body #contact .h6, body #contact-page .h6, body #features-page .subsection1 .h6, body #features-page .subsection2 .h6, body #features-page .subsection3 .right-section .h6, body #features-page .subsection3 .left-section .h6, body #features-page .subsection4 .h6, body #login-reg .h6 {
+body .section-heading h6, body #values h6, body #about h6, body #process h6, body #whoweare h6, body #about-page-section-3 h6, body #skills h6, body #team-member h6, body #top_banner h6, body #portfolio h6, body #faq h6, body #contact h6, body #contact-page h6, body #features-page .subsection1 h6, body #features-page .subsection2 h6, body #features-page .subsection3 .right-section h6, body #features-page .subsection3 .left-section h6, body #features-page .subsection4 h6, body #login-reg h6, body .section-heading .h6, body #features .h6, body #about .h6, body #process .h6, body #testimonial .h6, body #about-page-section-3 .h6, body #skills .h6, body #team-member .h6, body #top_banner .h6, body #portfolio .h6, body #faq .h6, body #contact .h6, body #contact-page .h6, body #features-page .subsection1 .h6, body #features-page .subsection2 .h6, body #features-page .subsection3 .right-section .h6, body #features-page .subsection3 .left-section .h6, body #features-page .subsection4 .h6, body #login-reg .h6 {
 	font-size: 16px;
 	margin-top: 0px;
 }
@@ -6283,19 +6290,19 @@ body #myCarousel .carousel-control {
 	opacity: 1;
 	z-index: 20;
 }
-body #features {
+body #values {
 	background-color: #fff;
 }
-body #features .img-responsive {
+body #values .img-responsive {
 	box-shadow: 0px 0px 12px #ddd;
 	display: block;
 	height: auto;
   max-width: 240px;
 }
-body #features i.feature_icon {
+body #values i.feature_icon {
 	font-size: 30px;
 }
-body #features a.readmore {
+body #values a.readmore {
 	font-weight: bold;
 	text-transform: uppercase;
 }
@@ -6303,7 +6310,7 @@ body #about {
 	background-color: #f9f9f9;
 	position: relative;
 }
-body #about .section-block, body #about #features, body #about #process, body #about #testimonial, body #about #footer, body #about #about-page-section-3, body #about #skills, body #about #team-member, body #about #portfolio, body #about #faq, body #about #contact, body #about #contact-page, body #about #features-page .subsection1, body #features-page #about .subsection1, body #about #features-page .subsection2, body #features-page #about .subsection2, body #about #features-page .subsection3 .right-section, body #features-page .subsection3 #about .right-section, body #about #features-page .subsection3 .left-section, body #features-page .subsection3 #about .left-section, body #about #features-page .subsection4, body #features-page #about .subsection4, body #about #login-reg {
+body #about .section-block, body #about #values, body #about #process, body #about #whoweare, body #about #footer, body #about #about-page-section-3, body #about #skills, body #about #team-member, body #about #portfolio, body #about #faq, body #about #contact, body #about #contact-page, body #about #features-page .subsection1, body #features-page #about .subsection1, body #about #features-page .subsection2, body #features-page #about .subsection2, body #about #features-page .subsection3 .right-section, body #features-page .subsection3 #about .right-section, body #about #features-page .subsection3 .left-section, body #features-page .subsection3 #about .left-section, body #about #features-page .subsection4, body #features-page #about .subsection4, body #about #login-reg {
 	padding: 50px 0px;
 	display: inline-block;
 }
@@ -6491,24 +6498,24 @@ body #process .process-border {
 	top: 29%;
 }
 }
-body #testimonial {
-	background: url(../img/bg2.jpg);
+body #whoweare {
+	background: url(../img/den_with_flag.jpg);
 	width: 100%;
 	height: 100%;
 	background-size: cover !important;
 	background-position: 50% 60% !important;
 	color: #fff;
 }
-body #testimonial h1, body #testimonial .h1 {
+body #whoweare h1, body #testimonial .h1 {
 	color: #fff;
 }
-body #testimonial .testimonial_box {
+body #whoweare .testimonial_box {
 	background: rgba(225, 225, 225, 0.5);
 	padding: 20px;
 	color: #fff;
 	border-radius: 6px;
 }
-body #testimonial .arrow-down {
+body #whoweare .arrow-down {
 	width: 0;
 	height: 0;
 	border-left: 18px solid transparent;
@@ -6517,10 +6524,10 @@ body #testimonial .arrow-down {
 	margin-left: 20px;
 	opacity: .5;
 }
-body #testimonial .testimonial_user {
+body #whoweare .testimonial_user {
 	margin-top: 20px;
 }
-body #testimonial .testimonial_user .user-image {
+body #whoweare .testimonial_user .user-image {
 	width: 60px;
 	height: 60px;
 	border-radius: 100%;
@@ -6528,10 +6535,10 @@ body #testimonial .testimonial_user .user-image {
 	float: left;
 	margin-right: 15px;
 }
-body #testimonial .testimonial_user .user-info {
+body #whoweare .testimonial_user .user-info {
 	display: inline-block;
 }
-body #testimonial .testimonial_user .user-info h5, body #testimonial .testimonial_user .user-info .h5 {
+body #whoweare .testimonial_user .user-info h5, body #testimonial .testimonial_user .user-info .h5 {
 	font-size: 18px;
 	margin-bottom: 0px;
 }
@@ -6748,7 +6755,7 @@ body #fulltitle .nav-link {
 body #about-page-section-3 {
 	background-color: #fff;
 }
-body #about-page-section-3 .section-block, body #about-page-section-3 #features, body #about-page-section-3 #process, body #about-page-section-3 #testimonial, body #about-page-section-3 #footer, body #about-page-section-3 #about-page-section-3, body #about-page-section-3 #skills, body #about-page-section-3 #team-member, body #about-page-section-3 #portfolio, body #about-page-section-3 #faq, body #about-page-section-3 #contact, body #about-page-section-3 #contact-page, body #about-page-section-3 #features-page .subsection1, body #features-page #about-page-section-3 .subsection1, body #about-page-section-3 #features-page .subsection2, body #features-page #about-page-section-3 .subsection2, body #about-page-section-3 #features-page .subsection3 .right-section, body #features-page .subsection3 #about-page-section-3 .right-section, body #about-page-section-3 #features-page .subsection3 .left-section, body #features-page .subsection3 #about-page-section-3 .left-section, body #about-page-section-3 #features-page .subsection4, body #features-page #about-page-section-3 .subsection4, body #about-page-section-3 #login-reg {
+body #about-page-section-3 .section-block, body #about-page-section-3 #values, body #about-page-section-3 #process, body #about-page-section-3 #whoweare, body #about-page-section-3 #footer, body #about-page-section-3 #about-page-section-3, body #about-page-section-3 #skills, body #about-page-section-3 #team-member, body #about-page-section-3 #portfolio, body #about-page-section-3 #faq, body #about-page-section-3 #contact, body #about-page-section-3 #contact-page, body #about-page-section-3 #features-page .subsection1, body #features-page #about-page-section-3 .subsection1, body #about-page-section-3 #features-page .subsection2, body #features-page #about-page-section-3 .subsection2, body #about-page-section-3 #features-page .subsection3 .right-section, body #features-page .subsection3 #about-page-section-3 .right-section, body #about-page-section-3 #features-page .subsection3 .left-section, body #features-page .subsection3 #about-page-section-3 .left-section, body #about-page-section-3 #features-page .subsection4, body #features-page #about-page-section-3 .subsection4, body #about-page-section-3 #login-reg {
 	padding: 50px 0px;
 	display: inline-block;
 }
@@ -7239,38 +7246,38 @@ body #contact-page .submit-button {
 	border: none;
 	margin-top: 10px;
 }
-body #features-page {
+body #values-page {
 /* subsection1 ends /--------------------------------------------------------- */ }
-body #features-page .subsection1 {
+body #values-page .subsection1 {
 	background-color: #fff;
 	background-image: url(../img/feature_banner1.jpg);
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 }
-body #features-page .subsection1 .section-heading h1, body #features-page .subsection1 #features h1, body #features-page .subsection1 #about h1, body #features-page .subsection1 #process h1, body #features-page .subsection1 #testimonial h1, body #features-page .subsection1 #about-page-section-3 h1, body #features-page .subsection1 #skills h1, body #features-page .subsection1 #team-member h1, body #features-page .subsection1 #top_banner h1, body #features-page .subsection1 #portfolio h1, body #features-page .subsection1 #faq h1, body #features-page .subsection1 #contact h1, body #features-page .subsection1 #contact-page h1, body #features-page .subsection1 .subsection1 h1, body #features-page .subsection1 .subsection2 h1, body #features-page .subsection1 .subsection3 .right-section h1, body #features-page .subsection3 .subsection1 .right-section h1, body #features-page .subsection1 .subsection3 .left-section h1, body #features-page .subsection3 .subsection1 .left-section h1, body #features-page .subsection1 .subsection4 h1, body #features-page .subsection1 #login-reg h1 {
+body #values-page .subsection1 .section-heading h1, body #features-page .subsection1 #features h1, body #features-page .subsection1 #about h1, body #features-page .subsection1 #process h1, body #features-page .subsection1 #whoweare h1, body #features-page .subsection1 #about-page-section-3 h1, body #features-page .subsection1 #skills h1, body #features-page .subsection1 #team-member h1, body #features-page .subsection1 #top_banner h1, body #features-page .subsection1 #portfolio h1, body #features-page .subsection1 #faq h1, body #features-page .subsection1 #contact h1, body #features-page .subsection1 #contact-page h1, body #features-page .subsection1 .subsection1 h1, body #features-page .subsection1 .subsection2 h1, body #features-page .subsection1 .subsection3 .right-section h1, body #features-page .subsection3 .subsection1 .right-section h1, body #features-page .subsection1 .subsection3 .left-section h1, body #features-page .subsection3 .subsection1 .left-section h1, body #features-page .subsection1 .subsection4 h1, body #features-page .subsection1 #login-reg h1 {
 	color: #fff;
 }
-body #features-page .subsection1 .section-heading .subheading, body #features-page .subsection1 #features .subheading, body #features-page .subsection1 #about .subheading, body #features-page .subsection1 #process .subheading, body #features-page .subsection1 #testimonial .subheading, body #features-page .subsection1 #about-page-section-3 .subheading, body #features-page .subsection1 #skills .subheading, body #features-page .subsection1 #team-member .subheading, body #features-page .subsection1 #top_banner .subheading, body #features-page .subsection1 #portfolio .subheading, body #features-page .subsection1 #faq .subheading, body #features-page .subsection1 #contact .subheading, body #features-page .subsection1 #contact-page .subheading, body #features-page .subsection1 .subsection1 .subheading, body #features-page .subsection1 .subsection2 .subheading, body #features-page .subsection1 .subsection3 .right-section .subheading, body #features-page .subsection3 .subsection1 .right-section .subheading, body #features-page .subsection1 .subsection3 .left-section .subheading, body #features-page .subsection3 .subsection1 .left-section .subheading, body #features-page .subsection1 .subsection4 .subheading, body #features-page .subsection1 #login-reg .subheading {
+body #values-page .subsection1 .section-heading .subheading, body #features-page .subsection1 #features .subheading, body #features-page .subsection1 #about .subheading, body #features-page .subsection1 #process .subheading, body #features-page .subsection1 #whoweare .subheading, body #features-page .subsection1 #about-page-section-3 .subheading, body #features-page .subsection1 #skills .subheading, body #features-page .subsection1 #team-member .subheading, body #features-page .subsection1 #top_banner .subheading, body #features-page .subsection1 #portfolio .subheading, body #features-page .subsection1 #faq .subheading, body #features-page .subsection1 #contact .subheading, body #features-page .subsection1 #contact-page .subheading, body #features-page .subsection1 .subsection1 .subheading, body #features-page .subsection1 .subsection2 .subheading, body #features-page .subsection1 .subsection3 .right-section .subheading, body #features-page .subsection3 .subsection1 .right-section .subheading, body #features-page .subsection1 .subsection3 .left-section .subheading, body #features-page .subsection3 .subsection1 .left-section .subheading, body #features-page .subsection1 .subsection4 .subheading, body #features-page .subsection1 #login-reg .subheading {
 	color: #fff;
 }
-body #features-page .subsection1 .wpb_column > .wpb_wrapper > *:last-child {
+body #values-page .subsection1 .wpb_column > .wpb_wrapper > *:last-child {
 	margin-bottom: 0;
 }
-body #features-page .subsection1 .wpb_column {
+body #values-page .subsection1 .wpb_column {
 	background-repeat: repeat;
 	background-size: cover;
 }
-body #features-page .subsection1 .iconbox {
+body #values-page .subsection1 .iconbox {
 	margin: 0 0 40px 0;
 }
-body #features-page .subsection1 .iconbox p:last-child {
+body #values-page .subsection1 .iconbox p:last-child {
 	margin: 0;
 }
-body #features-page .subsection1 .iconbox h3 {
+body #values-page .subsection1 .iconbox h3 {
 	margin: 0 0 10px 0;
 	text-transform: none;
 }
-body #features-page .subsection1 .iconbox i.boxicon {
+body #values-page .subsection1 .iconbox i.boxicon {
 	position: relative;
 	z-index: 2;
 	-webkit-transition: all 0.08s ease-in;
@@ -7279,10 +7286,10 @@ body #features-page .subsection1 .iconbox i.boxicon {
 	-o-transition: all 0.08s ease-in;
 	transition: all 0.08s ease-in;
 }
-body #features-page .subsection1 .flip .icon-color.card .back {
+body #values-page .subsection1 .flip .icon-color.card .back {
 	color: #fff;
 }
-body #features-page .subsection1 .flip {
+body #values-page .subsection1 .flip {
 	-webkit-perspective: 800;
 	-ms-perspective: 800;
 	-moz-perspective: 800;
@@ -7294,11 +7301,11 @@ body #features-page .subsection1 .flip {
 	display: block;
 	margin: 0px auto;
 }
-body #features-page .subsection1 .flip .card {
+body #values-page .subsection1 .flip .card {
 	width: 100%;
 	height: 100%;
 }
-body #features-page .subsection1 .flip .front, body #features-page .subsection1 .flip .back {
+body #values-page .subsection1 .flip .front, body #features-page .subsection1 .flip .back {
 	-webkit-transform-style: preserve-3d;
 	-webkit-transition: 0.5s;
 	-moz-transform-style: preserve-3d;
@@ -7310,13 +7317,13 @@ body #features-page .subsection1 .flip .front, body #features-page .subsection1 
 	transform-style: preserve-3d;
 	transition: 0.5s;
 }
-body #features-page .subsection1 .flip .card .face {
+body #values-page .subsection1 .flip .card .face {
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	text-align: center;
 }
-body #features-page .subsection1 .flip .card .front {
+body #values-page .subsection1 .flip .card .front {
 	position: absolute;
 	z-index: 1;
 	background: #f9f9f9;
@@ -7331,7 +7338,7 @@ body #features-page .subsection1 .flip .card .front {
 	/* Internet Explorer */
 	-o-backface-visibility: hidden;
 /* Opera */ }
-body #features-page .subsection1 .flip .card .back {
+body #values-page .subsection1 .flip .card .back {
 	border-radius: 4px;
 	transform: rotatey(-180deg);
 	-ms-transform: rotatey(-180deg);
@@ -7352,7 +7359,7 @@ body #features-page .subsection1 .flip .card .back {
 	/* Internet Explorer */
 	-o-backface-visibility: hidden;
 /* Opera */ }
-body #features-page .subsection1 .flip:hover .front {
+body #values-page .subsection1 .flip:hover .front {
 	transform: rotatey(180deg);
 	-ms-transform: rotatey(180deg);
 	/* IE 9 */
@@ -7362,7 +7369,7 @@ body #features-page .subsection1 .flip:hover .front {
 	/* Safari and Chrome */
 	-o-transform: rotatey(180deg);
 /* Opera */ }
-body #features-page .subsection1 .flip:hover .back {
+body #values-page .subsection1 .flip:hover .back {
 	transform: rotatey(0deg);
 	-ms-transform: rotatey(0deg);
 	/* IE 9 */
@@ -7382,7 +7389,7 @@ body #features-page .subsection1 .flip:hover .back {
 	/* Internet Explorer */
 	-o-backface-visibility: visible;
 /* Opera */ }
-body #features-page .subsection1 .iconbox-style i.boxicon {
+body #values-page .subsection1 .iconbox-style i.boxicon {
 	font-size: 58px;
 	text-align: center;
 	display: block;
@@ -7391,131 +7398,131 @@ body #features-page .subsection1 .iconbox-style i.boxicon {
 	margin: 0 0 14px 0;
 	padding: 0;
 }
-body #features-page .subsection1 .iconbox-style .iconimg {
+body #values-page .subsection1 .iconbox-style .iconimg {
 	margin: 0 0 16px 0;
 }
-body #features-page .subsection1 .iconbox-style table {
+body #values-page .subsection1 .iconbox-style table {
 	height: 200px;
 	width: 100%;
 }
-body #features-page .subsection1 .iconbox-style table td {
+body #values-page .subsection1 .iconbox-style table td {
 	vertical-align: middle;
 	padding: 10px 30px 0 30px;
 }
-body #features-page .subsection1 .iconbox-style .back h3 {
+body #values-page .subsection1 .iconbox-style .back h3 {
 	color: #fff;
 }
-body #features-page .subsection2 {
+body #values-page .subsection2 {
 	background-color: #fff;
 }
-body #features-page .subsection2 .section-heading h2, body #features-page .subsection2 #features h2, body #features-page .subsection2 #about h2, body #features-page .subsection2 #process h2, body #features-page .subsection2 #testimonial h2, body #features-page .subsection2 #about-page-section-3 h2, body #features-page .subsection2 #skills h2, body #features-page .subsection2 #team-member h2, body #features-page .subsection2 #top_banner h2, body #features-page .subsection2 #portfolio h2, body #features-page .subsection2 #faq h2, body #features-page .subsection2 #contact h2, body #features-page .subsection2 #contact-page h2, body #features-page .subsection2 .subsection1 h2, body #features-page .subsection2 .subsection2 h2, body #features-page .subsection2 .subsection3 .right-section h2, body #features-page .subsection3 .subsection2 .right-section h2, body #features-page .subsection2 .subsection3 .left-section h2, body #features-page .subsection3 .subsection2 .left-section h2, body #features-page .subsection2 .subsection4 h2, body #features-page .subsection2 #login-reg h2 {
+body #values-page .subsection2 .section-heading h2, body #features-page .subsection2 #features h2, body #features-page .subsection2 #about h2, body #features-page .subsection2 #process h2, body #features-page .subsection2 #whoweare h2, body #features-page .subsection2 #about-page-section-3 h2, body #features-page .subsection2 #skills h2, body #features-page .subsection2 #team-member h2, body #features-page .subsection2 #top_banner h2, body #features-page .subsection2 #portfolio h2, body #features-page .subsection2 #faq h2, body #features-page .subsection2 #contact h2, body #features-page .subsection2 #contact-page h2, body #features-page .subsection2 .subsection1 h2, body #features-page .subsection2 .subsection2 h2, body #features-page .subsection2 .subsection3 .right-section h2, body #features-page .subsection3 .subsection2 .right-section h2, body #features-page .subsection2 .subsection3 .left-section h2, body #features-page .subsection3 .subsection2 .left-section h2, body #features-page .subsection2 .subsection4 h2, body #features-page .subsection2 #login-reg h2 {
 	color: #777777;
 	line-height: 45px !important;
 }
-body #features-page .subsection2 .section-heading .subheading, body #features-page .subsection2 #features .subheading, body #features-page .subsection2 #about .subheading, body #features-page .subsection2 #process .subheading, body #features-page .subsection2 #testimonial .subheading, body #features-page .subsection2 #about-page-section-3 .subheading, body #features-page .subsection2 #skills .subheading, body #features-page .subsection2 #team-member .subheading, body #features-page .subsection2 #top_banner .subheading, body #features-page .subsection2 #portfolio .subheading, body #features-page .subsection2 #faq .subheading, body #features-page .subsection2 #contact .subheading, body #features-page .subsection2 #contact-page .subheading, body #features-page .subsection2 .subsection1 .subheading, body #features-page .subsection2 .subsection2 .subheading, body #features-page .subsection2 .subsection3 .right-section .subheading, body #features-page .subsection3 .subsection2 .right-section .subheading, body #features-page .subsection2 .subsection3 .left-section .subheading, body #features-page .subsection3 .subsection2 .left-section .subheading, body #features-page .subsection2 .subsection4 .subheading, body #features-page .subsection2 #login-reg .subheading {
+body #values-page .subsection2 .section-heading .subheading, body #features-page .subsection2 #features .subheading, body #features-page .subsection2 #about .subheading, body #features-page .subsection2 #process .subheading, body #features-page .subsection2 #whoweare .subheading, body #features-page .subsection2 #about-page-section-3 .subheading, body #features-page .subsection2 #skills .subheading, body #features-page .subsection2 #team-member .subheading, body #features-page .subsection2 #top_banner .subheading, body #features-page .subsection2 #portfolio .subheading, body #features-page .subsection2 #faq .subheading, body #features-page .subsection2 #contact .subheading, body #features-page .subsection2 #contact-page .subheading, body #features-page .subsection2 .subsection1 .subheading, body #features-page .subsection2 .subsection2 .subheading, body #features-page .subsection2 .subsection3 .right-section .subheading, body #features-page .subsection3 .subsection2 .right-section .subheading, body #features-page .subsection2 .subsection3 .left-section .subheading, body #features-page .subsection3 .subsection2 .left-section .subheading, body #features-page .subsection2 .subsection4 .subheading, body #features-page .subsection2 #login-reg .subheading {
 	color: #fff;
 }
-body #features-page .subsection2 hr {
+body #values-page .subsection2 hr {
 	width: 50px;
 	height: 3px;
 	border-top: 1px solid #fff;
 	margin-top: 0px;
 	display: inline-block;
 }
-body #features-page .subsection2 .wpb_wrapper h3 {
+body #values-page .subsection2 .wpb_wrapper h3 {
 	line-height: 40px;
 }
-body #features-page .subsection2 .iconbox-style-2 i.boxicon {
+body #values-page .subsection2 .iconbox-style-2 i.boxicon {
 	font-size: 34px;
 	text-align: center;
 	display: inline-block;
 }
-body #features-page .subsection2 .iconbox-style-2 .iconbox-icon {
+body #values-page .subsection2 .iconbox-style-2 .iconbox-icon {
 	float: left;
 	width: 30px;
 	margin-top: 2px;
 	text-align: center;
 }
-body #features-page .subsection2 .iconbox-style-2 .iconbox-content {
+body #values-page .subsection2 .iconbox-style-2 .iconbox-content {
 	margin-left: 54px;
 	margin-bottom: 30px;
 }
-body #features-page .subsection2 .nomargin {
+body #values-page .subsection2 .nomargin {
 	margin-bottom: 0px !important;
 }
-body #features-page .subsection2 .nomargin p {
+body #values-page .subsection2 .nomargin p {
 	margin: 0px;
 }
-body #features-page .subsection2 .iconbox-style-2 i.boxicon[class*="sl-"] {
+body #values-page .subsection2 .iconbox-style-2 i.boxicon[class*="sl-"] {
 	font-size: 30px;
 }
-body #features-page .subsection3 {
+body #values-page .subsection3 {
 	background-color: #34363e;
 	color: white;
 	position: relative;
 }
-body #features-page .subsection3 .right-section {
+body #values-page .subsection3 .right-section {
 	color: #fff;
 }bout
-body #features-page .subsection3 .right-section .section-heading h1, body #features-page .subsection3 .right-section #features h1, body #features-page .subsection3 .right-section #about h1, body #features-page .subsection3 .right-section #process h1, body #features-page .subsection3 .right-section #testimonial h1, body #features-page .subsection3 .right-section #about-page-section-3 h1, body #features-page .subsection3 .right-section #skills h1, body #features-page .subsection3 .right-section #team-member h1, body #features-page .subsection3 .right-section #top_banner h1, body #features-page .subsection3 .right-section #portfolio h1, body #features-page .subsection3 .right-section #faq h1, body #features-page .subsection3 .right-section #contact h1, body #features-page .subsection3 .right-section #contact-page h1, body #features-page .subsection3 .right-section .subsection1 h1, body #features-page .subsection3 .right-section .subsection2 h1, body #features-page .subsection3 .right-section .right-section h1, body #features-page .subsection3 .right-section .left-section h1, body #features-page .subsection3 .right-section .subsection4 h1, body #features-page .subsection3 .right-section #login-reg h1 {
+body #values-page .subsection3 .right-section .section-heading h1, body #features-page .subsection3 .right-section #features h1, body #features-page .subsection3 .right-section #about h1, body #features-page .subsection3 .right-section #process h1, body #features-page .subsection3 .right-section #whoweare h1, body #features-page .subsection3 .right-section #about-page-section-3 h1, body #features-page .subsection3 .right-section #skills h1, body #features-page .subsection3 .right-section #team-member h1, body #features-page .subsection3 .right-section #top_banner h1, body #features-page .subsection3 .right-section #portfolio h1, body #features-page .subsection3 .right-section #faq h1, body #features-page .subsection3 .right-section #contact h1, body #features-page .subsection3 .right-section #contact-page h1, body #features-page .subsection3 .right-section .subsection1 h1, body #features-page .subsection3 .right-section .subsection2 h1, body #features-page .subsection3 .right-section .right-section h1, body #features-page .subsection3 .right-section .left-section h1, body #features-page .subsection3 .right-section .subsection4 h1, body #features-page .subsection3 .right-section #login-reg h1 {
 	color: #fff;
 }
-body #features-page .subsection3 .right-section .section-heading .subheading, body #features-page .subsection3 .right-section #features .subheading, body #features-page .subsection3 .right-section #about .subheading, body #features-page .subsection3 .right-section #process .subheading, body #features-page .subsection3 .right-section #testimonial .subheading, body #features-page .subsection3 .right-section #about-page-section-3 .subheading, body #features-page .subsection3 .right-section #skills .subheading, body #features-page .subsection3 .right-section #team-member .subheading, body #features-page .subsection3 .right-section #top_banner .subheading, body #features-page .subsection3 .right-section #portfolio .subheading, body #features-page .subsection3 .right-section #faq .subheading, body #features-page .subsection3 .right-section #contact .subheading, body #features-page .subsection3 .right-section #contact-page .subheading, body #features-page .subsection3 .right-section .subsection1 .subheading, body #features-page .subsection3 .right-section .subsection2 .subheading, body #features-page .subsection3 .right-section .right-section .subheading, body #features-page .subsection3 .right-section .left-section .subheading, body #features-page .subsection3 .right-section .subsection4 .subheading, body #features-page .subsection3 .right-section #login-reg .subheading {
+body #values-page .subsection3 .right-section .section-heading .subheading, body #features-page .subsection3 .right-section #features .subheading, body #features-page .subsection3 .right-section #about .subheading, body #features-page .subsection3 .right-section #process .subheading, body #features-page .subsection3 .right-section #whoweare .subheading, body #features-page .subsection3 .right-section #about-page-section-3 .subheading, body #features-page .subsection3 .right-section #skills .subheading, body #features-page .subsection3 .right-section #team-member .subheading, body #features-page .subsection3 .right-section #top_banner .subheading, body #features-page .subsection3 .right-section #portfolio .subheading, body #features-page .subsection3 .right-section #faq .subheading, body #features-page .subsection3 .right-section #contact .subheading, body #features-page .subsection3 .right-section #contact-page .subheading, body #features-page .subsection3 .right-section .subsection1 .subheading, body #features-page .subsection3 .right-section .subsection2 .subheading, body #features-page .subsection3 .right-section .right-section .subheading, body #features-page .subsection3 .right-section .left-section .subheading, body #features-page .subsection3 .right-section .subsection4 .subheading, body #features-page .subsection3 .right-section #login-reg .subheading {
 	color: #fff;
 }
-body #features-page .subsection3 .right-section .featureblock {
+body #values-page .subsection3 .right-section .featureblock {
 	margin-bottom: 30px;
 	display: inline-block;
 }
-body #features-page .subsection3 .right-section .featureblock .icon {
+body #values-page .subsection3 .right-section .featureblock .icon {
 	text-align: right;
 	font-size: 30px;
 	line-height: 34px;
 }
-body #features-page .subsection3 .right-section .nomargin {
+body #values-page .subsection3 .right-section .nomargin {
 	margin-bottom: 0px !important;
 }
-body #features-page .subsection3 .right-section .subfeature .featureblock h4 {
+body #values-page .subsection3 .right-section .subfeature .featureblock h4 {
 	color: #fff;
 }
-body #features-page .subsection3 .right-section .subfeature .featureblock i {
+body #values-page .subsection3 .right-section .subfeature .featureblock i {
 	color: #fff;
 	font-size: 30px;
 }
-body #features-page .subsection3 .left-section {
+body #values-page .subsection3 .left-section {
 	background-color: #34363e;
 }
-body #features-page .subsection3 .left-section .section-heading h1, body #features-page .subsection3 .left-section #features h1, body #features-page .subsection3 .left-section #about h1, body #features-page .subsection3 .left-section #process h1, body #features-page .subsection3 .left-section #testimonial h1, body #features-page .subsection3 .left-section #about-page-section-3 h1, body #features-page .subsection3 .left-section #skills h1, body #features-page .subsection3 .left-section #team-member h1, body #features-page .subsection3 .left-section #top_banner h1, body #features-page .subsection3 .left-section #portfolio h1, body #features-page .subsection3 .left-section #faq h1, body #features-page .subsection3 .left-section #contact h1, body #features-page .subsection3 .left-section #contact-page h1, body #features-page .subsection3 .left-section .subsection1 h1, body #features-page .subsection3 .left-section .subsection2 h1, body #features-page .subsection3 .left-section .right-section h1, body #features-page .subsection3 .left-section .left-section h1, body #features-page .subsection3 .left-section .subsection4 h1, body #features-page .subsection3 .left-section #login-reg h1 {
+body #values-page .subsection3 .left-section .section-heading h1, body #features-page .subsection3 .left-section #features h1, body #features-page .subsection3 .left-section #about h1, body #features-page .subsection3 .left-section #process h1, body #features-page .subsection3 .left-section #whoweare h1, body #features-page .subsection3 .left-section #about-page-section-3 h1, body #features-page .subsection3 .left-section #skills h1, body #features-page .subsection3 .left-section #team-member h1, body #features-page .subsection3 .left-section #top_banner h1, body #features-page .subsection3 .left-section #portfolio h1, body #features-page .subsection3 .left-section #faq h1, body #features-page .subsection3 .left-section #contact h1, body #features-page .subsection3 .left-section #contact-page h1, body #features-page .subsection3 .left-section .subsection1 h1, body #features-page .subsection3 .left-section .subsection2 h1, body #features-page .subsection3 .left-section .right-section h1, body #features-page .subsection3 .left-section .left-section h1, body #features-page .subsection3 .left-section .subsection4 h1, body #features-page .subsection3 .left-section #login-reg h1 {
 	color: #fff;
 }
-body #features-page .subsection3 .left-section .section-heading .subheading, body #features-page .subsection3 .left-section #features .subheading, body #features-page .subsection3 .left-section #about .subheading, body #features-page .subsection3 .left-section #process .subheading, body #features-page .subsection3 .left-section #testimonial .subheading, body #features-page .subsection3 .left-section #about-page-section-3 .subheading, body #features-page .subsection3 .left-section #skills .subheading, body #features-page .subsection3 .left-section #team-member .subheading, body #features-page .subsection3 .left-section #top_banner .subheading, body #features-page .subsection3 .left-section #portfolio .subheading, body #features-page .subsection3 .left-section #faq .subheading, body #features-page .subsection3 .left-section #contact .subheading, body #features-page .subsection3 .left-section #contact-page .subheading, body #features-page .subsection3 .left-section .subsection1 .subheading, body #features-page .subsection3 .left-section .subsection2 .subheading, body #features-page .subsection3 .left-section .right-section .subheading, body #features-page .subsection3 .left-section .left-section .subheading, body #features-page .subsection3 .left-section .subsection4 .subheading, body #features-page .subsection3 .left-section #login-reg .subheading {
+body #values-page .subsection3 .left-section .section-heading .subheading, body #features-page .subsection3 .left-section #features .subheading, body #features-page .subsection3 .left-section #about .subheading, body #features-page .subsection3 .left-section #process .subheading, body #features-page .subsection3 .left-section #whoweare .subheading, body #features-page .subsection3 .left-section #about-page-section-3 .subheading, body #features-page .subsection3 .left-section #skills .subheading, body #features-page .subsection3 .left-section #team-member .subheading, body #features-page .subsection3 .left-section #top_banner .subheading, body #features-page .subsection3 .left-section #portfolio .subheading, body #features-page .subsection3 .left-section #faq .subheading, body #features-page .subsection3 .left-section #contact .subheading, body #features-page .subsection3 .left-section #contact-page .subheading, body #features-page .subsection3 .left-section .subsection1 .subheading, body #features-page .subsection3 .left-section .subsection2 .subheading, body #features-page .subsection3 .left-section .right-section .subheading, body #features-page .subsection3 .left-section .left-section .subheading, body #features-page .subsection3 .left-section .subsection4 .subheading, body #features-page .subsection3 .left-section #login-reg .subheading {
 	color: #fff;
 }
-body #features-page .subsection3 .left-section .subfeature h1 {
+body #values-page .subsection3 .left-section .subfeature h1 {
 	color: #fff;
 	font-size: 50px;
 	line-height: 75px;
 }
 @media screen and (max-width: 1024px) {
-body #features-page .subsection3 .left-section .subfeature h1 {
+body #values-page .subsection3 .left-section .subfeature h1 {
 	color: #fff;
 	font-size: 40px;
 	line-height: 75px;
 }
 }
-body #features-page .subsection4 {
+body #values-page .subsection4 {
 	background-color: #fff;
 }
-body #features-page .subsection4 .subheading-pricing {
+body #values-page .subsection4 .subheading-pricing {
 	color: #999999;
 }
-body #features-page .subsection4 .vc_column_container > .vc_column-inner {
+body #values-page .subsection4 .vc_column_container > .vc_column-inner {
 	box-sizing: border-box;
 	padding-left: 0px;
 	padding-right: 0px;
 	width: 100%;
 }
-body #features-page .subsection4 .pricing-plan {
+body #values-page .subsection4 .pricing-plan {
 	display: block;
 	padding: 0;
 	margin: 0;
@@ -7526,13 +7533,13 @@ body #features-page .subsection4 .pricing-plan {
 	position: relative;
 	overflow: hidden;
 }
-body #features-page .subsection4 .pricing-plan-head {
+body #values-page .subsection4 .pricing-plan-head {
 	text-align: center;
 }
-body #features-page .subsection4 .pricing-plan-1 {
+body #values-page .subsection4 .pricing-plan-1 {
 	background-color: #34363e;
 }
-body #features-page .subsection4 .ribbon {
+body #values-page .subsection4 .ribbon {
 	position: absolute;
 	top: -5px;
 	left: 10px;
@@ -7541,10 +7548,10 @@ body #features-page .subsection4 .ribbon {
 	overflow: hidden;
 	z-index: 10;
 }
-body #features-page .subsection4 .recommended {
+body #values-page .subsection4 .recommended {
 	background: url(../img/recommended.png) 0 0 no-repeat;
 }
-body #features-page .subsection4 .featured-ribbon {
+body #values-page .subsection4 .featured-ribbon {
 	width: 220px;
 	background: #34363e;
 	position: absolute;
@@ -7560,17 +7567,17 @@ body #features-page .subsection4 .featured-ribbon {
 	transform: rotate(-45deg);
 	-webkit-transform: rotate(-45deg);
 }
-body #features-page .subsection4 .grow {
+body #values-page .subsection4 .grow {
 	transition: all .2s ease-in-out;
 }
-body #features-page .subsection4 .grow:hover {
+body #values-page .subsection4 .grow:hover {
 	transform: scale(1.1);
 }
-body #features-page .subsection4 .pricing-plan .pricing-plan-head {
+body #values-page .subsection4 .pricing-plan .pricing-plan-head {
 	color: #fff;
 	border-radius: 3px 3px 0px 0px;
 }
-body #features-page .subsection4 .pricing-plan .pricing-plan-head h3 {
+body #values-page .subsection4 .pricing-plan .pricing-plan-head h3 {
 	display: block;
 	margin: 0;
 	padding: 12px 0 12px 0;
@@ -7581,24 +7588,24 @@ body #features-page .subsection4 .pricing-plan .pricing-plan-head h3 {
 	background: #f9f9f9;
 	text-transform: uppercase;
 }
-body #features-page .subsection4 .pricing-plan.pricing-color-true .pricing-plan-head {
+body #values-page .subsection4 .pricing-plan.pricing-color-true .pricing-plan-head {
 	margin: -1px -1px 0px -1px;
 	color: #fff;
 }
-body #features-page .subsection4 .pricing-plan.pricing-color-true .pricing-plan-head h3 {
+body #values-page .subsection4 .pricing-plan.pricing-color-true .pricing-plan-head h3 {
 	color: #fff;
 	background: none;
 }
-body #features-page .subsection4 .pricing-plan .pricing-price {
+body #values-page .subsection4 .pricing-plan .pricing-price {
 	background: #fff;
 	box-shadow: inset 0 1px 1px -1px #999999, inset 0 -1px 1px -1px #999999;
 }
-body #features-page .subsection4 .pricing-plan.pricing-color-true .pricing-price {
+body #values-page .subsection4 .pricing-plan.pricing-color-true .pricing-price {
 	background: rgba(0, 0, 0, 0.08);
 	box-shadow: none;
 	margin: 0;
 }
-body #features-page .subsection4 .pricing-plan .pricing-price span.pricing-amount {
+body #values-page .subsection4 .pricing-plan .pricing-price span.pricing-amount {
 	display: block;
 	font-size: 38px;
 	font-weight: 600;
@@ -7607,34 +7614,34 @@ body #features-page .subsection4 .pricing-plan .pricing-price span.pricing-amoun
 	line-height: 1;
 	color: #fff;
 }
-body #features-page .subsection4 .pricing-plan .pricing-price span.pricing-per {
+body #values-page .subsection4 .pricing-plan .pricing-price span.pricing-per {
 	display: block;
 	opacity: 0.6;
 	padding: 0 0 24px 0;
 	margin: 0;
 	color: #fff;
 }
-body #features-page .subsection4 .pricing-plan .pricing-signup {
+body #values-page .subsection4 .pricing-plan .pricing-signup {
 	display: block;
 	margin: 20px 0 0px 0;
 	padding: 20px 0 20px 0;
 	text-align: center;
 	background: #f9f9f9;
 }
-body #features-page .subsection4 .pricing-plan ul {
+body #values-page .subsection4 .pricing-plan ul {
 	margin: 20px 0 20px 0;
 	padding: 0 0 0px 0;
 	list-style: none;
 	background: #fff;
 	color: #777777;
 }
-body #features-page .subsection4 .pricing-plan li {
+body #values-page .subsection4 .pricing-plan li {
 	margin: 0 20px;
 	padding: 10px 0px;
 	text-align: center;
 	border-bottom: 1px solid #efefef;
 }
-body #features-page .subsection4 .pricing-plan li:last-child {
+body #values-page .subsection4 .pricing-plan li:last-child {
 	border-bottom: none;
 }
 body #login-reg {
