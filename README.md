@@ -66,16 +66,60 @@ already familiar with Git & Terminal commands.
 
 #### Branch Naming
 
-All branches should be named <username>-<issuename>
+All branches should be named <FirstInitialLastName/IssueName> 
 
 #### CSS
 
 All CSS files should be stored in the _styles_ directory.
 
+##### New Classes
+
+New css classes should, by default, go in a .css file associated with the 
+html file they are defining a style for (e.g. contact.html -> contact.css).
+
+If your class is meant to define site-wide style changes, then main is still
+acceptable, just be prepared to defend your reasoning.
+
+##### Linting
+
+Try your best to keep rules within your class alphabetized, and try to keep
+your classes alphabetized within the file. This one can be tough in bigger files,
+and we're working on a linter for it.
+
 #### Scripts
 
-All script files should be stored in the _script_ directory.
+All script files should be stored in the _script_ directory. The file name
+should be associated to the html file the script is intended for (e.g. contact.html
+-> contact.js). This helps to keep files smaller, thus improving load times 
+(and it makes development a lot easier).
 
 #### HTML
 
 Excluding the main page, all html views should be stored in the _views_ directory.
+
+##### Sub Pages
+
+All sub pages should have the 
+```
+<base href="../" />
+```
+rule at the top of the file. The relative link should move the page's base dir
+to the rootdir (where index.html is). This makes it easier to copy
+navigation html between pages.
+
+#### Image Extensions
+
+##### .jpg 
+
+Use .jpg files for any regular images (people, landscapes, etc).
+
+##### .svg
+
+Use .svg for any computer graphic files where we have an svg, but don't go digging trying to 
+convert icons to svg unless you're good with illustrator/other vector editors.
+
+##### .png
+
+Use .png for any computer graphic we have that it wouldn't be reasonable to make
+a .svg for.
+

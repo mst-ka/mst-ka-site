@@ -1,0 +1,4 @@
+package-lock.json
+active/script/firebase-init.js
+node_modules/
+*.log

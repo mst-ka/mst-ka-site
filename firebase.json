@@ -1,7 +1,6 @@
 {
   "hosting": {
     "public": "active",
-    // Prevents the .html portion of pages from being rendered
     "cleanUrls": true,
     "ignore": [
       "firebase.json",
@@ -10,7 +9,8 @@
       "public/"
     ],
     "contributors": [
-      "Joe Studer <joe.studer.18@gmail.com>"
+      "Joe Studer <joe.studer.18@gmail.com>",
+      "Jared Hanisch <jared.hanisch@gmail.com>"
     ]
   }
 }
