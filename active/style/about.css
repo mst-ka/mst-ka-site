@@ -15,6 +15,7 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
 
 .bullets li {
     list-style-type: circle;
+    margin-left: 20px;
 }
 
 .about-banner {
@@ -39,13 +40,14 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
 
 .about-item {
     flex: 2;
-    
 }
 
 .photo {
     flex: 1;
     padding: 50px;
-    
+}
+#officers .photo {
+    padding: 10px;
 }
 
 .photo img {
