@@ -56,7 +56,6 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
     float: right;
     border-radius: 8px;
     box-shadow: black 0 0px 10px;
-    /* margin-bottom: 20px; */
     max-height: 250px;
     min-width: 437px;
 }
@@ -72,8 +71,13 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
     justify-content: center;
   }
 }
-#officers .photo {
-    padding: 10px;
+.officer-listing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
-
-
+.officer-listing img {
+    box-shadow: black 0 0px 10px;
+    margin: 10px;
+}
