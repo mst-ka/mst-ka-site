@@ -38,21 +38,21 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
     padding-left: 15px;
     padding-right: 15px;  
 }
-.about-item {
+.about-listing {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: center;
 }
-.about-item p {
+.about-listing p {
   display: flex;
   text-align: justify;
   padding-right: 15px;
 }
-.about-item div {
+.about-listing div {
   max-width: 50%;
 }
-.about-item img {
+.about-listing img {
     float: right;
     border-radius: 8px;
     box-shadow: black 0 0px 10px;
@@ -63,10 +63,10 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
   .about-navbar {
     display: none;
   }
-  .about-item {
+  .about-listing {
     justify-content: center;
   }
-  .about-item div {
+  .about-listing div {
     max-width: 100%;
     justify-content: center;
   }
