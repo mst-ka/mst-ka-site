@@ -31,27 +31,53 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
 
 .about-container {
     display: flex; 
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    width: 1170px;
+    max-width: 1170px;
     padding-left: 15px;
     padding-right: 15px;  
 }
-
-.about-item {
-    flex: 2;
+.about-listing {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
 }
-
-.photo {
-    flex: 1;
-    padding: 50px;
+.about-listing p {
+  display: flex;
+  text-align: justify;
+  padding-right: 15px;
 }
-#officers .photo {
-    padding: 10px;
+.about-listing div {
+  max-width: 50%;
 }
-
-.photo img {
+.about-listing img {
+    float: right;
     border-radius: 8px;
     box-shadow: black 0 0px 10px;
-    margin-bottom: 50px;
+    max-height: 250px;
+    min-width: 437px;
+}
+@media (max-width: 920px) {
+  .about-navbar {
+    display: none;
+  }
+  .about-listing {
+    justify-content: center;
+  }
+  .about-listing div {
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+.officer-listing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.officer-listing img {
+    box-shadow: black 0 0px 10px;
+    margin: 10px;
 }
