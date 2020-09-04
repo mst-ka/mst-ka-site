@@ -12,22 +12,19 @@ const nodemailer = require('nodemailer');
 
 admin.initializeApp();
 
-const gmailUser = functions.config().gmail.login;
-const gmailPass = functions.config().gmail.pass; 
 const contactEmails = ['Joe Studer <joe.studer.18@gmail.com>'];
 
-var email = function(message) {
-  console.log("user: %s", gmailUser);
+var email = function(sender, message) {
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: gmailUser,
-      pass: gmailPass
+      user: functions.config().gmail.login,
+      pass: functions.config().gmail.pass
     }
   });
 
   const mailOptions = {
-    from: gmailUser,
+    from: sender,
     to: contactEmails,
     subject: '[MST-KA Website]: ' + message.subject,
     text: message.message,
@@ -42,16 +39,16 @@ var email = function(message) {
 };
 
 //.onDataAdded is watches for changes in database
-exports.onDataAdded = functions.database.ref('/messages/{sessionId}').onCreate(function (snap, context) {
+exports.onDataAddedMessage = functions.database.ref('/messages/{sessionId}').onCreate(function (snap, context) {
     //here we catch a new data, added to firebase database, it stored in a snap variable
     const createdData = snap.val();
     var text = createdData;
 
     //here we send new data using function for sending emails
-    email(text);
+    email(text.mail, text);
 });
 
-exports.onDataAdded = functions.database.ref('/applications/{sessionId}').onCreate(function (snap, context) {
+exports.onDataAddedApps = functions.database.ref('/applications/{sessionId}').onCreate(function (snap, context) {
     //here we catch a new data, added to firebase database, it stored in a snap variable
     const createdData = snap.val();
     var text = createdData;
@@ -79,5 +76,5 @@ exports.onDataAdded = functions.database.ref('/applications/{sessionId}').onCrea
 
 
     //here we send new data using function for sending emails
-    email(text);
+    email(text.mail, text);
 });
