@@ -6502,6 +6502,7 @@ body #whoweare {
 	background: url(../img/den_with_flag.jpg);
 	width: 100%;
 	height: 100%;
+  min-height: 380px;
 	background-size: cover !important;
 	background-position: 50% 60% !important;
 	color: #fff;
