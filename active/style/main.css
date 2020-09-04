@@ -7893,9 +7893,11 @@ body #login-reg .btn-link-1 {
 	margin: 0 15px 0 0;
 	font-size: 22px;
 }
-
+#content {
+  min-height: calc(100vh - 330px);
+}
 @media (max-width: 800px) {
-	#footer {
+#footer {
 		display: none !important;
 	}
 }
