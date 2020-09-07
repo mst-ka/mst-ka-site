@@ -12,5 +12,16 @@
       "Joe Studer <joe.studer.18@gmail.com>",
       "Jared Hanisch <jared.hanisch@gmail.com>"
     ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "hosting": {
+      "port": 5000
+    },
+    "database": {
+      "port": 9000
+    }
   }
 }
