@@ -1,0 +1,83 @@
+.about-navbar li{
+    display: inline;
+    margin: 0px 30px 0px 0px;
+}
+
+body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers, #parents-faq{
+    padding: 50px 0px;
+}
+
+.about-section-heading{
+    color: #333333; /*Dark Grey*/
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+.bullets li {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+.about-banner {
+    background-size: cover;
+    background-image: url(../img/banner-slide-3.jpg);
+    background-position: center;
+    padding: 175px 0px;
+}
+
+.about-nav-background {
+    background-color: #f0efef; /*Very Light Grey*/
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.about-listing {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.about-listing p {
+  display: flex;
+  text-align: justify;
+  padding-right: 15px;
+}
+.about-listing div {
+  max-width: 50%;
+}
+.about-listing img {
+    float: right;
+    border-radius: 8px;
+    box-shadow: black 0 0px 10px;
+    max-height: 250px;
+    min-width: 437px;
+}
+@media (max-width: 920px) {
+  .about-navbar {
+    display: none;
+  }
+  .about-listing {
+    justify-content: center;
+  }
+  .about-listing div {
+    max-width: 100%;
+    justify-content: center;
+  }
+}
+.officer-listing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.officer-listing img {
+    box-shadow: black 0 0px 10px;
+    margin: 10px;
+}
