@@ -6502,6 +6502,7 @@ body #whoweare {
 	background: url(../img/den_with_flag.jpg);
 	width: 100%;
 	height: 100%;
+  min-height: 380px;
 	background-size: cover !important;
 	background-position: 50% 60% !important;
 	color: #fff;
@@ -7893,9 +7894,11 @@ body #login-reg .btn-link-1 {
 	margin: 0 15px 0 0;
 	font-size: 22px;
 }
-
+#content {
+  min-height: calc(100vh - 330px);
+}
 @media (max-width: 800px) {
-	#footer {
+#footer {
 		display: none !important;
 	}
 }

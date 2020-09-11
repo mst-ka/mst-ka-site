@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/skin.css">
+    <link rel="stylesheet" href="style/values.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -18,7 +19,7 @@
 </head>
 
 <body id="wrapper" class="red">
-
+  <section id="content">
     <section id="top-header">
         <div class="container">
             <div class="row">
@@ -54,7 +55,7 @@
                 <div id="navbar" class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav sticky">
                         <li><a href="index.html">Home</a></li>
-                        <li class="active"><a href="#">Values</a></li>
+                        <li class="active"><a href="views/values.html">Values</a></li>
                         <li><a href="views/awards.html">Awards</a></li>
                         <li><a href="views/about.html">About</a></li>
                         <li><a href="views/contact.html">Contact</a></li>
@@ -67,46 +68,68 @@
     </header>
     <!--/.nav-ends -->
 
-    <div id="valueTab">
-      <a href="views/valuetab/brotherhood.html">The Bond of Brotherhood</a><br>
-      <a href="views/valuetab/giving.html">Giving Back</a><br>
-      <a href="views/valuetab/gentlemen.html">We Are Gentlemen</a><br>
-      <a href="views/valuetab/goKA.html">Top Five Reasons to Go KA</a><br>
-      <a href="views/valuetab/youareKA.html">You are A KA</a><br>
-    </div>
+    <section id="values-nav-banner">
+        <div class="values-banner"></div>
+        <div class="page_info values-nav-background">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-8 col-xs-6">
+                    <!-- TODO: Display these on mobile too -->
+                    <h4>You Are A KA</h4>
+                    <ul class="values-navbar">
+                        <li><a href="views/valuetab/brotherhood.html">The Bond of Brotherhood</a></li>
+                        <li><a href="views/valuetab/giving.html">Giving Back</a></li>
+                        <li><a href="views/valuetab/gentlemen.html">We Are Gentlemen</a></li>
+                        <li><a href="views/valuetab/goKA.html">Top Five Reasons to Go KA</a></li>
+                        <li><a href="views/valuetab/youareKA.html">You Are A KA</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-6" style="text-align:right;">Home<span class="sep"> / </span><span class="current"> Values</span></div>
+            </div>
+        </div>
+    </section>
 
-    <section id="content">
-      <img src="img/bigsmile.jpg" align=right>
-      <p>Sir, you are a Kappa Alpha. You are not just another fraternity man.
-        You are a knight within the most unique organization among Greek letter
-        societies. You have become familiar with the tradition and values which
-        emanated - not by accident, but by design - from the most noble
-        qualities of the Knights of old.</p>
-      <br>
-      <p>Our heritage incorporates the highest ideals of fidelity to God and
-        esteem of women. You are a KA. You can never be anything else. You will
-        always aspire to excellence. You cannot be petty, cowardly, unfair,
-        unfaithful - you are a KA.</p>
-      <br>
-      <p>You have a serious challenge, indeed a direct obligation incumbent upon
-        you as a KA. You are the recipient of a rich heritage. You will strive
-        to preserve, strengthen, and pass on this heritage to those brothers
-        that your Order chooses to entrust with it in the future.</p>
-      <br>
-      <p>You will never grow taller than when reach out to help a brother. And
-        you cannot desert him when others do. You can never become wiser by
-        disregarding the sterling ideals of your Order.</p>
-      <br>
-      <p>You can never worship God more intimately than when you utilize the
-        tools that Kappa Alpha has given you. And if you do these things, you
-        cannot but realize for yourself the respect of your fellow man, the
-        wealth of mortal happiness, and the salvation by a generous God.</p>
 
+    <section id="you-are-a-KA">
+        <div class="values-container">
+            <div class="values-listing">
+                <img src="img/bigsmile.jpg">
+                <div>
+                    <p>
+                        Sir, you are a Kappa Alpha. You are not just another fraternity man.
+                        You are a knight within the most unique organization among Greek letter
+                        societies. You have become familiar with the tradition and values which
+                        emanated - not by accident, but by design - from the most noble
+                        qualities of the Knights of old.
+                        <br>
+                        Our heritage incorporates the highest ideals of fidelity to God and
+                        esteem of women. You are a KA. You can never be anything else. You will
+                        always aspire to excellence. You cannot be petty, cowardly, unfair,
+                        unfaithful - you are a KA.
+                        <br>
+                        You have a serious challenge, indeed a direct obligation incumbent upon
+                        you as a KA. You are the recipient of a rich heritage. You will strive
+                        to preserve, strengthen, and pass on this heritage to those brothers
+                        that your Order chooses to entrust with it in the future.
+                        <br>
+                        You will never grow taller than when reach out to help a brother. And
+                        you cannot desert him when others do. You can never become wiser by
+                        disregarding the sterling ideals of your Order.
+                        <br>
+                        You can never worship God more intimately than when you utilize the
+                        tools that Kappa Alpha has given you. And if you do these things, you
+                        cannot but realize for yourself the respect of your fellow man, the
+                        wealth of mortal happiness, and the salvation by a generous God.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="applyButton">
       <a class="applyText" href="views/contact.html">Apply Online</a>
     </div>
+  </section>
 
     <section id="footer">
         <div class="container">
@@ -136,9 +159,9 @@
                           <li>Beta Alpha of Kappa Alpha</li>
                           <li>1 Fraternity Drive</li>
                           <li>Rolla, Missouri 65401</li>
-                          <li>President: (417) 699-6400</li>
+                          <li>President: <p class="presPhone" style="display: inline;"></p></li>
                           <li>Alumni Contact</li>
-                          <li>Jim Hennesy - (314) 378-8483</li>
+                          <li><p class="aluPhone" style="display: inline;"></p></li>
                         </ul>
                     </div>
                 </div>
@@ -171,8 +194,21 @@
                 </div>
             </div>
         </div>
-
-
+    </section>
+    <section id="bottom-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12 btm-footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12 copyright">
+            Developed by <span>Beta Alpha of Kappa Alpha</span>
+            and hosted on <a href="https://github.com/joe-studer-18/mst-ka-site">Github</a>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
+  <script src="./script/global.js"></script>
 </html>
