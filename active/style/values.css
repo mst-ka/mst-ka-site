@@ -1,0 +1,90 @@
+.values-navbar li{
+    display: inline;
+    margin: 0px 25px 0px 0px;
+}
+
+body #bond-of-brotherhood, #we-are-gentleman, #giving-back, #go-KA, #you-are-a-KA{
+    padding: 50px 0px;
+}
+
+body #bond-of-brotherhood, #we-are-gentleman, #giving-back, #go-KA, #you-are-a-KA img {
+    max-height: auto;
+    min-width: auto;
+}
+
+.values-section-heading{
+    color: #333333; /*Dark Grey*/
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+.bullets li {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+.values-banner {
+    background-size: cover;
+    background-image: url(../img/banner-slide-3.jpg);
+    background-position: center;
+    padding: 175px 0px;
+}
+
+.values-nav-background {
+    background-color: #f0efef; /*Very Light Grey*/
+}
+
+.values-container {
+    display: flex; 
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;  
+}
+.values-listing {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.values-listing p {
+  display: flex;
+  text-align: justify;
+  padding-right: 50px;
+}
+.values-listing div {
+  max-width: 50%;
+}
+.values-listing img {
+    float: right;
+    border-radius: 8px;
+    box-shadow: black 0 0px 10px;
+}
+
+body #go-KA .values-listing { /*special case for section without pictures*/
+  display: flex;
+  flex-direction: row;
+}
+body #go-KA .values-listing div { /*special case for section without pictures*/
+    max-width: 80%;
+}
+
+.icons img{
+    max-height: 145px;
+    min-width: 275px;
+}
+@media (max-width: 920px) {
+  .values-navbar {
+    display: none;
+  }
+  .values-listing {
+    justify-content: center;
+  }
+  .values-listing div {
+    max-width: 100%;
+    justify-content: center;
+  }
+}
