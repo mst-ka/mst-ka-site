@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/skin.css">
+    <link rel="stylesheet" href="style/awards.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -66,43 +67,61 @@
     </header>
     <!--/.nav-ends -->
 
-    <div id="awardTab">
-      <a href="views/awardtab/campusawards.html">Campus Awards</a><br>
-      <a href="views/awardtab/nationalawards.html">National Awards</a><br>
-      <a href="views/awardtab/scholarships.html">Scholarships</a><br>
-    </div>
+    <section id="awards-nav-banner">
+      <!-- TODO: Change this to a panoramic of the library. Make our awards look pretty. -->
+      <div class="awards-banner"></div>
+      <div class="page_info awards-nav-background">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-8 col-xs-6">
+              <!-- TODO: Display these on mobile too -->
+              <h4>Awards</h4>
+              <ul class="awards-navbar">
+                <li><a href="views/awardtab/campusawards.html">Campus Awards</a></li>
+                <li><a href="views/awardtab/nationalawards.html">National Awards</a></li>
+                <li><a href="views/awardtab/scholarships.html">Scholarships</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-6" style="text-align:right;">Home<span class="sep"> / </span><span class="current"> Awards</span></div>
+          </div>
+        </div>
+    </section>
 
     <section id="nationalAwardsContent">
-      <div class="awardList">
-        <img src="img/bakaawards.jpg" align=right>
-        <div class="awardType">
-          <h4>George C. Marshall Award of Chapter Excellence - </h4>
-          <p>The George C. Marshall Award is given to the top 0-3 KA chapters
-            nationally each year. Of the 45+ Marshalls awarded, our chapter
-            holds 11 (as of 2019). This gives us the distinct honor of being
-            the most awarded KA chapter in the nation, a legacy we are proud to
-            continue!
-          </p>
+      <div class="awards-container">
+        <div class="awards-img">
+          <img src="img/bakaawards.jpg" align=right>
         </div>
-        <div class="awardType">
-          <h4>Samuel Zenas Ammen Award for Chapter Excellence - </h4>
-          <p>Similarly to the Marshall Award, the Samuel Zenas Ammen Award is
-            awarded to the top 10% of KA chapters in the nation annually. As of
-            2019 our chapter is proud to have received this award every year it
-            has been awarded, barring only two years.
-          </p>
-        </div>
-        <div>
-          <p>To win the Ammen award you must also win the majority of awards in
-            the following categories: Chapter finances, New Member Education,
-            Academic Excellence, Community Service, Philanthropy, Excellence in
-            Communication, and others.
-          </p>
-        </div>
-        <div>
-          <p>To win the Marshall award you must win all of the awards in those
-            categories.
-          </p>
+        <div class="awards-info">
+          <div class="awardType">
+            <h4>George C. Marshall Award of Chapter Excellence - </h4>
+            <p>The George C. Marshall Award is given to the top 0-3 KA chapters
+              nationally each year. Of the 45+ Marshalls awarded, our chapter
+              holds 11 (as of 2019). This gives us the distinct honor of being
+              the most awarded KA chapter in the nation, a legacy we are proud to
+              continue!
+            </p>
+          </div>
+          <div class="awardType">
+            <h4>Samuel Zenas Ammen Award for Chapter Excellence - </h4>
+            <p>Similarly to the Marshall Award, the Samuel Zenas Ammen Award is
+              awarded to the top 10% of KA chapters in the nation annually. As of
+              2019 our chapter is proud to have received this award every year it
+              has been awarded, barring only two years.
+            </p>
+          </div>
+          <div>
+            <p>To win the Ammen award you must also win the majority of awards in
+              the following categories: Chapter finances, New Member Education,
+              Academic Excellence, Community Service, Philanthropy, Excellence in
+              Communication, and others.
+            </p>
+          </div>
+          <div>
+            <p>To win the Marshall award you must win all of the awards in those
+              categories.
+            </p>
+          </div>
         </div>
       </div>
     </section>
