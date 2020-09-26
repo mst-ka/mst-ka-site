@@ -7906,8 +7906,10 @@ body #login-reg .btn-link-1 {
 }
 .mobile-navbar {
   display: inline;
-  margin-left: 25px;
   z-index: 5;
+}
+.mobile-navbar > li {
+  margin-left: 25px;
 }
 .nav {
   height: calc(100vh - 100px);
