@@ -501,13 +501,3 @@
 
   return Instafeed;
 }));
-
-var feed = new Instafeed({
-  accessToken: 'IGQVJXd0g1OXd3eUJ1d3k2ZAjFOUGNHeDJvY2NKZAjZAERlBGMzFJRHUtR3hVQTFrc1JnZAVJ1Rlh4RnlvdVBZAWDlBYkhmNjZAJZAFBadHF1aUZATN2kyZAGFlTFo3UWxIbFVLOVpldmNPTnNQZAVpKVHc2cW1OcAZDZD',
-  limit: 5,
-  resolution: 'standard_resolution',
-  template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>',
-  target: 'instafeed'
-});
-feed.run();
-
