@@ -7897,8 +7897,20 @@ body #login-reg .btn-link-1 {
 #content {
   min-height: calc(100vh - 330px);
 }
+.mobile-navbar {
+  display: none;
+}
 @media (max-width: 800px) {
 #footer {
 		display: none !important;
-	}
+}
+.mobile-navbar {
+  display: inline;
+  margin-left: 25px;
+  z-index: 5;
+}
+.nav {
+  height: calc(100vh - 100px);
+  overflow: scroll;
+}
 }
