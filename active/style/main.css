@@ -7897,18 +7897,15 @@ body #login-reg .btn-link-1 {
 #content {
   min-height: calc(100vh - 330px);
 }
-.mobile-navbar {
-  display: none;
-}
 @media (max-width: 800px) {
 #footer {
 		display: none !important;
 }
-.mobile-navbar {
-  display: inline;
+.sub-navbar {
+  display: none;
   z-index: 5;
 }
-.mobile-navbar > li {
+.sub-navbar > li {
   margin-left: 25px;
 }
 .nav {
