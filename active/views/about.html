@@ -59,8 +59,9 @@
                             <li><a href="index.html">Home</a></li>
                             <li><a href="views/values.html">Values</a></li>
                             <li><a href="views/awards.html">Awards</a></li>
-                            <li class="active"><a href="views/about.html">About</a></li>
-                            <ul class="mobile-navbar">
+                            <li class="active" onclick="displaySubNav('about-sub-nav')"><a>About</a></li>
+                            <ul id="about-sub-nav" class="sub-navbar">
+                                <li class="active"><a href="views/about.html">About Us</a></li>
                                 <li><a href="views/abouttabs/GreekLife.html">BA of KA Greek Life</a></li>
                                 <li><a href="views/abouttabs/HouseHistory.html">BA of KA House History</a></li>
                                 <li><a href="views/abouttabs/Officers.html">BA of KA Officers</a></li>
@@ -304,5 +305,6 @@
     </div>
 </body>
 <script src="./script/global.js"></script>
+<script src="./script/nav.js"></script>
 
 </html>
