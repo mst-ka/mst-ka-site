@@ -7901,7 +7901,7 @@ body #login-reg .btn-link-1 {
   display: none;
 }
 .desktop-nav {
-  display: inline;
+  display: block;
 }
 @media (max-width: 800px) {
 #footer {
@@ -7911,7 +7911,7 @@ body #login-reg .btn-link-1 {
   display: none;
 }
 .mobile-navbar {
-  display: inline;
+  display: block;
 }
 .sub-navbar {
   display: none;
@@ -7919,8 +7919,17 @@ body #login-reg .btn-link-1 {
 }
 .sub-navbar > li {
   margin-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-.nav {
+.sub-navbar > li > a {
+	border-bottom: 1px solid #ddd;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  line-height: 30px;
+}
+.random-class {
   height: calc(100vh - 100px);
   overflow: scroll;
 }
