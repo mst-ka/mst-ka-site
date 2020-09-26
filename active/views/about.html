@@ -64,8 +64,22 @@
                         </ul>
                         <ul class="nav navbar-nav sticky mobile-navbar">
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="views/values.html">Values</a></li>
-                            <li><a href="views/awards.html">Awards</a></li>
+                            <li><a onclick="displaySubNav('values-sub-nav')">Values</a></li>
+                            <ul id="values-sub-nav" class="sub-navbar">
+                                <li><a href="views/values.html">Our Values</a></li>
+                                <li><a href="views/valuetab/brotherhood.html">The Bond of Brotherhood</a></li>
+                                <li><a href="views/valuetab/giving.html">Giving Back</a></li>
+                                <li><a href="views/valuetab/gentlemen.html">We Are Gentlemen</a></li>
+                                <li><a href="views/valuetab/goKA.html">Top Five Reasons to Go KA</a></li>
+                                <li><a href="views/valuetab/youareKA.html">You Are A KA</a></li>
+                            </ul>
+                            <li onclick="displaySubNav('awards-sub-nav')"><a>Awards</a></li>
+                            <ul id="awards-sub-nav" class="sub-navbar">
+                                <li><a href="views/awards.html">Our Awards</a></li>
+                                <li><a href="views/awardtab/campusawards.html">Campus Awards</a></li>
+                                <li><a href="views/awardtab/nationalawards.html">National Awards</a></li>
+                                <li><a href="views/awardtab/scholarships.html">Scholarships</a></li>
+                            </ul>
                             <li class="active" onclick="displaySubNav('about-sub-nav')"><a>About</a></li>
                             <ul id="about-sub-nav" class="sub-navbar">
                                 <li class="active"><a href="views/about.html">About Us</a></li>
