@@ -7921,6 +7921,8 @@ body #login-reg .btn-link-1 {
   margin-left: 25px;
   padding-top: 10px;
   padding-bottom: 10px;
+	float: none !important;
+	display: block;
 }
 .sub-navbar > li > a {
 	border-bottom: 1px solid #ddd;
@@ -7929,7 +7931,7 @@ body #login-reg .btn-link-1 {
   background-color: #fff;
   line-height: 30px;
 }
-.random-class {
+.sub-navbar-unfold {
   height: calc(100vh - 100px);
   overflow: scroll;
 }
