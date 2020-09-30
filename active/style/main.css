@@ -5970,6 +5970,13 @@ body header {
 	-webkit-transition: 0.8s;
 	transition: 0.8s;
 	z-index: 999;
+ 	background: #fff;
+  position: fixed;
+	text-align: left;
+	-webkit-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+	-moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+	box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
+	width: 100%;
 }
 body header .container {
   margin-left: 0px;
@@ -5986,12 +5993,13 @@ body header.sticky {
 	-moz-box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 	box-shadow: 0 3px 5px rgba(57, 63, 72, 0.3);
 	width: 100%;
+  z-index: 999;
 }
 body header .navbar-nav > li > a {
 	padding-top: 25px;
 	padding-bottom: 20px;
 	transition: 0.8s;
-	z-index: 999;
+	z-index: 1000;
 }
 body header .navbar-brand {
  	float: left;
@@ -7934,5 +7942,6 @@ body #login-reg .btn-link-1 {
 .sub-navbar-unfold {
   height: calc(100vh - 100px);
   overflow: scroll;
+  z-index: 1000;
 }
 }
