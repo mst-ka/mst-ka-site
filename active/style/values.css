@@ -15,7 +15,7 @@ body #bond-of-brotherhood, #we-are-gentleman, #giving-back, #go-KA, #you-are-a-K
 .values-section-heading{
     color: #333333; /*Dark Grey*/
     text-transform: uppercase;
-    margin-top: 50px;
+    padding-top: 50px;
 }
 
 .bullets li {
@@ -76,15 +76,45 @@ body #go-KA .values-listing div { /*special case for section without pictures*/
     max-height: 145px;
     min-width: 275px;
 }
+
+.video-sizing {
+  width: 640px;
+  height: 360px;
+}
 @media (max-width: 920px) {
   .values-navbar {
     display: none;
   }
   .values-listing {
     justify-content: center;
+    text-align: center;
+  }
+  .values-listing img {
+    max-width: 300px;
+    max-height: 200px;
+  }
+  .subpage-paragraph {
+    padding-top: 30px;
+  }
+  .video-sizing {
+    max-width: 300px;
+    max-height: 250px;
   }
   .values-listing div {
     max-width: 100%;
     justify-content: center;
+  }
+  .values-listing p{
+    padding: 0px 0px 50px 0px;
+    text-align: center;
+  }
+  .values-section-heading {
+    padding-top: 10px;
+  }
+  .icons img {
+    max-height: 145px;
+    min-width: 275px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
