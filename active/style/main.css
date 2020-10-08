@@ -6305,7 +6305,7 @@ body #values .img-responsive {
 	box-shadow: 0px 0px 12px #ddd;
 	display: block;
 	height: auto;
-  	max-width: 240px;
+  max-width: 240px;
 }
 
 @media (max-width: 920px) {
