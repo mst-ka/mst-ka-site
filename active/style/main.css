@@ -6327,6 +6327,14 @@ body #values .img-responsive {
 		
 	}
 }
+
+@media (max-width: 920px) {
+	body #values .img-responsive{
+		display: block;
+  		margin-left: auto;
+		margin-right: auto;
+	}
+}
 body #values i.feature_icon {
 	font-size: 30px;
 }
@@ -7958,6 +7966,13 @@ body #login-reg .btn-link-1 {
   padding-bottom: 10px;
   background-color: #fff;
   line-height: 30px;
+	display: block;
+	padding: 3px 20px;
+	clear: both;
+	font-weight: normal;
+	line-height: 1.428571429;
+	color: #333333;
+	white-space: nowrap;
 }
 .sub-navbar-unfold {
   height: calc(100vh - 100px);

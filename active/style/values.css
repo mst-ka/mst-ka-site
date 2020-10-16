@@ -76,7 +76,10 @@ body #go-KA .values-listing div { /*special case for section without pictures*/
     max-height: 145px;
     min-width: 275px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> efeea544fcc8756e108d7ae11be71bb83240f778
 .video-sizing {
   width: 640px;
   height: 360px;
