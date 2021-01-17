@@ -123,3 +123,11 @@ convert icons to svg unless you're good with illustrator/other vector editors.
 Use .png for any computer graphic we have that it wouldn't be reasonable to make
 a .svg for.
 
+#### Contact Us Email
+
+The contact us page uses a free email from [Zoho Mail](mail.zoho.com). Once added
+to the firebase account, you can access the user & pass with:
+
+```
+$ firebase functions:config:get mail
+```

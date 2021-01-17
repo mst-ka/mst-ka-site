@@ -16,10 +16,10 @@ const contactEmails = ['Joe Studer <joe.studer.18@gmail.com>'];
 
 var email = function(sender, message) {
   const transporter = nodemailer.createTransport({
-    service: 'gmail',
+    service: 'Zoho',
     auth: {
-      user: functions.config().gmail.login,
-      pass: functions.config().gmail.pass
+      user: functions.config().mail.login,
+      pass: functions.config().mail.pass
     }
   });
 
@@ -35,18 +35,9 @@ var email = function(sender, message) {
     if (error) {return console.log(error);}
     console.log('Message Sent: %s', info.messageId);
   };
+
   transporter.sendMail(mailOptions, getDeliveryStatus);
 };
-
-//.onDataAdded is watches for changes in database
-exports.onDataAddedMessage = functions.database.ref('/messages/{sessionId}').onCreate(function (snap, context) {
-    //here we catch a new data, added to firebase database, it stored in a snap variable
-    const createdData = snap.val();
-    var text = createdData;
-
-    //here we send new data using function for sending emails
-    email(text.mail, text);
-});
 
 exports.onDataAddedApps = functions.database.ref('/applications/{sessionId}').onCreate(function (snap, context) {
     //here we catch a new data, added to firebase database, it stored in a snap variable
@@ -76,5 +67,5 @@ exports.onDataAddedApps = functions.database.ref('/applications/{sessionId}').on
 
 
     //here we send new data using function for sending emails
-    email(text.mail, text);
+    email(functions.config().mail.login, text);
 });
