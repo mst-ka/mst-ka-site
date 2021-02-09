@@ -3,7 +3,7 @@
 This repository serves as the source for the mst-ka.org website, as well
 as the alumni portal. 
 
-## Status: (Soft-Launch)[http://mst-ka.firebaseapp.com/]
+## Status: [Soft-Launch](http://mst-ka.firebaseapp.com/)
 ## Contributing
 
 ### Git
