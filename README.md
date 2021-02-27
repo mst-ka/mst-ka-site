@@ -26,7 +26,7 @@ already familiar with Git & Terminal commands.
 
   2. Use the node package manager to install firebase
   ```
-  $ npm install firebase-tools (we'll use firebase to get things running)
+  $ npm install -g firebase-tools (we'll use firebase to get things running)
   ```
 
   3. Submit an issue on the repository (including your gmail) requesting to be 
