@@ -6,7 +6,8 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "public/"
+      "public/",
+      "active/img/originals"
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
