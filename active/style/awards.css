@@ -49,11 +49,8 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
   box-shadow: black 0 0px 10px;
   max-height: 234px;
   max-width: 437px;
+  margin-left: 25px;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> efeea544fcc8756e108d7ae11be71bb83240f778
 
 .awardType h4{
   color: #333333; /* Not quite pitch black */
