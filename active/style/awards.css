@@ -43,16 +43,17 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
   flex-direction: column;
 }
 
-.awards-img {
-  display: flex;
-  flex-direction: column;
-  justify: center;
+.awards-img img{
+  float: right;
+  border-radius: 8px;
+  box-shadow: black 0 0px 10px;
+  max-height: 234px;
+  max-width: 437px;
 }
+<<<<<<< HEAD
 
-.awards-img img {
-  width: 100;
-  height: 100;
-}
+=======
+>>>>>>> efeea544fcc8756e108d7ae11be71bb83240f778
 
 .awardType h4{
   color: #333333; /* Not quite pitch black */
@@ -62,8 +63,19 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
   .awards-navbar {
     display: none;
   }
-
   .awards-container {
     flex-direction: column;
+    align-items: center;
+  }
+  .awards-info {
+    padding-top: 30px;
+  }
+
+  .awards-img img {
+    max-height: 200px;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

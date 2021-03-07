@@ -1471,6 +1471,13 @@ pre code {
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
 	float: left;
 }
+@media (max-width: 920px) {
+	.col-md4, .col-xs-12, .col-md-10, .col-xs-10 {
+    	text-align: center;
+		margin: 0 auto;
+		float: none;
+	}
+}
 .col-xs-1 {
 	width: 8.3333333333%;
 }
@@ -6305,7 +6312,28 @@ body #values .img-responsive {
 	box-shadow: 0px 0px 12px #ddd;
 	display: block;
 	height: auto;
-  max-width: 240px;
+  	max-width: 240px;
+}
+
+@media (max-width: 920px) {
+	body #values .img-responsive {
+		display: block;
+  		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	body #values .center{
+		text-align: center;
+		
+	}
+}
+
+@media (max-width: 920px) {
+	body #values .img-responsive{
+		display: block;
+  		margin-left: auto;
+		margin-right: auto;
+	}
 }
 body #values i.feature_icon {
 	font-size: 30px;
