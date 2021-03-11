@@ -49,6 +49,7 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
   box-shadow: black 0 0px 10px;
   max-height: 234px;
   max-width: 437px;
+  margin-left: 25px;
 }
 
 .awardType h4{
