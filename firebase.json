@@ -6,7 +6,10 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "public/"
+      "public/",
+      "active/views/alumni-home.html",
+      "active/style/alumni-home.css",
+      "active/script/alumni-home.js"
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",

@@ -1,0 +1,13 @@
+.data-studio-report {
+    position: relative;
+    margin: auto;
+    padding-bottom: 50%;
+    width: 60%;
+}
+
+.data-studio-report iframe {
+    position: absolute;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+}
