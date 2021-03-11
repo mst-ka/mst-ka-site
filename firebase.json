@@ -1,5 +1,6 @@
 {
-  "hosting": {
+  "hosting": [{
+    "target": "prod",
     "public": "active",
     "cleanUrls": true,
     "ignore": [
@@ -14,6 +15,38 @@
       "Jared Hanisch <jared.hanisch@gmail.com>"
     ]
   },
+  {
+    "target": "staging",
+    "public": "active",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "public/",
+      "active/img/originals"
+    ],
+    "contributors": [
+      "Joe Studer <joe.studer.18@gmail.com>",
+      "Jared Hanisch <jared.hanisch@gmail.com>"
+    ]
+  },
+  {
+    "target": "devel",
+    "public": "active",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "public/",
+      "active/img/originals"
+    ],
+    "contributors": [
+      "Joe Studer <joe.studer.18@gmail.com>",
+      "Jared Hanisch <jared.hanisch@gmail.com>"
+    ]
+  }],
   "emulators": {
     "functions": {
       "port": 5001
