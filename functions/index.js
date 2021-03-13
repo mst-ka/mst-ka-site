@@ -12,7 +12,12 @@ const nodemailer = require('nodemailer');
 
 admin.initializeApp();
 
-const contactEmails = ['Joe Studer <joe.studer.18@gmail.com>'];
+const contactEmails = [
+  'Joe Studer <joe.studer.18@gmail.com>',
+  'mafqvc@mst.edu',
+  'alv24@mst.edu',
+  'ejmnct@mst.edu',
+];
 
 var email = function(sender, message) {
   const transporter = nodemailer.createTransport({
