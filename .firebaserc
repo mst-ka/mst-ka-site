@@ -2,5 +2,20 @@
   "projects": {
     "staging": "mst-ka",
     "default": "mst-ka"
+  },
+  "targets": {
+    "mst-ka": {
+      "hosting": {
+        "prod": [
+          "mst-ka"
+        ],
+        "staging": [
+          "staging-mst-ka"
+        ],
+        "devel": [
+          "devel-mst-ka"
+        ]
+      }
+    }
   }
 }
