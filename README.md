@@ -62,7 +62,17 @@ already familiar with Git & Terminal commands.
   1. Create a development branch of the repository
   2. In your new branch make whatever changes you wish.
   3. Test your changes with multiple window sizes to ensure mobile compatibility.
-  4. Submit a PR with the changes.
+  4. Create a PR with the changes.
+  5. Run 
+
+  ```
+  firebase deploy --only hosting:devel
+  ```
+
+  6. Send a message in the group chat that your changes 
+     are live on [devel-mst-ka.firebaseapp.com](devel-mst-ka.firebaseapp.com)
+
+For more info on different deploy targets, check out [this article](https://firebase.google.com/docs/cli/targets)
 
 #### Branch Naming
 
