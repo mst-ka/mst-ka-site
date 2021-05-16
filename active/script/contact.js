@@ -97,7 +97,7 @@ if (applyForm) {
       'inputLikes': applyForm.elements[19],
       'inputGentleman': applyForm.elements[20]
     };
-    // firebaseApplyPush(input);
+    firebaseApplyPush(input);
     applyForm.reset();
     return false;
   })
