@@ -237,7 +237,13 @@
                   <textarea name="definegentleman" id="definegentleman" required="required" class="form-control" rows="8"></textarea>
                 </div>
                 <div class="form-group">
-                  <button type="submit" name="submit" class="btn btn-default submit-button">Send Message <i class="fa fa-caret-right"></i></button>
+                  <div class="g-recaptcha" data-callback="onRecaptchaSuccess" data-sitekey="6Ld6jNcaAAAAACaWEQw_Mc9HqEet-_2KVZJwZ5cE"></div>
+                  <br/>
+                  <button id="submitBtn" type="submit" name="submit" 
+                          class="btn btn-default submit-button"
+                          disabled>
+                          Submit Application <i class="fa fa-caret-right"></i>
+                  </button>
                 </div>
               </div>
             </form>
@@ -383,9 +389,9 @@
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase.js"></script>
-    <script src="script/firebase-init.js"></script>
     <script src="script/contact.js"></script>
-
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="script/firebase-init.js"></script> 
 </body>
   <script src="./script/global.js"></script>
   <script src="./script/nav.js"></script>

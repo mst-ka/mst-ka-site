@@ -44,8 +44,15 @@ function firebaseApplyPush(input) {
     gentleman: input['inputGentleman'].value,
   }
 );
+}
 
-}// Snag emailForm data & push on submit
+function onRecaptchaSuccess(response) {
+  const submitBtn = document.getElementById('submitBtn');
+  console.log(response);
+  submitBtn.disabled = false;
+}
+
+// Snag emailForm data & push on submit
 if (emailForm) {
   emailForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
@@ -65,33 +72,37 @@ if (emailForm) {
 if (applyForm) {
   applyForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    //grab an input
-    const input = {
-      'inputName': applyForm.elements[0],
-      'inputEmail': applyForm.elements[1],
-      'inputPhone': applyForm.elements[2],
-      'inputAge': applyForm.elements[3],
-      'inputHS': applyForm.elements[4],
-      'inputRank': applyForm.elements[5],
-      'inputReligion': applyForm.elements[6],
-      // Address may be blank
-      'inputAddress': applyForm.elements[7],
-      'inputCity': applyForm.elements[8],
-      'inputState': applyForm.elements[9],
-      'inputZip': applyForm.elements[10],
-      'inputGPA': applyForm.elements[11],
-      'inputTestScore': applyForm.elements[12],
-      'inputMajor': applyForm.elements[13],
-      'inputActivities': applyForm.elements[14],
-      'inputHnA': applyForm.elements[15],
-      'inputGoals': applyForm.elements[16],
-      'inputContact': applyForm.elements[17],
-      'inputWhy': applyForm.elements[18],
-      'inputLikes': applyForm.elements[19],
-      'inputGentleman': applyForm.elements[20]
-    };
-    firebaseApplyPush(input);
-    applyForm.reset();
-    return false;
+    if (isPassedCaptcha) {
+      //grab an input
+      const input = {
+        'inputName': applyForm.elements[0],
+        'inputEmail': applyForm.elements[1],
+        'inputPhone': applyForm.elements[2],
+        'inputAge': applyForm.elements[3],
+        'inputHS': applyForm.elements[4],
+        'inputRank': applyForm.elements[5],
+        'inputReligion': applyForm.elements[6],
+        // Address may be blank
+        'inputAddress': applyForm.elements[7],
+        'inputCity': applyForm.elements[8],
+        'inputState': applyForm.elements[9],
+        'inputZip': applyForm.elements[10],
+        'inputGPA': applyForm.elements[11],
+        'inputTestScore': applyForm.elements[12],
+        'inputMajor': applyForm.elements[13],
+        'inputActivities': applyForm.elements[14],
+        'inputHnA': applyForm.elements[15],
+        'inputGoals': applyForm.elements[16],
+        'inputContact': applyForm.elements[17],
+        'inputWhy': applyForm.elements[18],
+        'inputLikes': applyForm.elements[19],
+        'inputGentleman': applyForm.elements[20]
+      };
+      // firebaseApplyPush(input);
+      applyForm.reset();
+      return false;
+    } else {
+      console.log("FAILED CAPTCHA");
+    }
   })
 }
