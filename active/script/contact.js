@@ -46,9 +46,8 @@ function firebaseApplyPush(input) {
 );
 }
 
-function onRecaptchaSuccess(response) {
+function onRecaptchaSuccess() {
   const submitBtn = document.getElementById('submitBtn');
-  console.log(response);
   submitBtn.disabled = false;
 }
 
