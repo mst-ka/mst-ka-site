@@ -6326,6 +6326,7 @@ body #values .img-responsive {
 
 	}
 }
+
 @media (max-width: 920px) {
 	body #values .img-responsive{
 		display: block;
@@ -6333,6 +6334,7 @@ body #values .img-responsive {
 		margin-right: auto;
 	}
 }
+
 body #values i.feature_icon {
 	font-size: 30px;
 }

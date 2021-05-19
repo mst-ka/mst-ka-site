@@ -1,7 +1,7 @@
 {
   "projects": {
     "staging": "mst-ka",
-    "default": "mst-ka",
+    "default": "mst-ka"
   },
   "targets": {
     "mst-ka": {
