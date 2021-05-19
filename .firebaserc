@@ -2,7 +2,6 @@
   "projects": {
     "staging": "mst-ka",
     "default": "mst-ka",
-    "mateusz": "mst-ka"
   },
   "targets": {
     "mst-ka": {
