@@ -10,6 +10,7 @@
       "public/",
       "active/img/originals"
     ],
+    /* Rewrites the URL to 404page.html if page doesn't exist */
     "rewrites": [
       {
         "source": "**",
