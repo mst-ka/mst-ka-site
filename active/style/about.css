@@ -30,13 +30,13 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
 }
 
 .about-container {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     max-width: 1170px;
     padding-left: 15px;
-    padding-right: 15px;  
+    padding-right: 15px;
 }
 .about-listing {
   display: flex;
@@ -90,7 +90,7 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
   .officer-listing img {
     box-shadow: black 0 0px 10px;
     border-radius: 8px;
-    
+
   }
 
 
@@ -108,4 +108,3 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
     box-shadow: black 0 0px 10px;
     margin: 10px;
 }
-
