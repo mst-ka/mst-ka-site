@@ -6321,6 +6321,7 @@ body #values .img-responsive {
   		margin-left: auto;
 		margin-right: auto;
 	}
+
 	body #values .center{
 		text-align: center;
 
@@ -6334,7 +6335,6 @@ body #values .img-responsive {
 		margin-right: auto;
 	}
 }
-
 body #values i.feature_icon {
 	font-size: 30px;
 }
