@@ -6321,10 +6321,10 @@ body #values .img-responsive {
   		margin-left: auto;
 		margin-right: auto;
 	}
-	
+
 	body #values .center{
 		text-align: center;
-		
+
 	}
 }
 
@@ -6628,7 +6628,7 @@ body #bottom-footer .btm-footer-links a {
 	color: #fff;
 }
 body #bottom-footer .copyright {
-	text-align: right;
+	text-align: left;
 }
 @media screen and (max-width: 768px) {
 body #bottom-footer .btm-footer-links {
