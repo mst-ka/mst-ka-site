@@ -13,7 +13,7 @@
     /* Rewrites the URL to 404page.html if page doesn't exist */
     "rewrites": [
       {
-        "source": "/",
+        "source": "/**",
         "destination": "404page.html"
       }
     ],
@@ -37,7 +37,7 @@
     /* Rewrites the URL to 404page.html if page doesn't exist */
     "rewrites": [
       {
-        "source": "/",
+        "source": "/**",
         "destination": "404page.html"
       }
     ],
@@ -61,7 +61,7 @@
     /* Rewrites the URL to 404page.html if page doesn't exist */
     "rewrites": [
       {
-        "source": "/",
+        "source": "/**",
         "destination": "404page.html"
       }
     ],

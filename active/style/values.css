@@ -35,19 +35,20 @@ body #bond-of-brotherhood, #we-are-gentleman, #giving-back, #go-KA, #you-are-a-K
 }
 
 .values-container {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     max-width: 1170px;
     padding-left: 15px;
-    padding-right: 15px;  
+    padding-right: 15px;
 }
 .values-listing {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
 }
 
 .values-listing p {
