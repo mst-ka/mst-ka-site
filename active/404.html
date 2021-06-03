@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/skin.css">
-    <link rel="stylesheet" href="/style/values.css">
+    <link rel="stylesheet" href="/style/about.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -54,7 +54,7 @@
             </div>
             <div id="navbar" class="collapse navbar-collapse navbar-right">
                 <ul id="desktop-nav" class="nav navbar-nav sticky desktop-nav">
-                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="/views/values.html">Values</a></li>
                     <li><a href="/views/awards.html">Awards</a></li>
                     <li><a href="/views/about.html">About Us</a></li>
@@ -62,7 +62,7 @@
                 </ul>
                 <ul class="nav navbar-nav sticky mobile-navbar">
                     <li><a href="/index.html">Home</a></li>
-                    <li class="active"><a onclick="displaySubNav('values')">Values<i id="values-nav-caret" style="position:absolute;right:5px" class="fa fa-caret-right"></i>
+                    <li><a onclick="displaySubNav('values')">Values<i id="values-nav-caret" style="position:absolute;right:5px" class="fa fa-caret-right"></i>
                     </a></li>
                     <ul id="values-sub-nav" class="active sub-navbar">
                         <li><a href="/views/values.html">Our Values</a></li>
@@ -81,7 +81,7 @@
                     </ul>
                     <li  onclick="displaySubNav('about')"><a>About<i id="about-nav-caret" style="position:absolute;right:5px" class="fa fa-caret-right"></i></a></li>
                     <ul id="about-sub-nav" class="sub-navbar">
-                        <li class="active"><a href="views/about.html">About Us</a></li>
+                        <li><a href="views/about.html">About Us</a></li>
                         <li><a href="/views/abouttabs/GreekLife.html">BA of KA Greek Life</a></li>
                         <li><a href="/views/abouttabs/HouseHistory.html">BA of KA House History</a></li>
                         <li><a href="/views/abouttabs/Officers.html">BA of KA Officers</a></li>
@@ -101,15 +101,13 @@
       <!--/.nav-ends -->
 
       <section id="404page">
-          <div class="container">
-            <div style="display:inline-block;margin-left: 300px;margin-right: 300px;margin-top:250px;margin-bottom:200px">
-              <img src="/img/KA_logo.png" width="200" height="249" style="padding:10px;">
-              <div style="display:inline-block;vertical-align: middle;">
-                <h1><span>404</span></h1>
-                <h4>Sorry, we couldn't find that page.</h4>
-              </div>
-            </div>
+        <div class="missing-page">
+          <img src="/img/KA_logo.png" width="200" height="249" style="padding: 10px;">
+          <div class="missing-page-text">
+            <h1><span>404</span></h1>
+            <h4>Sorry, we couldn't find that page.</h4>
           </div>
+        </div>
       </section>
 
     </section>

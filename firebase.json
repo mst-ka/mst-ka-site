@@ -10,13 +10,6 @@
       "public/",
       "active/img/originals"
     ],
-    /* Rewrites the URL to 404page.html if page doesn't exist */
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "404page.html"
-      }
-    ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
       "Jared Hanisch <jared.hanisch@gmail.com>",
@@ -34,13 +27,6 @@
       "public/",
       "active/img/originals"
     ],
-    /* Rewrites the URL to 404page.html if page doesn't exist */
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "404page.html"
-      }
-    ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
       "Jared Hanisch <jared.hanisch@gmail.com>",
@@ -57,13 +43,6 @@
       "**/node_modules/**",
       "public/",
       "active/img/originals"
-    ],
-    /* Rewrites the URL to 404page.html if page doesn't exist */
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "404page.html"
-      }
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
