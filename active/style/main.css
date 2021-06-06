@@ -6636,6 +6636,13 @@ body #bottom-footer .btm-footer-links {
 }
 body #bottom-footer .copyright {
 	text-align: left;
+	font-size: 11px;
+}
+}
+@media screen and (max-width: 320px) {
+body #bottom-footer .copyright {
+	text-align: left;
+	font-size: 8px;
 }
 }
 body #panel {
