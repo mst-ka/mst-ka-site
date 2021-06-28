@@ -8,7 +8,8 @@
       "**/.*",
       "**/node_modules/**",
       "public/",
-      "active/img/originals"
+      "active/img/originals",
+      "active/views/alumnitabs"
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
