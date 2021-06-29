@@ -14,7 +14,15 @@
     <script type="text/javascript">
       // FirebaseUI config.
       var uiConfig = {
-        signInSuccessUrl: 'views/alumnitabs/loggedIn.html',
+        signInSuccessUrl: 'views/alumnitabs/home.html',
+        callbacks:  {
+          signInSuccessWithAuthResult: function(authResult, redirectUrl) {
+            // User successfully signed in.
+            // Return type determines whether we continue the redirect automatically
+            // or whether we leave that to developer to handle.
+            return false;
+          }
+        },
         signInOptions: [
           {
             provider: firebase.auth.EmailAuthProvider.PROVIDER_ID,
