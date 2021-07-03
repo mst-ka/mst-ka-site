@@ -7903,8 +7903,12 @@ body #login-reg .btn-link-1 {
 
 @media (max-width: 767px) {
 	.applyButton {
-		display: none;
+		width: 4.875em;
+		height: 1.5em;
   }
+	.applyText {
+		font-size: 0.7em;
+	}
 }
 
 .footer-brand {
