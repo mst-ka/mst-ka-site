@@ -7905,6 +7905,8 @@ body #login-reg .btn-link-1 {
 	.applyButton {
 		width: 4.875em;
 		height: 1.5em;
+		bottom: 1.5em;
+		z-index: 900;
   }
 	.applyText {
 		font-size: 0.7em;
