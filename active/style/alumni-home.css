@@ -1,13 +1,17 @@
 .data-studio-report {
-    position: relative;
-    margin: auto;
-    padding-bottom: 50%;
-    width: 60%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
 }
 
 .data-studio-report iframe {
-    position: absolute;
-    left: 10%;
-    width: 100%;
+    align-items: center;
+    border:none;
     height: 100%;
+    width: 60%;
+}
+
+.data-studio-text {
+  align-items: center;
+  padding: 10px;
 }

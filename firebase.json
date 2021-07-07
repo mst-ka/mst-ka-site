@@ -8,14 +8,13 @@
       "**/.*",
       "**/node_modules/**",
       "public/",
-      "active/views/alumni-home.html",
-      "active/style/alumni-home.css",
-      "active/script/alumni-home.js",
-      "active/img/originals"
+      "active/img/originals",
+      "active/views/alumnitabs"
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
-      "Jared Hanisch <jared.hanisch@gmail.com>"
+      "Jared Hanisch <jared.hanisch@gmail.com>",
+      "Mateusz Przezdziecki <madprzez@gmail.com>"
     ]
   },
   {
@@ -31,7 +30,8 @@
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
-      "Jared Hanisch <jared.hanisch@gmail.com>"
+      "Jared Hanisch <jared.hanisch@gmail.com>",
+      "Mateusz Przezdziecki <madprzez@gmail.com>"
     ]
   },
   {
@@ -47,7 +47,8 @@
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
-      "Jared Hanisch <jared.hanisch@gmail.com>"
+      "Jared Hanisch <jared.hanisch@gmail.com>",
+      "Mateusz Przezdziecki <madprzez@gmail.com>"
     ]
   }],
   "emulators": {

@@ -44,8 +44,14 @@ function firebaseApplyPush(input) {
     gentleman: input['inputGentleman'].value,
   }
 );
+}
 
-}// Snag emailForm data & push on submit
+function onRecaptchaSuccess() {
+  const submitBtn = document.getElementById('submitBtn');
+  submitBtn.disabled = false;
+}
+
+// Snag emailForm data & push on submit
 if (emailForm) {
   emailForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
