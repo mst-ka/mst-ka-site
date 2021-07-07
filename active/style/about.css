@@ -13,6 +13,12 @@ body #greek-life, #house-history, #letter-ka-parent, #notable-alumni, #officers,
     text-align: center;
 }
 
+.about-section-heading-left{
+    color: #333333; /*Dark Grey*/
+    text-transform: uppercase;
+    text-align: left;
+}
+
 .bullets li {
     list-style-type: circle;
     margin-left: 20px;
