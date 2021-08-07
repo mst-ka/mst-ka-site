@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/style/main.css">
     <link rel="stylesheet" href="/style/alumni-home.css">
+    <link rel="stylesheet" href="/style/skin.css">
+    <link rel="stylesheet" href="/style/index.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -90,6 +92,7 @@
                         <li><a href="/views/abouttabs/ParentsFAQ.html">Parents FAQ About Fraternity Life</a></li>
                     </ul>
                     <li><a href="/views/contact.html">Contact</a></li>
+                    </ul>
                 </ul>
             </div>
             <!--/.nav-collapse -->
@@ -99,10 +102,38 @@
       </header>
       <!--/.nav-ends -->
 
+      <section id="alumni-nav-banner">
+        <div class="alumni-banner"></div>
+        <div class="page_info alumni-nav-background">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-sm-8 col-xs-6">
+                <h4>Alumni</h4>
+                <ul class="alumni-navbar">
+                  <li><a href="index.html">Database</a></li>
+                  <li><a href="index.html">Contact</a></li>
+                  <li><a href="index.html">Newsletter</a></li>
+                </ul>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-6" style="text-align:right;">Home<span class="sep"> / </span><span class="current"> Alumni</span></div>
+            </div>
+          </div>
+      </section>
+
       <section id="Map">
+        <div class="data">
         <div class="data-studio-report">
           <iframe src="https://datastudio.google.com/embed/reporting/63589a54-5a08-415e-9e66-b0f67342d1e5/page/rf9jB"></iframe>
         </div>
+        <div class="left-offset">
+          <div class="data-studio-report-wrapper">
+            <div class="section-heading" style="padding-top:110px;">
+              <h1><center> Beta Alpha of Kappa Alpha </center></h1>
+              <hr style="height:2px;background-color: #be2f37; width: 65%;">
+            </div>
+          </div>
+        </div>
+      </div>
       </section>
 
 
@@ -113,7 +144,7 @@
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
                         <div class="footer-brand">
-                            <img src="/img/KA_logo.png" align="left"></img>
+                            <img src="img/KA_logo.png" align="left"></img>
                             <h1>Kappa Alpha Order <span>Missouri S&amp;T</span></h1>
                         </div>
                     </div>
@@ -126,20 +157,18 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-md-3 col-sm-3 col-xs-12 block">
                     <div class="footer-block">
                         <h4>Contact Us - Beta Alpha</h4>
                         <hr />
                         <ul>
-                            <li>Beta Alpha of Kappa Alpha</li>
-                            <li>1 Fraternity Drive</li>
-                            <li>Rolla, Missouri 65401</li>
-                            <li>President: <p class="presPhone" style="display: inline;"></p>
-                            </li>
-                            <li>Alumni Contact</li>
-                            <li>
-                                <p class="aluPhone" style="display: inline;"></p>
-                            </li>
+                          <li>Beta Alpha of Kappa Alpha</li>
+                          <li>1 Fraternity Drive</li>
+                          <li>Rolla, Missouri 65401</li>
+                          <li>President: <p class="presPhone" style="display: inline;"></p></li>
+                          <li>Alumni Contact</li>
+                          <li><p class="aluPhone" style="display: inline;"></p></li>
                         </ul>
                     </div>
                 </div>
@@ -149,11 +178,11 @@
                         <h4>Contact Us - National</h4>
                         <hr />
                         <ul>
-                            <li>Kappa Alpha Order at Mulberry Hill</li>
-                            <li>115 Liberty Hall Road</li>
-                            <li>Lexington, Virginia 24450</li>
-                            <li>(540) 463-1865</li>
-                            <li>Fax: (540) 463-2140</li>
+                          <li>Kappa Alpha Order at Mulberry Hill</li>
+                          <li>115 Liberty Hall Road</li>
+                          <li>Lexington, Virginia 24450</li>
+                          <li>(540) 463-1865</li>
+                          <li>Fax: (540) 463-2140</li>
                         </ul>
                     </div>
                 </div>
@@ -163,10 +192,10 @@
                         <h4>Quick Links</h4>
                         <hr />
                         <ul class="footer-links">
-                            <li><a href="/views/values.html">Values</a></li>
-                            <li><a href="/views/awards.html">Awards</a></li>
-                            <li><a href="/views/about.html">About</a></li>
-                            <li><a href="/views/contact.html">Contact</a></li>
+                            <li><a href="views/values.html">Values</a></li>
+                            <li><a href="views/awards.html">Awards</a></li>
+                            <li><a href="views/about.html">About</a></li>
+                            <li><a href="views/contact.html">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -177,24 +206,17 @@
     </section>
 
     <section id="bottom-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12 btm-footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Use</a>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 copyright">
-                    Developed by <span>Beta Alpha of Kappa Alpha</span>
-                    and hosted on <a href="https://github.com/joe-studer-18/mst-ka-site">Github</a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12 copyright">
+            Developed by <span>Beta Alpha of Kappa Alpha</span>
+            and hosted on <a href="https://github.com/joe-studer-18/mst-ka-site">Github</a>
+          </div>
         </div>
+      </div>
     </section>
 
-    <div class="applyButton">
-        <a class="applyText" href="views/
-        .html">Apply Online</a>
-    </div>
-    <script src="./script/global.js"></script>
-    <script src="./script/nav.js"></script>
+</body>
+  <script src="./script/global.js"></script>
+  <script src="./script/nav.js"></script>
 </html>
