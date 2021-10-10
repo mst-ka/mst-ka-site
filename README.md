@@ -78,6 +78,18 @@ For more info on different deploy targets, check out [this article](https://fire
 
 All branches should be named <FirstInitialLastName/IssueName> 
 
+#### firbase-init.js
+
+The firebase-init.js file is important for any work that interacts with the Firebase API,
+our database, or any server side actions. However, since it includes the API Key, we 
+don't store it in Git. This means there's a couple steps you'll have to follow
+if you wan't/need to do this kind of development:
+
+1. Navigate to the scripts/ subdir and create a firebase-init.js file.
+2. Go to the [Firebase Console](https://console.firebase.google.com/u/0/) > mst-ka > Project Settings (Gear Icon) > SDK setup and configuration > Config
+3. Copy the config into your newly created firebase-init.js file.
+4. Add the new firebase-init.js file into your local git-ignore.
+
 #### CSS
 
 All CSS files should be stored in the _styles_ directory.
