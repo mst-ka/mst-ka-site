@@ -1,6 +1,10 @@
 const Struct = (...keys) => ((...v) => keys.reduce((o, k, i) => {o[k] = v[i]; return o} , {}))
 const Project = Struct('id', 'img', 'link', 'desc')
 var newsletterList = [
+  Project('Vol 4 - Spring 2022', 
+          'img/newsletter_covers/ss22_cover.jpeg',
+          'https://issuu.com/beta-alpha-alumni-association/docs/ss22_vol4',
+          `Spring 2022 Volume of the Beta Alpha Alumni Association Journal`),
   Project('Vol 3 - Fall 2021', 
           'img/newsletter_covers/f21_cover.jpeg',
           'https://issuu.com/beta-alpha-alumni-association/docs/fs21_vol3',
