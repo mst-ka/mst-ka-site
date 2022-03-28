@@ -1,15 +1,12 @@
 {
   "hosting": [{
     "target": "prod",
-    "public": "active",
+    "public": "out",
     "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "public/",
-      "active/img/originals",
-      "active/views/alumnitabs"
+      "**/node_modules/**"
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
@@ -19,14 +16,12 @@
   },
   {
     "target": "staging",
-    "public": "active",
+    "public": "out",
     "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "public/",
-      "active/img/originals"
+      "**/node_modules/**"
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
@@ -36,14 +31,12 @@
   },
   {
     "target": "devel",
-    "public": "active",
+    "public": "out",
     "cleanUrls": true,
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**",
-      "public/",
-      "active/img/originals"
+      "**/node_modules/**"
     ],
     "contributors": [
       "Joe Studer <joe.studer.18@gmail.com>",
