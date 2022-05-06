@@ -14,9 +14,9 @@ admin.initializeApp();
 
 const contactEmails = [
   'Joe Studer <joe.studer.18@gmail.com>',
-  'mafqvc@mst.edu',
-  'alv24@mst.edu',
-  'ejmnct@mst.edu',
+  'cpw5tv@umsystem.edu',  //Charles Weiberg - President
+  'alv24@umsystem.edu',   //Andersen Lohr   - Corresponding Secretary
+  'twbyny@umsystem.edu',  //Trey Brown      - Rush Chairman
 ];
 
 var email = function(sender, message) {
@@ -62,6 +62,7 @@ exports.onDataAddedApps = functions.database.ref('/applications/{sessionId}').on
                    "GPA: " + text.gpa + "<br/><br/>" +
                    "Class Rank: " + text.rank + "<br/><br/>" +
                    "ACT/SAT: " + text.tests + "<br/><br/>" +
+                   "Intended Major: " + text.major + "<br/><br/>" +
                    "Honors and Awards: " + text.honors + "<br/><br/>" +
                    "What are your goals for your first year of college: " + text.goals + "<br/><br/>" +
                    "Who have you been in contact with at KA: " + text.contact + "<br/><br/>" +
