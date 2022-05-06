@@ -14,6 +14,7 @@ admin.initializeApp();
 
 const contactEmails = [
   'Joe Studer <joe.studer.18@gmail.com>',
+  'Jared Hanisch <jared.hanisch@gmail.com>',
   'cpw5tv@umsystem.edu',  //Charles Weiberg - President
   'alv24@umsystem.edu',   //Andersen Lohr   - Corresponding Secretary
   'twbyny@umsystem.edu',  //Trey Brown      - Rush Chairman
