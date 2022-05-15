@@ -101,7 +101,7 @@ npm run build
 * Deploy your build:  
 
 ```bash
-firebase deploy --only hosting:devel
+firebase deploy --only hosting:react
 ```
 
 * Create a PR with the changes.

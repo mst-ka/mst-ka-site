@@ -43,6 +43,21 @@
       "Jared Hanisch <jared.hanisch@gmail.com>",
       "Mateusz Przezdziecki <madprzez@gmail.com>"
     ]
+  },
+  {
+    "target": "react",
+    "public": "out",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "contributors": [
+      "Joe Studer <joe.studer.18@gmail.com>",
+      "Jared Hanisch <jared.hanisch@gmail.com>",
+      "Mateusz Przezdziecki <madprzez@gmail.com>"
+    ]
   }],
   "emulators": {
     "functions": {
