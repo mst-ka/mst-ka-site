@@ -1,4 +1,4 @@
-import Navbar from "./Header/Navbar";
+import Navbar from "./Nav/Navbar";
 
 function Layout() {
   return <Navbar />;
