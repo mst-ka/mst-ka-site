@@ -16,6 +16,11 @@ firebase-init.js
 /out
 .next/
 
+#generated images
+/public/images/*/nextImageExportOptimizer/*
+/public/images/nextImageExportOptimizer/*
+/public/images/next-image-export-optimizer-hashes.json
+
 # misc
 .DS_Store
 .env.local

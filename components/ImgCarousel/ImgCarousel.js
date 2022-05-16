@@ -2,9 +2,9 @@ import React from 'react'
 
 import Carousel from 'react-material-ui-carousel'
 import { Paper, Button } from '@mui/material'
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import { styled } from "@mui/material/styles";
-import Image from 'next/image'
+import ArrowRightIcon from '@mui/icons-material/ArrowRight'
+import { styled } from "@mui/material/styles"
+import ExportedImage from 'next-image-export-optimizer'
 
 function ImgCarousel() {
   var imgs = [
@@ -12,7 +12,7 @@ function ImgCarousel() {
       heading: "Kappa Alpha Order",
       sub_heading: "Beta Alpha Chapter",
       alt_text: "TODO(Issue#124) Alt",
-      src: "/index/home-carousel-1.jpeg",
+      src: "images/index/home-carousel-1.jpeg",
       button_text:"About Us",
       button_link:"TODO(Issue#124) Add About Us Link"
     },
@@ -20,7 +20,7 @@ function ImgCarousel() {
       heading: "Kappa Alpha Order",
       sub_heading: "Beta Alpha Chapter",
       alt_text: "TODO(jstuder) Alt",
-      src: "/index/home-carousel-2.jpeg",
+      src: "images/index/home-carousel-2.jpeg",
       button_text:"Our Brotherhood",
       button_link:"TODO(Issue#124) Add About Us Link"
     },
@@ -28,7 +28,7 @@ function ImgCarousel() {
       heading: "Kappa Alpha Order",
       sub_heading: "Beta Alpha Chapter",
       alt_text: "TODO(jstuder) Alt",
-      src: "/index/home-carousel-3.jpeg",
+      src: "images/index/home-carousel-3.jpeg",
       button_text:"Academics Matter",
       button_link:"TODO(Issue#124 Add brotherhood link"
     }]
@@ -68,7 +68,7 @@ function _CreateImage(props)
     <Paper>
       <div style={{position: "relative", width: "100%", height: "600px"}}>
         {/* TODO(Issue#124} Darken these background images */}
-        <Image src={props.image.src} 
+        <ExportedImage src={props.image.src} 
                alt={props.image.alt_text}
                objectFit='cover'
                layout='fill'/>
