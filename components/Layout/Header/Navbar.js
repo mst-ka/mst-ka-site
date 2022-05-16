@@ -45,7 +45,7 @@ function Navbar() {
         <Toolbar
           sx={{ justifyContent: "space-between"}}
         >
-          <Link href="#" underline="none">
+          <Link href="/" underline="none">
             <Box
               component="img"
               src="/KA_logo.png"
