@@ -6,7 +6,6 @@
 .pnp.js
 
 #firebase
-firebase-init.js
 .firebase/
 
 # testing

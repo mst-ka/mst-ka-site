@@ -12,6 +12,7 @@ const nodemailer = require("nodemailer");
 
 admin.initializeApp();
 
+//TODO: Update contactEmails to include the IV, Recruitment chairs, Joe, and Jared, before deploying to prod
 const contactEmails = ["Jared Hanisch <jared.hanisch@gmail.com>"];
 
 let email = function (sender, message) {
@@ -48,33 +49,31 @@ exports.onDataAddedApps = functions.database
     // it stored in a snap variable
     const createdData = snap.val();
     var text = createdData;
-    text.subject = "testing";
-    text.message =  "First Name: " + text.firstName + "<br/><br/>" +
-                    "Last Name: " + text.lastName + "<br/><br/>" +
-                    "Phone: " + text.phone + "<br/><br/>" +
-                    "Email: " + text.email
-      // "Name: " + text.name + "<br/><br/>" +
-      // "Email: " + text.mail + "<br/><br/>" +
-      // "Age: " + text.age + "<br/><br/>" +
-      // "Address: " + text.addr + "<br/><br/>" + 
-      // "City: " + text.city + "<br/><br/>" +
-      // "State: " + text.state + "<br/><br/>" +
-      // "Zip: " + text.zip + "<br/><br/>" +
-      // "Phone: " + text.phone + "<br/><br/>" +
-      // "High School: " + text.school + "<br/><br/>" +
-      // "Religion: " + text.religion + "<br/><br/>" +
-      // "GPA: " + text.gpa + "<br/><br/>" +
-      // "Class Rank: " + text.rank + "<br/><br/>" +
-      // "ACT/SAT: " + text.tests + "<br/><br/>" +
-      // "Intended Major: " + text.major + "<br/><br/>" +
-      // "Honors and Awards: " + text.honors + "<br/><br/>" +
-      // "What are your goals for your first year of college: " + text.goals + "<br/><br/>" +
-      // "Who have you been in contact with at KA: " + text.contact + "<br/><br/>" +
-      // "Why are you considering KA: " + text.why + "<br/><br/>" +
-      // "What do you like about our Chapter: " + text.likes + "<br/><br/>" +
-      // "How would you define a gentleman: " + text.gentleman + "<br/><br/>" +
-      // "High School Activities: " + text.activities + "<br/><br/>";
+    text.subject = "BAofKA Membership Application";
+    text.message = `Name: ${text.firstName} ${text.lastName}` + "<br/><br/>" +
+                   "Phone: " + text.phone + "<br/><br/>" +
+                   "Email: " + text.email + "<br/><br/>" +
+                   `Address: ${text.address} ${text.city}, ${text.state} ${text.zip}` + "<br/><br/>" +
+                   "Age: " + text.age + "<br/><br/>" +
+                   "High School: " + text.highSchool + "<br/><br/>" +
+                   "Class Rank: " + text.classRank + "<br/><br/>" +
+                   "GPA: " + text.gpa + "<br/><br/>" +
+                   "ACT/SAT: " + text.actSAT+ "<br/><br/>" +
+                   "Religion: " + text.religion + "<br/><br/>" +
+                   "Intended Major: " + text.intendedMajor + "<br/><br/>" +
+                   "High School Activities: " + text.highSchoolActivities + "<br/><br/>" +
+                   "Honors & Awards: " + text.honorsAwards + "<br/><br/>" +
+                   "What are your goals for your first year of college?: " + text.goals + "<br/><br/>" +
+                   "Who have you been in contact with at KA?: " + text.contactWith + "<br/><br/>" +
+                   "Why are you considering KA?: " + text.whyConsidering + "<br/><br/>" +
+                   "What do you like about our Chapter?: " + text.likeAboutChapter + "<br/><br/>" +
+                   "How would you define a gentleman?: " + text.gentleman;
 
-    //here we send new data using function for sending emails
+    console.log(`Sending application for ${text.firstName} ${text.lastName}`);
+    // Send email with data
     email(functions.config().mail.login, text);
+
+    // Suppress warning of returning "Function returned undefined, expected Promise or value"
+    // by returning a dummy value that is not used.
+    return 0;
   });
