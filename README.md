@@ -26,9 +26,9 @@ Node.js is a runtime for JavaScript that allows you to execute JavaScript outsid
 Ensure node.js and npm were installed correctly:
 
   ```bash
-  $ node -v
+  $ node --version
   v16.13.0 (could be different depending on your node version)
-  $ npm -v
+  $ npm --version
   8.4.1 (could be different depending on your node version)
   ```
 
@@ -58,8 +58,33 @@ $ firebase use --add (select mst-ka-website)
 ### Getting Started 
 
 ---
+#### firebase-init.js
+The [firebase-init.js](./firebase-init.js) file is important for any work that interacts with the Firebase API,
+our database, or any server side actions (you can read more about initalizing a firebase app [here](https://firebase.google.com/docs/web/setup)). However, since it includes the API Key, we
+don't store it in Git. This means there's a couple steps you'll have to follow
+if you want/need to do this kind of development:
 
-You'll want to ensure that you are able to run the website on your local machine.
+You'll notice that within firebase-init.js that we are using environment variables to define our firebaseConfig object properties in the form of `process.env.NEXT_PUBLIC_VARIABLE_NAME`. This means we will need to define them in a local file that is not tracked by our GitHub repository.
+
+* First you will want to create a `.env.local` file in the root of the project directory. This is Next.js' way of handling environment variables that you can read more about [here](https://nextjs.org/docs/basic-features/environment-variables).
+* Initialize all the variables in that are in firebase-init.js within your `.env.local` file like so:
+
+```bash
+NEXT_PUBLIC_FIREBASE_API_KEY="<api key>"
+NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="<auth domain>"
+NEXT_PUBLIC_FIREBASE_DATABASE_URL="<database url>"
+NEXT_PUBLIC_FIREBASE_PROJECT_ID="<project id>"
+NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="<storage bucket>"
+NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="<message sender id>"
+NEXT_PUBLIC_FIREBASE_APP_ID="<app id>"
+NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID="<measurement id>"
+```
+
+* Next you will need to replace `<api key>`, `<auth domain>`, `<database url>`, etc. with their respective values:
+  * Navigate to the [Firebase Console](https://console.firebase.google.com/) > mst-ka > Project Settings (Gear Icon) > (Under the 'Your apps' section click _messages-database_) SDK setup and configuration > click 'npm' (if not already selected)
+  * Copy the values under the `firebaseConfig` object and paste them into your `.env.local` file corresponding to the matching environment variable declaration. 
+
+#### Running the application locally
 
 * In the root directory of this repository run:
 
@@ -67,7 +92,7 @@ You'll want to ensure that you are able to run the website on your local machine
 $ npm install
 ```
 
-This will download the project dependencies via node package mananger.
+This will download the project dependencies via node package manager.
 
 * Next, to begin hosting the website locally:
 
@@ -75,7 +100,7 @@ This will download the project dependencies via node package mananger.
 $ npm run dev
 ```
 
-* Navigate to [localhost:3000](http://localhost:3000/) and you should be seeing the website displayed. You can now start making changes and the locally hosted version of the website will automatically be updated with your changes.
+* Navigate to [localhost:3000](http://localhost:3000/) and you should be seeing the website displayed. You can now start making changes and the locally hosted version of the website will automatically be updated with your changes. To ensure your firebase app is initialized correctly you can navigate to the contact page ([localhost:3000/contact](http://localhost:3000/contact)) and you should be seeing the form being displayed _without_ issue.
 
 ### Recommended Practices
 
@@ -98,28 +123,26 @@ All branches should be named using the following format:
 npm run build
 ```
 
-* Deploy your build:  
+* [Generate a hosting channel](https://firebase.google.com/docs/hosting/test-preview-deploy#preview-channels) so we can see your changes in action:  
 
 ```bash
-firebase deploy --only hosting:react
+firebase hosting:channel:deploy CHANNEL_ID
 ```
 
-* Create a PR with the changes.
+Replace CHANNEL_ID with a string with no spaces (for example, `awesome-ka-website-feature`). This ID will be used to construct the preview URL associated with the preview channel. **_NOTE:_** This will only create a temporary website for 7 days. If you feel like it will take more time for your PR to be reviewed, extend (or shorten) the time the site will be live by following [these steps](https://firebase.google.com/docs/hosting/manage-hosting-resources#preview-channel-expiration).
 
-* Send a message in the group chat that your changes are live on [devel-mst-ka.web.app](https://devel-mst-ka.web.app/views/alumni)
+A few URLs will be returned by the console indicating that they are live:
+```bash
+✔  hosting:channel: Channel URL (mst-ka): https://mst-ka--...
+✔  hosting:channel: Channel URL (staging-mst-ka): https://staging-mst-ka--...
+✔  hosting:channel: Channel URL (devel-mst-ka): https://devel-mst-ka--...
+```
 
-For more info on different deploy targets, check out [this article](https://firebase.google.com/docs/cli/targets).
+* Copy the top one (`Channel URL (mst-ka): URL...`).
 
-#### firebase-init.js
+* Create a PR with your changes.
 
-The firebase-init.js file is important for any work that interacts with the Firebase API,
-our database, or any server side actions. However, since it includes the API Key, we
-don't store it in Git. This means there's a couple steps you'll have to follow
-if you wan't/need to do this kind of development:
-
-* Navigate to the root of the project directory and create a firebase-init.js file.
-* Go to the [Firebase Console](https://console.firebase.google.com/u/0/) > mst-ka > Project Settings (Gear Icon) > SDK setup and configuration > Config
-* Copy the config into your newly created firebase-init.js file.
+* Paste & submit the url as a comment in your pull request.
 
 ### Making your first Pull Request
 
@@ -143,7 +166,7 @@ In this project we are utilizing a [React](https://reactjs.org/) framework, [Nex
 
 It may also be worth your time looking into some Vanilla HTML/CSS/JavaScript tutorials if you would like.
 
-### Folder Structure (Opinionated, except for ***pages/***)
+### Folder Structure (Opinionated, except for ***pages/*** & ***functions/***)
 
 ---
 
@@ -162,6 +185,10 @@ Any static files that need to be included for the application (images, text file
 #### *utils/*
 
 Catch all for JavaScript functions/files that need to be used throughout the application.
+
+#### *functions/*
+
+This directory is unique to Google's [Cloud Functions for Firebase](https://firebase.google.com/docs/functions) framework that was created when initializing functions for this project. The important part of this directory is in the [`index.js`](./functions/index.js) file, which is, currently, what will run in the cloud when someone submits a contact form and it gets pushed up to our database.
 
 ### MUI & Styling
 
@@ -193,10 +220,61 @@ Responsive design is an important part of any web application and the way that M
 
 Refer to the following [documentation on breakpoints](https://mui.com/material-ui/customization/breakpoints/#main-content); this is how MUI handles it's responsive design. You can see how our current breakpoints set in the [theme](/utils/theme.js).
 
+### Utilizing Firebase Emulators to test our Contact Form
+
+---
+
+If you ever find yourself working with, or validating the contact form, you will want to do so in a development environment so that we are not interrupting service to our form that is live on the website.
+
+This is done through [Firebase Emulators](https://firebase.google.com/docs/emulator-suite). They can replicate all of Firebase's services, but in our case we are just concerned with the Realtime Database, Functions, and Hosting.
+
+Before starting the emulators you will need get the credentials for our Zoho email service that we use to send out the applications.
+
+* Navigate to the `functions/` directory and run:
+
+```bash
+$ firebase functions:config:get > .runtimeconfig.json
+```
+
+This should have generated a `.runtimeconfig.json` file containing the email credentials within the `/functions` directory.
+
+Now you are able to start the emulators with the following command:
+
+```bash
+$ firebase emulators:start
+```
+
+You should see something similar to this returned by the console:
+
+```bash
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Database  │ 127.0.0.1:9000 │ http://127.0.0.1:4000/database  │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Hosting   │ 127.0.0.1:5000 │ n/a                             │
+└───────────┴────────────────┴─────────────────────────────────┘
+```
+
+Navigate to the Emulator UI at http://127.0.0.1:4000 and you should see the emulator overview with the different services displayed.
+
+Only the following services should be 'On':
+
+* Realtime Database: This is where submitted applications via the contact form served on a locally hosted version of the website will be sent.
+* Functions: This is the console output of our firebase function being run every time a new application is pushed to the Realtime Database. The function is located in [/functions/index.js](./functions/index.js). **_IMPORTANT NOTE_**: Edit the `contactEmails` variable to send to your own email address so that you aren't spamming people with application emails while testing the contact form.
+* Hosting: This is a served website from a build of our application on localhost:5000. Similar to running `npm run build` && `npm run start`. New changes will not update the served site automatically, you will need to generate a new build if you make changes.  
+
 ### Linting
 
 ---
-If you're a fan of Visual Studio Code, you can download the Extension: [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) which will help you format your code in a 'proper' way. If you use a different editor, just try to make it look nice for now. We will be looking to install prettier within the project itself in the future. Maybe some cool DevOps stuff to come in the future?!
+If you're a fan of Visual Studio Code, you can download the Extension: [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) which will help you format your code in an "opinionated" way. If you use a different editor, just try to make it look nice for now. We will be looking to install prettier within the project itself in the future. Maybe some cool DevOps stuff to come in the future?!
 
 ### Image Extensions
 
@@ -216,12 +294,3 @@ convert icons to svg unless you're good with illustrator/other vector editors.
 Use .png for any computer graphic we have that it wouldn't be reasonable to make
 a .svg for.
 
-### Contact Us Email (***Contact page not Refactored yet***)
-
----
-The contact us page uses a free email from [Zoho Mail](mail.zoho.com). Once added
-to the firebase account, you can access the user & pass with:
-
-```bash
-$ firebase functions:config:get mail
-```
