@@ -1,13 +1,11 @@
 import { useState } from "react";
 import {
   Alert,
-  appBarClasses,
   Button,
   Container,
   Divider,
   Grid,
   Link,
-  MenuItem,
   Snackbar,
   TextField,
   Typography,
@@ -18,7 +16,6 @@ import * as yup from "yup";
 import ReCAPTCHA from "react-google-recaptcha";
 import { push, ref } from "firebase/database";
 import database from "../../firebase-init.js";
-import { usStates } from "../../utils/unitedStates.js";
 
 const validationSchema = yup.object({
   firstName: yup.string().required("Required"),
@@ -250,23 +247,11 @@ function Contact() {
           <Grid item mobile={12} tablet={6}>
             <TextField
               fullWidth
-              select
               id="state"
               label="State"
               variant="outlined"
-              SelectProps={{
-                MenuProps: {
-                  sx: { maxHeight: "20rem" },
-                },
-              }}
               {...formik.getFieldProps("state")}
-            >
-              {usStates.map((state) => (
-                <MenuItem key={state} value={state}>
-                  {state}
-                </MenuItem>
-              ))}
-            </TextField>
+            />
           </Grid>
           <Grid item mobile={12} tablet={6}>
             <TextField

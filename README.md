@@ -226,7 +226,7 @@ Refer to the following [documentation on breakpoints](https://mui.com/material-u
 
 If you ever find yourself working with, or validating the contact form, you will want to do so in a development environment so that we are not interrupting service to our form that is live on the website.
 
-This is done through [Firebase Emulators](https://firebase.google.com/docs/emulator-suite). They can replicate all of Firbase's services, but in our case we are just concerned with the Realtime Database, Functions, and Hosting.
+This is done through [Firebase Emulators](https://firebase.google.com/docs/emulator-suite). They can replicate all of Firebase's services, but in our case we are just concerned with the Realtime Database, Functions, and Hosting.
 
 Before starting the emulators you will need get the credentials for our Zoho email service that we use to send out the applications.
 
