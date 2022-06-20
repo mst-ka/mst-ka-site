@@ -228,7 +228,7 @@ If you ever find yourself working with, or validating the contact form, you will
 
 This is done through [Firebase Emulators](https://firebase.google.com/docs/emulator-suite). They can replicate all of Firebase's services, but in our case we are just concerned with the Realtime Database, Functions, and Hosting.
 
-Before starting the emulators you will need get the credentials for our Zoho email service that we use to send out the applications.
+Before starting the emulators you will need to get the credentials for our Zoho email service that we use to send out the applications.
 
 * Navigate to the `functions/` directory and run:
 

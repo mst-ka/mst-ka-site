@@ -3,9 +3,9 @@ import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
 
 import theme from "../utils/theme.js";
-import Layout from "../components/Layout/Layout.js";
+import Layout from "../components/Layout/Layout";
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <div>
       <Head>
@@ -16,11 +16,12 @@ function MyApp({ Component, pageProps }) {
 
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Layout />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </div>
   );
 }
 
-export default MyApp;
+export default App;
