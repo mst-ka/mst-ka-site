@@ -10,7 +10,6 @@ function Layout(props) {
     <div>
       <Navbar />
       {props.children}
-      
       <Footer />
       {router.pathname !== "/contact" ? (
         <Fab
