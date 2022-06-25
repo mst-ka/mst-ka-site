@@ -108,11 +108,7 @@ function Contact() {
     },
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm }) => {
-      if (
-        window.confirm(
-          "Are you sure you would like to submit your application?"
-        )
-      ) {
+      if (window.confirm("Are you sure you would like to submit your application?")) {
         //push to Firebase Realtime Database
         push(ref(database, "applications/"), {
           firstName: values.firstName,
