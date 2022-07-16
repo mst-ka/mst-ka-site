@@ -1,64 +1,51 @@
 {
-  "hosting": [{
-    "target": "prod",
-    "public": "out",
-    "cleanUrls": true,
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "contributors": [
-      "Joe Studer <joe.studer.18@gmail.com>",
-      "Jared Hanisch <jared.hanisch@gmail.com>",
-      "Mateusz Przezdziecki <madprzez@gmail.com>"
-    ]
-  },
-  {
-    "target": "staging",
-    "public": "out",
-    "cleanUrls": true,
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "contributors": [
-      "Joe Studer <joe.studer.18@gmail.com>",
-      "Jared Hanisch <jared.hanisch@gmail.com>",
-      "Mateusz Przezdziecki <madprzez@gmail.com>"
-    ]
-  },
-  {
-    "target": "devel",
-    "public": "out",
-    "cleanUrls": true,
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "contributors": [
-      "Joe Studer <joe.studer.18@gmail.com>",
-      "Jared Hanisch <jared.hanisch@gmail.com>",
-      "Mateusz Przezdziecki <madprzez@gmail.com>"
-    ]
-  },
-  {
-    "target": "react",
-    "public": "out",
-    "cleanUrls": true,
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "contributors": [
-      "Joe Studer <joe.studer.18@gmail.com>",
-      "Jared Hanisch <jared.hanisch@gmail.com>",
-      "Mateusz Przezdziecki <madprzez@gmail.com>"
-    ]
-  }],
+  "hosting": [
+    {
+      "target": "prod",
+      "public": "out",
+      "cleanUrls": true,
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "contributors": [
+        "Joe Studer <joe.studer.18@gmail.com>",
+        "Jared Hanisch <jared.hanisch@gmail.com>",
+        "Mateusz Przezdziecki <madprzez@gmail.com>"
+      ]
+    },
+    {
+      "target": "staging",
+      "public": "out",
+      "cleanUrls": true,
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "contributors": [
+        "Joe Studer <joe.studer.18@gmail.com>",
+        "Jared Hanisch <jared.hanisch@gmail.com>",
+        "Mateusz Przezdziecki <madprzez@gmail.com>"
+      ]
+    },
+    {
+      "target": "devel",
+      "public": "out",
+      "cleanUrls": true,
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "contributors": [
+        "Joe Studer <joe.studer.18@gmail.com>",
+        "Jared Hanisch <jared.hanisch@gmail.com>",
+        "Mateusz Przezdziecki <madprzez@gmail.com>"
+      ]
+    }
+  ],
   "emulators": {
     "functions": {
       "port": 5001
@@ -68,6 +55,14 @@
     },
     "database": {
       "port": 9000
+    },
+    "ui": {
+      "enabled": true
     }
+  },
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint"
+    ]
   }
 }

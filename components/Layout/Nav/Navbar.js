@@ -13,8 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import NavbarButton from "./NavbarButton";
 import MobileNavMenu from "./MobileNavMenu";
 
-function Navbar() {
-  const pages = [
+const pages = [
     { title: "Home", link: "/" },
     { title: "Values", link: "/values" },
     { title: "Awards", link: "/awards" },
@@ -22,6 +21,8 @@ function Navbar() {
     { title: "Alumni", link: "/alumni" },
     { title: "Contact", link: "/contact" },
   ];
+
+function Navbar() {
 
   const [open, setOpen] = useState(false);
 
@@ -45,7 +46,7 @@ function Navbar() {
         <Toolbar
           sx={{ justifyContent: "space-between"}}
         >
-          <Link href="#" underline="none">
+          <Link href="/" underline="none">
             <Box
               component="img"
               src="/KA_logo.png"
