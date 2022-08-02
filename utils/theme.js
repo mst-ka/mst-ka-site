@@ -35,7 +35,8 @@ const theme = createTheme({
   },
   transitions: {
     duration: {
-      standard: 100,
+      oneHundredMS: 100,
+      twoHundredMS: 200,
     },
     
   },

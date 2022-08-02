@@ -141,10 +141,10 @@ function Footer() {
       <Container
         sx={{
           bgcolor: "#272930",
-          padding: { mobile: "1rem 2rem", laptop: "1rem 12rem" },
+          padding: { mobile: "1rem 2rem 5rem", laptop: "1rem 12rem" },
         }}
       >
-        <Typography color="white.main">
+        <Typography color="white.main" sx={{ textAlign: "center" }}>
           Developed by Beta Alpha of Kappa Alpha and{" "}
           <Link
             underline="hover"
