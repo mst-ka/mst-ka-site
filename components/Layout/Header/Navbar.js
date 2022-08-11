@@ -14,16 +14,15 @@ import NavbarButton from "./NavbarButton";
 import MobileNavMenu from "./MobileNavMenu";
 
 const pages = [
-    { title: "Home", link: "/" },
-    { title: "Values", link: "/values" },
-    { title: "Awards", link: "/awards" },
-    { title: "About Us", link: "/about" },
-    { title: "Alumni", link: "/alumni" },
-    { title: "Contact", link: "/contact" },
-  ];
+  { title: "Home", link: "/" },
+  { title: "Values", link: "/values" },
+  { title: "Awards", link: "/awards" },
+  { title: "About Us", link: "/about" },
+  { title: "Alumni", link: "/alumni" },
+  { title: "Contact", link: "/contact" },
+];
 
 function Navbar() {
-
   const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -40,12 +39,9 @@ function Navbar() {
         position="sticky"
         sx={{
           bgcolor: "background.default",
-          
         }}
       >
-        <Toolbar
-          sx={{ justifyContent: "space-between"}}
-        >
+        <Toolbar sx={{ justifyContent: "space-between" }}>
           <Link href="/" underline="none">
             <Box
               component="img"

@@ -12,7 +12,7 @@ function QuickLinkButton(props) {
           justifyContent: "flex-start",
 
           transition: theme.transitions.create(["color"], {
-            duration: theme.transitions.duration.standard,
+            duration: theme.transitions.duration.oneHundredMS,
           }),
 
           "&:hover": {

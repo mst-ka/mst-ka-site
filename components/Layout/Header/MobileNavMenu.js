@@ -54,7 +54,7 @@ const aboutSubPages = [
 function MobileNavMenu(props) {
   return (
     <Drawer
-      transitionDuration={theme.transitions.duration.standard}
+      transitionDuration={theme.transitions.duration.oneHundredMS}
       variant="persistent"
       anchor="right"
       open={props.open}

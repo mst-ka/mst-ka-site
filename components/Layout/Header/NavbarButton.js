@@ -19,7 +19,7 @@ function NavbarButton(props) {
           transition: theme.transitions.create(
             ["color", "background-color", "border-bottom"],
             {
-              duration: theme.transitions.duration.standard,
+              duration: theme.transitions.duration.oneHundredMS,
             }
           ),
 
