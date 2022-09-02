@@ -1,5 +1,5 @@
 import { Container, Grid } from "@mui/material";
-import Newsletter from "../../components/Alumni Newsletter/Newsletter";
+import Newsletter from "../../components/Subpages/Alumni/Newsletter";
 
 const newsletters = [
   {

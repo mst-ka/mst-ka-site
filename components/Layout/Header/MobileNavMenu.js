@@ -40,9 +40,9 @@ const awardsSubPages = [
 
 const aboutSubPages = [
   { title: "About Us", link: "/about" },
-  { title: "BA Of KA Greek Life", link: "/about/ba-of-ka-greek-life" },
-  { title: "BA Of KA House History", link: "/about/ba-of-ka-house-history" },
-  { title: "BA Of KA Officers", link: "/about/ba-of-ka-officers" },
+  { title: "BA Of KA Greek Life", link: "/about/greek-life" },
+  { title: "BA Of KA House History", link: "/about/house-history" },
+  { title: "BA Of KA Officers", link: "/about/officers" },
   {
     title: "KA National Risk Management Policy",
     link: "https://www.kappaalphaorder.org/wp-content/uploads/2011/04/2018-Risk-Management-Policy.pdf",
