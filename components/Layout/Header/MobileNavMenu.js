@@ -48,6 +48,7 @@ const aboutSubPages = [
     link: "https://www.kappaalphaorder.org/wp-content/uploads/2011/04/2018-Risk-Management-Policy.pdf",
   },
   { title: "Letter From KA Parent", link: "/about/letter-from-ka-parent" },
+  { title: "Notable KA Alumni", link: "/about/notable-alumni" },
   { title: "Parents FAQ", link: "/about/parents-faq" },
 ];
 
