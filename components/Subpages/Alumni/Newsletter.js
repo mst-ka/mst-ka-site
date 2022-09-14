@@ -5,7 +5,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import theme from "../../utils/theme.js";
+import theme from "../../../utils/theme.js";
 
 function Newsletter(props) {
   return (
