@@ -1,4 +1,5 @@
 import { Container, Grid } from "@mui/material";
+import Banner from "../../components/Layout/Banner/Banner";
 import OfficerInfo from "../../components/Subpages/About/Officers/OfficerInfo";
 
 const officers = [
@@ -67,14 +68,14 @@ const officers = [
   },
   {
     name: "Matthew Stika",
-    position: "Rush Chairman",
+    position: "Recruitment Chairman",
     email: "mwsc8p@umsystem.edu",
     yearJoined: "2021",
     img: "/images/about/officers/rc1.jpg",
   },
   {
     name: "Trey Brown",
-    position: "Rush Chairman",
+    position: "Recruitment Chairman",
     email: "twbyny@umsystem.edu",
     yearJoined: "2021",
     img: "/images/about/officers/rc2.jpg",
@@ -103,7 +104,8 @@ const officers = [
 ];
 
 function BAOfKAOfficers() {
-  return (
+  return (<div>
+    <Banner text="Chapter Officers"/>
     <Container sx={{ padding: { mobile: "2rem", tablet: "2rem 20rem" } }}>
       <Grid container spacing={12}>
         {officers.map((officer, index) => (
@@ -118,6 +120,8 @@ function BAOfKAOfficers() {
         ))}
       </Grid>
     </Container>
+  </div>
+    
   );
 }
 

@@ -57,10 +57,8 @@ function Navbar() {
             <Typography
               variant="h1"
               sx={{
-                fontFamily: "Verdana",
-                fontSize: "2rem",
-                fontWeight: 600,
-                paddingTop: ".5rem",
+                fontSize: "2.5rem",
+                fontWeight: 700,
                 textTransform: "uppercase",
                 whiteSpace: "nowrap",
                 display: { mobile: "none", tablet: "block" },
@@ -69,16 +67,14 @@ function Navbar() {
               Kappa Alpha Order
             </Typography>
             <Typography
-              variant="overline"
+              variant="body2"
               sx={{
-                fontFamily: "Verdana",
                 color: "grey.main",
-                letterSpacing: ".2rem",
                 textTransform: "uppercase",
                 display: { mobile: "none", tablet: "block" },
               }}
             >
-              Missouri S&amp;T
+              Missouri University of Science &amp; Technology
             </Typography>
           </Link>
 
