@@ -21,8 +21,9 @@ function Banner(props) {
           display: "inline-block",
           verticalAlign: "middle",
           color: "white.main",
-          textShadow: ".1rem .1rem .5rem #000000",
+          textShadow: ".1rem .1rem 1rem #000000",
           fontWeight: 500,
+          fontSize: { mobile: "2.5rem", tablet: "3.5rem" },
         }}
       >
         {props.text}

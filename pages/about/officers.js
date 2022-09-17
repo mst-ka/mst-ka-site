@@ -106,7 +106,7 @@ const officers = [
 function BAOfKAOfficers() {
   return (<div>
     <Banner text="Chapter Officers"/>
-    <Container sx={{ padding: { mobile: "2rem", tablet: "2rem 20rem" } }}>
+    <Container sx={{ padding: { mobile: "2rem", tablet: "2rem 16rem" } }}>
       <Grid container spacing={12}>
         {officers.map((officer, index) => (
           <OfficerInfo

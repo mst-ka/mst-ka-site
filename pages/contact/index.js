@@ -109,7 +109,11 @@ function Contact() {
     },
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm }) => {
-      if (window.confirm("Are you sure you would like to submit your application?")) {
+      if (
+        window.confirm(
+          "Are you sure you would like to submit your application?"
+        )
+      ) {
         //push to Firebase Realtime Database
         push(ref(database, "applications/"), {
           firstName: values.firstName,
@@ -147,7 +151,7 @@ function Contact() {
       <form onSubmit={formik.handleSubmit}>
         <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
           <br />
-          <Typography align="center">
+          <Typography align="left">
             The Beta Alpha Chapter of Kappa Alpha Order are determined to
             recruit men who will become contributing members to our brotherhood.
             This application is meant to help us get to know you, and decide

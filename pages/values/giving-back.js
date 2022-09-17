@@ -1,5 +1,11 @@
+import Banner from "../../components/Layout/Banner/Banner";
+
 function GivingBack() {
-  return <div>Giving Back</div>;
+  return (
+    <div>
+      <Banner text="Giving Back" />
+    </div>
+  );
 }
 
 export default GivingBack;

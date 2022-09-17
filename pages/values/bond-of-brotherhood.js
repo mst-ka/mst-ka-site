@@ -1,5 +1,11 @@
+import Banner from "../../components/Layout/Banner/Banner";
+
 function BondOfBrotherhood() {
-  return <div>The Bond Of Brotherhood</div>;
+  return (
+    <div>
+      <Banner text="The Bond Of Brotherhood" />
+    </div>
+  );
 }
 
 export default BondOfBrotherhood;

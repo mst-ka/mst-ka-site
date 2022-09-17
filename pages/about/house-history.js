@@ -1,15 +1,14 @@
 import { Container, Grid, Typography } from "@mui/material";
-import TextSectionHeading from "../../components/Subpages/TextSectionHeading";
+import Banner from "../../components/Layout/Banner/Banner";
 import TextSectionImage from "../../components/Subpages/TextSectionImage";
 
 function BAOfKAHouseHistory() {
   return (
-    <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
+    <div>
+      <Banner text="Beta Alpha Chapter House History" />
+      <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
       <Grid container spacing={8}>
         <Grid item mobile={12} tablet={6}>
-          <TextSectionHeading>
-            Beta Alpha Chapter House History
-          </TextSectionHeading>
           <Typography>
             In 1959, years of organization and fund-raising climaxed in the
             opening of a new KA house custom-made for our use. We owe a
@@ -32,6 +31,8 @@ function BAOfKAHouseHistory() {
         />
       </Grid>
     </Container>
+    </div>
+    
   );
 }
 

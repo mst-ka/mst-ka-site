@@ -1,4 +1,5 @@
 import { Container, List, ListItem, Typography } from "@mui/material";
+import Banner from "../../components/Layout/Banner/Banner";
 import NotableAlumniList from "../../components/Subpages/About/NotableAlumni/NotbleAlumniList";
 import TextSectionHeading from "../../components/Subpages/TextSectionHeading";
 
@@ -80,46 +81,45 @@ const notableAlumni = {
 
 function NotableAlumni() {
   return (
-    <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
-      <TextSectionHeading>
-        Notable Alumni of Kappa Alpha Order
-      </TextSectionHeading>
+    <div>
+      <Banner text="Notable Alumni" />
+      <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
+        <Typography gutterBottom variant="h5">
+          Business
+        </Typography>
+        <NotableAlumniList alumni={notableAlumni.business} />
 
-      <Typography gutterBottom variant="h5">
-        Business
-      </Typography>
-      <NotableAlumniList alumni={notableAlumni.business} />
+        <Typography gutterBottom variant="h5">
+          Education - College &amp; University Presidents
+        </Typography>
+        <NotableAlumniList alumni={notableAlumni.education} />
 
-      <Typography gutterBottom variant="h5">
-        Education - College &amp; University Presidents
-      </Typography>
-      <NotableAlumniList alumni={notableAlumni.education} />
+        <Typography gutterBottom variant="h5">
+          Entertainment
+        </Typography>
+        <NotableAlumniList alumni={notableAlumni.entertainment} />
 
-      <Typography gutterBottom variant="h5">
-        Entertainment
-      </Typography>
-      <NotableAlumniList alumni={notableAlumni.entertainment} />
+        <Typography gutterBottom variant="h5">
+          Government
+        </Typography>
+        <NotableAlumniList alumni={notableAlumni.government} />
 
-      <Typography gutterBottom variant="h5">
-        Government
-      </Typography>
-      <NotableAlumniList alumni={notableAlumni.government} />
+        <Typography gutterBottom variant="h5">
+          Military
+        </Typography>
+        <NotableAlumniList alumni={notableAlumni.military} />
 
-      <Typography gutterBottom variant="h5">
-        Military
-      </Typography>
-      <NotableAlumniList alumni={notableAlumni.military} />
+        <Typography gutterBottom variant="h5">
+          Sports
+        </Typography>
+        <NotableAlumniList alumni={notableAlumni.sports} />
 
-      <Typography gutterBottom variant="h5">
-        Sports
-      </Typography>
-      <NotableAlumniList alumni={notableAlumni.sports} />
-
-      <Typography gutterBottom variant="h5">
-        Religion
-      </Typography>
-      <NotableAlumniList alumni={notableAlumni.religion} />
-    </Container>
+        <Typography gutterBottom variant="h5">
+          Religion
+        </Typography>
+        <NotableAlumniList alumni={notableAlumni.religion} />
+      </Container>
+    </div>
   );
 }
 

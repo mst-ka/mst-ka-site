@@ -2,7 +2,7 @@ import { Card, CardContent, CardMedia, Grid, Typography } from "@mui/material";
 
 function OfficerInfo(props) {
   return (
-    <Grid item mobile={12} tablet={4}>
+    <Grid item mobile={12} laptop={4}>
       <Card raised>
         <CardMedia
           component="img"
