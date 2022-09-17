@@ -1,7 +1,6 @@
 import { Container, List, ListItem, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import NotableAlumniList from "../../components/Subpages/About/NotableAlumni/NotbleAlumniList";
-import TextSectionHeading from "../../components/Subpages/TextSectionHeading";
 
 const notableAlumni = {
   business: [

@@ -1,6 +1,5 @@
 import { Container, Grid, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
-import TextSectionHeading from "../../components/Subpages/TextSectionHeading";
 import TextSectionImage from "../../components/Subpages/TextSectionImage";
 
 function LetterFromKAParent() {
