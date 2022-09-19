@@ -1,5 +1,11 @@
+import Banner from "../../components/Layout/Banner/Banner";
+
 function Awards() {
-  return <div>Awards</div>;
+  return (
+    <div>
+      <Banner text="Our Awards" />
+    </div>
+  );
 }
 
 export default Awards;
