@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import {
   AppBar,
   Box,
@@ -9,7 +8,11 @@ import {
   Typography,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-
+import {
+  valuesSubPages,
+  awardsSubPages,
+  aboutSubPages,
+} from "../../../utils/subpages";
 import NavbarButton from "./NavbarButton";
 import MobileNavMenu from "./MobileNavMenu";
 
@@ -33,8 +36,9 @@ function Navbar() {
     setOpen(false);
   };
 
+  let subpageArray = [];
   return (
-    <div>
+    <>
       <AppBar
         position="sticky"
         sx={{
@@ -77,13 +81,31 @@ function Navbar() {
               Missouri University of Science &amp; Technology
             </Typography>
           </Link>
-
           <Box sx={{ display: "flex" }}>
-            {pages.map((page, index) => (
-              <NavbarButton key={index} title={page.title} link={page.link} />
-            ))}
-          </Box>
+            {pages.map((page, index) => {
+              if (page.title === "Values") {
+                subpageArray = valuesSubPages;
+              }
+              else if (page.title === "Awards"){
+                subpageArray = awardsSubPages;
+              }
+              else if (page.title === "About Us"){
+                subpageArray = aboutSubPages;
+              }
+              else{
+                subpageArray = [];
+              }
 
+              return(
+                <NavbarButton
+                key={index}
+                title={page.title}
+                link={page.link}
+                subpages={subpageArray}
+              />
+              );
+            })}
+          </Box>
           <IconButton
             onClick={handleDrawerOpen}
             sx={{ display: { laptop: "none" } }}
@@ -93,7 +115,7 @@ function Navbar() {
         </Toolbar>
       </AppBar>
       <MobileNavMenu open={open} handleDrawerClose={handleDrawerClose} />
-    </div>
+    </>
   );
 }
 
