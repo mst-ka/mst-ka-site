@@ -30,7 +30,7 @@ function CollapsibleMobileNavButton(props) {
       <Divider />
       <Collapse in={collapse} timeout="auto" unmountOnExit>
         <List component="div" sx={{ color: "primary.main" }}>
-          {props.subPages.map((page, index) => (
+          {props.subpages.map((page, index) => (
             <div key={index}>
               <ListItemButton
                 component={Link}
