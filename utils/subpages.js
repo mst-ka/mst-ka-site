@@ -2,9 +2,7 @@ export const valuesSubPages = [
   { title: "Our Values", link: "/values" },
   { title: "The Bond Of Brotherhood", link: "/values/bond-of-brotherhood" },
   { title: "Giving Back", link: "/values/giving-back" },
-  { title: "We Are Gentleman", link: "/values/we-are-gentleman" },
   { title: "Top 5 Reasons to go KA", link: "/values/top-5-reasons" },
-  { title: "You Are A KA", link: "/values/you-are-a-ka" },
 ];
 
 export const awardsSubPages = [
