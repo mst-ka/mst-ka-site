@@ -85,7 +85,7 @@ function Values() {
               endeavors of life.
             </Typography>
           </Grid>
-          <Grid item mobile={12} sx={{margin: {tablet:"0rem 20rem" } }}>
+          <Grid item mobile={12} sx={{margin: {desktop:"0rem 12rem" } }}>
             <TextSectionHeading>
               <DoubleArrowIcon fontSize="large" color="primary" />
               Excellence

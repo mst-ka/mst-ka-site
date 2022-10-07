@@ -6,7 +6,7 @@ import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 function TopFiveReasons() {
   return (
     <div>
-      <Banner text="Top 5 reasons to go KA" />
+      <Banner text="Top 5 Reasons to go KA" />
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         <Grid container spacing={8}>
           <Grid item mobile={12} tablet={6}>
@@ -57,7 +57,7 @@ function TopFiveReasons() {
               fraternities, sororities, and other organizations.
             </Typography>
           </Grid>
-          <Grid item mobile={12} sx={{margin: {tablet:"0rem 20rem" } }}>
+          <Grid item mobile={12} sx={{margin: {desktop:"0rem 12rem" } }}>
             <TextSectionHeading>
               <DoubleArrowIcon fontSize="large" color="primary" />
               Leadership and Networking Opportunities
