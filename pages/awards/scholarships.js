@@ -40,24 +40,24 @@ function Scholarships() {
                 }}
               >
                 <ListItem sx={{ display: "list-item" }}>
-                  Four mandatory study hours every school night for freshmen
+                  Four mandatory study hours every school night for freshmen.
                 </ListItem>
                 <ListItem sx={{ display: "list-item" }}>
                   Any member struggling with grades is placed on mandatory study
-                  hours
+                  hours.
                 </ListItem>
                 <ListItem sx={{ display: "list-item" }}>
-                  Every member attends class regardless of his current GPA
+                  Every member attends class regardless of his current GPA.
                 </ListItem>
                 <ListItem sx={{ display: "list-item" }}>
-                  The house has a wifi network linked to the S&amp;T system The
-                  network provides access to laser printers and copier
+                  The house has a wifi network linked to the S&amp;T system. The
+                  network provides access to laser printers and copier.
                 </ListItem>
                 <ListItem sx={{ display: "list-item" }}>
-                  We maintain extensive academic files to assist each brother
+                  We maintain extensive academic files to assist each brother.
                 </ListItem>
                 <ListItem sx={{ display: "list-item" }}>
-                  The KA house has extensive dedicated study spaces
+                  The KA house has extensive dedicated study spaces.
                 </ListItem>
                 <ListItem sx={{ display: "list-item" }}>
                   This scholarship program is strongly supported by all members
