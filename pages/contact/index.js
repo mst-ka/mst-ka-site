@@ -501,7 +501,7 @@ function Contact() {
               <Grid item>
                 {/* TODO: Replace site key with actual site key when deploying to prod*/}
                 <ReCAPTCHA
-                  sitekey="6LcFEA4gAAAAAJD9f0WnuHs8eQVwYkgcyoHdA8Kw"
+                  sitekey="6Ld6jNcaAAAAACaWEQw_Mc9HqEet-_2KVZJwZ5cE"
                   onChange={handleRecaptcha}
                 />
                 <Button
