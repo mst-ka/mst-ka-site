@@ -42,7 +42,7 @@ function CreateImage(props) {
           image={props.image.src}
           sx={{
             position: "relative",
-            boxShadow: "0rem 1rem 2rem",
+            boxShadow: "0rem .5rem 1rem",
             filter: "brightness(40%)",
             width: "100%",
             height: "25rem",
