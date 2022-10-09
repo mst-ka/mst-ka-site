@@ -65,9 +65,9 @@ function MobileNavMenu(props) {
         />
         <MobileNavButton link="/alumni" icon={<PeopleIcon />} title="Alumni" />
         <MobileNavButton
-          link="/contact"
+          link="/apply"
           icon={<ContactPageIcon />}
-          title="Contact"
+          title="Apply"
         />
       </List>
     </Drawer>

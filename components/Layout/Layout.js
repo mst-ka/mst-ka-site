@@ -32,11 +32,11 @@ function Layout(props) {
       <Navbar />
       {props.children}
       <Footer />
-      {router.pathname !== "/contact" ? (
+      {router.pathname !== "/apply" ? (
         <Fab
           variant="extended"
           color="primary"
-          href="/contact"
+          href="/apply"
           sx={{ right: "1rem", bottom: "1rem", position: "fixed" }}
         >
           <ContactPageIcon sx={{ marginRight: ".3rem" }} />

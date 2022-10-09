@@ -13,7 +13,7 @@ const quickLinks = [
   { title: "Awards", link: "/awards" },
   { title: "About", link: "/about" },
   { title: "Alumni", link: "/alumni" },
-  { title: "Contact", link: "/contact" },
+  { title: "Apply", link: "/apply" },
 ];
 
 function Footer() {
@@ -87,9 +87,8 @@ function Footer() {
               <br />
               President: (417) 824-0849
               <br />
-              Alumni Contact Jim Hennessey:
-              <br />
-              (314) 378-8483
+              Alumni Contact <br />
+              Jim Hennessey: (314) 378-8483
             </Typography>
           </Grid>
           <Grid item mobile={12} tablet={3}>
