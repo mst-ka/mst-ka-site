@@ -100,7 +100,7 @@ This will download the project dependencies via node package manager.
 $ npm run dev
 ```
 
-* Navigate to [localhost:3000](http://localhost:3000/) and you should be seeing the website displayed. You can now start making changes and the locally hosted version of the website will automatically be updated with your changes. To ensure your firebase app is initialized correctly you can navigate to the membership page ([localhost:3000/apply](http://localhost:3000/apply)) and you should be seeing the form being displayed _without_ issue.
+* Navigate to [localhost:3000](http://localhost:3000/) and you should be seeing the website displayed. You can now start making changes and the locally hosted version of the website will automatically be updated with your changes. To ensure your firebase app is initialized correctly you can navigate to the apply page ([localhost:3000/apply](http://localhost:3000/apply)) and you should be seeing the form being displayed _without_ issue.
 
 ### Recommended Practices
 

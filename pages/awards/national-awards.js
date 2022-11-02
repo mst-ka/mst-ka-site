@@ -16,14 +16,14 @@ function NationalAwards() {
             <Typography>
               The George C. Marshall Award is given to the top 0-3 KA chapters
               nationally each year. Of the 45+ Marshalls awarded, our chapter
-              holds 11 (as of 2019). This gives us the distinct honor of being
+              holds 13 (as of 2022). This gives us the distinct honor of being
               the most awarded KA chapter in the nation, a legacy we are proud
               to continue!
             </Typography>
           </Grid>
           <TextSectionImage
-            src="/images/awards/national-awards/baka-awards.jpg"
-            alt="National Awards"
+            src="/images/awards/national-awards/marshall.jpg"
+            alt="Marshall Award"
           />
           <Grid item mobile={12} tablet={6}>
             <TextSectionHeading>
@@ -34,15 +34,19 @@ function NationalAwards() {
               awarded to the top 10% of KA chapters in the nation annually.
               <br />
               <br />
-              As of 2019 our chapter is proud to have received this award every
+              As of 2022 our chapter is proud to have received this award every
               year it has been awarded, barring only two years. To win the Ammen
               award you must also win the majority of awards in the following
-              categories: Chapter finances, New Member Education, Academic
+              categories: Chapter Finances, New Member Education, Academic
               Excellence, Community Service, Philanthropy, Excellence in
               Communication, and others. To win a Marshall award you must win
               all of the awards in those categories.
             </Typography>
           </Grid>
+          <TextSectionImage
+            src="/images/awards/national-awards/ammen.jpg"
+            alt="Ammen Award"
+          />
         </Grid>
       </Container>
     </div>

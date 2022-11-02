@@ -37,7 +37,7 @@ function GivingBack() {
             </Typography>
           </Grid>
           <TextSectionImage
-            src="/images/values/giving-back/teamwork.jpg"
+            src="/images/values/giving-back/service.jpg"
             alt="Service"
           />
         </Grid>

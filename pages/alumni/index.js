@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Button, Link, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import Newsletter from "../../components/Subpages/Alumni/Newsletter";
 
@@ -49,8 +49,29 @@ function Alumni() {
   return (
     <div>
       <Banner text="Alumni" />
-      <Container sx={{ padding: {mobile:"2rem", tablet: "2rem 12rem", laptop: "2rem 20rem"} }}>
-        <Grid container spacing={12}>
+
+      <Container
+        sx={{
+          padding: {
+            mobile: "2rem",
+            tablet: "2rem 12rem",
+            laptop: "2rem 20rem",
+          },
+        }}
+      >
+        <Typography>
+          Here you will find our alumni newsletter organized by the Beta Alpha
+          Alumni Association (BAAA). We release our newsletter bi-annually,
+          highlighting: news, history, ways for alumni to get involved, and our
+          brothers&apos; life events &amp; accomplishments. If you want to make
+          sure you never miss a newsletter, please fill out our{" "}
+          <Link href="https://forms.gle/JGcLGjDLBuoPFC4WA">
+            Alumni Reporting Form!
+          </Link> 
+          
+        </Typography>
+
+        <Grid container spacing={6} sx={{marginTop: "0rem"}}>
           {newsletters.map((newsletter, index) => (
             <Grid key={index} item mobile={12} tablet={6}>
               <Newsletter

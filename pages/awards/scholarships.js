@@ -1,5 +1,6 @@
-import { Container, Grid, Typography, List, ListItem } from "@mui/material";
+import { Container, Grid, Link, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
+import TextSectionImage from "../../components/Subpages/TextSectionImage";
 
 function Scholarships() {
   return (
@@ -7,67 +8,38 @@ function Scholarships() {
       <Banner text="Scholarships" />
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         <Grid container spacing={8}>
-          <Grid item mobile={12}>
+          <Grid item mobile={12} tablet={6}>
             <Typography>
-              Alumni have consistently funded ~$50,000 annually in scholarships
-              annually to members of the chapter based on academic achievement
-              and need. The fundamental reason for you to enter the Missouri
-              University of Science and Technology is to obtain a degree and
-              prepare yourself for a successful career. Kappa Alpha is dedicated
-              to an environment of scholarship that helps every brother maximize
-              his potential in his academic pursuits and achieve his goals. It
-              is the goal of MS&amp;T to guide and assist you in attaining that
-              goal.
+              The Beta Alpha Education Foundation was established in April 2012
+              as a 501(c)(3) public charity for the purpose of providing
+              scholarships and granting money for educational related housing
+              infrastructure at the Missouri University of Science and
+              Technology. Now the Foundation primarily solicits funds from the
+              alumni of the Beta Alpha chapter of Kappa Alpha Order on the
+              Missouri S&T campus. The alumni of the Beta Alpha chapter have
+              donated between $50,000 - $60,000 annually with the most recent
+              donation total topping $61,000 at our homecoming banquet in 2022.
+              These funds are used to support our undergraduate members in their
+              tuition and house costs.
               <br />
               <br />
-              Kappa Alpha is dedicated to an environment of scholarship that
-              helps every brother maximize his potential in his academic
-              pursuits. GPA Matters. The KA average GPA is consistently higher
-              than the average of all M&amp;ST students. The spirit of KA&apos;s
-              scholarship program recognizes high scholastic achievement as the
-              key to our overall chapter excellence. Here are some of the ways
-              we make that happen:
+              In addition to giving scholarships to undergraduate members of
+              Kappa Alpha, the Foundation gives scholarships that are open to
+              the campus at large. The Harold K. Chernoff Memorial Magnolia and
+              Rose Scholarships are awarded to highly qualified female
+              recipients each year at Homecoming.
               <br />
               <br />
-              <List
-                dense
-                sx={{
-                  listStyleType: "disc",
-                  paddingLeft: "2rem",
-                  "& .MuiListItem-root": {
-                    display: "list-item",
-                  },
-                }}
-              >
-                <ListItem sx={{ display: "list-item" }}>
-                  Four mandatory study hours every school night for freshmen.
-                </ListItem>
-                <ListItem sx={{ display: "list-item" }}>
-                  Any member struggling with grades is placed on mandatory study
-                  hours.
-                </ListItem>
-                <ListItem sx={{ display: "list-item" }}>
-                  Every member attends class regardless of his current GPA.
-                </ListItem>
-                <ListItem sx={{ display: "list-item" }}>
-                  The house has a wifi network linked to the S&amp;T system. The
-                  network provides access to laser printers and copier.
-                </ListItem>
-                <ListItem sx={{ display: "list-item" }}>
-                  We maintain extensive academic files to assist each brother.
-                </ListItem>
-                <ListItem sx={{ display: "list-item" }}>
-                  The KA house has extensive dedicated study spaces.
-                </ListItem>
-                <ListItem sx={{ display: "list-item" }}>
-                  This scholarship program is strongly supported by all members
-                  of the house and is a prime reason Kappa Alpha consistently
-                  maintains a GPA above the All Men&apos;s Average GPA and among the
-                  top of Greek organizations.
-                </ListItem>
-              </List>
+              If you&apos;d like to learn more, please visit the{" "}
+              <Link href="https://baedu.org/">
+                Beta Alpha Educational Foundation website
+              </Link>{"."}
             </Typography>
           </Grid>
+          <TextSectionImage
+            src="/images/awards/scholarships/scholarships.jpg"
+            alt="Scholarship Recipients"
+          />
         </Grid>
       </Container>
     </div>
