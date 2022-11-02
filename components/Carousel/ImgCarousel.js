@@ -12,7 +12,7 @@ function ImgCarousel() {
     {
       src: "images/home/banner-slide-2.jpg",
       button_text: "Academics Matter",
-      button_link: "/awards/scholarships",
+      button_link: "/about/academics",
     },
     {
       src: "images/home/banner-slide-3.jpg",
