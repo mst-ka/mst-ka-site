@@ -18,19 +18,11 @@ const quickLinks = [
 
 function Footer() {
   return (
-    <Box
-      sx={{
-        position: "relative",
-        minHeight: { mobile: "105vh", tablet: "50vh" },
-      }}
-    >
+    <Box sx={{}}>
       <Container
         sx={{
           bgcolor: "#34363E",
           padding: { mobile: "1rem 2rem", laptop: "1rem 10rem" },
-          position: "absolute",
-          bottom: 0,
-          width: "100%",
         }}
       >
         <Grid container spacing={2}>
@@ -143,28 +135,28 @@ function Footer() {
             ))}
           </Grid>
         </Grid>
-          <Typography
-            color="white.main"
-            sx={{
-              textAlign: "center",
-              padding: { mobile: "1rem 2rem 5rem", laptop: "1rem 12rem" },
-            }}
+        <Typography
+          color="white.main"
+          sx={{
+            textAlign: "center",
+            padding: { mobile: "1rem 2rem 5rem", laptop: "1rem 12rem" },
+          }}
+        >
+          Developed by Beta Alpha of Kappa Alpha and{" "}
+          <Link
+            underline="hover"
+            href="https://github.com/joe-studer-18/mst-ka-site"
           >
-            Developed by Beta Alpha of Kappa Alpha and{" "}
-            <Link
-              underline="hover"
-              href="https://github.com/joe-studer-18/mst-ka-site"
-            >
-              hosted on Github
-              <GitHubIcon
-                sx={{
-                  verticalAlign: "middle",
-                  marginLeft: ".25rem",
-                  color: "primary.main",
-                }}
-              />
-            </Link>
-          </Typography>
+            hosted on Github
+            <GitHubIcon
+              sx={{
+                verticalAlign: "middle",
+                marginLeft: ".25rem",
+                color: "primary.main",
+              }}
+            />
+          </Link>
+        </Typography>
       </Container>
     </Box>
   );

@@ -15,12 +15,12 @@ function Scholarships() {
               scholarships and granting money for educational related housing
               infrastructure at the Missouri University of Science and
               Technology. Now the Foundation primarily solicits funds from the
-              alumni of the Beta Alpha chapter of Kappa Alpha Order on the
-              Missouri S&T campus. The alumni of the Beta Alpha chapter have
-              donated between $50,000 - $60,000 annually with the most recent
-              donation total topping $61,000 at our homecoming banquet in 2022.
-              These funds are used to support our undergraduate members in their
-              tuition and house costs.
+              alumni of the Beta Alpha Chapter of Kappa Alpha Order on the
+              Missouri S&T campus to assist our undergraduate members in their
+              tuition and housing costs. The alumni of the Beta Alpha chapter
+              have donated between $50,000 - $60,000 annually with the most
+              recent donation total topping $61,000 at our homecoming banquet in
+              2022.
               <br />
               <br />
               In addition to giving scholarships to undergraduate members of
@@ -33,7 +33,8 @@ function Scholarships() {
               If you&apos;d like to learn more, please visit the{" "}
               <Link href="https://baedu.org/">
                 Beta Alpha Educational Foundation website
-              </Link>{"."}
+              </Link>
+              {"."}
             </Typography>
           </Grid>
           <TextSectionImage

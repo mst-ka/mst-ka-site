@@ -9,12 +9,12 @@ export const awardsSubPages = [
   { title: "Our Awards", link: "/awards" },
   { title: "Campus Awards", link: "/awards/campus-awards" },
   { title: "National Awards", link: "/awards/national-awards" },
-  { title: "Scholarships", link: "/awards/scholarships" },
 ];
 
 export const aboutSubPages = [
   { title: "About Us", link: "/about" },
   { title: "Academics", link: "/about/academics"},
+  { title: "Scholarships", link: "/about/scholarships" },
   { title: "Greek Life", link: "/about/greek-life" },
   { title: "Officers", link: "/about/officers" },
   {

@@ -38,7 +38,11 @@ function Academics() {
               last 5 semesters in a row as of Spring 2022. If you&apos;d like
               see how our grades compare among other organizations on campus,
               please{" "}
-              <Link href="https://involvement.mst.edu/media/studentsupport/involvement/documents/KA.pdf#220802105839">
+              <Link
+                target="_blank"
+                rel="noreferrer"
+                href="https://involvement.mst.edu/media/studentsupport/involvement/documents/KA.pdf#220802105839"
+              >
                 click here
               </Link>
               {"."}
