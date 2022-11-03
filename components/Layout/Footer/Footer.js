@@ -13,12 +13,12 @@ const quickLinks = [
   { title: "Awards", link: "/awards" },
   { title: "About", link: "/about" },
   { title: "Alumni", link: "/alumni" },
-  { title: "Contact", link: "/contact" },
+  { title: "Apply", link: "/apply" },
 ];
 
 function Footer() {
   return (
-    <Box>
+    <Box sx={{}}>
       <Container
         sx={{
           bgcolor: "#34363E",
@@ -87,9 +87,8 @@ function Footer() {
               <br />
               President: (417) 824-0849
               <br />
-              Alumni Contact Jim Hennessey:
-              <br />
-              (314) 378-8483
+              Alumni Contact <br />
+              Jim Hennessey: (314) 378-8483
             </Typography>
           </Grid>
           <Grid item mobile={12} tablet={3}>
@@ -136,15 +135,13 @@ function Footer() {
             ))}
           </Grid>
         </Grid>
-      </Container>
-
-      <Container
-        sx={{
-          bgcolor: "#272930",
-          padding: { mobile: "1rem 2rem 5rem", laptop: "1rem 12rem" },
-        }}
-      >
-        <Typography color="white.main" sx={{ textAlign: "center" }}>
+        <Typography
+          color="white.main"
+          sx={{
+            textAlign: "center",
+            padding: { mobile: "1rem 2rem 5rem", laptop: "1rem 12rem" },
+          }}
+        >
           Developed by Beta Alpha of Kappa Alpha and{" "}
           <Link
             underline="hover"

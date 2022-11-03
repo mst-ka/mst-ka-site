@@ -12,7 +12,7 @@ function ImgCarousel() {
     {
       src: "images/home/banner-slide-2.jpg",
       button_text: "Academics Matter",
-      button_link: "/awards/scholarships",
+      button_link: "/about/academics",
     },
     {
       src: "images/home/banner-slide-3.jpg",
@@ -23,7 +23,7 @@ function ImgCarousel() {
 
   return (
     <Carousel
-      duration={2000}
+      duration={500}
       interval={6000}
       animation={"fade"}
     >
@@ -45,7 +45,7 @@ function CreateImage(props) {
             boxShadow: "0rem .5rem 1rem",
             filter: "brightness(40%)",
             width: "100%",
-            height: "25rem",
+            height: "35rem",
           }}
         />
 
@@ -55,7 +55,7 @@ function CreateImage(props) {
           sx={{
             position: "absolute",
             left: "0",
-            top: { mobile: "10%", tablet: "30%" },
+            top: { mobile: "20%", tablet: "30%" },
             textAlign: "center",
             width: "100%",
             fontWeight: "500",
@@ -70,7 +70,7 @@ function CreateImage(props) {
           sx={{
             position: "absolute",
             left: "0",
-            top: { mobile: "40%", tablet: "45%" },
+            top: { mobile: "42%", tablet: "45%" },
             textAlign: "center",
             width: "100%",
             fontWeight: "500",
@@ -97,7 +97,7 @@ function CreateImage(props) {
             size="large"
             href={props.image.button_link}
             endIcon={<ArrowRightIcon />}
-            sx={{ float: { tablet: "right" } }}
+            sx={{ float: { tablet: "right" }, minWidth: '15rem', minHeight: '3rem' }}
           >
             {props.image.button_text}
           </Button>
@@ -107,8 +107,9 @@ function CreateImage(props) {
             color="primary"
             variant="contained"
             size="large"
+            href="/apply"
             endIcon={<ArrowRightIcon />}
-            sx={{ float: { tablet: "left" } }}
+            sx={{ float: { tablet: "left" }, minWidth: '15rem', minHeight: '3rem'}}
           >
             Membership
           </Button>

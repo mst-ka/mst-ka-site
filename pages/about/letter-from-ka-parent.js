@@ -36,7 +36,7 @@ function LetterFromKAParent() {
             </Typography>
           </Grid>
           <TextSectionImage
-            src="/images/about/letter-from-ka-parent/letterpen.jpg"
+            src="/images/about/letter-from-ka-parent/back-of-house.jpg"
             alt="Letter From KA Parent"
           />
         </Grid>

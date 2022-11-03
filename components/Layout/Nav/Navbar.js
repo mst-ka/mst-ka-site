@@ -22,7 +22,7 @@ const pages = [
   { title: "Awards", link: "/awards" },
   { title: "About Us", link: "/about" },
   { title: "Alumni", link: "/alumni" },
-  { title: "Contact", link: "/contact" },
+  { title: "Apply", link: "/apply" },
 ];
 
 function Navbar() {
@@ -75,6 +75,7 @@ function Navbar() {
               sx={{
                 color: "grey.main",
                 textTransform: "uppercase",
+                whiteSpace: "nowrap",
                 display: { mobile: "none", tablet: "block" },
               }}
             >

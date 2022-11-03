@@ -16,7 +16,7 @@ function ValuesInfoCard(props) {
       laptop={4}
       sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
     >
-      <Card sx={{ width: "80%" }}>
+      <Card sx={{ width: "90%" }}>
         <CardMedia component="img" src={props.image} />
         <CardContent>
           <Typography variant="h4" sx={{ marginBottom: "1rem" }}>

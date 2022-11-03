@@ -24,7 +24,7 @@ function BAOfKAGreekLife() {
             </Typography>
           </Grid>
           <TextSectionImage
-            src="/images/about/greek-life/baka-greek-life.jpg"
+            src="/images/about/greek-life/greek-week.jpg"
             alt="Greek Life"
           />
         </Grid>

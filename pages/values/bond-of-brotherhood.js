@@ -29,8 +29,8 @@ function BondOfBrotherhood() {
             </Typography>
           </Grid>
           <TextSectionImage
-            src="/images/values/bond-of-brotherhood/baka-bond-of-brotherhood.jpg"
-            alt="Bond of Brotherhood"
+            src="/images/values/bond-of-brotherhood/brotherhood.jpg"
+            alt="Brotherhood"
           />
         </Grid>
       </Container>

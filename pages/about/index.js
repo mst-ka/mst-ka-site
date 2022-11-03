@@ -27,8 +27,8 @@ function About() {
             </Typography>
           </Grid>
           <TextSectionImage
-            src="/images/about/index/baka-house.jpg"
-            alt="BA of KA House"
+            src="/images/about/index/officer-marshall.jpg"
+            alt="I, II, & III Marshall"
           />
           <Grid item mobile={12} tablet={6}>
             <TextSectionHeading>The Philosophy of the Order</TextSectionHeading>
@@ -45,8 +45,8 @@ function About() {
             </Typography>
           </Grid>
           <TextSectionImage
-            src="/images/about/index/baka-greek-life.jpg"
-            alt="Greek Life"
+            src="/images/about/index/induction.jpg"
+            alt="Induction"
           />
 
           <Grid item mobile={12} tablet={6}>
@@ -78,8 +78,8 @@ function About() {
             </Typography>
           </Grid>
           <TextSectionImage
-            src="/images/about/index/baka-litter-pickup.jpg"
-            alt="Litter Pickup"
+            src="/images/about/index/handshake.jpg"
+            alt="Handshake"
           />
 
           <Grid item mobile={12} tablet={6}>
@@ -99,8 +99,8 @@ function About() {
           </Grid>
 
           <TextSectionImage
-            src="/images/about/index/baka-house-renovation-drawing.png"
-            alt="House Renovation Drawing"
+            src="/images/about/index/veranda-hangin.jpg"
+            alt="Group Picture"
           />
 
           <Grid item mobile={12} tablet={6}>
@@ -142,8 +142,8 @@ function About() {
             </Typography>
           </Grid>
           <TextSectionImage
-            src="/images/about/index/house-at-night.jpg"
-            alt="House At Night"
+            src="/images/about/index/house.jpg"
+            alt="KA House"
           />
         </Grid>
       </Container>

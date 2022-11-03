@@ -12,6 +12,8 @@ function Newsletter(props) {
     <Card raised sx={{backgroundColor: "primary.main"}}>
       <CardActionArea
         href={props.link}
+        target="_blank"
+        rel="noreferrer"
         sx={{
           transition: theme.transitions.create(
             ["opacity", "color"],
