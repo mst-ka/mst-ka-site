@@ -55,7 +55,7 @@ exports.onDataAddedApps = functions.database
     // it stored in a snap variable
     const createdData = snap.val();
     var text = createdData;
-    text.subject = "BAofKA Membership Application";
+    text.subject = `BAofKA Membership Application for ${text.firstName} ${text.lastName}`;
     text.message = `Name: ${text.firstName} ${text.lastName}` + "<br/><br/>" +
                    "Phone: " + text.phone + "<br/><br/>" +
                    "Email: " + text.email + "<br/><br/>" +
