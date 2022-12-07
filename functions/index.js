@@ -15,10 +15,10 @@ admin.initializeApp();
 const contactEmails = [
   "Joe Studer <joe.studer.18@gmail.com>",
   "Jared Hanisch <jared.hanisch@gmail.com>",
-  "cpw5tv@umsystem.edu", //Charles Weiberg - President
-  "alv24@umsystem.edu",  //Andersen Lohr   - Corresponding Secretary
-  "twbyny@umsystem.edu", //Trey Brown      - Recruitment Chairman
-  "mwsc8p@umsystem.edu"  //Matthew Stika   - Recruitment Chairman
+  "alv24@umsystem.edu",   //Andersen Lohr    - President
+  "twbyny@umsystem.edu",  //Trey Brown       - Corresponding Secretary
+  "pdpp88@umsystem.edu",  //Paul Pham        - Recruitment Chairman
+  "ceak3z@umsystem.edu"   //Chris Altamirano - Recruitment Chairman
 ];
 
 let email = function (sender, message) {
