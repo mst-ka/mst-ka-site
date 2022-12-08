@@ -85,7 +85,7 @@ function Footer() {
               <br />
               1 Fraternity Drive Rolla, Missouri 65401
               <br />
-              President: (417) 824-0849
+              President: (314) 667-0417
               <br />
               Alumni Contact <br />
               Jim Hennessey: (314) 378-8483
