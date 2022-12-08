@@ -15,7 +15,7 @@ function OfficerInfo(props) {
             {props.position}
           </Typography>
           <Typography>{props.email}</Typography>
-          <Typography>Year Joined KA: {props.yearJoined}</Typography>
+          <Typography>Pledge Class: {props.pledgeClass}</Typography>
         </CardContent>
       </Card>
     </Grid>
