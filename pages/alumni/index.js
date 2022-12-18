@@ -1,6 +1,7 @@
-import { Container, Grid, Button, Link, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import Newsletter from "../../components/Subpages/Alumni/Newsletter";
+import NewsletterSignUp from "../../components/Subpages/Alumni/NewsletterSignUp";
 
 const newsletters = [
   {
@@ -49,7 +50,6 @@ function Alumni() {
   return (
     <div>
       <Banner text="Alumni" />
-
       <Container
         sx={{
           padding: {
@@ -59,16 +59,14 @@ function Alumni() {
           },
         }}
       >
-        <Typography>
-          Here you will find our alumni newsletter organized by the Beta Alpha
-          Alumni Association (BAAA). We release our newsletter bi-annually,
-          highlighting: news, history, ways for alumni to get involved, and our
-          brothers&apos; life events &amp; accomplishments. If you want to make
-          sure you never miss a newsletter, please fill out our{" "}
-          <Link href="https://forms.gle/JGcLGjDLBuoPFC4WA">
-            Alumni Reporting Form!
-          </Link> 
-          
+        <Typography sx={{}}>
+          Here you will find our alumni newsletter, The BAAA Journal, organized
+          by the Beta Alpha Alumni Association (BAAA). We release our newsletter
+          bi-annually, highlighting: news, history, ways for alumni to get
+          involved, and our brothers&apos; life events &amp; accomplishments. If
+          you have questions or suggestions for future stories to be highlighted
+          please reach out to one of the BAAA Contacts on the last page of any
+          issue of The BAAA Journal below!
         </Typography>
 
         <Grid container spacing={6} sx={{marginTop: "0rem"}}>
@@ -85,6 +83,7 @@ function Alumni() {
           ))}
         </Grid>
       </Container>
+      <NewsletterSignUp/>
     </div>
   );
 }

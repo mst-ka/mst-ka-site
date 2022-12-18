@@ -23,7 +23,7 @@ function Newsletter(props) {
           ),
 
           "&:hover": {
-            opacity: 0.9,
+            opacity: 0.7,
             color: "primary.main"
           },
         }}
