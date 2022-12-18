@@ -23,7 +23,8 @@ const validationSchema = yup.object({
   lastName: yup.string().required("Required"),
   phone: yup
     .string()
-    .length(10, "Please enter full 10-digit phone number")
+    .min(10, "Please enter full 10-digit phone number")
+    .max(15, "Phone number may not be greater than 15 digits")
     .required("Required"),
   email: yup.string().email("Please enter a valid email").required("Required"),
   age: yup
@@ -69,11 +70,11 @@ const displayAlternateHelper = (text, touched, errors) => {
 };
 
 function Contact() {
-  const [recaptcha, setRecaptcha] = useState(true);
+  const [recaptchaPassed, setRecaptchaPassed] = useState(false);
 
   //Handler for enabling the submit button for the form once the ReCAPTCHA is successful
   const handleRecaptcha = () => {
-    setRecaptcha(!recaptcha);
+    setRecaptchaPassed(!recaptchaPassed);
   };
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -109,11 +110,8 @@ function Contact() {
     },
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm }) => {
-      if (
-        window.confirm(
-          "Are you sure you would like to submit your application?"
-        )
-      ) {
+      // prettier-ignore
+      if (window.confirm("Are you sure you would like to submit your application?")) {
         //push to Firebase Realtime Database
         push(ref(database, "applications/"), {
           firstName: values.firstName,
@@ -138,9 +136,10 @@ function Contact() {
           whyConsidering: values.whyConsidering,
           likeAboutChapter: values.likeAboutChapter,
           gentleman: values.gentleman,
+        }).then(() => {
+          resetForm();
+          setOpenSnackbar(true);
         });
-        resetForm();
-        setOpenSnackbar(true);
       }
     },
   });
@@ -499,7 +498,6 @@ function Contact() {
                 />
               </Grid>
               <Grid item>
-                {/* TODO: Replace site key with actual site key when deploying to prod*/}
                 <ReCAPTCHA
                   sitekey="6Ld6jNcaAAAAACaWEQw_Mc9HqEet-_2KVZJwZ5cE"
                   onChange={handleRecaptcha}
@@ -513,7 +511,7 @@ function Contact() {
                   onClick={() => {
                     scrollToErrors(formik.errors);
                   }}
-                  disabled={recaptcha && !formik.isSubmitting}
+                  disabled={!recaptchaPassed || formik.isSubmitting}
                 >
                   Submit Application
                 </Button>
@@ -522,7 +520,7 @@ function Contact() {
             <Snackbar
               anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
               open={openSnackbar}
-              autoHideDuration={5000}
+              autoHideDuration={6000}
               onClose={handleCloseSnackbar}
             >
               <Alert variant="filled" severity="success">

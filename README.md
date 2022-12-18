@@ -208,11 +208,11 @@ Responsive design is an important part of any web application and the way that M
 
 Refer to the following [documentation on breakpoints](https://mui.com/material-ui/customization/breakpoints/#main-content); this is how MUI handles it's responsive design. You can see how our current breakpoints set in the [theme](/utils/theme.js).
 
-## Utilizing Firebase Emulators to test our Membership Application
+## Utilizing Firebase Emulators
 
-If you ever find yourself working with, or validating the membership application, you will want to do so in a development environment so that we are not interrupting service to the form that is live on the website.
+If you ever find yourself working with, or validating a part of the website that uses Firebase Functions or the Realtime Database, you will want to do so in a development environment. We want to make sure we are not interrupting service on the live website.
 
-This is done through [Firebase Emulators](https://firebase.google.com/docs/emulator-suite). They can replicate all of Firebase's services, but in our case we are just concerned with the Realtime Database, Functions, and Hosting.
+This is done through [Firebase Emulators](https://firebase.google.com/docs/emulator-suite). They can replicate all of Firebase's services, but in our case, we are just concerned with the Realtime Database, Functions, and Hosting for now.
 
 Before starting the emulators you will need to get the credentials for our Zoho email service that we use to send out the applications.
 
@@ -254,7 +254,7 @@ You should see something similar to this returned by the console:
 Only the following services should be 'On':
 
 * Realtime Database: This is where submitted applications via the membership application served on a locally hosted version of the website will be sent.
-* Functions: This is the console output of our firebase function being run every time a new application is pushed to the Realtime Database. The function is located in [/functions/index.js](./functions/index.js). **_IMPORTANT NOTE_**: Edit the `contactEmails` variable to send to your own email address so that you aren't spamming people with application emails while testing the membership application.
+* Functions: This is the console output of our firebase functions being run. The functions are located in [/functions/index.js](./functions/index.js). **_IMPORTANT NOTE_**: If you are working with the membership application, edit the `contactEmails` variable to send to your own email address so that you aren't spamming people with application emails while testing the membership application.
 * Hosting: This is a served website from a build of our application on localhost:5000. Similar to running `npm run build` && `npm run start`. New changes will not update the served site automatically, you will need to generate a new build if you make changes.  
 
 ## Linting
