@@ -59,7 +59,7 @@ function Alumni() {
           },
         }}
       >
-        <Typography sx={{}}>
+        <Typography>
           Here you will find our alumni newsletter, The BAAA Journal, organized
           by the Beta Alpha Alumni Association (BAAA). We release our newsletter
           bi-annually, highlighting: news, history, ways for alumni to get
