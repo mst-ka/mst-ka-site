@@ -1,7 +1,7 @@
 import { Container, Grid, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import Newsletter from "../../components/Subpages/Alumni/Newsletter";
-import NewsletterSignUp from "../../components/Subpages/Alumni/NewsletterSignUp";
+import NewsletterSignup from "../../components/Subpages/Alumni/NewsletterSignUp";
 
 const newsletters = [
   {
@@ -83,7 +83,7 @@ function Alumni() {
           ))}
         </Grid>
       </Container>
-      <NewsletterSignUp/>
+      <NewsletterSignup/>
     </div>
   );
 }
