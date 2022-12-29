@@ -20,6 +20,13 @@ import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import CloseIcon from "@mui/icons-material/Close";
 
 const validationSchema = yup.object({
+  firstName: yup.string().required("Required"),
+  lastName: yup.string().required("Required"),
+  pledgeClass: yup
+    .number()
+    .typeError("Please enter your pledge class year")
+    .positive("Pledge class must be a positive year")
+    .required("Required"),
   email: yup.string().email("Please enter a valid email").required("Required"),
 });
 
@@ -45,14 +52,13 @@ function NewsletterSignup() {
   };
 
   // We do not want to modify the 'showSignup' state and save that
-  // value in local storage if we are just hiding the form (Clicking '
+  // value in local storage if we are just hiding the form (Clicking
   // the 'X'). We only want to prevent the form from showing up upon
-  //revisits if the user has already submitted their email. 
-  const [tempHideSignup, setTempHideSignup] = useState(true)
+  // revisits if the user has already submitted their email.
+  const [tempHideSignup, setTempHideSignup] = useState(true);
   const handleTempHideSignup = () => {
     setTempHideSignup(false);
-  }
-
+  };
 
   const [openSuccessSnackbar, setOpenSuccessSnackbar] = useState(false);
   const handleCloseSuccessSnackbar = () => {
@@ -66,6 +72,9 @@ function NewsletterSignup() {
 
   const formik = useFormik({
     initialValues: {
+      firstName: "",
+      lastName: "",
+      pledgeClass: "",
       email: "",
     },
     validationSchema: validationSchema,
@@ -85,10 +94,10 @@ function NewsletterSignup() {
            *
            * This is done to allow us to loop through to see if the submitted
            * value by the user already exists in the database. If it doesn't we
-           * add it, if it does we do NOT add it and notify the user.
+           * add it, if it does, we do NOT add it, and then notify the user.
            */
           let emailEntryExists = false;
-          if(data != undefined || data != null){
+          if (data != undefined || data != null) {
             for (let uniqueKey of Object.values(data)) {
               if (uniqueKey.email === values.email) {
                 emailEntryExists = true;
@@ -97,9 +106,12 @@ function NewsletterSignup() {
               }
             }
           }
-          
+
           if (!emailEntryExists) {
             push(ref(database, "newsletterEmailSignUp/"), {
+              firstName: values.firstName,
+              lastName: values.lastName,
+              pledgeClass: values.pledgeClass,
               email: values.email,
             }).then(() => {
               //Upon success
@@ -157,6 +169,42 @@ function NewsletterSignup() {
               Sign up to make sure you never miss out on a new issue of The BAAA
               Journal!
             </Typography>
+            <TextField
+              id="firstName"
+              fullWidth
+              variant="standard"
+              label="First Name"
+              {...formik.getFieldProps("firstName")}
+              error={
+                formik.touched.firstName && Boolean(formik.errors.firstName)
+              }
+              helperText={formik.touched.firstName && formik.errors.firstName}
+              sx={{ marginTop: ".5rem" }}
+            />
+            <TextField
+              fullWidth
+              id="lastName"
+              variant="standard"
+              label="Last Name"
+              {...formik.getFieldProps("lastName")}
+              error={formik.touched.lastName && Boolean(formik.errors.lastName)}
+              helperText={formik.touched.lastName && formik.errors.lastName}
+              sx={{ marginTop: ".5rem" }}
+            />
+            <TextField
+              fullWidth
+              id="pledgeClass"
+              variant="standard"
+              label="Pledge Class (ex: 1997)"
+              {...formik.getFieldProps("pledgeClass")}
+              error={
+                formik.touched.pledgeClass && Boolean(formik.errors.pledgeClass)
+              }
+              helperText={
+                formik.touched.pledgeClass && formik.errors.pledgeClass
+              }
+              sx={{ marginTop: ".5rem" }}
+            />
             <TextField
               fullWidth
               id="email"
