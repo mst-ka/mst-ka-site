@@ -35,7 +35,7 @@ function Layout(props) {
         {props.children}
       </Container>
       <Footer />
-      {router.pathname !== "/apply" ? (
+      {router.pathname !== "/apply" && (
         <Fab
           variant="extended"
           color="primary"
@@ -45,7 +45,7 @@ function Layout(props) {
           <ContactPageIcon sx={{ marginRight: ".3rem" }} />
           Apply for Membership
         </Fab>
-      ) : null}
+      )}
     </div>
   );
 }

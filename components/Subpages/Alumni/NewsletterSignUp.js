@@ -79,56 +79,17 @@ function NewsletterSignup() {
     },
     validationSchema: validationSchema,
     onSubmit: (values, { resetForm }) => {
-      const newsletterEmailRef = ref(database, "newsletterEmailSignUp/");
-      // Query existing email entries in the database
-      onValue(
-        newsletterEmailRef,
-        (snapshot) => {
-          const data = snapshot.val();
-          /*
-           * Convert newsletterEmailSignUp object (which contains objects
-           * of objects differentiated by their unique keys) to an array of
-           * objects of the form:
-           *
-           *    [ { email: "user1@email.com" }, { email: "user2@email.com" }, ...]
-           *
-           * This is done to allow us to loop through to see if the submitted
-           * value by the user already exists in the database. If it doesn't we
-           * add it, if it does, we do NOT add it, and then notify the user.
-           */
-          let emailEntryExists = false;
-          if (data != undefined || data != null) {
-            for (let uniqueKey of Object.values(data)) {
-              if (uniqueKey.email === values.email) {
-                emailEntryExists = true;
-                setOpenWarnSnackbar(true);
-                break;
-              }
-            }
-          }
+      push(ref(database, "newsletterEmailSignUp/"), {
+        firstName: values.firstName,
+        lastName: values.lastName,
+        pledgeClass: values.pledgeClass,
+        email: values.email,
+      }).then(() => {
+        //Upon success
+        setOpenSuccessSnackbar(true);
+        handleCloseSignup();
+      });
 
-          if (!emailEntryExists) {
-            push(ref(database, "newsletterEmailSignUp/"), {
-              firstName: values.firstName,
-              lastName: values.lastName,
-              pledgeClass: values.pledgeClass,
-              email: values.email,
-            }).then(() => {
-              //Upon success
-              setOpenSuccessSnackbar(true);
-              handleCloseSignup();
-            });
-          }
-        },
-        {
-          // We want to only run onValue()'s callback once to retrieve
-          // the emails that already exist in the database and compare
-          // the email being submitted. If this option was not set then
-          // the onValue() callback would fire again when a new user
-          // email is pushed.
-          onlyOnce: true,
-        }
-      );
       resetForm();
     },
   });
