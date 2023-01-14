@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import { onValue, push, ref } from "firebase/database";
+import { push, ref } from "firebase/database";
 import database from "../../../firebase-init.js";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import CloseIcon from "@mui/icons-material/Close";
@@ -63,11 +63,6 @@ function NewsletterSignup() {
   const [openSuccessSnackbar, setOpenSuccessSnackbar] = useState(false);
   const handleCloseSuccessSnackbar = () => {
     setOpenSuccessSnackbar(false);
-  };
-
-  const [openWarnSnackbar, setOpenWarnSnackbar] = useState(false);
-  const handleCloseWarnSnackbar = () => {
-    setOpenWarnSnackbar(false);
   };
 
   const formik = useFormik({
@@ -198,18 +193,6 @@ function NewsletterSignup() {
       >
         <Alert variant="filled" severity="success">
           Thank you, your email has been added to our distribution list!
-        </Alert>
-      </Snackbar>
-      <Snackbar
-        anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-        open={openWarnSnackbar}
-        autoHideDuration={6000}
-        onClose={handleCloseWarnSnackbar}
-        // Push snackbar above the 'Apply For Membership' Button
-        sx={{ bottom: { mobile: "4.5rem" } }}
-      >
-        <Alert variant="filled" severity="warning">
-          You have already added your email to our distribution list!
         </Alert>
       </Snackbar>
     </form>
