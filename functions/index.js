@@ -12,16 +12,9 @@ const nodemailer = require("nodemailer");
 
 admin.initializeApp();
 
-const contactEmails = [
-  "Joe Studer <joe.studer.18@gmail.com>",
-  "Jared Hanisch <jared.hanisch@gmail.com>",
-  "alv24@umsystem.edu",   //Andersen Lohr    - President
-  "twbyny@umsystem.edu",  //Trey Brown       - Corresponding Secretary
-  "pdpp88@umsystem.edu",  //Paul Pham        - Recruitment Chairman
-  "ceak3z@umsystem.edu"   //Chris Altamirano - Recruitment Chairman
-];
+const applicationContactEmails = ["Jared Hanisch <jared.hanisch@gmail.com>"];
 
-let email = function (sender, message) {
+let email = function (sender, receiver, message) {
   const transporter = nodemailer.createTransport({
     service: "Zoho",
     auth: {
@@ -32,20 +25,19 @@ let email = function (sender, message) {
 
   const mailOptions = {
     from: sender,
-    to: contactEmails,
-    subject: "[MST-KA Website]: " + message.subject,
+    to: receiver,
+    subject: message.subject,
     text: message.message,
     html: message.message,
   };
 
-  const getDeliveryStatus = function (error, info) {
+  transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      return console.log(error);
+      console.error("Error: " + error);
     }
-    console.log("Message Sent: %s", info.messageId);
-  };
-
-  transporter.sendMail(mailOptions, getDeliveryStatus);
+    console.log("Envelope: " + JSON.stringify(info.envelope));
+    console.log("Message ID: " + info.messageId);
+  });
 };
 
 exports.onDataAddedApps = functions.database
@@ -55,7 +47,8 @@ exports.onDataAddedApps = functions.database
     // it stored in a snap variable
     const createdData = snap.val();
     var text = createdData;
-    text.subject = `BAofKA Membership Application for ${text.firstName} ${text.lastName}`;
+    text.subject = `[MST-KA Website]: BAofKA Membership Application for ${text.firstName} ${text.lastName}`;
+    //prettier-ignore
     text.message = `Name: ${text.firstName} ${text.lastName}` + "<br/><br/>" +
                    "Phone: " + text.phone + "<br/><br/>" +
                    "Email: " + text.email + "<br/><br/>" +
@@ -77,9 +70,26 @@ exports.onDataAddedApps = functions.database
 
     console.log(`Sending application for ${text.firstName} ${text.lastName}`);
     // Send email with data
-    email(functions.config().mail.login, text);
+    email(functions.config().mail.login, applicationContactEmails, text);
 
     // Suppress warning of returning "Function returned undefined, expected Promise or value"
-    // by returning a dummy value that is not used.
-    return 0;
+    return;
+  });
+
+exports.onDataAddedNewsletter = functions.database
+  .ref("/newsletterEmailSignUp/{sessionId}")
+  .onCreate(function (snap, context) {
+    const data = snap.val();
+    let text = data;
+    text.subject = "Thanks for Signing-up to Receive The BAAA Journal!";
+    text.message = `Brother ${text.lastName}, <br/><br/> This is a test, here are the rest of the fields <br/><br/>
+                    First Name: ${text.firstName}<br/><br/>
+                    Pledge Class: ${text.pledgeClass}<br/><br/>
+                    Email: ${text.email}`;
+    console.log(
+      `Sending welcome email to ${text.firstName} ${text.lastName} at ${text.email}`
+    );
+    email(functions.config().mail.login, `${text.email}`, text);
+
+    return;
   });
