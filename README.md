@@ -123,7 +123,7 @@ npm run build
 firebase hosting:channel:deploy CHANNEL_ID
 ```
 
-Replace CHANNEL*ID with a string with no spaces (for example, `awesome-ka-website-feature`). This ID will be used to construct the preview URL associated with the preview channel. \*\*\_NOTE:*\*\* This will only create a temporary website for 7 days. If you feel like it will take more time for your PR to be reviewed, extend (or shorten) the time the site will be live by following [these steps](https://firebase.google.com/docs/hosting/manage-hosting-resources#preview-channel-expiration).
+Replace CHANNEL_ID with a string with no spaces (for example, `awesome-ka-website-feature`). This ID will be used to construct the preview URL associated with the preview channel. **NOTE:** This will only create a temporary website for 7 days. If you feel like it will take more time for your PR to be reviewed, extend (or shorten) the time the site will be live by following [these steps](https://firebase.google.com/docs/hosting/manage-hosting-resources#preview-channel-expiration).
 
 A few URLs will be returned by the console indicating that they are live:
 
