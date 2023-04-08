@@ -1,9 +1,17 @@
 import { Container, Grid, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import Newsletter from "../../components/Subpages/Alumni/Newsletter";
-import NewsletterSignUp from "../../components/Subpages/Alumni/NewsletterSignUp";
+import NewsletterSignup from "../../components/Subpages/Alumni/NewsletterSignUp";
 
 const newsletters = [
+  {
+    volumeName: "Vol. 6",
+    link: "https://issuu.com/beta-alpha-alumni-association/docs/ss23_vol6",
+    imageSrc: "/images/alumni/s23_cover.jpeg",
+    altText: "Spring 2023 Newsletter",
+    volumeSubText:
+      "Spring 2023 Volume of the Beta Alpha Alumni Association Journal",
+  },
   {
     volumeName: "Vol. 5",
     link: "https://issuu.com/beta-alpha-alumni-association/docs/fs22_vol5",
@@ -69,7 +77,7 @@ function Alumni() {
           issue of The BAAA Journal below!
         </Typography>
 
-        <Grid container spacing={6} sx={{marginTop: "0rem"}}>
+        <Grid container spacing={6} sx={{ marginTop: "0rem" }}>
           {newsletters.map((newsletter, index) => (
             <Grid key={index} item mobile={12} tablet={6}>
               <Newsletter
@@ -83,7 +91,7 @@ function Alumni() {
           ))}
         </Grid>
       </Container>
-      <NewsletterSignUp/>
+      <NewsletterSignup />
     </div>
   );
 }
