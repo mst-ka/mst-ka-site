@@ -17,7 +17,7 @@ function ValuesInfoCard(props) {
       sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
     >
       <Card sx={{ width: "90%" }}>
-        <CardMedia component="img" src={props.image} />
+        <CardMedia component="img" src={props.image} loading="lazy" />
         <CardContent>
           <Typography variant="h4" sx={{ marginBottom: "1rem" }}>
             {props.title}

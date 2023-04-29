@@ -1,9 +1,11 @@
+import { useState, useEffect } from "react";
 import { Box, CardMedia, Grid, Typography, Button } from "@mui/material";
 import Carousel from "react-material-ui-carousel";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 function ImgCarousel() {
-  var imgs = [
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [imgs, setImgs] = useState([
     {
       src: "images/home/banner-slide-1.jpg",
       button_text: "About Us",
@@ -19,27 +21,42 @@ function ImgCarousel() {
       button_text: "Our Brotherhood",
       button_link: "/values/bond-of-brotherhood",
     },
-  ];
+  ]);
 
   return (
     <Carousel
       duration={500}
       interval={6000}
       animation={"fade"}
+      onChange={(index) => setActiveIndex(index)}
     >
       {imgs.map((img, index) => (
-        <CreateImage key={index} image={img} />
+        <CreateImage
+          key={index}
+          index={index}
+          activeIndex={activeIndex}
+          image={img}
+        />
       ))}
     </Carousel>
   );
 }
 
 function CreateImage(props) {
+  const [imageIsLoaded, setImageIsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (!imageIsLoaded) {
+      setImageIsLoaded(imageIsLoaded || (props.activeIndex === props.index));
+    }
+  }, [props.activeIndex]);
+
   return (
     <>
       <Box>
         <CardMedia
-          image={props.image.src}
+          image={imageIsLoaded ? props.image.src : ''}
+          component='div'
           sx={{
             position: "relative",
             boxShadow: "0rem .5rem 1rem",

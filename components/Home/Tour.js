@@ -17,6 +17,7 @@ function Tour() {
             height="100%"
             frameBorder={0}
             styles={{ height: "600px", borderRadius: ".25rem" }}
+            loading="lazy"
           />
         </Grid>
         <Grid item mobile={12} tablet={4} sx={{}}>
