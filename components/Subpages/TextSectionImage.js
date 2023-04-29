@@ -7,6 +7,7 @@ function TextSectionImage(props) {
         component="img"
         src={props.src}
         alt={props.alt}
+        loading="lazy"
         sx={{
           borderRadius: ".25rem",
           boxShadow: ".1rem .1rem .5rem",

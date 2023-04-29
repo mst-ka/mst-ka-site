@@ -8,6 +8,7 @@ function OfficerInfo(props) {
           component="img"
           src={props.img}
           alt={props.position}
+          loading="lazy"
         />
         <CardContent>
           <Typography variant="h6">{props.name}</Typography>
