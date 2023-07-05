@@ -1,6 +1,6 @@
 // Import the functions for SDKs we need
 import { initializeApp } from "firebase/app";
-import { getDatabase } from "firebase/database";
+import { getDatabase, connectDatabaseEmulator } from "firebase/database";
 
 let firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -13,19 +13,18 @@ let firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-//If testing the Realtime Database locally via emulator, use the Emulated Realtime Database URL
-//instead of the Realtime Database URL for the production application
-if (location.hostname === "127.0.0.1" || location.hostname === "localhost") {
-  firebaseConfig = {
-    databaseURL: "http://127.0.0.1:9000?ns=mst-ka",
-  };
-}
-
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 
 //Initialize Realtime Database
 const database = getDatabase(app);
+
+//If testing the Realtime Database locally via emulator, use the Emulated Realtime Database URL
+//instead of the Realtime Database URL for the production application
+typeof location !== "undefined" &&
+(location.hostname === "127.0.0.1" || location.hostname === "localhost")
+  ? connectDatabaseEmulator(database, "127.0.0.1", 9000)
+  : null;
 
 //expose database instance to rest of application
 export default database;
