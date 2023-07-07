@@ -3,14 +3,14 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, connectDatabaseEmulator } from "firebase/database";
 
 let firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.NEXT_PUBLIC_FIREBASE_DATABASE_URL,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyBl8iYJ7oa5NKdkXa387f6tj9ZyJlqu3Co",
+  authDomain: "mst-ka.firebaseapp.com",
+  databaseURL: "https://mst-ka.firebaseio.com",
+  projectId: "mst-ka",
+  storageBucket: "mst-ka.appspot.com",
+  messagingSenderId: "1013954571954",
+  appId: "1:1013954571954:web:0d961bb3a90768cf2ca3ab",
+  measurementId: "G-GS55KK9LT6",
 };
 
 // Initialize Firebase
