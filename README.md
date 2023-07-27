@@ -53,33 +53,6 @@ $ firebase login
 $ firebase use --add (select mst-ka-website)
 ```
 
-#### firebase-init.js
-
-The [firebase-init.js](./firebase-init.js) file is important for any work that interacts with the Firebase API,
-our database, or any server side actions (you can read more about initalizing a firebase app [here](https://firebase.google.com/docs/web/setup)). However, since it includes the API Key, we
-don't store it in Git. This means there's a couple steps you'll have to follow
-if you want/need to do this kind of development:
-
-You'll notice that within firebase-init.js that we are using environment variables to define our firebaseConfig object properties in the form of `process.env.NEXT_PUBLIC_VARIABLE_NAME`. This means we will need to define them in a local file that is not tracked by our GitHub repository.
-
-- First you will want to create a `.env.local` file in the root of the project directory. This is Next.js' way of handling environment variables that you can read more about [here](https://nextjs.org/docs/basic-features/environment-variables).
-- Initialize all the variables in that are in firebase-init.js within your `.env.local` file like so:
-
-```bash
-NEXT_PUBLIC_FIREBASE_API_KEY="<api key>"
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN="<auth domain>"
-NEXT_PUBLIC_FIREBASE_DATABASE_URL="<database url>"
-NEXT_PUBLIC_FIREBASE_PROJECT_ID="<project id>"
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET="<storage bucket>"
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID="<message sender id>"
-NEXT_PUBLIC_FIREBASE_APP_ID="<app id>"
-NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID="<measurement id>"
-```
-
-- Next you will need to replace `<api key>`, `<auth domain>`, `<database url>`, etc. with their respective values:
-  - Navigate to the [Firebase Console](https://console.firebase.google.com/) > mst-ka > Project Settings (Gear Icon) > (Under the 'Your apps' section click _messages-database_) SDK setup and configuration > click 'npm' (if not already selected)
-  - Copy the values under the `firebaseConfig` object and paste them into your `.env.local` file corresponding to the matching environment variable declaration.
-
 ### Running the application locally
 
 - In the root directory of this repository run:
@@ -98,6 +71,16 @@ $ npm run dev
 
 - Navigate to [localhost:3000](http://localhost:3000/) and you should be seeing the website displayed. You can now start making changes and the locally hosted version of the website will automatically be updated with your changes. To ensure your firebase app is initialized correctly you can navigate to the apply page ([localhost:3000/apply](http://localhost:3000/apply)) and you should be seeing the form being displayed _without_ issue.
 
+### Making your first Pull Request
+
+- Create a development branch of the repository
+- In your new branch, edit the firebase.json file, add your name and email to the contributors section.
+- Commit and push the changes to your branch
+- Submit a Pull Request.
+- Send a message in the group chat that you have an active pull request that needs to be reviewed.
+
+Congratulations! You are now ready to begin contributing to the mst-ka.org website. Take a look through our [open issues](https://github.com/mst-ka/mst-ka-site/issues) and go ahead an assign yourself one or send a message in the group chat and I'm sure we will be able to find you something to work on!
+
 ### Recommended Practices
 
 #### Branch Naming
@@ -111,45 +94,10 @@ All branches should be named using the following format:
 - Create a development branch of the repository
 - In your new branch make whatever changes you wish.
 - Test your changes in your locally hosted version of the website.
-- Generate a build:
+- Create a Pull Request on GitHub and assign relevant reviewers
+- After approval a Github Action will autmatically deploy your changes to the website!
 
-```bash
-npm run build
-```
-
-- [Generate a hosting channel](https://firebase.google.com/docs/hosting/test-preview-deploy#preview-channels) so we can see your changes in action:
-
-```bash
-firebase hosting:channel:deploy CHANNEL_ID
-```
-
-Replace CHANNEL_ID with a string with no spaces (for example, `awesome-ka-website-feature`). This ID will be used to construct the preview URL associated with the preview channel. **NOTE:** This will only create a temporary website for 7 days. If you feel like it will take more time for your PR to be reviewed, extend (or shorten) the time the site will be live by following [these steps](https://firebase.google.com/docs/hosting/manage-hosting-resources#preview-channel-expiration).
-
-A few URLs will be returned by the console indicating that they are live:
-
-```bash
-✔  hosting:channel: Channel URL (mst-ka): https://mst-ka--...
-✔  hosting:channel: Channel URL (staging-mst-ka): https://staging-mst-ka--...
-✔  hosting:channel: Channel URL (devel-mst-ka): https://devel-mst-ka--...
-```
-
-- Copy the top one (`Channel URL (mst-ka): URL...`).
-
-- Create a PR with your changes.
-
-- Paste & submit the url as a comment in your pull request.
-
-### Making your first Pull Request
-
-- Create a development branch of the repository
-- In your new branch, edit the firebase.json file, add your name and email to the contributors section.
-- Commit and push the changes to your branch
-- Submit a Pull Request.
-- Send a message in the group chat that you have an active pull request that needs to be reviewed.
-
-Congratulations! You are now ready to begin contributing to the mst-ka.org website. Take a look through our [open issues](https://github.com/mst-ka/mst-ka-site/issues) and go ahead an assign yourself one or send a message in the group chat and I'm sure we will be able to find you something to work on!
-
-# Project Overview
+## Project Overview
 
 In this project we are utilizing a [React](https://reactjs.org/) framework, [Next.js](https://nextjs.org/) and a React Component Library, [MUI v5 (Material UI)](https://mui.com/) for easier styling. If you are unfamiliar with React, Next.js, or MUI take a look at their respective docs, or you can follow some tutorials; below are a couple recommendations. They are fairly long but have a lot of fundamentals that will aid you as you develop a React based application.
 

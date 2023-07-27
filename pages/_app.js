@@ -1,9 +1,11 @@
 import Head from "next/head";
 import { ThemeProvider } from "@mui/material/styles";
 import { CssBaseline } from "@mui/material";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 import theme from "../utils/theme.js";
 import Layout from "../components/Layout/Layout";
+import "../styles/global.css";
 
 function App({ Component, pageProps }) {
   return (
@@ -17,12 +19,14 @@ function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
+      <GoogleReCaptchaProvider reCaptchaKey="6Lf59QQnAAAAAEeiSfQeDKzEyCGFSfmWX1vYVUL1">
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ThemeProvider>
+      </GoogleReCaptchaProvider>
     </div>
   );
 }

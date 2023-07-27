@@ -13,7 +13,7 @@ import {
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 import { useFormik } from "formik";
 import * as yup from "yup";
-import ReCAPTCHA from "react-google-recaptcha";
+import { GoogleReCaptcha } from "react-google-recaptcha-v3";
 import { push, ref } from "firebase/database";
 import database from "../../firebase-init.js";
 import Banner from "../../components/Layout/Banner/Banner.js";
@@ -74,7 +74,7 @@ function Contact() {
 
   //Handler for enabling the submit button for the form once the ReCAPTCHA is successful
   const handleRecaptcha = () => {
-    setRecaptchaPassed(!recaptchaPassed);
+    setRecaptchaPassed(true);
   };
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
@@ -498,10 +498,7 @@ function Contact() {
                 />
               </Grid>
               <Grid item>
-                <ReCAPTCHA
-                  sitekey="6Ld6jNcaAAAAACaWEQw_Mc9HqEet-_2KVZJwZ5cE"
-                  onChange={handleRecaptcha}
-                />
+                <GoogleReCaptcha onVerify={handleRecaptcha} />
                 <Button
                   variant="outlined"
                   size="large"
@@ -515,6 +512,21 @@ function Contact() {
                 >
                   Submit Application
                 </Button>
+                <Typography
+                  color="#b9b9b9"
+                  sx={{ marginTop: "1rem" }}
+                  variant="subtitle2"
+                >
+                  This site is protected by reCAPTCHA and the Google{" "}
+                  <Link href="https://policies.google.com/privacy">
+                    Privacy Policy
+                  </Link>{" "}
+                  and{" "}
+                  <Link href="https://policies.google.com/terms">
+                    Terms of Service
+                  </Link>{" "}
+                  apply.
+                </Typography>
               </Grid>
             </Grid>
             <Snackbar
