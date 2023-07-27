@@ -16,6 +16,17 @@ let firebaseConfig = {
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 
+if (typeof window !== "undefined") {
+  import("firebase/app-check").then((firebaseAppCheck) => {
+    firebaseAppCheck.initializeAppCheck(app, {
+      provider: new firebaseAppCheck.ReCaptchaV3Provider(
+        "6Lf59QQnAAAAAEeiSfQeDKzEyCGFSfmWX1vYVUL1"
+      ),
+      isTokenAutoRefreshEnabled: true,
+    });
+  });
+}
+
 //Initialize Realtime Database
 const database = getDatabase(app);
 
