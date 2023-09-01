@@ -7,6 +7,7 @@ import {
   CardHeader,
   Divider,
   IconButton,
+  Link,
   Slide,
   Snackbar,
   TextField,
@@ -176,10 +177,21 @@ function NewsletterSignup() {
               type="submit"
               endIcon={<ArrowRightIcon />}
               disabled={formik.isSubmitting || !formik.isValid}
-              sx={{ float: "right", margin: "1rem 0rem" }}
+              sx={{ margin: "1rem 0rem" }}
             >
               Sign Up
             </Button>
+            <Typography color="#b9b9b9" variant="subtitle2">
+              This site is protected by reCAPTCHA and the Google{" "}
+              <Link href="https://policies.google.com/privacy">
+                Privacy Policy
+              </Link>{" "}
+              and{" "}
+              <Link href="https://policies.google.com/terms">
+                Terms of Service
+              </Link>{" "}
+              apply.
+            </Typography>
           </CardContent>
         </Card>
       </Slide>
