@@ -12,7 +12,14 @@ const nodemailer = require("nodemailer");
 
 admin.initializeApp();
 
-const applicationContactEmails = ["Jared Hanisch <jared.hanisch@gmail.com>"];
+const applicationContactEmails = [
+  "Joe Studer <joe.studer.18@gmail.com>",
+  "Jared Hanisch <jared.hanisch@gmail.com>",
+  "alv24@umsystem.edu", //Andersen Lohr    - President
+  "twbyny@umsystem.edu", //Trey Brown       - Corresponding Secretary
+  "pdpp88@umsystem.edu", //Paul Pham        - Recruitment Chairman
+  "ceak3z@umsystem.edu", //Chris Altamirano - Recruitment Chairman
+];
 
 let email = function (sender, receiver, message) {
   const transporter = nodemailer.createTransport({
@@ -47,7 +54,7 @@ exports.onDataAddedApps = functions.database
     // it stored in a snap variable
     const createdData = snap.val();
     var text = createdData;
-    text.subject = `[MST-KA Website]: BAofKA Membership Application for ${text.firstName} ${text.lastName}`;
+    text.subject = `[MST-KA Website]: Membership Application for ${text.firstName} ${text.lastName}`;
     //prettier-ignore
     text.message = `Name: ${text.firstName} ${text.lastName}` + "<br/><br/>" +
                    "Phone: " + text.phone + "<br/><br/>" +
@@ -81,15 +88,89 @@ exports.onDataAddedNewsletter = functions.database
   .onCreate(function (snap, context) {
     const data = snap.val();
     let text = data;
-    text.subject = "Thanks for Signing-up to Receive The BAAA Journal!";
-    text.message = `Brother ${text.lastName}, <br/><br/> This is a test, here are the rest of the fields <br/><br/>
-                    First Name: ${text.firstName}<br/><br/>
-                    Pledge Class: ${text.pledgeClass}<br/><br/>
-                    Email: ${text.email}`;
-    console.log(
-      `Sending welcome email to ${text.firstName} ${text.lastName} at ${text.email}`
-    );
-    email(functions.config().mail.login, `${text.email}`, text);
+
+    //prettier-ignore
+    let headersList = {
+      "Accept": "*/*",
+      "Authorization": `${functions.config().listmonk.auth}`,
+      "Content-Type": "application/json",
+    };
+
+    //prettier-ignore
+    let addNewSubscriberBodyContent = JSON.stringify({
+      "email": `${text.email}`,
+      "name": `${text.firstName} ${text.lastName}`,
+      "status": "enabled",
+      "attribs": {
+        "pledgeClass": parseInt(text.pledgeClass),
+      },
+      "lists": [1],
+      "preconfirm_subscriptions": false,
+    });
+
+    let baseAPIURL = "https://listmonk.mst-ka.org/api";
+
+    fetch(`${baseAPIURL}/subscribers`, {
+      method: "POST",
+      headers: headersList,
+      body: addNewSubscriberBodyContent,
+    })
+      .then((response) => {
+        if (!response.ok) {
+          if (response.status === 409) {
+            throw new Error(
+              `Status: ${
+                response.status
+              }, Email Already Exists for ${JSON.stringify(text)}`
+            );
+          } else {
+            throw new Error(
+              `HTTP Error while attempting to add new subscriber, Status: ${response.status}`
+            );
+          }
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(
+          `Successfully added ${text.firstName} ${text.lastName} to Listmonk\n`,
+          "Response:\n",
+          data
+        );
+
+        //prettier-ignore
+        let transactionalMsgBodyContent = JSON.stringify({
+          "subscriber_email": `${text.email}`,
+          "template_id": 6,
+          "data": {"lastName": `${text.lastName}`},
+          "content_type": "html"
+        });
+
+        fetch(`${baseAPIURL}/tx`, {
+          method: "POST",
+          headers: headersList,
+          body: transactionalMsgBodyContent,
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(
+                `HTTP Error while sending transactional email, Status: ${response.status}`
+              );
+            }
+            return response.json();
+          })
+          .then(() =>
+            console.log(
+              `Successfully Sent Transactional Confirmation Email to ${text.firstName} ${text.lastName} at ${text.email}`
+            )
+          )
+          .catch((error) => {
+            console.error(error);
+          });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
 
     return;
   });
