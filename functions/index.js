@@ -21,7 +21,7 @@ const applicationContactEmails = [
   "ceak3z@umsystem.edu", //Chris Altamirano - Recruitment Chairman
 ];
 
-let email = function (sender, receiver, message) {
+const email = (sender, receiver, message) => {
   const transporter = nodemailer.createTransport({
     service: "Zoho",
     auth: {
@@ -40,10 +40,9 @@ let email = function (sender, receiver, message) {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error("Error: " + error);
+      console.error(`Error Sending Email: ${error}`);
     }
-    console.log("Envelope: " + JSON.stringify(info.envelope));
-    console.log("Message ID: " + info.messageId);
+    console.log(`Message ID:  ${info.messageId}`);
   });
 };
 
@@ -53,7 +52,7 @@ exports.onDataAddedApps = functions.database
     // here we catch a new data, added to firebase database,
     // it stored in a snap variable
     const createdData = snap.val();
-    var text = createdData;
+    let text = createdData;
     text.subject = `[MST-KA Website]: Membership Application for ${text.firstName} ${text.lastName}`;
     //prettier-ignore
     text.message = `Name: ${text.firstName} ${text.lastName}` + "<br/><br/>" +
@@ -83,6 +82,40 @@ exports.onDataAddedApps = functions.database
     return;
   });
 
+const addNewSubscriber = (header, bodyContent, url) => {
+  return fetch(`${url}/subscribers`, {
+    method: "POST",
+    headers: header,
+    body: bodyContent,
+  }).then((response) => {
+    if (!response.ok) {
+      if (response.status === 409) {
+        throw new Error(`Status: ${response.status}, Email Already Exists`);
+      } else {
+        throw new Error(
+          `HTTP Error while attempting to add new subscriber, Status: ${response.status}`
+        );
+      }
+    }
+    return response.json();
+  });
+};
+
+const sendTransactionalEmail = (header, bodyContent, url) => {
+  return fetch(`${url}/tx`, {
+    method: "POST",
+    headers: header,
+    body: bodyContent,
+  }).then((response) => {
+    if (!response.ok) {
+      throw new Error(
+        `HTTP Error while sending transactional email, Status: ${response.status}`
+      );
+    }
+    return response.json();
+  });
+};
+
 exports.onDataAddedNewsletter = functions.database
   .ref("/newsletterEmailSignUp/{sessionId}")
   .onCreate(function (snap, context) {
@@ -90,14 +123,14 @@ exports.onDataAddedNewsletter = functions.database
     let text = data;
 
     //prettier-ignore
-    let headersList = {
+    const headersList = {
       "Accept": "*/*",
       "Authorization": `${functions.config().listmonk.auth}`,
       "Content-Type": "application/json",
     };
 
     //prettier-ignore
-    let addNewSubscriberBodyContent = JSON.stringify({
+    const addNewSubscriberBodyContent = JSON.stringify({
       "email": `${text.email}`,
       "name": `${text.firstName} ${text.lastName}`,
       "status": "enabled",
@@ -105,60 +138,36 @@ exports.onDataAddedNewsletter = functions.database
         "pledgeClass": parseInt(text.pledgeClass),
       },
       "lists": [1],
-      "preconfirm_subscriptions": false,
+      "preconfirm_subscriptions": true
     });
 
-    let baseAPIURL = "https://listmonk.mst-ka.org/api";
+    //prettier-ignore
+    const transactionalMsgBodyContent = JSON.stringify({
+      "subscriber_email": `${text.email}`,
+      "template_id": 6,
+      "data": {"lastName": `${text.lastName}`},
+      "content_type": "html"
+    });
 
-    fetch(`${baseAPIURL}/subscribers`, {
-      method: "POST",
-      headers: headersList,
-      body: addNewSubscriberBodyContent,
-    })
-      .then((response) => {
-        if (!response.ok) {
-          if (response.status === 409) {
-            throw new Error(
-              `Status: ${
-                response.status
-              }, Email Already Exists for ${JSON.stringify(text)}`
-            );
-          } else {
-            throw new Error(
-              `HTTP Error while attempting to add new subscriber, Status: ${response.status}`
-            );
-          }
-        }
-        return response.json();
-      })
+    const baseAPIURL = "https://listmonk.mst-ka.org/api";
+
+    console.log(
+      `Attempting to add ${text.firstName} ${text.lastName}, PC ${text.pledgeClass}, Email: ${text.email} to Listmonk`
+    );
+
+    addNewSubscriber(headersList, addNewSubscriberBodyContent, baseAPIURL)
       .then((data) => {
         console.log(
           `Successfully added ${text.firstName} ${text.lastName} to Listmonk\n`,
           "Response:\n",
           data
         );
-
-        //prettier-ignore
-        let transactionalMsgBodyContent = JSON.stringify({
-          "subscriber_email": `${text.email}`,
-          "template_id": 6,
-          "data": {"lastName": `${text.lastName}`},
-          "content_type": "html"
-        });
-
-        fetch(`${baseAPIURL}/tx`, {
-          method: "POST",
-          headers: headersList,
-          body: transactionalMsgBodyContent,
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(
-                `HTTP Error while sending transactional email, Status: ${response.status}`
-              );
-            }
-            return response.json();
-          })
+        // Sending Confirmation Email
+        sendTransactionalEmail(
+          headersList,
+          transactionalMsgBodyContent,
+          baseAPIURL
+        )
           .then(() =>
             console.log(
               `Successfully Sent Transactional Confirmation Email to ${text.firstName} ${text.lastName} at ${text.email}`
