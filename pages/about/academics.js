@@ -35,13 +35,13 @@ function Academics() {
               <br />
               <br />
               With that hard work we have received the top GPA on campus for the
-              last 5 semesters in a row as of Spring 2022. If you&apos;d like
+              last 6 semesters in a row as of Spring 2023. If you&apos;d like
               see how our grades compare among other organizations on campus,
               please{" "}
               <Link
                 target="_blank"
                 rel="noreferrer"
-                href="https://involvement.mst.edu/media/studentsupport/involvement/documents/KA.pdf#220802105839"
+                href="https://involvement.mst.edu/media/studentsupport/involvement/documents/greekhousingdocsprofiles/KA.pdf#230614085332"
               >
                 click here
               </Link>
