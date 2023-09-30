@@ -49,7 +49,7 @@ const email = (sender, receiver, message) => {
 
 exports.onDataAddedApps = functions.database
   .ref("/applications/{sessionId}")
-  .onCreate(function (snap, context) {
+  .onCreate(function (snap) {
     //prettier-ignore
     const emailContent = {
       ...snap.val(),
@@ -118,7 +118,7 @@ const sendTransactionalEmail = (header, bodyContent, url) =>
 
 exports.onDataAddedNewsletter = functions.database
   .ref("/newsletterEmailSignUp/{sessionId}")
-  .onCreate(function (snap, context) {
+  .onCreate(function (snap) {
     const headersList = {
       Accept: "*/*",
       Authorization: `${functions.config().listmonk.auth}`,
