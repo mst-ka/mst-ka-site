@@ -49,7 +49,7 @@ const email = (sender, receiver, message) => {
 
 exports.onDataAddedApps = functions.database
   .ref("/applications/{sessionId}")
-  .onCreate(function (snap, context) {
+  .onCreate(function (snap) {
     //prettier-ignore
     const emailContent = {
       ...snap.val(),
@@ -85,7 +85,7 @@ exports.onDataAddedApps = functions.database
     );
 
     // Suppress warning of returning "Function returned undefined, expected Promise or value"
-    return;
+    return 0;
   });
 
 const addNewSubscriber = (header, bodyContent, url) =>
@@ -118,12 +118,14 @@ const sendTransactionalEmail = (header, bodyContent, url) =>
 
 exports.onDataAddedNewsletter = functions.database
   .ref("/newsletterEmailSignUp/{sessionId}")
-  .onCreate(function (snap, context) {
+  .onCreate(function (snap) {
     const headersList = {
       Accept: "*/*",
       Authorization: `${functions.config().listmonk.auth}`,
       "Content-Type": "application/json",
     };
+
+    console.log(`Attemping to add: ${JSON.stringify(snap.val())}`);
 
     const addNewSubscriberBodyContent = JSON.stringify({
       email: `${snap.val().email}`,
@@ -150,8 +152,8 @@ exports.onDataAddedNewsletter = functions.database
     )
       .then((data) => {
         console.log(
-          `Successfully added ${snap.val().firstName} 
-          ${snap.val().lastName} to Listmonk\n`,
+          `Successfully added ${snap.val().firstName} ` +
+            `${snap.val().lastName} to Listmonk\n`,
           "Response:\n",
           data
         );
@@ -163,9 +165,9 @@ exports.onDataAddedNewsletter = functions.database
         )
           .then(() =>
             console.log(
-              `Successfully Sent Transactional Confirmation Email to 
-              ${snap.val().firstName} ${snap.val().lastName} at 
-              ${snap.val().email}`
+              "Successfully Sent Transactional Confirmation Email to " +
+                `${snap.val().firstName} ${snap.val().lastName} at ` +
+                `${snap.val().email}`
             )
           )
           .catch((error) => {
@@ -176,5 +178,6 @@ exports.onDataAddedNewsletter = functions.database
         console.error(error);
       });
 
-    return;
+    // Suppress warning of returning "Function returned undefined, expected Promise or value"
+    return 0;
   });
