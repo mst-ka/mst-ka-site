@@ -5,6 +5,14 @@ import NewsletterSignup from "../../components/Subpages/Alumni/NewsletterSignUp"
 
 const newsletters = [
   {
+    volumeName: "Vol. 7",
+    link: "https://issuu.com/beta-alpha-alumni-association/docs/fs23_vol7",
+    imageSrc: "/images/alumni/f23_cover.jpeg",
+    altText: "Fall 2023 Newsletter",
+    volumeSubText:
+      "Fall 2023 Volume of the Beta Alpha Alumni Association Journal",
+  },
+  {
     volumeName: "Vol. 6",
     link: "https://issuu.com/beta-alpha-alumni-association/docs/ss23_vol6",
     imageSrc: "/images/alumni/s23_cover.jpeg",
