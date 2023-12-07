@@ -7,6 +7,11 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 
 import QuickLinkButton from "./QuickLinkButton";
 import theme from "../../../utils/theme";
+import {
+  presidentPhoneNumber,
+  alumnusAdvisorPhoneNumber,
+} from "../../../utils/contact-info";
+import { officerInfo } from "../../../utils/officer-info";
 
 const quickLinks = [
   { title: "Values", link: "/values" },
@@ -85,10 +90,14 @@ function Footer() {
               <br />
               1 Fraternity Drive Rolla, Missouri 65401
               <br />
-              President: (314) 667-0417
-              <br />
-              Alumni Contact <br />
-              Jim Hennessey: (314) 378-8483
+              <Typography sx={{ textDecoration: "underline" }}>
+                President
+              </Typography>
+              {officerInfo.president.name}: {presidentPhoneNumber}
+              <Typography sx={{ textDecoration: "underline" }}>
+                Alumnus Advisor
+              </Typography>
+              Jim Hennessey: {alumnusAdvisorPhoneNumber}
             </Typography>
           </Grid>
           <Grid item mobile={12} tablet={3}>
