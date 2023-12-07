@@ -151,17 +151,18 @@ function Contact() {
         <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
           <br />
           <Typography align="left">
-            The Beta Alpha Chapter of Kappa Alpha Order are determined to
-            recruit men who will become contributing members to our brotherhood.
-            This application is meant to help us get to know you, and decide
-            whether you have what it takes to become a member of Kappa Alpha. We
-            ask that you fill this out honestly because properly picking members
-            is just as important for you as it is for us. Rush events are hosted
-            in the St. Louis and Kansas City areas every summer for anyone able
-            to attend. All costs of the events are covered by KA and rides to
-            and from the events can be arranged upon request. For more
-            information, or to sign up for an event please contact either one of
-            our <Link href="/about/officers">Recruitment Chairs</Link>.
+            The brothers of the Beta Alpha Chapter of Kappa Alpha Order are
+            determined to recruit men who will become contributing members to
+            our brotherhood. This application is meant to help us get to know
+            you, and decide whether you have what it takes to become a member of
+            Kappa Alpha. We ask that you fill this out honestly because properly
+            picking members is just as important for you as it is for us. Rush
+            events are hosted in the St. Louis and Kansas City areas every
+            summer for anyone able to attend. All costs of the events are
+            covered by KA and rides to and from the events can be arranged upon
+            request. For more information, or to sign up for an event please
+            contact either one of our{" "}
+            <Link href="/about/officers">Recruitment Chairs</Link>.
           </Typography>
           <br />
         </Container>
