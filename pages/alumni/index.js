@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from "@mui/material";
+import { Container, Divider, Grid, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import Newsletter from "../../components/Subpages/Alumni/Newsletter";
 import NewsletterSignup from "../../components/Subpages/Alumni/NewsletterSignUp";
@@ -75,17 +75,19 @@ function Alumni() {
           },
         }}
       >
-        <Typography>
-          Here you will find our alumni newsletter, The BAAA Journal, organized
-          by the Beta Alpha Alumni Association (BAAA). We release our newsletter
-          bi-annually, highlighting: news, history, ways for alumni to get
-          involved, and our brothers&apos; life events &amp; accomplishments. If
-          you have questions or suggestions for future stories to be highlighted
-          please reach out to one of the BAAA Contacts on the last page of any
-          issue of The BAAA Journal below!
+        <Typography sx={{ padding: "1rem" }}>
+          Welcome to our alumni page where you will find our alumni newsletter,
+          The BAAA Journal, organized by the Beta Alpha Alumni Association
+          (BAAA). We release our newsletter bi-annually, highlighting: news,
+          history, ways for alumni to get involved, and our brothers&apos; life
+          events &amp; accomplishments. If you have questions or suggestions for
+          future stories to be highlighted please reach out to one of the BAAA
+          Contacts on the last page of any issue of The BAAA Journal below!
         </Typography>
-
-        <Grid container spacing={6} sx={{ marginTop: "0rem" }}>
+        <Divider sx={{ margin: "1rem 0rem" }} />
+        <NewsletterSignup />
+        <Divider sx={{ margin: "1rem 0rem" }} />
+        <Grid container spacing={6} sx={{ paddingTop: "1rem" }}>
           {newsletters.map((newsletter, index) => (
             <Grid key={index} item mobile={12} tablet={6}>
               <Newsletter
@@ -99,7 +101,6 @@ function Alumni() {
           ))}
         </Grid>
       </Container>
-      <NewsletterSignup />
     </div>
   );
 }

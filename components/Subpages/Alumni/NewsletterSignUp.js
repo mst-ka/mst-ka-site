@@ -1,14 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Alert,
   Button,
-  Card,
-  CardContent,
-  CardHeader,
-  Divider,
-  IconButton,
+  Grid,
   Link,
-  Slide,
   Snackbar,
   TextField,
   Typography,
@@ -18,7 +13,6 @@ import * as yup from "yup";
 import { push, ref } from "firebase/database";
 import database from "../../../firebase-init.js";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import CloseIcon from "@mui/icons-material/Close";
 
 const validationSchema = yup.object({
   firstName: yup.string().required("Required"),
@@ -32,35 +26,6 @@ const validationSchema = yup.object({
 });
 
 function NewsletterSignup() {
-  const [showSignup, setShowSignup] = useState(true);
-  // Check the value of SHOW_SIGNUP in local storage
-  // to determine if we need to show the Sign-up form
-  useEffect(() => {
-    const show = window.localStorage.getItem("SHOW_SIGNUP");
-    if (show != null) {
-      setShowSignup(JSON.parse(show));
-    }
-  }, []);
-
-  // Set whether to show the signup, determined if the user has
-  // previously submitted their email or not.
-  useEffect(() => {
-    window.localStorage.setItem("SHOW_SIGNUP", JSON.stringify(showSignup));
-  }, [showSignup]);
-
-  const handleCloseSignup = () => {
-    setShowSignup(false);
-  };
-
-  // We do not want to modify the 'showSignup' state and save that
-  // value in local storage if we are just hiding the form (Clicking
-  // the 'X'). We only want to prevent the form from showing up upon
-  // revisits if the user has already submitted their email.
-  const [tempHideSignup, setTempHideSignup] = useState(true);
-  const handleTempHideSignup = () => {
-    setTempHideSignup(false);
-  };
-
   const [openSuccessSnackbar, setOpenSuccessSnackbar] = useState(false);
   const handleCloseSuccessSnackbar = () => {
     setOpenSuccessSnackbar(false);
@@ -83,7 +48,6 @@ function NewsletterSignup() {
       }).then(() => {
         //Upon success
         setOpenSuccessSnackbar(true);
-        handleCloseSignup();
       });
 
       resetForm();
@@ -92,109 +56,77 @@ function NewsletterSignup() {
 
   return (
     <form onSubmit={formik.handleSubmit}>
-      <Slide
-        direction="right"
-        in={showSignup && tempHideSignup}
-        timeout={600}
-        mountOnEnter
-        unmountOnExit
-      >
-        <Card
-          raised
-          sx={{
-            left: "1rem",
-            bottom: "1rem",
-            right: "1rem",
-            position: "fixed",
-            maxWidth: "24rem",
-            borderStyle: "solid",
-            borderColor: "primary.main",
-            zIndex: 999,
-          }}
-        >
-          <CardHeader
-            action={
-              <IconButton onClick={handleTempHideSignup}>
-                <CloseIcon fontSize="large" sx={{ color: "primary.main" }} />
-              </IconButton>
-            }
-            title="BAAA Newsletter Sign-up"
+      <Typography textAlign="center" variant="h4">
+        BAAA Newsletter Sign-up
+      </Typography>
+      <Typography textAlign="center">
+        Sign up to make sure you never miss out on a new issue of The BAAA
+        Journal!
+      </Typography>
+      <Grid container spacing={2}>
+        <Grid item mobile={12} tablet={6}>
+          <TextField
+            id="firstName"
+            fullWidth
+            label="First Name"
+            {...formik.getFieldProps("firstName")}
+            error={formik.touched.firstName && Boolean(formik.errors.firstName)}
+            helperText={formik.touched.firstName && formik.errors.firstName}
+            sx={{ marginTop: ".5rem" }}
           />
-          <Divider variant="middle" sx={{ color: "primary.main" }} />
-          <CardContent>
-            <Typography>
-              Sign up to make sure you never miss out on a new issue of The BAAA
-              Journal!
-            </Typography>
-            <TextField
-              id="firstName"
-              fullWidth
-              variant="standard"
-              label="First Name"
-              {...formik.getFieldProps("firstName")}
-              error={
-                formik.touched.firstName && Boolean(formik.errors.firstName)
-              }
-              helperText={formik.touched.firstName && formik.errors.firstName}
-              sx={{ marginTop: ".5rem" }}
-            />
-            <TextField
-              fullWidth
-              id="lastName"
-              variant="standard"
-              label="Last Name"
-              {...formik.getFieldProps("lastName")}
-              error={formik.touched.lastName && Boolean(formik.errors.lastName)}
-              helperText={formik.touched.lastName && formik.errors.lastName}
-              sx={{ marginTop: ".5rem" }}
-            />
-            <TextField
-              fullWidth
-              id="pledgeClass"
-              variant="standard"
-              label="Pledge Class (ex: 1997)"
-              {...formik.getFieldProps("pledgeClass")}
-              error={
-                formik.touched.pledgeClass && Boolean(formik.errors.pledgeClass)
-              }
-              helperText={
-                formik.touched.pledgeClass && formik.errors.pledgeClass
-              }
-              sx={{ marginTop: ".5rem" }}
-            />
-            <TextField
-              fullWidth
-              id="email"
-              variant="standard"
-              label="Email"
-              {...formik.getFieldProps("email")}
-              error={formik.touched.email && Boolean(formik.errors.email)}
-              helperText={formik.touched.email && formik.errors.email}
-              sx={{ marginTop: ".5rem" }}
-            />
-            <Button
-              variant="contained"
-              type="submit"
-              endIcon={<ArrowRightIcon />}
-              disabled={formik.isSubmitting || !formik.isValid}
-              sx={{ margin: "1rem 0rem" }}
-            >
-              Sign Up
-            </Button>
-            <Typography color="#b9b9b9" variant="subtitle2">
-              This site is protected by reCAPTCHA and the Google{" "}
-              <Link href="https://policies.google.com/privacy">
-                Privacy Policy
-              </Link>{" "}
-              and{" "}
-              <Link href="https://policies.google.com/terms">
-                Terms of Service
-              </Link>{" "}
-              apply.
-            </Typography>
-          </CardContent>
-        </Card>
-      </Slide>
+        </Grid>
+        <Grid item mobile={12} tablet={6}>
+          <TextField
+            fullWidth
+            id="lastName"
+            label="Last Name"
+            {...formik.getFieldProps("lastName")}
+            error={formik.touched.lastName && Boolean(formik.errors.lastName)}
+            helperText={formik.touched.lastName && formik.errors.lastName}
+            sx={{ marginTop: ".5rem" }}
+          />
+        </Grid>
+        <Grid item mobile={12} tablet={6}>
+          <TextField
+            fullWidth
+            id="pledgeClass"
+            label="Pledge Class (ex: 1997)"
+            {...formik.getFieldProps("pledgeClass")}
+            error={
+              formik.touched.pledgeClass && Boolean(formik.errors.pledgeClass)
+            }
+            helperText={formik.touched.pledgeClass && formik.errors.pledgeClass}
+            sx={{ marginTop: ".5rem" }}
+          />
+        </Grid>
+        <Grid item mobile={12} tablet={6}>
+          <TextField
+            fullWidth
+            id="email"
+            label="Email"
+            {...formik.getFieldProps("email")}
+            error={formik.touched.email && Boolean(formik.errors.email)}
+            helperText={formik.touched.email && formik.errors.email}
+            sx={{ marginTop: ".5rem" }}
+          />
+        </Grid>
+      </Grid>
+      <Button
+        variant="contained"
+        type="submit"
+        endIcon={<ArrowRightIcon />}
+        disabled={formik.isSubmitting || !formik.isValid}
+        sx={{ margin: "1rem 0rem" }}
+      >
+        Sign Up
+      </Button>
+      <Typography color="#b9b9b9" variant="subtitle2">
+        This site is protected by reCAPTCHA and the Google{" "}
+        <Link href="https://policies.google.com/privacy">Privacy Policy</Link>{" "}
+        and{" "}
+        <Link href="https://policies.google.com/terms">Terms of Service</Link>{" "}
+        apply.
+      </Typography>
       <Snackbar
         anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
         open={openSuccessSnackbar}
