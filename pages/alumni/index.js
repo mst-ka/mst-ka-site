@@ -46,7 +46,7 @@ const newsletters = [
   },
   {
     volumeName: "Vol. 2",
-    link: "https://issuu.com/beta-alpha-alumni-association/docs/sp21_vol2",
+    link: "/newsletters/ss21_vol2.pdf",
     imageSrc: "/images/alumni/s21_cover.jpeg",
     altText: "Spring 2021 Newsletter",
     volumeSubText:
@@ -54,7 +54,7 @@ const newsletters = [
   },
   {
     volumeName: "Vol. 1",
-    link: "https://issuu.com/beta-alpha-alumni-association/docs/baaa_journal_vol_1",
+    link: "/newsletters/fs20_vol1.pdf",
     imageSrc: "/images/alumni/f20_cover.jpeg",
     altText: "Fall 2020 Newsletter",
     volumeSubText:
