@@ -46,7 +46,7 @@ const newsletters = [
   },
   {
     volumeName: "Vol. 3",
-    link: "https://issuu.com/beta-alpha-alumni-association/docs/fs21_vol3",
+    link: "/newsletters/fs21_vol3.pdf",
     imageSrc: "/images/alumni/f21_cover.jpeg",
     altText: "Fall 2021 Newsletter",
     volumeSubText:
