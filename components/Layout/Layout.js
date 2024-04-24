@@ -35,7 +35,7 @@ function Layout(props) {
         {props.children}
       </Container>
       <Footer />
-      {router.pathname !== "/apply" && (
+      {router.pathname !== "/apply" && router.pathname !== "/alumni" && (
         <Fab
           variant="extended"
           color="primary"
