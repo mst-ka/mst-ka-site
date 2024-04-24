@@ -25,7 +25,7 @@ const validationSchema = yup.object({
   email: yup.string().email("Please enter a valid email").required("Required"),
 });
 
-function NewsletterSignup() {
+function MailingListSignup() {
   const [openSuccessSnackbar, setOpenSuccessSnackbar] = useState(false);
   const handleCloseSuccessSnackbar = () => {
     setOpenSuccessSnackbar(false);
@@ -57,11 +57,18 @@ function NewsletterSignup() {
   return (
     <form onSubmit={formik.handleSubmit}>
       <Typography textAlign="center" variant="h4">
-        BAAA Newsletter Sign-up
+        Beta Alpha Alumni Mailing List
       </Typography>
-      <Typography textAlign="center">
-        Sign up to make sure you never miss out on a new issue of The BAAA
-        Journal!
+      <Typography
+        textAlign="center"
+        sx={{
+          margin: {
+            laptop: "0.5rem 4rem",
+          },
+        }}
+      >
+        Sign up to stay up to date on the Beta Alpha Alumni Association and
+        never miss out on a new issue of The BAAA Journal!
       </Typography>
       <Grid container spacing={2}>
         <Grid item mobile={12} tablet={6}>
@@ -143,4 +150,4 @@ function NewsletterSignup() {
   );
 }
 
-export default NewsletterSignup;
+export default MailingListSignup;

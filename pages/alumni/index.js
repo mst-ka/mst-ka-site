@@ -1,9 +1,17 @@
 import { Container, Divider, Grid, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import Newsletter from "../../components/Subpages/Alumni/Newsletter";
-import NewsletterSignup from "../../components/Subpages/Alumni/NewsletterSignUp";
+import MailingListSignup from "../../components/Subpages/Alumni/MailingListSignUp";
 
 const newsletters = [
+  {
+    volumeName: "Vol. 8",
+    link: "https://issuu.com/beta-alpha-alumni-association/docs/beta_alpha_journal_spring_24_vol_8",
+    imageSrc: "/images/alumni/s24_cover.jpeg",
+    altText: "Spring 2024 Newsletter",
+    volumeSubText:
+      "Spring 2024 Volume of the Beta Alpha Alumni Association Journal",
+  },
   {
     volumeName: "Vol. 7",
     link: "https://issuu.com/beta-alpha-alumni-association/docs/fs23_vol7",
@@ -85,7 +93,7 @@ function Alumni() {
           Contacts on the last page of any issue of The BAAA Journal below!
         </Typography>
         <Divider sx={{ margin: "1rem 0rem" }} />
-        <NewsletterSignup />
+        <MailingListSignup />
         <Divider sx={{ margin: "1rem 0rem" }} />
         <Grid container spacing={6} sx={{ paddingTop: "1rem" }}>
           {newsletters.map((newsletter, index) => (
