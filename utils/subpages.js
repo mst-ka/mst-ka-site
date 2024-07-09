@@ -19,7 +19,7 @@ export const aboutSubPages = [
   { title: "Officers", link: "/about/officers" },
   {
     title: "KA National Risk Management Policy",
-    link: "https://www.kappaalphaorder.org/wp-content/uploads/2011/04/2018-Risk-Management-Policy.pdf",
+    link: "https://www.kappaalphaorder.org/wp-content/uploads/2023/07/2023-Risk-Management-Policy.pdf",
   },
   { title: "Letter From a KA Parent", link: "/about/letter-from-ka-parent" },
   { title: "Parents FAQ", link: "/about/parents-faq" },

@@ -2,6 +2,7 @@ import { Box, Container, Divider, Grid, Link, Typography } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -61,8 +62,8 @@ function Footer() {
                   sx={{ color: "secondary.main", margin: ".5rem" }}
                 />
               </Link>
-              <Link href="https://twitter.com/MST_KA">
-                <TwitterIcon
+              <Link href="https://x.com/MST_KA">
+                <XIcon
                   sx={{ color: "secondary.main", margin: ".5rem" }}
                 />
               </Link>
