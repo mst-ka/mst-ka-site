@@ -26,6 +26,7 @@ function ImgCarousel() {
       duration={500}
       interval={6000}
       animation={"fade"}
+      swipe={false}
     >
       {imgs.map((img, index) => (
         <CreateImage key={index} image={img} />
