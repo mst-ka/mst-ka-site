@@ -62,7 +62,7 @@ function Footer() {
                   sx={{ color: "secondary.main", margin: ".5rem" }}
                 />
               </Link>
-              <Link href="https://twitter.com/MST_KA">
+              <Link href="https://x.com/MST_KA">
                 <XIcon
                   sx={{ color: "secondary.main", margin: ".5rem" }}
                 />
