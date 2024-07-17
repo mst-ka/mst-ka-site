@@ -14,13 +14,17 @@ import { push, ref } from "firebase/database";
 import database from "../../../firebase-init.js";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
+const maxPledgeClassYear  = new Date().getFullYear();
+const minPledgeClassYear  = 1903;
+
 const validationSchema = yup.object({
   firstName: yup.string().required("Required"),
   lastName: yup.string().required("Required"),
   pledgeClass: yup
     .number()
+    .min(minPledgeClassYear, "Pledge Class must be after the chapter was established")
+    .max(maxPledgeClassYear, "Pledge Class cannot be in the future")
     .typeError("Please enter your pledge class year")
-    .positive("Pledge class must be a positive year")
     .required("Required"),
   email: yup.string().email("Please enter a valid email").required("Required"),
 });
