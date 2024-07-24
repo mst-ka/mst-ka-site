@@ -89,10 +89,8 @@ function Contact() {
       lastName: "",
       phone: "",
       email: "",
-      address: "",
-      city: "",
+      hometown: "",
       state: "",
-      zip: "",
       age: "",
       highSchool: "",
       classRank: "",
@@ -118,10 +116,8 @@ function Contact() {
           lastName: values.lastName,
           phone: values.phone,
           email: values.email,
-          address: values.address,
-          city: values.city,
+          hometown: values.hometown,
           state: values.state,
-          zip: values.zip,
           age: values.age,
           highSchool: values.highSchool,
           classRank: values.classRank,
@@ -225,19 +221,10 @@ function Contact() {
             <Grid item mobile={12} tablet={6}>
               <TextField
                 fullWidth
-                id="address"
-                label="Address"
+                id="hometown"
+                label="Hometown"
                 variant="outlined"
-                {...formik.getFieldProps("address")}
-              />
-            </Grid>
-            <Grid item mobile={12} tablet={6}>
-              <TextField
-                fullWidth
-                id="city"
-                label="City"
-                variant="outlined"
-                {...formik.getFieldProps("city")}
+                {...formik.getFieldProps("hometown")}
               />
             </Grid>
             <Grid item mobile={12} tablet={6}>
@@ -247,15 +234,6 @@ function Contact() {
                 label="State"
                 variant="outlined"
                 {...formik.getFieldProps("state")}
-              />
-            </Grid>
-            <Grid item mobile={12} tablet={6}>
-              <TextField
-                fullWidth
-                id="zip"
-                label="Zip Code"
-                variant="outlined"
-                {...formik.getFieldProps("zip")}
               />
             </Grid>
           </Grid>

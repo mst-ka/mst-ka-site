@@ -16,6 +16,7 @@ admin.initializeApp();
 const applicationContactEmails = [
   "Joe Studer <joe.studer.18@gmail.com>",
   "Jared Hanisch <jared.hanisch@gmail.com>",
+  "Christian Matoushek <christian.matoushek@gmail.com",
   "twbyny@umsystem.edu", // Trey Brown       - President
   "ceak3z@umsystem.edu", // Chris Altamirano - Corresponding Secretary
   "bcdkcd@umsystem.edu", // Brady Dodd       - Recruitment Chairman
@@ -57,7 +58,7 @@ exports.onDataAddedApps = functions.database
       message: `Name: ${snap.val().firstName} ${snap.val().lastName}<br/><br/>
                 Phone: ${snap.val().phone}<br/><br/>
                 Email: ${snap.val().email}<br/><br/>
-                Address: ${snap.val().address} ${snap.val().city}, ${snap.val().state} ${snap.val().zip}<br/><br/>
+                Hometown: ${snap.val().hometown}, ${snap.val().state}<br/><br/>
                 Age: ${snap.val().age}<br/><br/>
                 High School: ${snap.val().highSchool}<br/><br/>
                 Class Rank: ${snap.val().classRank}<br/><br/>
