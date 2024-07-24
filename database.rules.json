@@ -1,0 +1,40 @@
+{
+	"rules": {
+		"newsletterEmailSignUp": {
+			".read": false,
+			"$signUpId": {
+				".write": "!data.exists() && newData.hasChildren(['firstName', 'lastName', 'pledgeClass', 'email'])",
+				"email":       { ".validate": "newData.isString() && newData.val().length <= 320" },
+				"firstName":   { ".validate": "newData.isString() && newData.val().length <= 50"  },
+				"lastName":    { ".validate": "newData.isString() && newData.val().length <= 50"  },
+				"pledgeClass": { ".validate": "newData.isString() && newData.val().length == 4"   }
+			}
+		},
+		"applications": {
+			".read": false,
+			"$applicationId": {
+				".write": "!data.exists() && newData.hasChildren(['firstName', 'lastName', 'phone', 'email', 'hometown', 'state', 'age', 'highSchool', 'classRank', 'gpa', 'actSAT', 'religion', 'intendedMajor', 'highSchoolActivities', 'honorsAwards', 'goals', 'contactWith', 'whyConsidering', 'likeAboutChapter', 'gentleman'])",
+				"firstName": 		    { ".validate": "newData.isString()" },
+				"lastName":             { ".validate": "newData.isString()" },
+				"phone":                { ".validate": "newData.isString()" },
+				"email":                { ".validate": "newData.isString()" },
+				"hometown":             { ".validate": "newData.isString()" },
+				"state":                { ".validate": "newData.isString()" },
+				"age":                  { ".validate": "newData.isString()" },
+				"highSchool":           { ".validate": "newData.isString()" },
+				"classRank":            { ".validate": "newData.isString()" },
+				"gpa":                  { ".validate": "newData.isString()" },
+				"actSAT":               { ".validate": "newData.isString()" },
+				"religion":             { ".validate": "newData.isString()" },
+				"intendedMajor":        { ".validate": "newData.isString()" },
+				"highSchoolActivities": { ".validate": "newData.isString()" },
+				"honorsAwards":         { ".validate": "newData.isString()" },
+				"goals":                { ".validate": "newData.isString()" },
+				"contactWith":          { ".validate": "newData.isString()" },
+				"whyConsidering":       { ".validate": "newData.isString()" },
+				"likeAboutChapter":     { ".validate": "newData.isString()" },
+				"gentleman":            { ".validate": "newData.isString()" }
+			}
+		}
+	}
+}
