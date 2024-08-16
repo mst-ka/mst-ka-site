@@ -9,12 +9,12 @@ function Values() {
       <Banner text="Our Values" />
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         <Grid container spacing={8}>
-          <Grid item mobile={12} tablet={6} >
+          <Grid item mobile={12} tablet={6}>
             <TextSectionHeading>
               <DoubleArrowIcon fontSize="large" color="primary" />
               Reverence
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               Our founders sought to emulate the ideal Christian gentleman and
               in so doing recognized the importance of having a deep reverence
               for God. Our motto, “Dieu et Les Dames” means “God and the ladies”
@@ -27,7 +27,7 @@ function Values() {
               <DoubleArrowIcon fontSize="large" color="primary" />
               Gentility
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               The men of Kappa Alpha Order are known as the gentlemen of the
               fraternity world. A KA, through his gentility, should always be
               distinguished by his modern chivalric characteristics.
@@ -38,7 +38,7 @@ function Values() {
               <DoubleArrowIcon fontSize="large" color="primary" />
               Service
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               At the heart of the code of chivalry and the fabric of KA is
               service to those in need. Through community service, volunteerism
               and commitment to philanthropy, KAs aim to serve those around them
@@ -50,7 +50,7 @@ function Values() {
               <DoubleArrowIcon fontSize="large" color="primary" />
               Leadership
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               We teach our members to be leaders among men, on campus, in their
               communities, and throughout life. Through bravery and
               self-reliance, KAs strive to lead their lives with honor, and when
@@ -63,7 +63,7 @@ function Values() {
               <DoubleArrowIcon fontSize="large" color="primary" />
               Knowledge
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               The philosophy of our Order is that the acquisition of knowledge
               and the development of character are the great goals of life. Our
               focus on the cultivation of knowledge manifests itself through
@@ -77,7 +77,7 @@ function Values() {
               <DoubleArrowIcon fontSize="large" color="primary" />
               Perseverance
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               “Onward” is ever our stance despite the danger and difficulty that
               life often brings. KAs understand that anything in life worth
               attaining will take hard work, dedication, and determination,
@@ -85,12 +85,12 @@ function Values() {
               endeavors of life.
             </Typography>
           </Grid>
-          <Grid item mobile={12} sx={{margin: {desktop:"0rem 12rem" } }}>
+          <Grid item mobile={12} sx={{ margin: { desktop: "0rem 12rem" } }}>
             <TextSectionHeading>
               <DoubleArrowIcon fontSize="large" color="primary" />
               Excellence
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               Excellence is our aim and “Upward” is the direction that we
               continually strive. No matter the situation or circumstance, KAs
               work to attain excellence and to overcome the temptation to settle

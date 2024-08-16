@@ -9,7 +9,7 @@ function BondOfBrotherhood() {
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         <Grid container spacing={8}>
           <Grid item mobile={12} tablet={6}>
-            <Typography>
+            <Typography align="justify">
               The bond of brotherhood established within the walls of Kappa
               Alpha Order is a bond that will last a lifetime. “KA for Life” is
               what we call it. You will hear that from active and alumni
@@ -21,7 +21,7 @@ function BondOfBrotherhood() {
               man becomes a member of Kappa Alpha Order, he is always a part of
               that brotherhood. When alumni return, no matter how long they have
               been away, they are immediately recognized as part of our
-              brotherhood. 
+              brotherhood.
               <br />
               <br />
               Quoting Thomas Carlyle, the Kappa Alpha Order believes that “the

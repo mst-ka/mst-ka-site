@@ -10,19 +10,24 @@ import {
 } from "@mui/material";
 import { useFormik } from "formik";
 import * as yup from "yup";
+import { GoogleReCaptcha } from "react-google-recaptcha-v3";
 import { push, ref } from "firebase/database";
 import database from "../../../firebase-init.js";
-import ArrowRightIcon from "@mui/icons-material/ArrowRight";
+import { scrollToErrors } from "../../../utils/form-helpers.js";
+import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
 
-const maxPledgeClassYear  = new Date().getFullYear();
-const minPledgeClassYear  = 1903;
+const maxPledgeClassYear = new Date().getFullYear();
+const minPledgeClassYear = 1903;
 
-const validationSchema = yup.object({
+const mailingListValidationSchema = yup.object({
   firstName: yup.string().required("Required"),
   lastName: yup.string().required("Required"),
   pledgeClass: yup
     .number()
-    .min(minPledgeClassYear, "Pledge Class must be after the chapter was established")
+    .min(
+      minPledgeClassYear,
+      "Pledge Class must be after the chapter was established"
+    )
     .max(maxPledgeClassYear, "Pledge Class cannot be in the future")
     .typeError("Please enter your pledge class year")
     .required("Required"),
@@ -30,6 +35,12 @@ const validationSchema = yup.object({
 });
 
 function MailingListSignup() {
+  const [recaptchaPassed, setRecaptchaPassed] = useState(false);
+  //Handler for enabling the submit button for the form once the ReCAPTCHA is successful
+  const handleRecaptcha = () => {
+    setRecaptchaPassed(true);
+  };
+
   const [openSuccessSnackbar, setOpenSuccessSnackbar] = useState(false);
   const handleCloseSuccessSnackbar = () => {
     setOpenSuccessSnackbar(false);
@@ -42,8 +53,8 @@ function MailingListSignup() {
       pledgeClass: "",
       email: "",
     },
-    validationSchema: validationSchema,
-    onSubmit: (values, { resetForm }) => {
+    validationSchema: mailingListValidationSchema,
+    onSubmit: (values, actions) => {
       push(ref(database, "newsletterEmailSignUp/"), {
         firstName: values.firstName,
         lastName: values.lastName,
@@ -52,9 +63,8 @@ function MailingListSignup() {
       }).then(() => {
         //Upon success
         setOpenSuccessSnackbar(true);
+        actions.resetForm();
       });
-
-      resetForm();
     },
   });
 
@@ -122,11 +132,15 @@ function MailingListSignup() {
           />
         </Grid>
       </Grid>
+      <GoogleReCaptcha onVerify={handleRecaptcha} />
       <Button
-        variant="contained"
+        variant="outlined"
         type="submit"
-        endIcon={<ArrowRightIcon />}
-        disabled={formik.isSubmitting || !formik.isValid}
+        endIcon={<DoubleArrowIcon />}
+        onClick={() => {
+          scrollToErrors(formik.errors);
+        }}
+        disabled={!recaptchaPassed || formik.isSubmitting || !formik.isValid}
         sx={{ margin: "1rem 0rem" }}
       >
         Sign Up
@@ -143,8 +157,7 @@ function MailingListSignup() {
         open={openSuccessSnackbar}
         autoHideDuration={6000}
         onClose={handleCloseSuccessSnackbar}
-        // Push snackbar above the 'Apply For Membership' Button
-        sx={{ bottom: { mobile: "4.5rem" } }}
+        sx={{ bottom: { mobile: "4rem" } }}
       >
         <Alert variant="filled" severity="success">
           Thank you, your email has been added to our distribution list!

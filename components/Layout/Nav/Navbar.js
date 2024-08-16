@@ -12,6 +12,7 @@ import {
   valuesSubPages,
   awardsSubPages,
   aboutSubPages,
+  alumniSubPages,
 } from "../../../utils/subpages";
 import NavbarButton from "./NavbarButton";
 import MobileNavMenu from "./MobileNavMenu";
@@ -86,24 +87,23 @@ function Navbar() {
             {pages.map((page, index) => {
               if (page.title === "Values") {
                 subpageArray = valuesSubPages;
-              }
-              else if (page.title === "Awards"){
+              } else if (page.title === "Awards") {
                 subpageArray = awardsSubPages;
-              }
-              else if (page.title === "About Us"){
+              } else if (page.title === "About Us") {
                 subpageArray = aboutSubPages;
-              }
-              else{
+              } else if (page.title === "Alumni") {
+                subpageArray = alumniSubPages;
+              } else {
                 subpageArray = [];
               }
 
-              return(
+              return (
                 <NavbarButton
-                key={index}
-                title={page.title}
-                link={page.link}
-                subpages={subpageArray}
-              />
+                  key={index}
+                  title={page.title}
+                  link={page.link}
+                  subpages={subpageArray}
+                />
               );
             })}
           </Box>

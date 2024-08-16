@@ -9,7 +9,7 @@ function LetterFromKAParent() {
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         <Grid container spacing={8}>
           <Grid item mobile={12} tablet={6}>
-            <Typography>
+            <Typography align="justify">
               Greek Life offers an excellent opportunity for college students to
               enhance their classroom learning by developing their leadership
               and social skills so essential for success in life. We were very

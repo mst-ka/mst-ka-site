@@ -9,7 +9,7 @@ function Scholarships() {
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         <Grid container spacing={8}>
           <Grid item mobile={12} tablet={6}>
-            <Typography>
+            <Typography align="justify">
               The Beta Alpha Education Foundation was established in April 2012
               as a 501(c)(3) public charity for the purpose of providing
               scholarships and granting money for educational related housing

@@ -11,7 +11,7 @@ function About() {
         <Grid container spacing={8}>
           <Grid item mobile={12} tablet={6}>
             <TextSectionHeading>Kappa Alpha Order History</TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               Kappa Alpha Order was founded by four men, bound their friendship
               in a “mutual pledge of faith and loyalty,” at Washington College
               in Virginia, in December of 1865.
@@ -32,7 +32,7 @@ function About() {
           />
           <Grid item mobile={12} tablet={6}>
             <TextSectionHeading>The Philosophy of the Order</TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               The acquisition of knowledge and the development of character are
               the great goals of life, and the primary focus for gentlemen of
               Kappa Alpha Order.
@@ -53,7 +53,7 @@ function About() {
             <TextSectionHeading>
               The Impacts of Fraternity Participation
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               You can greatly enhance the rewards of college life through a
               fraternity experience. Transitioning to college life, students
               often search for a group -- somewhere they feel comfortable
@@ -86,7 +86,7 @@ function About() {
             <TextSectionHeading>
               A Moral Compass for the Modern Gentleman
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               You come to college with your values intact; you&apos;ve learned
               from family and friends what&apos;s right and wrong.
               <br />
@@ -107,7 +107,7 @@ function About() {
             <TextSectionHeading>
               History of Beta Alpha Chapter
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               The Beta Alpha Chapter of Kappa Alpha Order was founded on April
               27, 1903, making it the second oldest fraternity on campus
               <br />

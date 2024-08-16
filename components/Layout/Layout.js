@@ -5,6 +5,8 @@ import Footer from "./Footer/Footer";
 import { useRouter } from "next/router";
 import Safe from "react-safe";
 
+// Array of subpage pathnames we do not want to show the 'Apply for Membership' Button on
+const noApplyButtonSubpages = ["/apply", "/alumni", "/alumni/spotlight"];
 function Layout(props) {
   const router = useRouter();
   return (
@@ -35,7 +37,7 @@ function Layout(props) {
         {props.children}
       </Container>
       <Footer />
-      {router.pathname !== "/apply" && router.pathname !== "/alumni" && (
+      {!noApplyButtonSubpages.includes(router.pathname) && (
         <Fab
           variant="extended"
           color="primary"

@@ -1,4 +1,4 @@
-import { Container, Divider, Grid, Typography } from "@mui/material";
+import { Container, Divider, Grid, Link, Typography } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import Newsletter from "../../components/Subpages/Alumni/Newsletter";
 import MailingListSignup from "../../components/Subpages/Alumni/MailingListSignUp";
@@ -73,7 +73,7 @@ const newsletters = [
 function Alumni() {
   return (
     <div>
-      <Banner text="Alumni" />
+      <Banner text="The BAAA Journal" />
       <Container
         sx={{
           padding: {
@@ -83,14 +83,17 @@ function Alumni() {
           },
         }}
       >
-        <Typography sx={{ padding: "1rem" }}>
+        <Typography align="justify" sx={{ padding: "1rem" }}>
           Welcome to our alumni page where you will find our alumni newsletter,
           The BAAA Journal, organized by the Beta Alpha Alumni Association
           (BAAA). We release our newsletter bi-annually, highlighting: news,
           history, ways for alumni to get involved, and our brothers&apos; life
-          events &amp; accomplishments. If you have questions or suggestions for
-          future stories to be highlighted please reach out to one of the BAAA
-          Contacts on the last page of any issue of The BAAA Journal below!
+          events &amp; accomplishments. If you would like to recommend a brother
+          to be featured in a future issue of The BAAA Journal, please fill out{" "}
+          <Link href="/alumni/spotlight">this form</Link>. If you have questions
+          or suggestions for future stories to be highlighted please reach out
+          to one of the BAAA Contacts on the last page of any issue of The BAAA
+          Journal below!
         </Typography>
         <Divider sx={{ margin: "1rem 0rem" }} />
         <MailingListSignup />

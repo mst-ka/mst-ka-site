@@ -13,7 +13,7 @@ import Banner from "../../components/Layout/Banner/Banner";
 function ParentsFAQ() {
   return (
     <div>
-      <Banner text="Parents' Frequently Asked Questions "/>
+      <Banner text="Parents' Frequently Asked Questions " />
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         For your son, making the transition from high school or community
         college to a four-year college or university may seem like an imposing
@@ -71,7 +71,7 @@ function ParentsFAQ() {
         <br />
         <br />
         As a parent, you are undoubtedly concerned about your son&apos;s college
-        experience and the choices he willmake. Below, we answer some of the
+        experience and the choices he will make. Below, we answer some of the
         questions you may have about fraternity membership.
         <br />
         <br />
