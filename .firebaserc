@@ -1,6 +1,5 @@
 {
   "projects": {
-    "staging": "mst-ka",
     "default": "mst-ka"
   },
   "targets": {
@@ -8,12 +7,6 @@
       "hosting": {
         "prod": [
           "mst-ka"
-        ],
-        "staging": [
-          "staging-mst-ka"
-        ],
-        "devel": [
-          "devel-mst-ka"
         ]
       }
     }

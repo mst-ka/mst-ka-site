@@ -14,7 +14,7 @@ function TopFiveReasons() {
               <DoubleArrowIcon fontSize="large" color="primary" />
               Brotherhood
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               Thanks to our size, we are both a big house, and a small house.
               Being a big house means no matter what class you are in, or what
               problems you are dealing with, there is someone in KA who is able
@@ -29,11 +29,11 @@ function TopFiveReasons() {
               <DoubleArrowIcon fontSize="large" color="primary" />
               Academics
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               We pride ourselves in our academic success. As an organization, we
               have implemented a thorough academic competition which not only
-              helps us to keep track of how we&apos;re all doing, but also provides
-              an extra incentive to do well!
+              helps us to keep track of how we&apos;re all doing, but also
+              provides an extra incentive to do well!
             </Typography>
           </Grid>
           <Grid item mobile={12} tablet={6}>
@@ -41,7 +41,7 @@ function TopFiveReasons() {
               <DoubleArrowIcon fontSize="large" color="primary" />
               Character Development
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               Fostering a strong work ethic and leadership abilities, joining KA
               has a profound impact on making a good person into a great person.
             </Typography>
@@ -51,18 +51,18 @@ function TopFiveReasons() {
               <DoubleArrowIcon fontSize="large" color="primary" />
               Social Atmosphere
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               School is hard, and having a social life in a small town can be
               tough. Being a part of KA allows you to take part in socials with
               fraternities, sororities, and other organizations.
             </Typography>
           </Grid>
-          <Grid item mobile={12} sx={{margin: {desktop:"0rem 12rem" } }}>
+          <Grid item mobile={12} sx={{ margin: { desktop: "0rem 12rem" } }}>
             <TextSectionHeading>
               <DoubleArrowIcon fontSize="large" color="primary" />
               Leadership and Networking Opportunities
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               Joining KA opens a whole new world of opportunities, through our
               10+ committees, our 13 officers, and our High-Performance Teams,
               we have over 30 leadership positions available at any given time,

@@ -9,7 +9,12 @@ import PeopleIcon from "@mui/icons-material/People";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 
 import theme from "../../../utils/theme";
-import { valuesSubPages, awardsSubPages, aboutSubPages } from "../../../utils/subpages";
+import {
+  valuesSubPages,
+  awardsSubPages,
+  aboutSubPages,
+  alumniSubPages,
+} from "../../../utils/subpages";
 import MobileNavButton from "./MobileNavButton";
 import CollapsibleMobileNavButton from "./CollapsibleMobileNavButton";
 
@@ -21,8 +26,6 @@ const DrawerHeader = styled("div")(() => ({
   justifyContent: "flex-end",
   zIndex: -1,
 }));
-
-
 
 function MobileNavMenu(props) {
   return (
@@ -63,7 +66,11 @@ function MobileNavMenu(props) {
           title="About"
           subpages={aboutSubPages}
         />
-        <MobileNavButton link="/alumni" icon={<PeopleIcon />} title="Alumni" />
+        <CollapsibleMobileNavButton
+          icon={<PeopleIcon />}
+          title="Alumni"
+          subpages={alumniSubPages}
+        />
         <MobileNavButton
           link="/apply"
           icon={<ContactPageIcon />}

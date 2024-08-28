@@ -13,7 +13,7 @@ function NationalAwards() {
             <TextSectionHeading>
               George C. Marshall Award for Chapter Excellence
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               The George C. Marshall Award is given to the top 0-3 KA chapters
               nationally each year. Of the 45+ Marshalls awarded, our chapter
               holds 13 (as of 2022). This gives us the distinct honor of being
@@ -29,7 +29,7 @@ function NationalAwards() {
             <TextSectionHeading>
               Samuel Zenas Ammen Award for Chapter Excellence
             </TextSectionHeading>
-            <Typography>
+            <Typography align="justify">
               Similarly to the Marshall Award, the Samuel Zenas Ammen Award is
               awarded to the top 10% of KA chapters in the nation annually.
               <br />

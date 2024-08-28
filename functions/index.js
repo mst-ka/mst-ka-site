@@ -13,16 +13,6 @@ const constants = require("./constants");
 
 admin.initializeApp();
 
-const applicationContactEmails = [
-  "Joe Studer <joe.studer.18@gmail.com>",
-  "Jared Hanisch <jared.hanisch@gmail.com>",
-  "Christian Matoushek <christian.matoushek@gmail.com",
-  "twbyny@umsystem.edu", // Trey Brown       - President
-  "ceak3z@umsystem.edu", // Chris Altamirano - Corresponding Secretary
-  "bcdkcd@umsystem.edu", // Brady Dodd       - Recruitment Chairman
-  "pjb4kh@umsystem.edu", // Parker Bruns     - Recruitment Chairman
-];
-
 const email = (sender, receiver, message) => {
   const transporter = nodemailer.createTransport({
     service: "Zoho",
@@ -48,12 +38,21 @@ const email = (sender, receiver, message) => {
   });
 };
 
+const applicationContactEmails = [
+  // "Joe Studer <joe.studer.18@gmail.com>",
+  "Jared Hanisch <jared.hanisch@gmail.com>",
+  // "Christian Matoushek <christian.matoushek@gmail.com",
+  // "twbyny@umsystem.edu", // Trey Brown       - President
+  // "ceak3z@umsystem.edu", // Chris Altamirano - Corresponding Secretary
+  // "bcdkcd@umsystem.edu", // Brady Dodd       - Recruitment Chairman
+  // "pjb4kh@umsystem.edu", // Parker Bruns     - Recruitment Chairman
+];
+
 exports.onDataAddedApps = functions.database
   .ref("/applications/{sessionId}")
   .onCreate(function (snap) {
     //prettier-ignore
     const emailContent = {
-      ...snap.val(),
       subject: `[MST-KA Website]: Membership Application for ${snap.val().firstName} ${snap.val().lastName}`,
       message: `Name: ${snap.val().firstName} ${snap.val().lastName}<br/><br/>
                 Phone: ${snap.val().phone}<br/><br/>
@@ -87,6 +86,44 @@ exports.onDataAddedApps = functions.database
 
     // Suppress warning of returning "Function returned undefined, expected Promise or value"
     return 0;
+  });
+
+const alumniSpotlightContactEmails = [
+  // "Joe Studer <joe.studer.18@gmail.com>",
+  // "Jared Hanisch <jared.hanisch@gmail.com>",
+  // "Christian Matoushek <christian.matoushek@gmail.com",
+  "betaalphaalumni1903@gmail.com",
+];
+
+exports.onDataAddedSpotlight = functions.database
+  .ref("alumniSpotlight/{sessionId}")
+  .onCreate(function (snap) {
+    //prettier-ignore
+    const emailContent = {
+      subject: `[MST-KA Website] Alumni Spotlight Recommendation for ${snap.val().recFullName}`,
+      message: `Recommended By:<br/>
+                ${snap.val().yourFullName}<br/>
+                ${snap.val().yourPhoneNumber}<br/>
+                ${snap.val().yourEmail}<br/><br/>
+                Recommended Brother's Information:<br/>
+                ${snap.val().recFullName}<br/>
+                ${snap.val().recPhoneNumber}<br/>
+                ${snap.val().recEmail}<br/><br/>
+                Testimonial:<br/>
+                ${snap.val().whyRecommended}`
+    }
+
+    console.log(
+      `Sending Alumni Spotlight Recommendation for ${
+        snap.val().recFullName
+      } from ${snap.val().yourFullName}`
+    );
+
+    email(
+      functions.config().mail.login,
+      alumniSpotlightContactEmails,
+      emailContent
+    );
   });
 
 const addNewSubscriber = (header, bodyContent, url) =>

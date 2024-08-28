@@ -2,7 +2,7 @@ import { Box, Container, Divider, Grid, Link, Typography } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import XIcon from '@mui/icons-material/X';
+import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -24,7 +24,7 @@ const quickLinks = [
 
 function Footer() {
   return (
-    <Box sx={{}}>
+    <Box>
       <Container
         sx={{
           bgcolor: "#34363E",
@@ -63,9 +63,7 @@ function Footer() {
                 />
               </Link>
               <Link href="https://x.com/MST_KA">
-                <XIcon
-                  sx={{ color: "secondary.main", margin: ".5rem" }}
-                />
+                <XIcon sx={{ color: "secondary.main", margin: ".5rem" }} />
               </Link>
               <Link href="https://www.linkedin.com/company/beta-alpha-chapter-of-kappa-alpha-order/">
                 <LinkedInIcon
@@ -91,13 +89,24 @@ function Footer() {
               <br />
               1 Fraternity Drive Rolla, Missouri 65401
               <br />
-              <Typography sx={{ textDecoration: "underline" }}>
+              <Typography
+                component={"span"}
+                color="white.main"
+                sx={{ textDecoration: "underline" }}
+              >
                 President
               </Typography>
+              <br />
               {officerInfo.president.name}: {presidentPhoneNumber}
-              <Typography sx={{ textDecoration: "underline" }}>
+              <br />
+              <Typography
+                component={"span"}
+                color="white.main"
+                sx={{ textDecoration: "underline" }}
+              >
                 Alumnus Advisor
               </Typography>
+              <br />
               Jim Hennessey: {alumnusAdvisorPhoneNumber}
             </Typography>
           </Grid>

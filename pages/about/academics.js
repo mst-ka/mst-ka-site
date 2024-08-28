@@ -9,7 +9,7 @@ function Academics() {
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         <Grid container spacing={8}>
           <Grid item mobile={12} tablet={6}>
-            <Typography>
+            <Typography align="justify">
               Kappa Alpha Order recognizes that academic success is a key to
               long term success for both new and active members. Being a top
               achiever on campus, Kappa Alpha Order has derived habits and a

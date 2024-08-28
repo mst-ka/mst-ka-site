@@ -9,7 +9,7 @@ function BAOfKAGreekLife() {
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         <Grid container spacing={8}>
           <Grid item mobile={12} tablet={6}>
-            <Typography>
+            <Typography align="justify">
               In Kappa Alpha Order we strive for excellence in all aspects on
               campus, including socialization with others. We understand that
               college puts a lot of stress on you and that is why we look to

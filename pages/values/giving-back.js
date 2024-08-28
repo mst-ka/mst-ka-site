@@ -9,7 +9,7 @@ function GivingBack() {
       <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
         <Grid container spacing={8}>
           <Grid item mobile={12} tablet={6}>
-            <Typography>
+            <Typography align="justify">
               The brothers of Kappa Alpha Order are dedicated to serving our
               school, our community, and our nation. Members of Beta Alpha
               Chapter offer their time and resources across the Midwest, lending
