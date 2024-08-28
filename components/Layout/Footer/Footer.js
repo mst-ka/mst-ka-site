@@ -2,7 +2,7 @@ import { Box, Container, Divider, Grid, Link, Typography } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import XIcon from '@mui/icons-material/X';
+import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
@@ -63,9 +63,7 @@ function Footer() {
                 />
               </Link>
               <Link href="https://x.com/MST_KA">
-                <XIcon
-                  sx={{ color: "secondary.main", margin: ".5rem" }}
-                />
+                <XIcon sx={{ color: "secondary.main", margin: ".5rem" }} />
               </Link>
               <Link href="https://www.linkedin.com/company/beta-alpha-chapter-of-kappa-alpha-order/">
                 <LinkedInIcon
@@ -153,7 +151,7 @@ function Footer() {
           }}
         >
           Developed by Beta Alpha of Kappa Alpha and{" "}
-          <Link underline="hover" href="https://github.com/mst-ka">
+          <Link underline="hover" href="https://github.com/mst-ka/mst-ka-site">
             hosted on Github
             <GitHubIcon
               sx={{
