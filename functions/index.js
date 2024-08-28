@@ -39,13 +39,13 @@ const email = (sender, receiver, message) => {
 };
 
 const applicationContactEmails = [
-  // "Joe Studer <joe.studer.18@gmail.com>",
+  "Joe Studer <joe.studer.18@gmail.com>",
   "Jared Hanisch <jared.hanisch@gmail.com>",
-  // "Christian Matoushek <christian.matoushek@gmail.com",
-  // "twbyny@umsystem.edu", // Trey Brown       - President
-  // "ceak3z@umsystem.edu", // Chris Altamirano - Corresponding Secretary
-  // "bcdkcd@umsystem.edu", // Brady Dodd       - Recruitment Chairman
-  // "pjb4kh@umsystem.edu", // Parker Bruns     - Recruitment Chairman
+  "Christian Matoushek <christian.matoushek@gmail.com",
+  "twbyny@umsystem.edu", // Trey Brown       - President
+  "ceak3z@umsystem.edu", // Chris Altamirano - Corresponding Secretary
+  "bcdkcd@umsystem.edu", // Brady Dodd       - Recruitment Chairman
+  "pjb4kh@umsystem.edu", // Parker Bruns     - Recruitment Chairman
 ];
 
 exports.onDataAddedApps = functions.database
@@ -89,9 +89,9 @@ exports.onDataAddedApps = functions.database
   });
 
 const alumniSpotlightContactEmails = [
-  // "Joe Studer <joe.studer.18@gmail.com>",
-  // "Jared Hanisch <jared.hanisch@gmail.com>",
-  // "Christian Matoushek <christian.matoushek@gmail.com",
+  "Joe Studer <joe.studer.18@gmail.com>",
+  "Jared Hanisch <jared.hanisch@gmail.com>",
+  "Christian Matoushek <christian.matoushek@gmail.com",
   "betaalphaalumni1903@gmail.com",
 ];
 
