@@ -23,7 +23,11 @@ function Tour() {
           <Typography variant="h4" sx={{ marginBottom: "1rem" }}>
             Kappa Alpha Order
           </Typography>
-          <Typography variant="body1" sx={{ fontStyle: "italic" }}>
+          <Typography
+            variant="body1"
+            align="justify"
+            sx={{ fontStyle: "italic" }}
+          >
             You come to college with your values intact; you&apos;ve learned
             from family and friends what&apos;s right and wrong. While in
             college, Kappa Alpha Order helps you keep your compass straight,
@@ -33,7 +37,7 @@ function Tour() {
             <br />
             <br />
           </Typography>
-          <Typography>
+          <Typography align="justify">
             <CheckIcon
               fontSize="medium"
               color="primary"
@@ -47,7 +51,7 @@ function Tour() {
             <br />
             <br />
           </Typography>
-          <Typography>
+          <Typography align="justify">
             <CheckIcon
               fontSize="medium"
               color="primary"
@@ -60,7 +64,7 @@ function Tour() {
             <br />
             <br />
           </Typography>
-          <Typography>
+          <Typography align="justify">
             <CheckIcon
               fontSize="medium"
               color="primary"
@@ -72,7 +76,7 @@ function Tour() {
             <br />
             <br />
           </Typography>
-          <Typography>
+          <Typography align="justify">
             <CheckIcon
               fontSize="medium"
               color="primary"
@@ -84,7 +88,14 @@ function Tour() {
             <br />
             <br />
           </Typography>
-          <Button variant="outlined" size="large" href="/about" endIcon={<ArrowRightIcon />}>Learn More</Button>
+          <Button
+            variant="outlined"
+            size="large"
+            href="/about"
+            endIcon={<ArrowRightIcon />}
+          >
+            Learn More
+          </Button>
         </Grid>
       </Grid>
     </>

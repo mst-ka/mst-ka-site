@@ -13,7 +13,7 @@ export const awardsSubPages = [
 
 export const aboutSubPages = [
   { title: "About Us", link: "/about" },
-  { title: "Academics", link: "/about/academics"},
+  { title: "Academics", link: "/about/academics" },
   { title: "Scholarships", link: "/about/scholarships" },
   { title: "Greek Life", link: "/about/greek-life" },
   { title: "Officers", link: "/about/officers" },
@@ -23,4 +23,9 @@ export const aboutSubPages = [
   },
   { title: "Letter From a KA Parent", link: "/about/letter-from-ka-parent" },
   { title: "Parents FAQ", link: "/about/parents-faq" },
+];
+
+export const alumniSubPages = [
+  { title: "The BAAA Journal", link: "/alumni" },
+  { title: "Alumni Spotlight Recommendation", link: "/alumni/spotlight" },
 ];

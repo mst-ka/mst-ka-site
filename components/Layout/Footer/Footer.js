@@ -24,7 +24,7 @@ const quickLinks = [
 
 function Footer() {
   return (
-    <Box sx={{}}>
+    <Box>
       <Container
         sx={{
           bgcolor: "#34363E",
@@ -89,13 +89,24 @@ function Footer() {
               <br />
               1 Fraternity Drive Rolla, Missouri 65401
               <br />
-              <Typography sx={{ textDecoration: "underline" }}>
+              <Typography
+                component={"span"}
+                color="white.main"
+                sx={{ textDecoration: "underline" }}
+              >
                 President
               </Typography>
+              <br />
               {officerInfo.president.name}: {presidentPhoneNumber}
-              <Typography sx={{ textDecoration: "underline" }}>
+              <br />
+              <Typography
+                component={"span"}
+                color="white.main"
+                sx={{ textDecoration: "underline" }}
+              >
                 Alumnus Advisor
               </Typography>
+              <br />
               Jim Hennessey: {alumnusAdvisorPhoneNumber}
             </Typography>
           </Grid>

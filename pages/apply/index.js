@@ -17,8 +17,9 @@ import { GoogleReCaptcha } from "react-google-recaptcha-v3";
 import { push, ref } from "firebase/database";
 import database from "../../firebase-init.js";
 import Banner from "../../components/Layout/Banner/Banner.js";
+import { scrollToErrors } from "../../utils/form-helpers.js";
 
-const validationSchema = yup.object({
+const membershipAppValidationSchema = yup.object({
   firstName: yup.string().required("Required"),
   lastName: yup.string().required("Required"),
   phone: yup
@@ -49,16 +50,6 @@ const validationSchema = yup.object({
   likeAboutChapter: yup.string().required("Required"),
   gentleman: yup.string().required("Required"),
 });
-
-//Click event handler for the Submit button to focus on fields that have errors associated with it
-const scrollToErrors = (errors) => {
-  const errorKeys = Object.keys(errors);
-  if (errorKeys.length > 0) {
-    setTimeout(() => {
-      document.getElementsByName(errorKeys[0])[0].focus();
-    }, 10);
-  }
-};
 
 //If we would like to display alternate helper text for our user prior to there being
 //errors associated with their input. See the Class Rank field for an example.
@@ -106,8 +97,8 @@ function Contact() {
       likeAboutChapter: "",
       gentleman: "",
     },
-    validationSchema: validationSchema,
-    onSubmit: (values, { resetForm }) => {
+    validationSchema: membershipAppValidationSchema,
+    onSubmit: (values, actions) => {
       // prettier-ignore
       if (window.confirm("Are you sure you would like to submit your application?")) {
         //push to Firebase Realtime Database
@@ -133,7 +124,7 @@ function Contact() {
           likeAboutChapter: values.likeAboutChapter,
           gentleman: values.gentleman,
         }).then(() => {
-          resetForm();
+          actions.resetForm();
           setOpenSnackbar(true);
         });
       }
@@ -146,7 +137,7 @@ function Contact() {
       <form onSubmit={formik.handleSubmit}>
         <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
           <br />
-          <Typography align="left">
+          <Typography align="justify">
             The brothers of the Beta Alpha Chapter of Kappa Alpha Order are
             determined to recruit men who will become contributing members to
             our brotherhood. This application is meant to help us get to know
@@ -487,7 +478,9 @@ function Contact() {
                   onClick={() => {
                     scrollToErrors(formik.errors);
                   }}
-                  disabled={!recaptchaPassed || formik.isSubmitting}
+                  disabled={
+                    !recaptchaPassed || formik.isSubmitting || !formik.isValid
+                  }
                 >
                   Submit Application
                 </Button>
@@ -513,6 +506,7 @@ function Contact() {
               open={openSnackbar}
               autoHideDuration={6000}
               onClose={handleCloseSnackbar}
+              sx={{ bottom: { mobile: "4rem" } }}
             >
               <Alert variant="filled" severity="success">
                 Application Successfully Submitted!

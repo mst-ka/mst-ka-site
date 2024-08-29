@@ -3,7 +3,7 @@
 		"newsletterEmailSignUp": {
 			".read": false,
 			"$signUpId": {
-				".write": "!data.exists() && newData.hasChildren(['firstName', 'lastName', 'pledgeClass', 'email'])",
+			".write": "!data.exists() && newData.hasChildren(['firstName', 'lastName', 'pledgeClass', 'email'])",
 				"email":       { ".validate": "newData.isString() && newData.val().length <= 320" },
 				"firstName":   { ".validate": "newData.isString() && newData.val().length <= 50"  },
 				"lastName":    { ".validate": "newData.isString() && newData.val().length <= 50"  },
@@ -13,7 +13,7 @@
 		"applications": {
 			".read": false,
 			"$applicationId": {
-				".write": "!data.exists() && newData.hasChildren(['firstName', 'lastName', 'phone', 'email', 'hometown', 'state', 'age', 'highSchool', 'classRank', 'gpa', 'actSAT', 'religion', 'intendedMajor', 'highSchoolActivities', 'honorsAwards', 'goals', 'contactWith', 'whyConsidering', 'likeAboutChapter', 'gentleman'])",
+			".write": "!data.exists() && newData.hasChildren(['firstName', 'lastName', 'phone', 'email', 'hometown', 'state', 'age', 'highSchool', 'classRank', 'gpa', 'actSAT', 'religion', 'intendedMajor', 'highSchoolActivities', 'honorsAwards', 'goals', 'contactWith', 'whyConsidering', 'likeAboutChapter', 'gentleman'])",
 				"firstName": 		    { ".validate": "newData.isString()" },
 				"lastName":             { ".validate": "newData.isString()" },
 				"phone":                { ".validate": "newData.isString()" },
@@ -34,6 +34,19 @@
 				"whyConsidering":       { ".validate": "newData.isString()" },
 				"likeAboutChapter":     { ".validate": "newData.isString()" },
 				"gentleman":            { ".validate": "newData.isString()" }
+			}
+		},
+		"alumniSpotlight": {
+			".read": false,
+			"$spotlightId" : {
+			".write": "!data.exists() && newData.hasChildren(['yourFullName', 'yourPhoneNumber', 'yourEmail', 'recFullName', 'recPhoneNumber', 'recEmail', 'whyRecommended'])",
+			"yourFullName": 	{".validate": "newData.isString()"}, 
+			"yourPhoneNumber": 	{".validate": "newData.isString()"}, 
+			"yourEmail": 		{".validate": "newData.isString()"}, 
+			"recFullName": 		{".validate": "newData.isString()"}, 
+			"recPhoneNumber": 	{".validate": "newData.isString()"}, 
+			"recEmail": 		{".validate": "newData.isString()"}, 
+			"whyRecommended": 	{".validate": "newData.isString()"}
 			}
 		}
 	}
