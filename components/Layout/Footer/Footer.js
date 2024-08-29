@@ -162,7 +162,7 @@ function Footer() {
           }}
         >
           Developed by Beta Alpha of Kappa Alpha and{" "}
-          <Link underline="hover" href="https://github.com/mst-ka">
+          <Link underline="hover" href="https://github.com/mst-ka/mst-ka-site">
             hosted on Github
             <GitHubIcon
               sx={{
