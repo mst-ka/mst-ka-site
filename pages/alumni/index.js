@@ -5,6 +5,14 @@ import MailingListSignup from "../../components/Subpages/Alumni/MailingListSignU
 
 const newsletters = [
   {
+    volumeName: "Vol. 9",
+    link: "https://issuu.com/beta-alpha-alumni-association/docs/beta_alpha_journal_fall_24_vol_9",
+    imageSrc: "/images/alumni/f24_cover.jpeg",
+    altText: "Fall 2024 Newsletter",
+    volumeSubText:
+      "Fall 2024 Volume of the Beta Alpha Alumni Association Journal",
+  },
+  {
     volumeName: "Vol. 8",
     link: "https://issuu.com/beta-alpha-alumni-association/docs/beta_alpha_journal_spring_24_vol_8",
     imageSrc: "/images/alumni/s24_cover.jpeg",
@@ -38,7 +46,7 @@ const newsletters = [
   },
   {
     volumeName: "Vol. 4",
-    link: "https://issuu.com/beta-alpha-alumni-association/docs/ss22_vol4",
+    link: "/newsletters/ss22_vol4.pdf",
     imageSrc: "/images/alumni/s22_cover.jpeg",
     altText: "Spring 2022 Newsletter",
     volumeSubText:
