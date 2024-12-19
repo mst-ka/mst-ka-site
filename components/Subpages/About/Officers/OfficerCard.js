@@ -18,7 +18,6 @@ function OfficerCard(props) {
             {props.position}
           </Typography>
           <Link href={"mailto:" + props.email}>{props.email}</Link>
-          <Typography>Pledge Class: {props.pledgeClass}</Typography>
         </CardContent>
       </Card>
     </Grid>

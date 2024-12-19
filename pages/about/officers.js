@@ -17,7 +17,6 @@ function BAOfKAOfficers() {
               name={officer.name}
               position={officer.position}
               email={officer.email}
-              pledgeClass={officer.pledgeClass}
               img={officer.img}
             />
           ))}
