@@ -42,10 +42,10 @@ const applicationContactEmails = [
   "Joe Studer <joe.studer.18@gmail.com>",
   "Jared Hanisch <jared.hanisch@gmail.com>",
   "Christian Matoushek <christian.matoushek@gmail.com",
-  "twbyny@umsystem.edu", // Trey Brown       - President
-  "ceak3z@umsystem.edu", // Chris Altamirano - Corresponding Secretary
-  "bcdkcd@umsystem.edu", // Brady Dodd       - Recruitment Chairman
-  "pjb4kh@umsystem.edu", // Parker Bruns     - Recruitment Chairman
+  "msmgg5@umsystem.edu", // Marco Miskovic - President
+  "bcdkcd@umsystem.edu", // Brady Dodd     - Corresponding Secretary
+  "nb887@umsystem.edu",  // Noah Bauman    - Recruitment Chairman
+  "bahrqc@umsystem.edu", // Bailey Hermann - Recruitment Chairman
 ];
 
 exports.onDataAddedApps = functions.database
