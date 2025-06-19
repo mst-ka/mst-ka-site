@@ -4,6 +4,8 @@ import {
   Typography,
   Card,
   CardContent,
+  CardMedia,
+  CardActionArea,
   Grid,
   LinearProgress,
   Button,
@@ -17,9 +19,13 @@ import {
   MobileStepper,
   useTheme,
   useMediaQuery,
+  Link,
 } from "@mui/material";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
+import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
+import EditNoteIcon from "@mui/icons-material/EditNote";
 import Banner from "../components/Layout/Banner/Banner";
 import Image from "next/image";
 import React from "react";
@@ -65,20 +71,32 @@ const FurnitureFundraiser = () => {
 
   const furnitureImages = [
     {
-      url: "https://www.polywood.com/cdn/shop/files/efku5hbmu0yqnhjatlq2.jpg?v=1737500793&width=1000",
+      imageUrl:
+        "/images/furniture-fundraiser/adirondack.png",
       description: "Nautical Curveback Adirondack Chair",
+      productUrl:
+        "https://www.polywood.com/products/nautical-curveback-adirondack-chair-ad610?variant=45792917881059",
     },
     {
-      url: "https://www.polywood.com/cdn/shop/files/xxcbmlxagcww6lqvfkbm.jpg?v=1737500115&width=1000",
+      imageUrl:
+        "/images/furniture-fundraiser/table.png",
       description: '48" Round Farmhouse Dining Table',
+      productUrl:
+        "https://www.polywood.com/products/48-round-farmhouse-dining-table-rt248?variant=45794136686819",
     },
     {
-      url: "https://www.polywood.com/cdn/shop/files/t8ogblutusmhdpkfakqo.jpg?v=1737499950&width=1000",
+      imageUrl:
+        "/images/furniture-fundraiser/chair.png",
       description: "Palm Coast Upright Adirondack Chair",
+      productUrl:
+        "https://www.polywood.com/products/palm-coast-upright-adirondack-chair-hnu200?variant=45792813678819",
     },
     {
-      url: "https://www.polywood.com/cdn/shop/files/dptgsm1ekgh8wffo0gtg.jpg?v=1737500825&width=1000",
+      imageUrl:
+        "/images/furniture-fundraiser/sidetable.png",
       description: 'Long Island 18" Side Table',
+      productUrl:
+        "https://www.polywood.com/products/long-island-18-side-table-ect18?variant=45793115144419",
     },
   ];
 
@@ -108,7 +126,7 @@ const FurnitureFundraiser = () => {
           <Typography variant="h4" gutterBottom>
             Fundraising Progress
           </Typography>
-          <Card sx={{ padding: "2rem" }}>
+          <Card sx={{ padding: "2rem", maxWidth: "60rem", margin: "0 auto" }}>
             <Box sx={{ marginBottom: "0.5rem" }}>
               <Box
                 sx={{
@@ -285,10 +303,54 @@ const FurnitureFundraiser = () => {
         {/* Budget Breakdown Section */}
         <Box sx={{ marginTop: "3rem" }}>
           <Typography variant="h4" gutterBottom>
-            Budget Breakdown - add warranty info
+            Budget Breakdown
           </Typography>
-          <Typography variant="body1" color="text.secondary" paragraph>
-            Detailed budget breakdown coming soon...
+          <Typography variant="body1" paragraph>
+            We have selected{" "}
+            <Link
+              href="https://www.polywood.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Polywood
+            </Link>{" "}
+            furniture for our outdoor space, a premium brand known for its
+            exceptional quality and durability. Polywood furniture is crafted
+            from recycled high-density polyethylene (HDPE) plastic, making it:
+          </Typography>
+          <ul style={{ marginBottom: "1.5rem" }}>
+            <li>
+              <Typography variant="body1" paragraph>
+                100% weather-resistant and maintenance-free
+              </Typography>
+            </li>
+            <li>
+              <Typography variant="body1" paragraph>
+                UV-resistant and won&apos;t fade, crack, or splinter
+              </Typography>
+            </li>
+            <li>
+              <Typography variant="body1" paragraph>
+                Eco-friendly, made from recycled materials
+              </Typography>
+            </li>
+            <li>
+              <Typography variant="body1" paragraph>
+                Backed by a 20-year residential warranty; guaranteed against
+                splintering, cracking, chipping, peeling, rotting, or insect
+                damage.
+              </Typography>
+            </li>
+          </ul>
+          <Typography variant="body1" paragraph>
+            The furniture pieces we&apos;ve selected are designed to withstand
+            the elements year-round, requiring minimal maintenance while
+            providing maximum comfort and style. Each piece comes with
+            Polywood&apos;s comprehensive warranty, ensuring your investment
+            will last for decades to come.
+            <br />
+            <br />
+            Check out the furniture pieces we plan to purchase:
           </Typography>
 
           {/* Image Gallery */}
@@ -305,36 +367,46 @@ const FurnitureFundraiser = () => {
                   margin: "0 auto",
                 }}
               >
-                <Box
-                  sx={{
-                    width: "100%",
-                    height: "auto",
-                    backgroundColor: "grey.200",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    overflow: "hidden",
-                  }}
+                <CardActionArea
+                  component={Link}
+                  href={furnitureImages[activeStep].productUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  sx={{ height: "100%" }}
                 >
-                  <img
-                    src={furnitureImages[activeStep].url}
-                    alt={furnitureImages[activeStep].description}
-                    style={{
+                  <Box
+                    sx={{
                       width: "100%",
-                      height: "100%",
-                      objectFit: "cover",
+                      height: "auto",
+                      position: "relative",
+                      backgroundColor: "grey.200",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      overflow: "hidden",
                     }}
-                  />
-                </Box>
-                <CardContent>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    align="center"
                   >
-                    {furnitureImages[activeStep].description}
-                  </Typography>
-                </CardContent>
+                    <CardMedia
+                      component="img"
+                      image={furnitureImages[activeStep].imageUrl}
+                      alt={furnitureImages[activeStep].description}
+                      sx={{
+                        width: "100%",
+                        height: "auto",
+                        objectFit: "cover",
+                      }}
+                    />
+                  </Box>
+                  <CardContent>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      align="center"
+                    >
+                      {furnitureImages[activeStep].description}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
               </Card>
               <MobileStepper
                 steps={furnitureImages.length}
@@ -385,7 +457,7 @@ const FurnitureFundraiser = () => {
               }}
             >
               {furnitureImages.map((image, index) => (
-                <Grid item xs={12} sm={6} md={3} key={index}>
+                <Grid item xs={12} sm={6} key={index}>
                   <Card
                     sx={{
                       height: "100%",
@@ -393,39 +465,48 @@ const FurnitureFundraiser = () => {
                       flexDirection: "column",
                       minHeight: "15rem",
                       width: "100%",
-                      maxWidth: "20rem",
+                      maxWidth: "25rem",
                     }}
                   >
-                    <Box
-                      sx={{
-                        width: "100%",
-                        height: "auto",
-                        backgroundColor: "grey.200",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        overflow: "hidden",
-                      }}
+                    <CardActionArea
+                      component={Link}
+                      href={image.productUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{ height: "100%" }}
                     >
-                      <img
-                        src={image.url}
-                        alt={image.description}
-                        style={{
+                      <Box
+                        sx={{
                           width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
+                          height: "auto",
+                          backgroundColor: "grey.200",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          overflow: "hidden",
                         }}
-                      />
-                    </Box>
-                    <CardContent>
-                      <Typography
-                        variant="body2"
-                        color="text.secondary"
-                        align="center"
                       >
-                        {image.description}
-                      </Typography>
-                    </CardContent>
+                        <CardMedia
+                          component="img"
+                          image={image.imageUrl}
+                          alt={image.description}
+                          sx={{
+                            width: "400px",
+                            height: "320px",
+                            objectFit: "cover",
+                          }}
+                        />
+                      </Box>
+                      <CardContent>
+                        <Typography
+                          variant="body2"
+                          color="text.secondary"
+                          align="center"
+                        >
+                          {image.description}
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
                   </Card>
                 </Grid>
               ))}
@@ -436,35 +517,112 @@ const FurnitureFundraiser = () => {
             component={Paper}
             sx={{
               maxWidth: { mobile: "100%", tablet: "60rem" },
-              margin: "0 auto",
-              padding: { mobile: "0 1rem", tablet: 0 },
+              margin: "1rem auto 0",
+              padding: { mobile: "0 0.25rem", tablet: 0 },
             }}
           >
             <Table>
               <TableHead>
                 <TableRow>
-                  <TableCell>Category</TableCell>
-                  <TableCell>Description</TableCell>
-                  <TableCell align="right">Estimated Cost</TableCell>
+                  <TableCell
+                    align="left"
+                    sx={{
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      padding: { xs: "0.25rem", sm: "0.5rem" },
+                      whiteSpace: "normal",
+                    }}
+                  >
+                    Item
+                  </TableCell>
+                  <TableCell
+                    align="right"
+                    sx={{
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      padding: { xs: "0.25rem", sm: "0.5rem" },
+                      width: "2.5rem",
+                    }}
+                  >
+                    Qty
+                  </TableCell>
+                  <TableCell
+                    align="right"
+                    sx={{
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      padding: { xs: "0.25rem", sm: "0.5rem" },
+                      width: "4.5rem",
+                    }}
+                  >
+                    Unit
+                  </TableCell>
+                  <TableCell
+                    align="right"
+                    sx={{
+                      fontSize: { xs: "0.9rem", sm: "1rem" },
+                      padding: { xs: "0.25rem", sm: "0.5rem" },
+                      width: "5rem",
+                    }}
+                  >
+                    Total
+                  </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
                 <TableRow>
-                  <TableCell component="th" scope="row">
-                    <Typography variant="subtitle1" fontWeight="medium">
-                      Furniture Items
-                    </Typography>
+                  <TableCell align="left" scope="row">
+                    Adirondack Chairs
                   </TableCell>
-                  <TableCell>
-                    <Typography variant="body2" color="text.secondary">
-                      Detailed list of furniture items and costs will be added
-                      here.
-                    </Typography>
+                  <TableCell align="right">20</TableCell>
+                  <TableCell align="right">$329</TableCell>
+                  <TableCell align="right">$6,580</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell align="left" scope="row">
+                    Dining Tables
                   </TableCell>
+                  <TableCell align="right">3</TableCell>
+                  <TableCell align="right">$569</TableCell>
+                  <TableCell align="right">$1,707</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell align="left" scope="row">
+                    Dining Chairs
+                  </TableCell>
+                  <TableCell align="right">12</TableCell>
+                  <TableCell align="right">$389</TableCell>
+                  <TableCell align="right">$4,668</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell align="left" scope="row">
+                    Side Tables
+                  </TableCell>
+                  <TableCell align="right">10</TableCell>
+                  <TableCell align="right">$79</TableCell>
+                  <TableCell align="right">$790</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell align="left" scope="row">
+                    Shipping & Handling
+                  </TableCell>
+                  <TableCell align="right"></TableCell>
+                  <TableCell align="right"></TableCell>
+                  <TableCell align="right">$TBD</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell align="left" scope="row">
+                    Taxes
+                  </TableCell>
+                  <TableCell align="right"></TableCell>
+                  <TableCell align="right"></TableCell>
+                  <TableCell align="right">$TBD</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell align="left" scope="row">
+                    <Typography variant="h6">Total Cost</Typography>
+                  </TableCell>
+                  <TableCell align="right"></TableCell>
+                  <TableCell align="right"></TableCell>
                   <TableCell align="right">
-                    <Typography variant="body2" color="text.secondary">
-                      TBD
-                    </Typography>
+                    <Typography variant="h6">$15,368</Typography>
                   </TableCell>
                 </TableRow>
               </TableBody>
@@ -526,28 +684,75 @@ const FurnitureFundraiser = () => {
                   <Typography
                     variant="h6"
                     gutterBottom
-                    sx={{ textAlign: "center", marginBottom: "2rem" }}
-                  >
-                    PayPal
-                  </Typography>
-                  <Typography variant="body1" paragraph>
-                    Send your donation to: [PayPal email address]
-                  </Typography>
-                  <Box sx={{ flexGrow: 1 }} />
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    href="https://www.paypal.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
                     sx={{
-                      padding: "0.75rem",
-                      fontSize: "1.1rem",
+                      textAlign: "center",
+                      marginBottom: "2rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                     }}
                   >
-                    Donate with PayPal
-                  </Button>
+                    <AccountBalanceWalletIcon sx={{ margin: "0.5rem" }} />
+                    PayPal / Card
+                  </Typography>
+                  <Typography variant="body1" align="justify">
+                    Make a secure donation through PayPal. You can use your
+                    PayPal account or any major credit card.
+                  </Typography>
+                  <Box sx={{ flexGrow: 1 }} />
+                  <Box
+                    sx={{ display: "flex", flexDirection: "column", gap: 2 }}
+                  >
+                    <Box
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        mb: 2,
+                        mt: 2,
+                      }}
+                    >
+                      <Image
+                        src="/images/furniture-fundraiser/BAEFPayPalQRCode.png"
+                        alt="BAEF PayPal QR Code"
+                        width={150}
+                        height={150}
+                      />
+                    </Box>
+                    <Button
+                      variant="contained"
+                      fullWidth
+                      href="https://www.paypal.com/donate/?hosted_button_id=6RRJ3HQNZKSM4"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      sx={{
+                        padding: "0.75rem",
+                        fontSize: "1.1rem",
+                        backgroundColor: "#ffc439",
+                        "&:hover": {
+                          backgroundColor: "#e6b033",
+                        },
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "0.5rem",
+                      }}
+                    >
+                      <Image
+                        src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png"
+                        alt="PayPal"
+                        width={100}
+                        height={26}
+                      />
+                    </Button>
+                    <Typography
+                      variant="body2"
+                      color="text.secondary"
+                      align="center"
+                    >
+                      Please include &ldquo;BAAA Outdoor Furniture
+                      Fundraiser&rdquo; in the note
+                    </Typography>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>
@@ -583,17 +788,39 @@ const FurnitureFundraiser = () => {
                   <Typography
                     variant="h6"
                     gutterBottom
-                    sx={{ textAlign: "center", marginBottom: "2rem" }}
+                    sx={{
+                      textAlign: "center",
+                      marginBottom: "2rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                   >
+                    <PhoneIphoneIcon sx={{ margin: "0.5rem" }} />
                     Venmo
                   </Typography>
-                  <Typography variant="body1" paragraph>
-                    Send your donation to: [Venmo username]
+                  <Typography align="justify" variant="body1">
+                    Send your donation to:{" "}
+                    <Typography component="span" sx={{ fontWeight: "bold" }}>
+                      @BAEFDonate
+                    </Typography>{" "}
+                    or scan the QR code below:
                   </Typography>
-                  <Typography variant="body1" paragraph>
-                    Venmo QR code will be added here
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Box
+                    sx={{ display: "flex", justifyContent: "center", mb: 2 }}
+                  >
+                    <Image
+                      src="/images/furniture-fundraiser/BAEFVenmoQRCode.png"
+                      alt="BAEF Venmo QR Code"
+                      width={200}
+                      height={250}
+                    />
+                  </Box>
+                  <Typography
+                    variant="body2"
+                    align="center"
+                    color="text.secondary"
+                  >
                     Please include &ldquo;BAAA Outdoor Furniture
                     Fundraiser&rdquo; in the note
                   </Typography>
@@ -632,22 +859,34 @@ const FurnitureFundraiser = () => {
                   <Typography
                     variant="h6"
                     gutterBottom
-                    sx={{ textAlign: "center", marginBottom: "2rem" }}
+                    sx={{
+                      textAlign: "center",
+                      marginBottom: "2rem",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
                   >
+                    <EditNoteIcon sx={{ margin: "0.5rem" }} />
                     Check
                   </Typography>
-                  <Typography variant="body1" paragraph>
-                    Please make checks payable to [Organization Name], with
-                    &apos;BAAA Outdoor Furniture&apos; in the memo line.
+                  <Typography align="justify" variant="body" paragraph>
+                    Please make checks payable to &apos;Beta Alpha Education
+                    Foundation&apos;, with &apos;BAAA Outdoor Furniture&apos; in
+                    the memo line.
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
+                  <Typography
+                    align="center"
+                    variant="body"
+                    sx={{ fontWeight: "bold" }}
+                  >
                     Mail to:
                     <br />
-                    [Organization name]
+                    Christopher Markus – BAEF Treasurer
                     <br />
-                    [Street address]
+                    PO Box 9473
                     <br />
-                    [City, State ZIP]
+                    Naperville, IL 60567-9473
                   </Typography>
                 </CardContent>
               </Card>
@@ -656,6 +895,7 @@ const FurnitureFundraiser = () => {
 
           <Typography
             variant="body1"
+            align="center"
             sx={{ marginTop: "2rem", color: "text.secondary" }}
           >
             Please include your name and contact information with your donation
