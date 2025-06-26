@@ -20,12 +20,19 @@ import {
   useTheme,
   useMediaQuery,
   Link,
+  Alert,
+  AlertTitle,
 } from "@mui/material";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import EditNoteIcon from "@mui/icons-material/EditNote";
+import StarIcon from "@mui/icons-material/Star";
+import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
+import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 import Banner from "../components/Layout/Banner/Banner";
 import Image from "next/image";
 import React from "react";
@@ -44,56 +51,31 @@ const FurnitureFundraiser = () => {
   };
 
   // Placeholder for current donation amount - this would be dynamic in production
-  const currentAmount = 8500;
-  const goalAmount = 15000;
+  const currentAmount = 0;
+  const goalAmount = 17000;
   const progress = (currentAmount / goalAmount) * 100;
-
-  const donationTiers = [
-    {
-      amount: 500,
-      name: "Individual Contribution", // Placeholder name
-      benefits: [
-        "Benefit 1",
-        "Benefit 2",
-        "Largest donation will be prominently recognized on a permanent plaque on the veranda",
-      ],
-    },
-    {
-      amount: 1000,
-      name: "Group Contribution", // Placeholder name
-      benefits: [
-        "All Tier 1 benefits",
-        "Benefit 4",
-        "Largest donation will be prominently recognized on a permanent plaque on the veranda",
-      ],
-    },
-  ];
 
   const furnitureImages = [
     {
-      imageUrl:
-        "/images/furniture-fundraiser/adirondack.png",
+      imageUrl: "/images/furniture-fundraiser/adirondack.png",
       description: "Nautical Curveback Adirondack Chair",
       productUrl:
         "https://www.polywood.com/products/nautical-curveback-adirondack-chair-ad610?variant=45792917881059",
     },
     {
-      imageUrl:
-        "/images/furniture-fundraiser/table.png",
+      imageUrl: "/images/furniture-fundraiser/table.png",
       description: '48" Round Farmhouse Dining Table',
       productUrl:
         "https://www.polywood.com/products/48-round-farmhouse-dining-table-rt248?variant=45794136686819",
     },
     {
-      imageUrl:
-        "/images/furniture-fundraiser/chair.png",
+      imageUrl: "/images/furniture-fundraiser/chair.png",
       description: "Palm Coast Upright Adirondack Chair",
       productUrl:
         "https://www.polywood.com/products/palm-coast-upright-adirondack-chair-hnu200?variant=45792813678819",
     },
     {
-      imageUrl:
-        "/images/furniture-fundraiser/sidetable.png",
+      imageUrl: "/images/furniture-fundraiser/sidetable.png",
       description: 'Long Island 18" Side Table',
       productUrl:
         "https://www.polywood.com/products/long-island-18-side-table-ect18?variant=45793115144419",
@@ -102,7 +84,7 @@ const FurnitureFundraiser = () => {
 
   return (
     <>
-      <Banner text="BAAA Outdoor Furniture Fundraiser" />
+      <Banner text="Beta Alpha Outdoor Furniture Fundraiser" />
       <Container
         sx={{
           padding: {
@@ -112,18 +94,36 @@ const FurnitureFundraiser = () => {
           },
         }}
       >
-        <Typography align="justify" sx={{ marginBottom: "2rem" }}>
+        <Typography align="justify" sx={{ marginBottom: "1rem" }}>
           In coordination with the Beta Alpha Education Foundation (BAEF), the
-          Beta Alpha Alumni Assocaiation is (BAAA) is organizing... description
-          of fundraiser placeholder. Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Beta Alpha Alumni Association (BAAA) is organizing this fundraiser to
+          replace the deteriorating outdoor furniture on our chapter house
+          veranda. This space has long been a gathering place where brothers
+          share stories, celebrate, and build lasting memories. Now, it&apos;s
+          time to update it with durable, comfortable furniture that will serve
+          both active members and alumni for years to come.
+        </Typography>
+
+        <Typography align="justify" sx={{ marginBottom: "1rem" }}>
+          With your support, we can provide a comfortable outdoor space that
+          brings brothers together and serves the chapter for years to come.
+          Every gift brings us closer to making the veranda a place where past,
+          present, and future brothers can come together — whether for casual
+          hangouts, special events, or simply enjoying the fresh air and
+          camaraderie. Thank you for considering a gift to help us revitalize
+          this important gathering spot!
+        </Typography>
+        <Typography align="justify">
+          If you have any questions at all, please reach out to BAAA via email
+          at:{" "}
+          <Link href="mailto:betaalphaalumni1903@gmail.com">
+            betaalphaalumni1903@gmail.com
+          </Link>
         </Typography>
 
         {/* Progress Section */}
         <Box sx={{ marginY: "3rem" }}>
-          <Typography variant="h4" gutterBottom>
+          <Typography variant="h4" fontWeight="bold" gutterBottom>
             Fundraising Progress
           </Typography>
           <Card sx={{ padding: "2rem", maxWidth: "60rem", margin: "0 auto" }}>
@@ -188,6 +188,7 @@ const FurnitureFundraiser = () => {
                     padding: "0.75rem 2rem",
                     fontSize: "1.1rem",
                   }}
+                  endIcon={<FavoriteIcon />}
                 >
                   Donate Now
                 </Button>
@@ -196,114 +197,10 @@ const FurnitureFundraiser = () => {
           </Card>
         </Box>
 
-        {/* Donation Tiers */}
-        <Typography
-          variant="h4"
-          gutterBottom
-          sx={{ marginTop: "3rem", marginBottom: "2rem" }}
-        >
-          Donation Tiers
-        </Typography>
-        <Grid
-          container
-          sx={{
-            justifyContent: "center",
-            maxWidth: { mobile: "100%", tablet: "80rem" },
-            margin: "0 auto",
-            padding: { mobile: "0 1rem", tablet: 0 },
-            gap: "2rem",
-          }}
-        >
-          {donationTiers.map((tier) => (
-            <Grid
-              item
-              xs={12}
-              md={6}
-              key={tier.amount}
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                paddingLeft: "0",
-              }}
-            >
-              <Card
-                sx={{
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  minHeight: "25rem",
-                  minWidth: "20rem",
-                  width: "100%",
-                  maxWidth: "25rem",
-                }}
-              >
-                <CardContent
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    height: "100%",
-                    padding: "2rem",
-                  }}
-                >
-                  <Typography
-                    variant="h5"
-                    component="h2"
-                    gutterBottom
-                    sx={{
-                      textAlign: "center",
-                      marginBottom: "2rem",
-                    }}
-                  >
-                    {tier.name} - ${tier.amount}
-                  </Typography>
-                  <Typography
-                    variant="body1"
-                    color="text.secondary"
-                    paragraph
-                    sx={{ marginBottom: "0.5rem" }}
-                  >
-                    Benefits include:
-                  </Typography>
-                  <Box sx={{ flexGrow: 1 }}>
-                    <ul
-                      style={{
-                        listStyleType: "none",
-                        padding: 0,
-                        margin: 0,
-                      }}
-                    >
-                      {tier.benefits.map((benefit, index) => (
-                        <li key={index} style={{ marginBottom: "0.5rem" }}>
-                          <Typography variant="body1">
-                            &bull; {benefit}
-                          </Typography>
-                        </li>
-                      ))}
-                    </ul>
-                  </Box>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    fullWidth
-                    sx={{
-                      marginTop: "2rem",
-                      padding: "0.75rem",
-                      fontSize: "1.1rem",
-                    }}
-                    href="#donate"
-                  >
-                    Donate ${tier.amount}
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-
-        {/* Budget Breakdown Section */}
+        {/* Project Details Section */}
         <Box sx={{ marginTop: "3rem" }}>
-          <Typography variant="h4" gutterBottom>
-            Budget Breakdown
+          <Typography variant="h4" fontWeight="bold" gutterBottom>
+            Project Details
           </Typography>
           <Typography variant="body1" paragraph>
             We have selected{" "}
@@ -513,10 +410,13 @@ const FurnitureFundraiser = () => {
             </Grid>
           )}
 
+          <Typography variant="h5" fontWeight="bold" sx={{ margin: "1rem" }}>
+            How Funds Will Be Used
+          </Typography>
           <TableContainer
             component={Paper}
             sx={{
-              maxWidth: { mobile: "100%", tablet: "60rem" },
+              maxWidth: { mobile: "100%", tablet: "auto" },
               margin: "1rem auto 0",
               padding: { mobile: "0 0.25rem", tablet: 0 },
             }}
@@ -609,11 +509,19 @@ const FurnitureFundraiser = () => {
                 </TableRow>
                 <TableRow>
                   <TableCell align="left" scope="row">
-                    Taxes
+                    Taxes (8.475%)
                   </TableCell>
                   <TableCell align="right"></TableCell>
                   <TableCell align="right"></TableCell>
-                  <TableCell align="right">$TBD</TableCell>
+                  <TableCell align="right">$1165</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell align="left" scope="row">
+                    Recognition Plaque
+                  </TableCell>
+                  <TableCell align="right"></TableCell>
+                  <TableCell align="right"></TableCell>
+                  <TableCell align="right">~$1000</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="left" scope="row">
@@ -622,7 +530,7 @@ const FurnitureFundraiser = () => {
                   <TableCell align="right"></TableCell>
                   <TableCell align="right"></TableCell>
                   <TableCell align="right">
-                    <Typography variant="h6">$15,368</Typography>
+                    <Typography variant="h6">$15910 + S&H</Typography>
                   </TableCell>
                 </TableRow>
               </TableBody>
@@ -630,11 +538,156 @@ const FurnitureFundraiser = () => {
           </TableContainer>
         </Box>
 
+        {/* Recognition Levels */}
+        <Box sx={{ marginTop: "3rem", marginBottom: "2rem" }}>
+          <Typography variant="h4" fontWeight="bold" gutterBottom>
+            Recognition Levels
+          </Typography>
+          <Typography variant="body1" paragraph>
+            We deeply appreciate every gift that helps improve our chapter
+            house. Every donor who contributes $500 or more will have their name
+            recognized on a plaque proudly displayed on our Veranda. This plaque
+            celebrates everyone who supports making our outdoor space a
+            welcoming place for actives and alumni alike to enjoy for years to
+            come.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            If you’re donating with a group of brothers—like a pledge class or
+            alumni group—you can choose to be recognized collectively by your
+            group’s name on the plaque. It’s a great way to honor your shared
+            commitment and leave a lasting mark together.
+          </Typography>
+
+          {/* Tier Cards */}
+            <Grid container direction="column" spacing={3} alignItems="center">
+              {/* $500+ */}
+              <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    background:
+                      "linear-gradient(90deg, #FFF9E5 0%, #FFF3C0 100%)",
+                    boxShadow: 2,
+                  }}
+                >
+                  <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
+                    <StarIcon sx={{ fontSize: 40, color: "#FFD700" }} />
+                  </Box>
+                  <CardContent>
+                    <Typography variant="h5" fontWeight="bold">
+                      $500+
+                    </Typography>
+                    <Typography variant="body2">
+                      Your name will be listed on the plaque as a valued member
+                      helping us take the first step toward improving our
+                      outdoor space.
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+              {/* $1,000+ */}
+              <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    background:
+                      "linear-gradient(90deg, #FFF3C0 0%, #FFE082 100%)",
+                    boxShadow: 2,
+                  }}
+                >
+                  <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
+                    <EmojiEventsIcon sx={{ fontSize: 40, color: "#FFC107" }} />
+                  </Box>
+                  <CardContent>
+                    <Typography variant="h5" fontWeight="bold">
+                      $1,000+
+                    </Typography>
+                    <Typography variant="body2">
+                      Recognized in a higher giving tier, your support shows a
+                      deeper commitment to enhancing our chapter house
+                      experience.
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+              {/* $2,000+ */}
+              <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    background:
+                      "linear-gradient(90deg, #FFE082 0%, #FFD180 100%)",
+                    boxShadow: 2,
+                  }}
+                >
+                  <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
+                    <WorkspacePremiumIcon
+                      sx={{ fontSize: 40, color: "#FFA000" }}
+                    />
+                  </Box>
+                  <CardContent>
+                    <Typography variant="h5" fontWeight="bold">
+                      $2,000+
+                    </Typography>
+                    <Typography variant="body2">
+                      Included among our top donors, your generosity plays a key
+                      role in making the Veranda a place everyone can enjoy.
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+              {/* Top Donor */}
+              <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
+                <Card
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    background:
+                      "linear-gradient(90deg, #b71c1c 0%, #d32f2f 100%)",
+                    color: "#ffe082",
+                    boxShadow: 4,
+                  }}
+                >
+                  <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
+                    <MilitaryTechIcon sx={{ fontSize: 40, color: "#FFD700" }} />
+                  </Box>
+                  <CardContent>
+                    <Typography
+                      variant="h5"
+                      fontWeight="bold"
+                      sx={{
+                        color: "#ffe082",
+                        textShadow: "1px 1px 4px #880808",
+                      }}
+                    >
+                      Top Donor
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: "#ffe082",
+                        textShadow: "1px 1px 4px #880808",
+                      }}
+                    >
+                      The largest individual or group donation will receive
+                      special, prominent placement on the plaque as a thank-you
+                      for leading this effort.
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            </Grid>
+        </Box>
+
         {/* Ways to Donate */}
         <Box sx={{ marginTop: "3rem" }}>
           <Typography
             id="donate"
             variant="h4"
+            fontWeight="bold"
             gutterBottom
             sx={{
               scrollMarginTop: "5rem", // This creates space above the element when scrolling to it
@@ -642,7 +695,15 @@ const FurnitureFundraiser = () => {
           >
             Ways to Donate
           </Typography>
-
+          <Alert severity="info">
+            <AlertTitle>Donor Info Needed for Recognition</AlertTitle>
+            When making your donation, please be sure to include your{" "}
+            <Typography component="span" fontWeight="bold" variant="body2">
+              name, phone number, and email address{" "}
+            </Typography>
+            so we can properly recognize your contribution and reach out if any
+            details need to be confirmed.
+          </Alert>
           <Grid
             container
             spacing={2}
@@ -744,14 +805,6 @@ const FurnitureFundraiser = () => {
                         height={26}
                       />
                     </Button>
-                    <Typography
-                      variant="body2"
-                      color="text.secondary"
-                      align="center"
-                    >
-                      Please include &ldquo;BAAA Outdoor Furniture
-                      Fundraiser&rdquo; in the note
-                    </Typography>
                   </Box>
                 </CardContent>
               </Card>
@@ -807,7 +860,11 @@ const FurnitureFundraiser = () => {
                     or scan the QR code below:
                   </Typography>
                   <Box
-                    sx={{ display: "flex", justifyContent: "center", mb: 2 }}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                      marginTop: "1rem",
+                    }}
                   >
                     <Image
                       src="/images/furniture-fundraiser/BAEFVenmoQRCode.png"
@@ -816,14 +873,6 @@ const FurnitureFundraiser = () => {
                       height={250}
                     />
                   </Box>
-                  <Typography
-                    variant="body2"
-                    align="center"
-                    color="text.secondary"
-                  >
-                    Please include &ldquo;BAAA Outdoor Furniture
-                    Fundraiser&rdquo; in the note
-                  </Typography>
                 </CardContent>
               </Card>
             </Grid>
@@ -875,32 +924,32 @@ const FurnitureFundraiser = () => {
                     Foundation&apos;, with &apos;BAAA Outdoor Furniture&apos; in
                     the memo line.
                   </Typography>
-                  <Typography
-                    align="center"
-                    variant="body"
-                    sx={{ fontWeight: "bold" }}
+                  <Box
+                    sx={{
+                      flexGrow: 1,
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "center",
+                    }}
                   >
-                    Mail to:
-                    <br />
-                    Christopher Markus – BAEF Treasurer
-                    <br />
-                    PO Box 9473
-                    <br />
-                    Naperville, IL 60567-9473
-                  </Typography>
+                    <Typography
+                      align="center"
+                      variant="body"
+                      sx={{ fontWeight: "bold" }}
+                    >
+                      Mail to:
+                      <br />
+                      Christopher Markus – BAEF Treasurer
+                      <br />
+                      PO Box 9473
+                      <br />
+                      Naperville, IL 60567-9473
+                    </Typography>
+                  </Box>
                 </CardContent>
               </Card>
             </Grid>
           </Grid>
-
-          <Typography
-            variant="body1"
-            align="center"
-            sx={{ marginTop: "2rem", color: "text.secondary" }}
-          >
-            Please include your name and contact information with your donation
-            so we can properly recognize your contribution.
-          </Typography>
         </Box>
       </Container>
     </>
