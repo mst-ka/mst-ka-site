@@ -33,6 +33,7 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
 import FavoriteIcon from "@mui/icons-material/Favorite";
+import EventIcon from "@mui/icons-material/Event";
 import Banner from "../components/Layout/Banner/Banner";
 import Image from "next/image";
 import React from "react";
@@ -54,6 +55,11 @@ const FurnitureFundraiser = () => {
   const currentAmount = 0;
   const goalAmount = 17000;
   const progress = (currentAmount / goalAmount) * 100;
+
+  const targetDate = new Date("2025-09-01");
+  const currentDate = new Date();
+  const timeToGo = targetDate.getTime() - currentDate.getTime();
+  const daysToGo = Math.ceil(timeToGo / (1000 * 60 * 60 * 24));
 
   const furnitureImages = [
     {
@@ -94,7 +100,7 @@ const FurnitureFundraiser = () => {
           },
         }}
       >
-        <Typography align="justify" sx={{ marginBottom: "1rem" }}>
+        <Typography sx={{ marginBottom: "1rem" }}>
           In coordination with the Beta Alpha Education Foundation (BAEF), the
           Beta Alpha Alumni Association (BAAA) is organizing this fundraiser to
           replace the deteriorating outdoor furniture on our chapter house
@@ -104,16 +110,14 @@ const FurnitureFundraiser = () => {
           both active members and alumni for years to come.
         </Typography>
 
-        <Typography align="justify" sx={{ marginBottom: "1rem" }}>
-          With your support, we can provide a comfortable outdoor space that
-          brings brothers together and serves the chapter for years to come.
-          Every gift brings us closer to making the veranda a place where past,
-          present, and future brothers can come together — whether for casual
-          hangouts, special events, or simply enjoying the fresh air and
-          camaraderie. Thank you for considering a gift to help us revitalize
-          this important gathering spot!
+        <Typography sx={{ marginBottom: "1rem" }}>
+          Your support brings us closer to transforming the veranda into a space
+          where past, present, and future brothers can gather—whether for casual
+          hangouts, special events, or simply enjoying the fresh air and shared
+          brotherhood. Thank you for considering a gift to help us renew this
+          meaningful place.
         </Typography>
-        <Typography align="justify">
+        <Typography>
           If you have any questions at all, please reach out to BAAA via email
           at:{" "}
           <Link href="mailto:betaalphaalumni1903@gmail.com">
@@ -170,6 +174,25 @@ const FurnitureFundraiser = () => {
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   ${(goalAmount - currentAmount).toLocaleString()} to go
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "1rem",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <EventIcon color="primary" sx={{ mr: 0.5 }} />
+                  <Typography variant="body1" color="text.secondary">
+                    <b>{daysToGo}</b> days to go
+                  </Typography>
+                </Box>
+                <Typography variant="body1" color="text.secondary">
+                  (September 1, 2025)
                 </Typography>
               </Box>
               <Box
@@ -544,142 +567,140 @@ const FurnitureFundraiser = () => {
             Recognition Levels
           </Typography>
           <Typography variant="body1" paragraph>
-            We deeply appreciate every gift that helps improve our chapter
-            house. Every donor who contributes $500 or more will have their name
-            recognized on a plaque proudly displayed on our Veranda. This plaque
-            celebrates everyone who supports making our outdoor space a
-            welcoming place for actives and alumni alike to enjoy for years to
-            come.
+            We deeply appreciate any gift that helps us reach our goal. Every
+            donor who contributes $500 or more will have their name recognized
+            on a plaque proudly displayed on our Veranda. This plaque celebrates
+            everyone who supports making our outdoor space a welcoming place for
+            actives and alumni alike to enjoy for years to come.
           </Typography>
           <Typography variant="body1" paragraph>
-            If you’re donating with a group of brothers—like a pledge class or
-            alumni group—you can choose to be recognized collectively by your
-            group’s name on the plaque. It’s a great way to honor your shared
-            commitment and leave a lasting mark together.
+            If you&apos;re donating with a group of brothers—like a pledge class
+            or alumni group—you can choose to be recognized collectively by your
+            group&apos;s name on the plaque. It&apos;s a great way to honor your
+            shared commitment and leave a lasting mark together.
           </Typography>
 
           {/* Tier Cards */}
-            <Grid container direction="column" spacing={3} alignItems="center">
-              {/* $500+ */}
-              <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
-                <Card
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    background:
-                      "linear-gradient(90deg, #FFF9E5 0%, #FFF3C0 100%)",
-                    boxShadow: 2,
-                  }}
-                >
-                  <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
-                    <StarIcon sx={{ fontSize: 40, color: "#FFD700" }} />
-                  </Box>
-                  <CardContent>
-                    <Typography variant="h5" fontWeight="bold">
-                      $500+
-                    </Typography>
-                    <Typography variant="body2">
-                      Your name will be listed on the plaque as a valued member
-                      helping us take the first step toward improving our
-                      outdoor space.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-              {/* $1,000+ */}
-              <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
-                <Card
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    background:
-                      "linear-gradient(90deg, #FFF3C0 0%, #FFE082 100%)",
-                    boxShadow: 2,
-                  }}
-                >
-                  <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
-                    <EmojiEventsIcon sx={{ fontSize: 40, color: "#FFC107" }} />
-                  </Box>
-                  <CardContent>
-                    <Typography variant="h5" fontWeight="bold">
-                      $1,000+
-                    </Typography>
-                    <Typography variant="body2">
-                      Recognized in a higher giving tier, your support shows a
-                      deeper commitment to enhancing our chapter house
-                      experience.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-              {/* $2,000+ */}
-              <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
-                <Card
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    background:
-                      "linear-gradient(90deg, #FFE082 0%, #FFD180 100%)",
-                    boxShadow: 2,
-                  }}
-                >
-                  <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
-                    <WorkspacePremiumIcon
-                      sx={{ fontSize: 40, color: "#FFA000" }}
-                    />
-                  </Box>
-                  <CardContent>
-                    <Typography variant="h5" fontWeight="bold">
-                      $2,000+
-                    </Typography>
-                    <Typography variant="body2">
-                      Included among our top donors, your generosity plays a key
-                      role in making the Veranda a place everyone can enjoy.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-              {/* Top Donor */}
-              <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
-                <Card
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    background:
-                      "linear-gradient(90deg, #b71c1c 0%, #d32f2f 100%)",
-                    color: "#ffe082",
-                    boxShadow: 4,
-                  }}
-                >
-                  <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
-                    <MilitaryTechIcon sx={{ fontSize: 40, color: "#FFD700" }} />
-                  </Box>
-                  <CardContent>
-                    <Typography
-                      variant="h5"
-                      fontWeight="bold"
-                      sx={{
-                        color: "#ffe082",
-                        textShadow: "1px 1px 4px #880808",
-                      }}
-                    >
-                      Top Donor
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      sx={{
-                        color: "#ffe082",
-                        textShadow: "1px 1px 4px #880808",
-                      }}
-                    >
-                      The largest individual or group donation will receive
-                      special, prominent placement on the plaque as a thank-you
-                      for leading this effort.
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
+          <Grid container direction="column" spacing={3} alignItems="center">
+            {/* $500+ */}
+            <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
+              <Card
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  background:
+                    "linear-gradient(90deg, #FFF9E5 0%, #FFF3C0 100%)",
+                  boxShadow: 2,
+                }}
+              >
+                <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
+                  <StarIcon sx={{ fontSize: 40, color: "#FFD700" }} />
+                </Box>
+                <CardContent>
+                  <Typography variant="h5" fontWeight="bold">
+                    $500+
+                  </Typography>
+                  <Typography variant="body2">
+                    Your name will be listed on the plaque as a valued member
+                    helping us take the first step toward improving our outdoor
+                    space.
+                  </Typography>
+                </CardContent>
+              </Card>
             </Grid>
+            {/* $1,000+ */}
+            <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
+              <Card
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  background:
+                    "linear-gradient(90deg, #FFF3C0 0%, #FFE082 100%)",
+                  boxShadow: 2,
+                }}
+              >
+                <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
+                  <EmojiEventsIcon sx={{ fontSize: 40, color: "#FFC107" }} />
+                </Box>
+                <CardContent>
+                  <Typography variant="h5" fontWeight="bold">
+                    $1,000+
+                  </Typography>
+                  <Typography variant="body2">
+                    Recognized in a higher giving tier, your support shows a
+                    deeper commitment to enhancing our chapter house experience.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            {/* $2,000+ */}
+            <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
+              <Card
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  background:
+                    "linear-gradient(90deg, #FFE082 0%, #FFD180 100%)",
+                  boxShadow: 2,
+                }}
+              >
+                <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
+                  <WorkspacePremiumIcon
+                    sx={{ fontSize: 40, color: "#FFA000" }}
+                  />
+                </Box>
+                <CardContent>
+                  <Typography variant="h5" fontWeight="bold">
+                    $2,000+
+                  </Typography>
+                  <Typography variant="body2">
+                    Included among our top donors, your generosity plays a key
+                    role in making the Veranda a place everyone can enjoy.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+            {/* Top Donor */}
+            <Grid item xs={12} sx={{ width: "100%", maxWidth: "30rem" }}>
+              <Card
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  background:
+                    "linear-gradient(90deg, #b71c1c 0%, #d32f2f 100%)",
+                  color: "#ffe082",
+                  boxShadow: 4,
+                }}
+              >
+                <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
+                  <MilitaryTechIcon sx={{ fontSize: 40, color: "#FFD700" }} />
+                </Box>
+                <CardContent>
+                  <Typography
+                    variant="h5"
+                    fontWeight="bold"
+                    sx={{
+                      color: "#ffe082",
+                      textShadow: "1px 1px 4px #880808",
+                    }}
+                  >
+                    Top Donor
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    sx={{
+                      color: "#ffe082",
+                      textShadow: "1px 1px 4px #880808",
+                    }}
+                  >
+                    The largest individual or group donation will receive
+                    special, prominent placement on the plaque as a thank-you
+                    for leading this effort.
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          </Grid>
         </Box>
 
         {/* Ways to Donate */}
@@ -758,7 +779,8 @@ const FurnitureFundraiser = () => {
                   </Typography>
                   <Typography variant="body1" align="justify">
                     Make a secure donation through PayPal. You can use your
-                    PayPal account or any major credit card.
+                    PayPal account or any major credit card. Scan the QR code or
+                    click the button below to donate:
                   </Typography>
                   <Box sx={{ flexGrow: 1 }} />
                   <Box
