@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 import Safe from "react-safe";
 
 // Array of subpage pathnames we do not want to show the 'Apply for Membership' Button on
-const noApplyButtonSubpages = ["/apply", "/alumni", "/alumni/spotlight"];
+const noApplyButtonSubpages = ["/apply", "/alumni", "/alumni/spotlight", "/furniture-fundraiser"];
 function Layout(props) {
   const router = useRouter();
   return (

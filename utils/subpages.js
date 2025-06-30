@@ -28,4 +28,5 @@ export const aboutSubPages = [
 export const alumniSubPages = [
   { title: "The BAAA Journal", link: "/alumni" },
   { title: "Alumni Spotlight Recommendation", link: "/alumni/spotlight" },
+  { title: "Outdoor Furniture Fundraiser", link: "/furniture-fundraiser" },
 ];
