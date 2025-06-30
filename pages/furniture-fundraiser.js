@@ -54,11 +54,17 @@ const FurnitureFundraiser = () => {
   const currentAmount = 0;
   const goalAmount = 17000;
   const progress = (currentAmount / goalAmount) * 100;
-  const lastUpdatedDate = new Date("06-30-2025");
+  const lastUpdatedDate = new Date("2025-06-30");
 
-  const targetDate = new Date("09-01-2025");
+  const targetDate = new Date("2025-09-01");
   const currentDate = new Date();
-  const timeToGo = targetDate.getTime() - currentDate.getTime();
+  // Get today's date at midnight in the local timezone
+  const today = new Date(
+    currentDate.getFullYear(),
+    currentDate.getMonth(),
+    currentDate.getDate()
+  );
+  const timeToGo = targetDate.getTime() - today.getTime();
   const daysToGo = Math.ceil(timeToGo / (1000 * 60 * 60 * 24));
 
   const furnitureImages = [
@@ -128,8 +134,22 @@ const FurnitureFundraiser = () => {
 
         {/* Progress Section */}
         <Box sx={{ marginY: "3rem" }}>
-          <Typography variant="h4" fontWeight="bold" gutterBottom>
+          <Typography variant="h4" fontWeight="bold">
             Fundraising Progress
+          </Typography>
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ marginBottom: "1rem" }}
+          >
+            (as of{" "}
+            {lastUpdatedDate.toLocaleDateString("en-US", {
+              timeZone: "UTC",
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })}
+            )
           </Typography>
           <Card sx={{ padding: "2rem", maxWidth: "60rem", margin: "0 auto" }}>
             <Box sx={{ marginBottom: "0.5rem" }}>
@@ -172,15 +192,6 @@ const FurnitureFundraiser = () => {
               >
                 <Typography variant="body2" color="text.secondary">
                   {Math.round(progress)}% funded
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  (as of{" "}
-                  {lastUpdatedDate.toLocaleDateString("en-US", {
-                    month: "long",
-                    day: "numeric",
-                    year: "numeric",
-                  })}
-                  )
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   ${(goalAmount - currentAmount).toLocaleString()} to go
