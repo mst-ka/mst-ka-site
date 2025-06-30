@@ -104,18 +104,19 @@ const FurnitureFundraiser = () => {
           In coordination with the Beta Alpha Education Foundation (BAEF), the
           Beta Alpha Alumni Association (BAAA) is organizing this fundraiser to
           replace the deteriorating outdoor furniture on our chapter house
-          veranda. This space has long been a gathering place where brothers
-          share stories, celebrate, and build lasting memories. Now, it&apos;s
-          time to update it with durable, comfortable furniture that will serve
-          both active members and alumni for years to come.
+          veranda. This space has long served as a meaningful extension of the
+          chapter house—where brothers connect, study, and create lasting
+          memories. Now, it&apos;s time to update it with durable, comfortable
+          furniture that will serve both active members and alumni for years to
+          come.
         </Typography>
 
         <Typography sx={{ marginBottom: "1rem" }}>
-          Your support brings us closer to transforming the veranda into a space
-          where past, present, and future brothers can gather—whether for casual
-          hangouts, special events, or simply enjoying the fresh air and shared
-          brotherhood. Thank you for considering a gift to help us renew this
-          meaningful place.
+          Your support brings us closer to transforming the veranda into a
+          versatile, welcoming environment—ideal for studying, casual
+          conversations, alumni gatherings, or simply enjoying the outdoors and
+          our shared brotherhood. Thank you for considering a gift to help us
+          renew this important space.
         </Typography>
         <Typography>
           If you have any questions at all, please reach out to BAAA via email
