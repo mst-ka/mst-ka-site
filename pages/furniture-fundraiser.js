@@ -51,12 +51,12 @@ const FurnitureFundraiser = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  // Placeholder for current donation amount - this would be dynamic in production
   const currentAmount = 0;
   const goalAmount = 17000;
   const progress = (currentAmount / goalAmount) * 100;
+  const lastUpdatedDate = new Date("06-30-2025");
 
-  const targetDate = new Date("2025-09-01");
+  const targetDate = new Date("09-01-2025");
   const currentDate = new Date();
   const timeToGo = targetDate.getTime() - currentDate.getTime();
   const daysToGo = Math.ceil(timeToGo / (1000 * 60 * 60 * 24));
@@ -172,6 +172,15 @@ const FurnitureFundraiser = () => {
               >
                 <Typography variant="body2" color="text.secondary">
                   {Math.round(progress)}% funded
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  (as of{" "}
+                  {lastUpdatedDate.toLocaleDateString("en-US", {
+                    month: "long",
+                    day: "numeric",
+                    year: "numeric",
+                  })}
+                  )
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   ${(goalAmount - currentAmount).toLocaleString()} to go
