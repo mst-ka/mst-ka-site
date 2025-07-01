@@ -51,10 +51,10 @@ const FurnitureFundraiser = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const currentAmount = 0;
+  const currentAmount = 500;
   const goalAmount = 17000;
   const progress = (currentAmount / goalAmount) * 100;
-  const lastUpdatedDate = new Date("2025-06-30");
+  const lastUpdatedDate = new Date("2025-07-01");
 
   const targetDate = new Date("2025-09-01");
   const currentDate = new Date();
@@ -615,11 +615,11 @@ const FurnitureFundraiser = () => {
                 }}
               >
                 <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
-                  <StarIcon sx={{ fontSize: 40, color: "#FFD700" }} />
+                  <StarIcon sx={{ fontSize: 40, color: "#CD7F32" }} />
                 </Box>
                 <CardContent>
                   <Typography variant="h5" fontWeight="bold">
-                    $500+
+                    Bronze - $500+
                   </Typography>
                   <Typography variant="body2">
                     Your name will be listed on the plaque as a valued member
@@ -636,16 +636,16 @@ const FurnitureFundraiser = () => {
                   display: "flex",
                   alignItems: "center",
                   background:
-                    "linear-gradient(90deg, #FFF3C0 0%, #FFE082 100%)",
+                    "linear-gradient(90deg, #F5F5F5 0%, #E0E0E0 100%)",
                   boxShadow: 2,
                 }}
               >
                 <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
-                  <EmojiEventsIcon sx={{ fontSize: 40, color: "#FFC107" }} />
+                  <EmojiEventsIcon sx={{ fontSize: 40, color: "#A9A9A9" }} />
                 </Box>
                 <CardContent>
                   <Typography variant="h5" fontWeight="bold">
-                    $1,000+
+                    Silver - $1,000+
                   </Typography>
                   <Typography variant="body2">
                     Recognized in a higher giving tier, your support shows a
@@ -672,7 +672,7 @@ const FurnitureFundraiser = () => {
                 </Box>
                 <CardContent>
                   <Typography variant="h5" fontWeight="bold">
-                    $2,000+
+                    Gold - $2,000+
                   </Typography>
                   <Typography variant="body2">
                     Included among our top donors, your generosity plays a key
@@ -689,29 +689,27 @@ const FurnitureFundraiser = () => {
                   alignItems: "center",
                   background:
                     "linear-gradient(90deg, #b71c1c 0%, #d32f2f 100%)",
-                  color: "#ffe082",
+                  color: "#E5E4E2",
                   boxShadow: 4,
                 }}
               >
                 <Box sx={{ p: 2, display: "flex", alignItems: "center" }}>
-                  <MilitaryTechIcon sx={{ fontSize: 40, color: "#FFD700" }} />
+                  <MilitaryTechIcon sx={{ fontSize: 40, color: "#E5E4E2" }} />
                 </Box>
                 <CardContent>
                   <Typography
                     variant="h5"
                     fontWeight="bold"
                     sx={{
-                      color: "#ffe082",
-                      textShadow: "1px 1px 4px #880808",
+                      color: "#E5E4E2"
                     }}
                   >
-                    Top Donor
+                    Platinum - Top Donor
                   </Typography>
                   <Typography
                     variant="body2"
                     sx={{
-                      color: "#ffe082",
-                      textShadow: "1px 1px 4px #880808",
+                      color: "#E5E4E2"
                     }}
                   >
                     The largest individual or group donation will receive
