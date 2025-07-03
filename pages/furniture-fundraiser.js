@@ -51,10 +51,10 @@ const FurnitureFundraiser = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const currentAmount = 500;
+  const currentAmount = 2131.95;
   const goalAmount = 17000;
   const progress = (currentAmount / goalAmount) * 100;
-  const lastUpdatedDate = new Date("2025-07-01");
+  const lastUpdatedDate = new Date("2025-07-02");
 
   const targetDate = new Date("2025-09-01");
   const currentDate = new Date();
