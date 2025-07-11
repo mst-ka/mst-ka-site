@@ -1,7 +1,9 @@
-import { Container, Divider, Grid, Link, Typography } from "@mui/material";
+import { Box, Container, Divider, Link, Typography, useMediaQuery } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import Newsletter from "../../components/Subpages/Alumni/Newsletter";
 import MailingListSignup from "../../components/Subpages/Alumni/MailingListSignUp";
+import Carousel from "react-material-ui-carousel";
+import { useTheme } from "@mui/material/styles";
 
 const newsletters = [
   {
@@ -79,6 +81,21 @@ const newsletters = [
 ];
 
 function Alumni() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("tablet"));
+  const itemsPerSlide = isMobile ? 1 : 3;
+  const slides = [];
+
+  if (newsletters.length > 0) {
+    if (newsletters.length <= itemsPerSlide) {
+      slides.push(newsletters);
+    } else {
+      for (let i = 0; i <= newsletters.length - itemsPerSlide; i++) {
+        slides.push(newsletters.slice(i, i + itemsPerSlide));
+      }
+    }
+  }
+
   return (
     <div>
       <Banner text="The BAAA Journal" />
@@ -86,8 +103,8 @@ function Alumni() {
         sx={{
           padding: {
             mobile: "2rem",
-            tablet: "2rem 12rem",
-            laptop: "2rem 20rem",
+            tablet: "2rem 6rem",
+            laptop: "2rem 10rem",
           },
         }}
       >
@@ -106,19 +123,40 @@ function Alumni() {
         <Divider sx={{ margin: "1rem 0rem" }} />
         <MailingListSignup />
         <Divider sx={{ margin: "1rem 0rem" }} />
-        <Grid container spacing={6} sx={{ paddingTop: "1rem" }}>
-          {newsletters.map((newsletter, index) => (
-            <Grid key={index} item mobile={12} tablet={6}>
-              <Newsletter
-                volumeName={newsletter.volumeName}
-                link={newsletter.link}
-                imageSrc={newsletter.imageSrc}
-                altText={newsletter.altText}
-                volumeSubText={newsletter.volumeSubText}
-              />
-            </Grid>
+        <Carousel
+          sx={{ paddingTop: "1rem" }}
+          autoPlay={false}
+          navButtonsAlwaysVisible={true}
+          animation="fade"
+          duration={750}
+        >
+          {slides.map((slide, index) => (
+            <Box
+              key={index}
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: isMobile ? "center" : "space-around",
+                gap: 2,
+              }}
+            >
+              {slide.map((item) => (
+                <Box
+                  key={item.volumeName}
+                  sx={{ width: isMobile ? "100%" : "33%" }}
+                >
+                  <Newsletter
+                    volumeName={item.volumeName}
+                    link={item.link}
+                    imageSrc={item.imageSrc}
+                    altText={item.altText}
+                    volumeSubText={item.volumeSubText}
+                  />
+                </Box>
+              ))}
+            </Box>
           ))}
-        </Grid>
+        </Carousel>
       </Container>
     </div>
   );
