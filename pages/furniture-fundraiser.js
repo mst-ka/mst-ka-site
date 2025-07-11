@@ -51,10 +51,10 @@ const FurnitureFundraiser = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const currentAmount = 2131.95;
+  const currentAmount = 3763;
   const goalAmount = 17000;
   const progress = (currentAmount / goalAmount) * 100;
-  const lastUpdatedDate = new Date("2025-07-02");
+
 
   const targetDate = new Date("2025-09-01");
   const currentDate = new Date();
@@ -134,22 +134,8 @@ const FurnitureFundraiser = () => {
 
         {/* Progress Section */}
         <Box sx={{ marginY: "3rem" }}>
-          <Typography variant="h4" fontWeight="bold">
+          <Typography variant="h4" fontWeight="bold" gutterBottom>
             Fundraising Progress
-          </Typography>
-          <Typography
-            variant="body2"
-            color="text.secondary"
-            sx={{ marginBottom: "1rem" }}
-          >
-            (as of{" "}
-            {lastUpdatedDate.toLocaleDateString("en-US", {
-              timeZone: "UTC",
-              month: "long",
-              day: "numeric",
-              year: "numeric",
-            })}
-            )
           </Typography>
           <Card sx={{ padding: "2rem", maxWidth: "60rem", margin: "0 auto" }}>
             <Box sx={{ marginBottom: "0.5rem" }}>
