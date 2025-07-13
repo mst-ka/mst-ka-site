@@ -51,7 +51,7 @@ const FurnitureFundraiser = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const currentAmount = 3763;
+  const currentAmount = 8594;
   const goalAmount = 17000;
   const progress = (currentAmount / goalAmount) * 100;
 
