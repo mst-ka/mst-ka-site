@@ -51,21 +51,9 @@ const FurnitureFundraiser = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const currentAmount = 15120;
+  const currentAmount = 23034;
   const goalAmount = 17000;
-  const progress = (currentAmount / goalAmount) * 100;
-
-
-  const targetDate = new Date("2025-09-01");
-  const currentDate = new Date();
-  // Get today's date at midnight in the local timezone
-  const today = new Date(
-    currentDate.getFullYear(),
-    currentDate.getMonth(),
-    currentDate.getDate()
-  );
-  const timeToGo = targetDate.getTime() - today.getTime();
-  const daysToGo = Math.ceil(timeToGo / (1000 * 60 * 60 * 24));
+  const progress = Math.min((currentAmount / goalAmount) * 100, 100);
 
   const furnitureImages = [
     {
@@ -177,10 +165,14 @@ const FurnitureFundraiser = () => {
                 }}
               >
                 <Typography variant="body2" color="text.secondary">
-                  {Math.round(progress)}% funded
+                  {currentAmount >= goalAmount
+                    ? "100% funded"
+                    : `${Math.round(progress)}% funded`}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                  ${(goalAmount - currentAmount).toLocaleString()} to go
+                  {currentAmount >= goalAmount
+                    ? "🎉 $0 to go! 🎉"
+                    : `${(goalAmount - currentAmount).toLocaleString()} to go`}
                 </Typography>
               </Box>
               <Box
@@ -192,16 +184,27 @@ const FurnitureFundraiser = () => {
                   marginTop: "1rem",
                 }}
               >
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <EventIcon color="primary" sx={{ mr: 0.5 }} />
-                  <Typography variant="body1" color="text.secondary">
-                    <b>{daysToGo}</b> days to go
-                  </Typography>
-                </Box>
-                <Typography variant="body1" color="text.secondary">
-                  (September 1, 2025)
+                <Typography variant="h6" align="center" color="primary" sx={{ mb: 1 }}>
+                  Thank You to Our Generous Donors!
+                </Typography>
+                <Typography
+                  variant="body1"
+                  color="text.secondary"
+                  align="center"
+                >
+                  We are incredibly grateful for your generous contributions.
+                  Thanks to you, we have exceeded our goal and can now provide
+                  comfortable and durable outdoor furniture for generations of
+                  KA brothers to come.
+                  <br />
+                  <br />
+                  While this fundraiser is complete, you can still support our
+                  chapter by donating to the Beta Alpha Education Foundation
+                  (BAEF), which provides scholarships and educational funding to
+                  our active members.
                 </Typography>
               </Box>
+
               <Box
                 sx={{
                   display: "flex",
@@ -213,14 +216,16 @@ const FurnitureFundraiser = () => {
                   variant="contained"
                   color="primary"
                   size="large"
-                  href="#donate"
+                  href="https://baedu.org/baef-donation/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   sx={{
                     padding: "0.75rem 2rem",
                     fontSize: "1.1rem",
                   }}
                   endIcon={<FavoriteIcon />}
                 >
-                  Donate Now
+                  Donate to the BAEF
                 </Button>
               </Box>
             </Box>
