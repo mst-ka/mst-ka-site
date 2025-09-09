@@ -14,7 +14,13 @@ function ParentsFAQ() {
   return (
     <div>
       <Banner text="Parents' Frequently Asked Questions " />
-      <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
+      <Container
+        maxWidth="desktop"
+        sx={{
+          py: { mobile: 2, tablet: 4 },
+          px: { mobile: 2, tablet: 3, laptop: 4 },
+        }}
+      >
         For your son, making the transition from high school or community
         college to a four-year college or university may seem like an imposing
         challenge. The Beta Alpha Chapter of Kappa Alpha Order knows you may be
@@ -75,9 +81,7 @@ function ParentsFAQ() {
         questions you may have about fraternity membership.
         <br />
         <br />
-        <Accordion
-          sx={{ backgroundColor: "primary.main", color: "white.main" }}
-        >
+        <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography fontStyle={"italic"}>
               Are fraternities like the one shown in the movie Animal House?
@@ -109,9 +113,7 @@ function ParentsFAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          sx={{ backgroundColor: "primary.main", color: "white.main" }}
-        >
+        <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography fontStyle={"italic"}>
               The expectations about alcohol. What is it REALLY like in the
@@ -132,9 +134,7 @@ function ParentsFAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          sx={{ backgroundColor: "primary.main", color: "white.main" }}
-        >
+        <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography fontStyle={"italic"}>
               I&apos;m concerned about my son&apos;s grades. What impact would
@@ -159,9 +159,7 @@ function ParentsFAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          sx={{ backgroundColor: "primary.main", color: "white.main" }}
-        >
+        <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography fontStyle={"italic"}>
               What about pledging or hazing?
@@ -184,9 +182,7 @@ function ParentsFAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          sx={{ backgroundColor: "primary.main", color: "white.main" }}
-        >
+        <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography fontStyle={"italic"}>
               Who is actually in charge of the fraternity?
@@ -208,9 +204,7 @@ function ParentsFAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          sx={{ backgroundColor: "primary.main", color: "white.main" }}
-        >
+        <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography fontStyle={"italic"}>
               Does it cost a lot of money to be in a fraternity?
@@ -227,9 +221,7 @@ function ParentsFAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          sx={{ backgroundColor: "primary.main", color: "white.main" }}
-        >
+        <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography fontStyle={"italic"}>
               Being in a fraternity sounds like it takes a lot of time.
@@ -247,9 +239,7 @@ function ParentsFAQ() {
             </Typography>
           </AccordionDetails>
         </Accordion>
-        <Accordion
-          sx={{ backgroundColor: "primary.main", color: "white.main" }}
-        >
+        <Accordion>
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography fontStyle={"italic"}>
               How does my son go about joining a fraternity?
@@ -274,7 +264,7 @@ function ParentsFAQ() {
           </AccordionDetails>
         </Accordion>
         <Accordion
-          sx={{ backgroundColor: "primary.main", color: "white.main" }}
+          sx={{ backgroundColor: "white.main"}}
         >
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography fontStyle={"italic"}>

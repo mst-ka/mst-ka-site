@@ -86,16 +86,14 @@ function AlumniSpotlight() {
   return (
     <div>
       <Banner text="Alumni Spotlight Recommendation" />
-      <form onSubmit={formik.handleSubmit}>
-        <Container
-          sx={{
-            padding: {
-              mobile: "2rem",
-              tablet: "2rem 12rem",
-              laptop: "2rem auto",
-            },
-          }}
-        >
+      <Container
+        maxWidth="desktop"
+        sx={{
+          py: { mobile: 2, tablet: 4 },
+          px: { mobile: 2, tablet: 3, laptop: 4 },
+        }}
+      >
+        <form onSubmit={formik.handleSubmit}>
           <Typography align="justify">
             We are thrilled to feature the achievements and stories of fellow
             alumni in our upcoming <Link href="/alumni">BAAA Journals</Link>.
@@ -282,8 +280,8 @@ function AlumniSpotlight() {
               Thank you for your Alumni Spotlight recommendation!
             </Alert>
           </Snackbar>
-        </Container>
-      </form>
+        </form>
+      </Container>
     </div>
   );
 }

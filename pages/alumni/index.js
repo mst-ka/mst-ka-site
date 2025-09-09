@@ -5,6 +5,14 @@ import MailingListSignup from "../../components/Subpages/Alumni/MailingListSignU
 
 const newsletters = [
   {
+    volumeName: "Vol. 10",
+    link: "/newsletters/fs25_vol10.pdf",
+    imageSrc: "/images/alumni/f25_cover.jpeg",
+    altText: "Fall 2025 Newsletter",
+    volumeSubText:
+      "Fall 2025 Volume of the Beta Alpha Alumni Association Journal",
+  },
+  {
     volumeName: "Vol. 9",
     link: "https://issuu.com/beta-alpha-alumni-association/docs/beta_alpha_journal_fall_24_vol_9",
     imageSrc: "/images/alumni/f24_cover.jpeg",
@@ -83,32 +91,31 @@ function Alumni() {
     <div>
       <Banner text="The BAAA Journal" />
       <Container
+        maxWidth="desktop"
         sx={{
-          padding: {
-            mobile: "2rem",
-            tablet: "2rem 12rem",
-            laptop: "2rem 20rem",
-          },
+          py: { mobile: 2, tablet: 4 },
+          px: { mobile: 2, tablet: 3, laptop: 4 },
         }}
       >
         <Typography align="justify" sx={{ padding: "1rem" }}>
-          Welcome to our alumni page where you will find our alumni newsletter,
-          The BAAA Journal, organized by the Beta Alpha Alumni Association
-          (BAAA). We release our newsletter bi-annually, highlighting: news,
-          history, ways for alumni to get involved, and our brothers&apos; life
-          events &amp; accomplishments. If you would like to recommend a brother
-          to be featured in a future issue of The BAAA Journal, please fill out{" "}
-          <Link href="/alumni/spotlight">this form</Link>. If you have questions
-          or suggestions for future stories to be highlighted please reach out
-          to one of the BAAA Contacts on the last page of any issue of The BAAA
-          Journal below!
+          The Beta Alpha Alumni Association (BAAA) would like to welcome you to
+          the central hub for our Beta Alpha alumni. Here you will find the
+          latest issue of our alumni newsletter, The BAAA Journal, published by
+          the BAAA. Each edition is filled with chapter news, historical
+          retrospectives, opportunities for alumni engagement, and celebrations
+          of our brothers&apos; personal and professional milestones. Do you
+          know a brother with a story worth sharing? We invite you to recommend
+          them for an alumni spotlight by filling out{" "}
+          <Link href="/alumni/spotlight">this form</Link>. For any questions or
+          content suggestions, please connect with the BAAA contacts listed in
+          any of the journals below.
         </Typography>
         <Divider sx={{ margin: "1rem 0rem" }} />
         <MailingListSignup />
         <Divider sx={{ margin: "1rem 0rem" }} />
         <Grid container spacing={6} sx={{ paddingTop: "1rem" }}>
-          {newsletters.map((newsletter, index) => (
-            <Grid key={index} item mobile={12} tablet={6}>
+          {newsletters.map((newsletter) => (
+            <Grid key={newsletter.volumeName} item mobile={12} tablet={6}>
               <Newsletter
                 volumeName={newsletter.volumeName}
                 link={newsletter.link}

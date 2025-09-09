@@ -7,25 +7,28 @@ function About() {
   return (
     <div>
       <Banner text="About Us" />
-      <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
-        <Grid container spacing={8}>
+      <Container
+        maxWidth="desktop"
+        sx={{ py: { mobile: 2, tablet: 4 }, px: { mobile: 2, tablet: 3, laptop: 4 } }}
+      >
+        <Grid container spacing={8} sx={{ pt: 4 }}>
           <Grid item mobile={12} tablet={6}>
             <TextSectionHeading>Kappa Alpha Order History</TextSectionHeading>
             <Typography align="justify">
               Kappa Alpha Order was founded by four men, bound their friendship
               in a “mutual pledge of faith and loyalty,” at Washington College
               in Virginia, in December of 1865.
-              <br />
-              <br />
+            <br />
+            <br />
               Our founders created an organization rooted in the highest ideals
               of the time: honor, chivalry, and gentility.
-              <br />
-              <br />
-              KA translates these timeless philosophies into the mainstream of
-              American universities. These gentlemanly traits are the hallmark
+            <br />
+            <br />
+            KA translates these timeless philosophies into the mainstream of
+            American universities. These gentlemanly traits are the hallmark
               of men who have chosen our unique lifestyle.
-            </Typography>
-          </Grid>
+          </Typography>
+        </Grid>
           <TextSectionImage
             src="/images/about/index/officer-marshall.jpg"
             alt="I, II, & III Marshall"

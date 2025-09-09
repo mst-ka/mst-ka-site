@@ -1,7 +1,7 @@
 import {
   Box,
-  Container,
   Typography,
+  Container,
   Card,
   CardContent,
   CardMedia,
@@ -51,16 +51,16 @@ const FurnitureFundraiser = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
-  const currentAmount = 23034;
+  const currentAmount = 22894;
   const goalAmount = 17000;
   const progress = Math.min((currentAmount / goalAmount) * 100, 100);
 
   const furnitureImages = [
     {
       imageUrl: "/images/furniture-fundraiser/adirondack.png",
-      description: "Nautical Curveback Adirondack Chair",
+      description: "Nautical 3-Piece Curveback Adirondack Set",
       productUrl:
-        "https://www.polywood.com/products/nautical-curveback-adirondack-chair-ad610?variant=45792917881059",
+        "https://www.polywood.com/products/nautical-3-piece-curveback-adirondack-set-pws419-1?variant=45792947896547",
     },
     {
       imageUrl: "/images/furniture-fundraiser/table.png",
@@ -69,16 +69,10 @@ const FurnitureFundraiser = () => {
         "https://www.polywood.com/products/48-round-farmhouse-dining-table-rt248?variant=45794136686819",
     },
     {
-      imageUrl: "/images/furniture-fundraiser/chair.png",
-      description: "Palm Coast Upright Adirondack Chair",
+      imageUrl: "/images/furniture-fundraiser/chairs.png",
+      description: "Palm Coast 4-Piece Upright Adirondack Conversation Set",
       productUrl:
-        "https://www.polywood.com/products/palm-coast-upright-adirondack-chair-hnu200?variant=45792813678819",
-    },
-    {
-      imageUrl: "/images/furniture-fundraiser/sidetable.png",
-      description: 'Long Island 18" Side Table',
-      productUrl:
-        "https://www.polywood.com/products/long-island-18-side-table-ect18?variant=45793115144419",
+        "https://www.polywood.com/products/palm-coast-4-piece-upright-adirondack-conversation-set-pws1528-1?variant=45792825999587",
     },
   ];
 
@@ -86,12 +80,10 @@ const FurnitureFundraiser = () => {
     <>
       <Banner text="Beta Alpha Outdoor Furniture Fundraiser" />
       <Container
+        maxWidth="desktop"
         sx={{
-          padding: {
-            mobile: "1.5rem",
-            tablet: "2rem 4rem",
-            laptop: "2rem 8rem",
-          },
+          py: { mobile: 2, tablet: 4 },
+          px: { mobile: 2, tablet: 3, laptop: 4 },
         }}
       >
         <Typography sx={{ marginBottom: "1rem" }}>
@@ -184,7 +176,12 @@ const FurnitureFundraiser = () => {
                   marginTop: "1rem",
                 }}
               >
-                <Typography variant="h6" align="center" color="primary" sx={{ mb: 1 }}>
+                <Typography
+                  variant="h6"
+                  align="center"
+                  color="primary"
+                  sx={{ mb: 1 }}
+                >
                   Thank You to Our Generous Donors!
                 </Typography>
                 <Typography
@@ -504,15 +501,15 @@ const FurnitureFundraiser = () => {
               <TableBody>
                 <TableRow>
                   <TableCell align="left" scope="row">
-                    Adirondack Chairs
+                    Adirondack & Side Table 3-Piece Set
                   </TableCell>
-                  <TableCell align="right">20</TableCell>
-                  <TableCell align="right">$329</TableCell>
-                  <TableCell align="right">$6,580</TableCell>
+                  <TableCell align="right">10</TableCell>
+                  <TableCell align="right">$615</TableCell>
+                  <TableCell align="right">$6,150</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="left" scope="row">
-                    Dining Tables
+                    Dining Table
                   </TableCell>
                   <TableCell align="right">3</TableCell>
                   <TableCell align="right">$569</TableCell>
@@ -520,19 +517,11 @@ const FurnitureFundraiser = () => {
                 </TableRow>
                 <TableRow>
                   <TableCell align="left" scope="row">
-                    Dining Chairs
+                    Dining Chairs 4-Piece Set
                   </TableCell>
-                  <TableCell align="right">12</TableCell>
-                  <TableCell align="right">$389</TableCell>
-                  <TableCell align="right">$4,668</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell align="left" scope="row">
-                    Side Tables
-                  </TableCell>
-                  <TableCell align="right">10</TableCell>
-                  <TableCell align="right">$79</TableCell>
-                  <TableCell align="right">$790</TableCell>
+                  <TableCell align="right">4</TableCell>
+                  <TableCell align="right">$1,449</TableCell>
+                  <TableCell align="right">$5796</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="left" scope="row">
@@ -540,15 +529,7 @@ const FurnitureFundraiser = () => {
                   </TableCell>
                   <TableCell align="right"></TableCell>
                   <TableCell align="right"></TableCell>
-                  <TableCell align="right">$TBD</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell align="left" scope="row">
-                    Taxes (8.475%)
-                  </TableCell>
-                  <TableCell align="right"></TableCell>
-                  <TableCell align="right"></TableCell>
-                  <TableCell align="right">$1165</TableCell>
+                  <TableCell align="right">$1,199</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="left" scope="row">
@@ -556,7 +537,7 @@ const FurnitureFundraiser = () => {
                   </TableCell>
                   <TableCell align="right"></TableCell>
                   <TableCell align="right"></TableCell>
-                  <TableCell align="right">~$1000</TableCell>
+                  <TableCell align="right">$TBD</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell align="left" scope="row">
@@ -564,8 +545,11 @@ const FurnitureFundraiser = () => {
                   </TableCell>
                   <TableCell align="right"></TableCell>
                   <TableCell align="right"></TableCell>
-                  <TableCell align="right">
-                    <Typography variant="h6">$15910 + S&H</Typography>
+                  <TableCell
+                    align="right"
+                    sx={{ whiteSpace: { mobile: "normal", tablet: "nowrap" } }}
+                  >
+                    <Typography variant="h6">$14,852 + Plaque</Typography>
                   </TableCell>
                 </TableRow>
               </TableBody>
@@ -692,7 +676,7 @@ const FurnitureFundraiser = () => {
                     variant="h5"
                     fontWeight="bold"
                     sx={{
-                      color: "#E5E4E2"
+                      color: "#E5E4E2",
                     }}
                   >
                     Platinum - Top Donor
@@ -700,7 +684,7 @@ const FurnitureFundraiser = () => {
                   <Typography
                     variant="body2"
                     sx={{
-                      color: "#E5E4E2"
+                      color: "#E5E4E2",
                     }}
                   >
                     The largest individual or group donation will receive

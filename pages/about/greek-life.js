@@ -6,8 +6,14 @@ function BAOfKAGreekLife() {
   return (
     <div>
       <Banner text="Greek Life at KA" />
-      <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
-        <Grid container spacing={8}>
+      <Container
+        maxWidth="desktop"
+        sx={{
+          py: { mobile: 2, tablet: 4 },
+          px: { mobile: 2, tablet: 3, laptop: 4 },
+        }}
+      >
+        <Grid container spacing={8} sx={{ pt: { mobile: 2, tablet: 4 } }}>
           <Grid item mobile={12} tablet={6}>
             <Typography align="justify">
               In Kappa Alpha Order we strive for excellence in all aspects on
