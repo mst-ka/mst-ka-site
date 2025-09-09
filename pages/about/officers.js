@@ -8,12 +8,18 @@ const officers = Object.values(officerInfo);
 function BAOfKAOfficers() {
   return (
     <div>
-      <Banner text="Chapter Officers" />
-      <Container sx={{ padding: { mobile: "2rem", tablet: "2rem 16rem" } }}>
-        <Grid container spacing={12}>
-          {officers.map((officer, index) => (
+      <Banner text="Chapter Officers" simple />
+      <Container
+        maxWidth="desktop"
+        sx={{
+          py: { mobile: 2, tablet: 4 },
+          px: { mobile: 2, tablet: 3, laptop: 4 },
+        }}
+      >
+        <Grid container spacing={4} sx={{ pt: { mobile: 2, tablet: 4 } }}>
+          {officers.map((officer) => (
             <OfficerCard
-              key={index}
+              key={officer.name}
               name={officer.name}
               position={officer.position}
               email={officer.email}

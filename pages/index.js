@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Box, Grid, Container } from "@mui/material";
 import ImgCarousel from "../components/Carousel/ImgCarousel";
 import Tour from "../components/Home/Tour";
 import ValuesInfoCard from "../components/Home/ValuesInfo";
@@ -26,18 +26,30 @@ const values = [
 
 export default function Home() {
   return (
-    <>
+    <Box>
       <ImgCarousel />
-      <Container sx={{ padding: { mobile: "1rem", laptop: "2rem 12rem" } }}>
-        <Grid container spacing={6}>
-          {values.map((value, index) => (
-            <ValuesInfoCard key={index} title={value.title} image={value.image}>
-              {value.content}
-            </ValuesInfoCard>
-          ))}
-        </Grid>
-        <Tour/>
+      <Container
+        maxWidth="desktop"
+        sx={{
+          py: { mobile: 2, tablet: 4 },
+          px: { mobile: 2, tablet: 3, laptop: 4 },
+        }}
+      >
+        <Box sx={{ pt: { mobile: 2, tablet: 4 } }}>
+          <Grid container spacing={6}>
+            {values.map((value) => (
+              <ValuesInfoCard
+                key={value.title}
+                title={value.title}
+                image={value.image}
+              >
+                {value.content}
+              </ValuesInfoCard>
+            ))}
+          </Grid>
+          <Tour />
+        </Box>
       </Container>
-    </>
+    </Box>
   );
 }

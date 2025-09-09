@@ -1,4 +1,4 @@
-import { Container, Grid, Table, TableHead, TableCell, Typography, TableRow, TableBody } from "@mui/material";
+import { Box, Container, Grid, Table, TableHead, TableCell, Typography, TableRow, TableBody } from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import TextSectionHeading from "../../components/Subpages/TextSectionHeading";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
@@ -17,28 +17,33 @@ function CampusAwards() {
   return (
     <div>
       <Banner text="Campus Awards" />
-      <Container sx={{ padding: { mobile: "2rem", laptop: "2rem 20rem" } }}>
-        <Table>
-          <TableHead>
-            <TableRow>
-            <TableCell>Award</TableCell>
-            <TableCell>Description</TableCell>
-            <TableCell>Years Awarded</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {awards.map((award) => (
-              <TableRow key={award.awardName}>
-                <TableCell> {award.awardName}</TableCell>
-                <TableCell> {award.description}</TableCell>
-                <TableCell> {award.yearsAwarded}</TableCell>
-
+      <Container
+        maxWidth="desktop"
+        sx={{
+          py: { mobile: 2, tablet: 4 },
+          px: { mobile: 2, tablet: 3, laptop: 4 },
+        }}
+      >
+        <Box sx={{ pt: { mobile: 2, tablet: 4 } }}>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>Award</TableCell>
+                <TableCell>Description</TableCell>
+                <TableCell>Years Awarded</TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-        
-       
+            </TableHead>
+            <TableBody>
+              {awards.map((award) => (
+                <TableRow key={award.awardName}>
+                  <TableCell> {award.awardName}</TableCell>
+                  <TableCell> {award.description}</TableCell>
+                  <TableCell> {award.yearsAwarded}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </Box>
       </Container>
     </div>
   );

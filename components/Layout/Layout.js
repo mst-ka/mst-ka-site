@@ -1,4 +1,4 @@
-import { Container, Fab } from "@mui/material";
+import { Box, Fab } from "@mui/material";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import Navbar from "./Nav/Navbar";
 import Footer from "./Footer/Footer";
@@ -33,9 +33,7 @@ function Layout(props) {
         }]`}</Safe.script>
       <Navbar />
       {/* Push footer to the bottom */}
-      <Container disableGutters sx={{ minHeight: "70vh" }}>
-        {props.children}
-      </Container>
+      <Box sx={{ minHeight: "70vh" }}>{props.children}</Box>
       <Footer />
       {!noApplyButtonSubpages.includes(router.pathname) && (
         <Fab
