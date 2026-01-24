@@ -156,7 +156,7 @@ function Contact() {
             covered by KA and rides to and from the events can be arranged upon
             request. For more information, or to sign up for an event please
             contact either one of our{" "}
-              <Link href="/about/officers">Recruitment Chairs</Link>.
+              <Link href="/about/officers">Recruitment Chairmen</Link>.
             </Typography>
             <br />
 
