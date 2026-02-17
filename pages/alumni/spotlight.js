@@ -9,6 +9,7 @@ import {
   Snackbar,
   TextField,
   Typography,
+  Breadcrumbs
 } from "@mui/material";
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -18,6 +19,7 @@ import database from "../../firebase-init";
 import Banner from "../../components/Layout/Banner/Banner";
 import { scrollToErrors } from "../../utils/form-helpers.js";
 import DoubleArrowIcon from "@mui/icons-material/DoubleArrow";
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const alumniSpotlightValidationSchema = yup.object({
   yourFullName: yup.string().required("Required"),
@@ -93,15 +95,24 @@ function AlumniSpotlight() {
           px: { mobile: 2, tablet: 3, laptop: 4 },
         }}
       >
+        <Breadcrumbs separator={<ArrowRightIcon />} aria-label="breadcrumb" sx={{ mb: 3 }}>
+          <Link
+            underline="hover"
+            color="inherit"
+            href="/alumni"
+          >
+            Alumni
+          </Link>
+          <Typography color="primary">Spotlight Recommendation</Typography>
+        </Breadcrumbs>
         <form onSubmit={formik.handleSubmit}>
           <Typography align="justify">
-            We are thrilled to feature the achievements and stories of fellow
-            alumni in our upcoming <Link href="/alumni">BAAA Journals</Link>.
             This is your opportunity to recommend a fellow brother whose
             accomplishments and experiences would inspire and connect our
             chapter. Your recommendations help us highlight the best of our
-            brotherhood, and we appreciate your input in shaping our spotlight
-            features.
+            brotherhood, which will be featured prominently on our{" "}
+            <Link href="/alumni/blog">Alumni Blog</Link> for the entire
+            community to read.
           </Typography>
           <br />
           <Typography align="justify">

@@ -26,7 +26,7 @@ const mailingListValidationSchema = yup.object({
     .number()
     .min(
       minPledgeClassYear,
-      "Pledge Class must be after the chapter was established"
+      "Pledge Class must be after the chapter was established",
     )
     .max(maxPledgeClassYear, "Pledge Class cannot be in the future")
     .typeError("Please enter your pledge class year")
@@ -81,8 +81,9 @@ function MailingListSignup() {
           },
         }}
       >
-        Sign up to stay up to date on the Beta Alpha Alumni Association and
-        never miss out on a new issue of The BAAA Journal!
+        Get the latest from the Chapter and the BAAA delivered straight to your
+        inbox. Join our mailing list today to stay connected and never miss an
+        update!
       </Typography>
       <Grid container spacing={2}>
         <Grid item mobile={12} tablet={6}>
