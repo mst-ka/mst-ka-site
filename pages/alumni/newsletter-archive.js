@@ -1,7 +1,14 @@
-import { Container, Divider, Grid, Link , Typography, Breadcrumbs } from "@mui/material";
+import {
+  Container,
+  Divider,
+  Grid,
+  Link,
+  Typography,
+  Breadcrumbs,
+} from "@mui/material";
 import Banner from "../../components/Layout/Banner/Banner";
 import Newsletter from "../../components/Subpages/Alumni/Newsletter";
-import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 
 const newsletters = [
   {
@@ -97,14 +104,25 @@ function NewsletterArchive() {
           px: { mobile: 2, tablet: 3, laptop: 4 },
         }}
       >
-        <Breadcrumbs separator={<ArrowRightIcon />} aria-label="breadcrumb" sx={{ mb: 3 }}>
+        <Breadcrumbs
+          separator={<ArrowRightIcon />}
+          aria-label="breadcrumb"
+          sx={{ mb: 3 }}
+        >
           <Link underline="hover" color="inherit" href="/alumni">
             Alumni
           </Link>
           <Typography color="primary">Newsletter Archive</Typography>
         </Breadcrumbs>
         <Typography align="justify" sx={{ padding: "1rem" }}>
-            Explore our archive of newsletters, where you can find past issues of the BAAA Journal. Each edition is filled with chapter news, historical retrospectives, and celebrations of our brothers' personal and professional milestones. After the Fall 2025 issue, the BAAA Journal will transition to a <Link href="/alumni/blog">blog format</Link> , allowing for more frequent updates and dynamic content. We encourage you to explore the archive, but check out our new blog for the latest news and stories from our alumni community!
+          Explore our archive of newsletters, where you can find past issues of
+          the BAAA Journal. Each edition is filled with chapter news, historical
+          retrospectives, and celebrations of our brothers&apos; personal and
+          professional milestones. After the Fall 2025 issue, the BAAA Journal
+          will transition to a <Link href="/alumni/blog">blog format</Link> ,
+          allowing for more frequent updates and dynamic content. We encourage
+          you to explore the archive, but check out our new blog for the latest
+          news and stories from our alumni community!
         </Typography>
         <Divider sx={{ margin: "1rem 0rem" }} />
         <Grid container spacing={6} sx={{ paddingTop: "1rem" }}>
