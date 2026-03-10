@@ -10,7 +10,7 @@ const noApplyButtonSubpages = ["/apply", "/alumni", "/alumni/spotlight", "/furni
 function Layout(props) {
   const router = useRouter();
   return (
-    <div>
+    <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Safe.script type="application/ld+json">{`[{  "@context" : "http://schema.org",
           "@type" : "LocalBusiness",
           "@id": "https://www.mst-ka.org",
@@ -33,7 +33,9 @@ function Layout(props) {
         }]`}</Safe.script>
       <Navbar />
       {/* Push footer to the bottom */}
-      <Box sx={{ minHeight: "70vh" }}>{props.children}</Box>
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        {props.children}
+      </Box>
       <Footer />
       {!noApplyButtonSubpages.includes(router.pathname) && (
         <Fab
@@ -46,7 +48,7 @@ function Layout(props) {
           Apply for Membership
         </Fab>
       )}
-    </div>
+    </Box>
   );
 }
 

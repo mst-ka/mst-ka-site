@@ -25,17 +25,12 @@ import {
 } from "@mui/material";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
-import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
-import EditNoteIcon from "@mui/icons-material/EditNote";
 import StarIcon from "@mui/icons-material/Star";
 import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import WorkspacePremiumIcon from "@mui/icons-material/WorkspacePremium";
 import MilitaryTechIcon from "@mui/icons-material/MilitaryTech";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import EventIcon from "@mui/icons-material/Event";
 import Banner from "../components/Layout/Banner/Banner";
-import Image from "next/image";
 import React from "react";
 
 const FurnitureFundraiser = () => {

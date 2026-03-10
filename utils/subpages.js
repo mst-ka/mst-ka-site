@@ -26,7 +26,9 @@ export const aboutSubPages = [
 ];
 
 export const alumniSubPages = [
-  { title: "The BAAA Journal", link: "/alumni" },
+  { title: "Alumni Home", link: "/alumni" },
+  { title: "Blog", link: "/alumni/blog" },
   { title: "Alumni Spotlight Recommendation", link: "/alumni/spotlight" },
+  { title: "Newsletter Archive", link: "/alumni/newsletter-archive" },
   { title: "Outdoor Furniture Fundraiser", link: "/furniture-fundraiser" },
 ];
