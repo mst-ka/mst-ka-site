@@ -44,13 +44,13 @@ const email = (sender, receiver, message) => {
 };
 
 const applicationContactEmails = [
-  // "Joe Studer <joe.studer.18@gmail.com>",
+  "Joe Studer <joe.studer.18@gmail.com>",
   "Jared Hanisch <jared.hanisch@gmail.com>",
-  // "Christian Matoushek <christian.matoushek@gmail.com",
-  // "bcdkcd@mst.edu",     // Brady Dodd     - President
-  // "nb887@mst.edu",      // Noah Bauman    - Corresponding Secretary
-  // "lgqkb@umsystem.edu", // Luke Gerling   - Recruitment Chairman
-  // "jfxnh@umsystem.edu", // Joshua Fallert - Recruitment Chairman
+  "Christian Matoushek <christian.matoushek@gmail.com",
+  "bcdkcd@mst.edu",     // Brady Dodd     - President
+  "nb887@mst.edu",      // Noah Bauman    - Corresponding Secretary
+  "lgqkb@umsystem.edu", // Luke Gerling   - Recruitment Chairman
+  "jfxnh@umsystem.edu", // Joshua Fallert - Recruitment Chairman
 ];
 
 exports.onDataAddedApps = onValueCreated(
@@ -90,10 +90,10 @@ exports.onDataAddedApps = onValueCreated(
 );
 
 const alumniSpotlightContactEmails = [
-  // "Joe Studer <joe.studer.18@gmail.com>",
+  "Joe Studer <joe.studer.18@gmail.com>",
   "Jared Hanisch <jared.hanisch@gmail.com>",
-  // "Christian Matoushek <christian.matoushek@gmail.com",
-  // "betaalphaalumni1903@gmail.com",
+  "Christian Matoushek <christian.matoushek@gmail.com",
+  "betaalphaalumni1903@gmail.com",
 ];
 
 exports.onDataAddedSpotlight = onValueCreated(
