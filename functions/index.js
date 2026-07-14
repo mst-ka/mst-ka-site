@@ -6,10 +6,15 @@
 
 "use strict";
 
-const functions = require("firebase-functions");
+const { onValueCreated } = require("firebase-functions/v2/database");
+const { defineSecret } = require("firebase-functions/params");
 const admin = require("firebase-admin");
 const nodemailer = require("nodemailer");
 const constants = require("./constants");
+
+const MAIL_LOGIN = defineSecret("MAIL_LOGIN");
+const MAIL_PASS = defineSecret("MAIL_PASS");
+const LISTMONK_AUTH = defineSecret("LISTMONK_AUTH");
 
 admin.initializeApp();
 
@@ -17,8 +22,8 @@ const email = (sender, receiver, message) => {
   const transporter = nodemailer.createTransport({
     service: "Zoho",
     auth: {
-      user: functions.config().mail.login,
-      pass: functions.config().mail.pass,
+      user: MAIL_LOGIN.value(),
+      pass: MAIL_PASS.value(),
     },
   });
 
@@ -48,9 +53,10 @@ const applicationContactEmails = [
   "jfxnh@umsystem.edu", // Joshua Fallert - Recruitment Chairman
 ];
 
-exports.onDataAddedApps = functions.database
-  .ref("/applications/{sessionId}")
-  .onCreate(function (snap) {
+exports.onDataAddedApps = onValueCreated(
+  { ref: "/applications/{sessionId}", secrets: [MAIL_LOGIN, MAIL_PASS] },
+  (event) => {
+    const snap = event.data;
     //prettier-ignore
     const emailContent = {
       subject: `[MST-KA Website]: Membership Application for ${snap.val().firstName} ${snap.val().lastName}`,
@@ -77,16 +83,11 @@ exports.onDataAddedApps = functions.database
     console.log(
       `Sending application for ${snap.val().firstName} ${snap.val().lastName}`
     );
-    // Send email with data
-    email(
-      functions.config().mail.login,
-      applicationContactEmails,
-      emailContent
-    );
+    email(MAIL_LOGIN.value(), applicationContactEmails, emailContent);
 
-    // Suppress warning of returning "Function returned undefined, expected Promise or value"
-    return 0;
-  });
+    return null;
+  }
+);
 
 const alumniSpotlightContactEmails = [
   "Joe Studer <joe.studer.18@gmail.com>",
@@ -95,9 +96,10 @@ const alumniSpotlightContactEmails = [
   "betaalphaalumni1903@gmail.com",
 ];
 
-exports.onDataAddedSpotlight = functions.database
-  .ref("alumniSpotlight/{sessionId}")
-  .onCreate(function (snap) {
+exports.onDataAddedSpotlight = onValueCreated(
+  { ref: "/alumniSpotlight/{sessionId}", secrets: [MAIL_LOGIN, MAIL_PASS] },
+  (event) => {
+    const snap = event.data;
     //prettier-ignore
     const emailContent = {
       subject: `[MST-KA Website] Alumni Spotlight Recommendation for ${snap.val().recFullName}`,
@@ -111,7 +113,7 @@ exports.onDataAddedSpotlight = functions.database
                 ${snap.val().recEmail}<br/><br/>
                 Testimonial:<br/>
                 ${snap.val().whyRecommended}`
-    }
+    };
 
     console.log(
       `Sending Alumni Spotlight Recommendation for ${
@@ -119,12 +121,11 @@ exports.onDataAddedSpotlight = functions.database
       } from ${snap.val().yourFullName}`
     );
 
-    email(
-      functions.config().mail.login,
-      alumniSpotlightContactEmails,
-      emailContent
-    );
-  });
+    email(MAIL_LOGIN.value(), alumniSpotlightContactEmails, emailContent);
+
+    return null;
+  }
+);
 
 const addNewSubscriber = (header, bodyContent, url) =>
   fetch(`${url}/subscribers`, {
@@ -154,12 +155,13 @@ const sendTransactionalEmail = (header, bodyContent, url) =>
     return response.json();
   });
 
-exports.onDataAddedNewsletter = functions.database
-  .ref("/newsletterEmailSignUp/{sessionId}")
-  .onCreate(function (snap) {
+exports.onDataAddedNewsletter = onValueCreated(
+  { ref: "/newsletterEmailSignUp/{sessionId}", secrets: [LISTMONK_AUTH] },
+  (event) => {
+    const snap = event.data;
     const headersList = {
       Accept: "*/*",
-      Authorization: `${functions.config().listmonk.auth}`,
+      Authorization: `${LISTMONK_AUTH.value()}`,
       "Content-Type": "application/json",
     };
 
@@ -183,7 +185,7 @@ exports.onDataAddedNewsletter = functions.database
       content_type: "html",
     });
 
-    addNewSubscriber(
+    return addNewSubscriber(
       headersList,
       addNewSubscriberBodyContent,
       constants.BASE_API_URL
@@ -196,7 +198,7 @@ exports.onDataAddedNewsletter = functions.database
           data
         );
 
-        sendTransactionalEmail(
+        return sendTransactionalEmail(
           headersList,
           transactionalMsgBodyContent,
           constants.BASE_API_URL
@@ -215,7 +217,5 @@ exports.onDataAddedNewsletter = functions.database
       .catch((error) => {
         console.error(error);
       });
-
-    // Suppress warning of returning "Function returned undefined, expected Promise or value"
-    return 0;
-  });
+  }
+);
